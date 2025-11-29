@@ -1,0 +1,132 @@
+﻿<MudHidden Breakpoint="Breakpoint.SmAndDown" Hidden="true">
+    <header class="layout-header">
+        <MudGrid Spacing="1">
+            <MudItem sm="3" xs="3" Class="layout-logo">
+                <a href="/">
+                    <img src="/images/logo-horizontal.svg" style="height:60px;margin-left:20px;" />
+                </a>
+            </MudItem>
+            <MudItem sm="6" xs="6" Class="layout-menu pt-2">
+                @*<MudStack Style="height:60px;" Spacing="3" Row="true" AlignItems="AlignItems.Center" Justify="Justify.FlexStart">
+                        <MudButton Link="/users" Class="no-uppercase" Variant="Variant.Text">Food Party</MudButton>
+                        <MudButton Link="/users" Class="no-uppercase" Variant="Variant.Text">Plan n Event</MudButton>
+                        <MudButton Link="/users" Class="no-uppercase" Variant="Variant.Text">Corporate Orders</MudButton>
+                        <MudButton Link="/users" Class="no-uppercase" Variant="Variant.Text">Search Venue</MudButton>
+                    </MudStack>*@
+
+                <MudTabs Rounded="true" Centered="false" MinimumTabWidth="0" Elevation="0">
+                    <MudTabPanel Style="text-transform:none" Text="Food Party" Href="/dashboard" Icon="@Icons.Material.Filled.Fastfood" />
+                    <MudTabPanel Style="text-transform:none" Text="Plan n Event" Href="/components/navmenu" Icon="@Icons.Material.Filled.Event" />
+                    <MudTabPanel Style="text-transform:none" Text="Corporate Orders" Href="/thelab" Icon="@Icons.Material.Filled.OfflinePin" />
+                    <MudTabPanel Style="text-transform:none" Text="Search Venue" Href="/thelab" Icon="@Icons.Material.Filled.Place" />
+                </MudTabs>
+
+            </MudItem>
+            <MudItem sm="3" xs="3" Class="layout-call">
+                <MudStack Style="height:60px;" Row="true" Spacing="3" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                    <MudText Style="color: #111111"> <MudIcon Icon="@Icons.Material.Filled.Phone" /> +91 8760803361</MudText>
+                    <MudButton Variant="Variant.Filled" @onclick="OpenLoginPage" Color="Color.Primary" Class="btn-sign" StartIcon="@Icons.Material.Filled.VerifiedUser">Sign Up</MudButton>
+                </MudStack>
+            </MudItem>
+        </MudGrid>
+    </header>
+</MudHidden>
+
+<MudHidden Breakpoint="Breakpoint.MdAndUp" Hidden="true">
+    <header class="layout-header">
+        <MudGrid Spacing="1">
+            <MudItem sm="9" xs="9" Class="layout-logo">
+                <img src="/images/logo-horizontal.svg" style="height:60px;margin-left:20px;" />
+            </MudItem>
+            <MudItem sm="3" xs="3" Class="text-end pt-2 pe-5">
+                <MudIconButton Size="Size.Medium" Icon="@Icons.Material.Filled.Menu" Color="Color.Primary" Edge="Edge.End" OnClick="@ToggleDrawer" />
+            </MudItem>
+        </MudGrid>
+    </header>
+</MudHidden>
+
+<MudDrawer @bind-Open="_drawerOpen" Anchor="Anchor.Left" Elevation="1" Variant="DrawerVariant.Temporary">
+    <MudNavMenu>
+        <MudNavLink Href="/" Icon="@Icons.Material.Filled.Home" IconColor="Color.Tertiary" Match="NavLinkMatch.All">Home</MudNavLink>
+        <MudNavLink Href="/about" Icon="@Icons.Material.Filled.AccountBox" IconColor="Color.Tertiary">Food Party</MudNavLink>
+        <MudNavLink Icon="@Icons.Material.Filled.History" IconColor="Color.Tertiary" Href="/blog">Plan n Event</MudNavLink>
+        <MudNavLink Icon="@Icons.Material.Filled.Login" IconColor="Color.Tertiary" Href="/login">Corporate Orders</MudNavLink>
+        <MudNavLink Icon="@Icons.Material.Filled.Contacts" IconColor="Color.Tertiary" Href="/contact">Search Venue</MudNavLink>
+    </MudNavMenu>
+    <MudGrid Spacing="1" Class="mt-3">
+        <MudItem xs="12" sm="12" Class="text-center">
+            <img src="/images/logo-horizontal.svg" height="50" />
+        </MudItem>
+    </MudGrid>
+</MudDrawer>
+
+<style>
+
+    .btn-sign {
+        border-radius: 40px;
+        background-color: #FF3B30 !important;
+        text-transform: capitalize !important;
+        box-shadow: 0px 4px 7.1px 0px #FFFFFF80 inset;
+    }
+
+        .btn-sign:hover {
+            background-color: #FF3B30 !important;
+        }
+
+    .layout-header {
+        height: 60px;
+        background-color: #ffffff;
+        border: 1px solid #F7F7F7;
+        margin-left: 24px;
+        margin-right: 24px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        position: relative; /* or absolute / fixed */
+        /* z-index: 9999;*/
+    }
+
+    .layout-logo {
+        display: flex;
+        align-items: center; /* vertical alignment */
+        /*justify-content: center;*/ /* horizontal alignment */
+        padding-left: 30px;
+    }
+
+    .layout-menu {
+        height: 60px;
+    }
+
+    .layout-call {
+        padding-right: 20px;
+        height: 60px;
+    }
+
+    .no-uppercase {
+        text-transform: none;
+        color: #666666;
+        font-size: 16px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+        .no-uppercase:hover {
+            background-color: #FFF6F6;
+            color: #FF6767;
+        }
+</style>
+
+@code{
+#nullable disable
+    [Inject] protected NavigationManager Navigation { get; set; }
+
+    private bool _drawerOpen = false;
+
+    void ToggleDrawer()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+
+    private void OpenLoginPage()
+    {
+        Navigation.NavigateTo("/login");
+    }
+}

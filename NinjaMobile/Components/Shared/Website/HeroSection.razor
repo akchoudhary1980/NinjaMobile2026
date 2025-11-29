@@ -1,0 +1,117 @@
+﻿<MudGrid Class="g-0 hero-bg">
+    <MudItem sm="12" xs="12" Class="text-center">
+        <div class="hero-hosting-text">
+            Hosting
+        </div>
+    </MudItem>
+    <MudItem sm="12" xs="12" Class="text-center">
+        <div>
+            <b class="hero-made-text">made</b> <span class="hero-effortless-text"> effortless</span>
+        </div>
+    </MudItem>
+    <MudItem sm="12" xs="12" Class="text-center">
+        <div class="hero-para-text">
+            Enjoy your big day stress-free. EzGatherr brings your dream event together beautifully, while you savor each moment.
+        </div>
+    </MudItem>
+    <MudItem sm="12" xs="12" Class="text-center">
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" Class="hero-btn-plan">Start Planning Now</MudButton>
+    </MudItem>
+</MudGrid>
+
+<style>
+
+    .hero-bg {
+        width: 100%;
+        height: auto;
+        /*box-shadow: 0px 4px 4px 0px #16223305, 0px 4px 24px 0px #16223305, 0px 24px 24px 0px #16223305, 0px 32px 32px 0px #16223305, 0px 64px 64px 0px #16223314, 0px 120px 120px 0px #1622330A;*/
+    }
+
+    .hero-btn-plan {
+        border-radius: 40px;
+        background-color: #FF3B30 !important;
+        text-transform: capitalize !important;
+        box-shadow: 0px 4px 7.1px 0px #FFFFFF80 inset;
+    }
+    .hero-btn-plan:hover {
+        background-color: #FF3B30 !important;
+    }
+
+    .hero-hosting-text {
+        font-family: 'Playfair Display', serif;
+        font-size: 120px;
+        font-weight: 400;
+        font-style: italic;
+        color: #111111;
+        letter-spacing: 2%;
+        line-height: 100%;
+    }
+
+    .hero-effortless-text {
+        font-family: 'Playfair Display', serif;
+        font-size: 120px;
+        font-weight: 400;
+        font-style: italic;
+        color: #FF6767;
+        letter-spacing: 2%;
+        line-height: 100%;
+        vertical-align: top;
+        display: inline-block;
+    }
+
+    .hero-made-text {
+        font-family: 'Playfair Display', serif;
+        font-size: 68px;
+        font-weight: 500;
+        font-style: italic;
+        color: #111111;
+        letter-spacing: 2%;
+        line-height: 100%;
+        vertical-align: top;
+        display: inline-block;
+    }
+
+    .hero-para-text {
+        font-size: 16px;
+        font-weight: 500;
+        color: #666666;       
+        letter-spacing: -2%;
+        line-height: 150%;
+    }
+    
+
+    /* Responsive adjustments */
+    @@media (max-width: 768px) {
+        .hero-hosting-text,
+        .hero-effortless-text {
+            font-size: 56px;
+        }
+
+        .hero-made-text {
+            font-size: 32px;
+        }
+        .hero-para-text {
+            font-size: 16px;
+            font-weight: 500;
+            color: #666666;
+            letter-spacing: -2%;
+            line-height: 150%;
+        }
+    }
+
+    @@media (max-width: 480px) {
+        .hero-hosting-text,
+        .hero-effortless-text {
+            font-size: 42px;
+        }
+        .hero-made-text {
+            font-size: 20px;
+        }
+        .hero-para-text {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: -2%;
+            line-height: 150%;
+        }
+    }
+</style>

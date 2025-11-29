@@ -1,0 +1,19 @@
+﻿@inherits LayoutComponentBase
+
+<title>EZar</title>
+
+<MudThemeProvider Theme="CustomeThemes.Themetheme" />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout Style="background-color: #F9F5FC;">
+    <HeaderSection />
+    <MudMainContent Class="m-0 p-0">
+        <div style="margin-top:60px">
+            @Body
+        </div>
+    </MudMainContent>
+    <FooterSection />
+</MudLayout>
+
