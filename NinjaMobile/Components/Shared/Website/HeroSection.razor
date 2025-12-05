@@ -1,12 +1,12 @@
-﻿<MudGrid Class="g-0 hero-bg">
+﻿<MudGrid Spacing="0" Class="hero-bg">
+    <div class="hero-bg-circle">
+    </div>
     <MudItem sm="12" xs="12" Class="text-center">
-        <div class="hero-hosting-text">
-            Hosting
-        </div>
-    </MudItem>
-    <MudItem sm="12" xs="12" Class="text-center">
-        <div>
-            <b class="hero-made-text">made</b> <span class="hero-effortless-text"> effortless</span>
+        <div class="hero-text-box">
+            <div class="hero-hosting-text">
+                Hosting <br />
+                <span><b class="hero-made-text">made</b>effortless</span>
+            </div>
         </div>
     </MudItem>
     <MudItem sm="12" xs="12" Class="text-center">
@@ -21,10 +21,25 @@
 
 <style>
 
-    .hero-bg {
-        width: 100%;
+    .hero-bg { 
+        position: relative;
         height: auto;
-        /*box-shadow: 0px 4px 4px 0px #16223305, 0px 4px 24px 0px #16223305, 0px 24px 24px 0px #16223305, 0px 32px 32px 0px #16223305, 0px 64px 64px 0px #16223314, 0px 120px 120px 0px #1622330A;*/
+        display: flex;
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+        padding:32px 24px 32px 24px;
+    }
+    .hero-bg-circle{
+        position:absolute;
+        width: 360px;
+        height: 360px;
+        top: -100px;
+        left: -156px;
+        border-radius: 50%;
+        background: linear-gradient(137deg, rgba(255, 111, 97, 0.27) 49.34%, rgba(255, 111, 97, 0.60) 120.01%);
+        filter: blur(200px);
+
     }
 
     .hero-btn-plan {
@@ -37,81 +52,112 @@
         background-color: #FF3B30 !important;
     }
 
+    .hero-text-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .hero-hosting-text {
         font-family: 'Playfair Display', serif;
-        font-size: 120px;
+        font-size: 56px;
         font-weight: 400;
         font-style: italic;
         color: #111111;
-        letter-spacing: 2%;
+        letter-spacing: -2%;
         line-height: 100%;
-    }
-
-    .hero-effortless-text {
-        font-family: 'Playfair Display', serif;
-        font-size: 120px;
-        font-weight: 400;
-        font-style: italic;
-        color: #FF6767;
-        letter-spacing: 2%;
-        line-height: 100%;
-        vertical-align: top;
-        display: inline-block;
+        text-align: left;
     }
 
     .hero-made-text {
         font-family: 'Playfair Display', serif;
-        font-size: 68px;
+        font-size: 32px;
         font-weight: 500;
         font-style: italic;
         color: #111111;
-        letter-spacing: 2%;
+        letter-spacing: -2%;
         line-height: 100%;
         vertical-align: top;
         display: inline-block;
     }
-
     .hero-para-text {
+        color: #666;
+        text-align: center;
         font-size: 16px;
-        font-weight: 500;
-        color: #666666;       
-        letter-spacing: -2%;
-        line-height: 150%;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; 
+        padding:14px;
     }
     
-
-    /* Responsive adjustments */
-    @@media (max-width: 768px) {
-        .hero-hosting-text,
-        .hero-effortless-text {
-            font-size: 56px;
-        }
-
-        .hero-made-text {
-            font-size: 32px;
-        }
-        .hero-para-text {
-            font-size: 16px;
-            font-weight: 500;
-            color: #666666;
-            letter-spacing: -2%;
-            line-height: 150%;
-        }
-    }
-
-    @@media (max-width: 480px) {
-        .hero-hosting-text,
-        .hero-effortless-text {
-            font-size: 42px;
-        }
-        .hero-made-text {
-            font-size: 20px;
-        }
-        .hero-para-text {
-            font-size: 14px;
-            font-weight: 500;
-            letter-spacing: -2%;
-            line-height: 150%;
-        }
-    }
 </style>
+
+@* 
+<div class="hero-section container text-center">
+
+    <div class="row">
+        <div class="hero-hosting-text col-12">
+            Hosting
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-2">
+        <div class="hero-made-text col-6 text-end pe-3">
+            made
+        </div>
+        <div class="hero-effortless-text col-6 text-start ps-3">
+            effortless
+        </div>
+    </div>
+
+    <div class="hero-para-text mt-3 px-3">
+        <p>
+            Enjoy your big day stress-free. EzGatherr brings your dream event
+            together beautifully, while you savor each moment.
+        </p>
+    </div>
+
+    <div class="text-center mt-3">
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" Class="hero-btn-plan">
+            Start Planning Now
+        </MudButton>
+    </div>
+
+</div>
+
+<style>
+.hero-hosting-text {
+    color: #111;
+    font-family: "Playfair Display";
+    font-size: 56px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -1.12px;
+}
+
+.hero-made-text,
+.hero-effortless-text {
+    color: #111;
+    font-family: "Playfair Display";
+    font-style: italic;
+    line-height: 1;
+}
+
+.hero-made-text {
+    font-size: 32px;
+    font-weight: 500;
+    padding-right:45px;
+}
+
+.hero-effortless-text {
+    font-size: 56px;
+    font-weight: 400;
+}
+
+.hero-para-text {
+    color: #666;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
+</style> *@

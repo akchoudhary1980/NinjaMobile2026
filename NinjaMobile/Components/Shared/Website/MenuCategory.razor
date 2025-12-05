@@ -1,0 +1,55 @@
+﻿<MudGrid Spacing="0" Class="menu-container">
+    <MudItem sm="12">
+        <MudStack Spacing="10" Row="true" AlignItems="AlignItems.Center" Justify="Justify.Center">
+
+            <MudPaper Outlined="false" Elevation="0" Class="menu-item text-center">
+                <MudIcon Icon="@Icons.Material.Filled.Lightbulb" />
+                <br/>
+                <MudText Typo="Typo.caption">Food</MudText>               
+            </MudPaper>
+
+            <MudPaper Outlined="false" Elevation="0" Class="menu-item text-center">
+                <MudIcon Icon="@Icons.Material.Filled.Lightbulb" />
+                <br/>
+                <MudText Typo="Typo.caption">@name</MudText>               
+            </MudPaper>
+
+            <MudPaper Outlined="false" Elevation="0" Class="menu-item text-center">
+                <MudIcon Icon="@Icons.Material.Filled.Lightbulb" />
+                <br/>
+                <MudText Typo="Typo.caption">Food</MudText>
+            </MudPaper>
+
+            <MudPaper Outlined="false" Elevation="0" Class="menu-item text-center ">
+                <MudIcon Icon="@Icons.Material.Filled.Lightbulb" />
+                <br/> 
+                <MudText Typo="Typo.caption">Food</MudText>
+            </MudPaper>
+        </MudStack>
+
+    </MudItem>
+
+</MudGrid>
+@code{
+    string name = "Food";
+}
+
+<style>
+    .menu-container{
+        height:56px;
+        width:auto;
+        border-radius:50px;
+        background-color:#fff;
+        padding:5px 20px 5px 20px;
+    }
+    .menu-item{
+        height:40px;
+        width:60px;
+        color: #666666;
+
+    }
+    .menu-item:hover{
+       color:red;
+    }
+
+</style>
