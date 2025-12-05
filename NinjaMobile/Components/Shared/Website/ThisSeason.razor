@@ -1,0 +1,111 @@
+﻿<MudGrid Spacing="1">
+
+    <MudItem xs="12" sm="12">
+        <div class="marque-heading">
+            <h2>This Season’s<br />Favorites</h2>
+        </div>
+    </MudItem>
+
+    <MudGrid Spacing="4">
+        <MudItem xs="12" sm="4">
+            <div class="season-img">
+                <img src="/images/web-content/navratri.png" alt="img" />
+                <div class="season-text-box">
+                    <h6>Navratri <br />Special</h6>
+                    <p>All-inclusive Pooja and decoration planning</p>
+                </div>
+            </div>
+        </MudItem>
+        <MudItem xs="12" sm="4">            
+            <div class="season-img">
+                <img src="/images/web-content/wedding.png" alt="img" />
+                <div class="season-text-box">
+                    <h6>Wedding <br />Special</h6>
+                    <p>Exclusive offers for weddings with MCs and DJs.</p>
+                </div>
+            </div>           
+        </MudItem>
+        <MudItem xs="12" sm="4">         
+            <div class="season-img">
+                <img src="/images/web-content/birthday.png" alt="img" />
+                <div class="season-text-box">
+                    <h6>Birthday <br />Bash</h6>
+                    <p>Celebrate birthdays with offers on décor.</p>
+                </div>
+            </div>           
+        </MudItem>
+    </MudGrid>
+
+</MudGrid>
+
+<style>
+
+    .season-img {
+        position:relative;        
+    }
+
+    .season-img img {
+        border-radius:30px;
+    }
+
+    .season-text-box {
+        width:100%;
+        position: absolute;
+        left: 50%; /* move to horizontal center */
+        bottom: 32px; /* keep bottom spacing */
+        transform: translateX(-50%); /* shift back half width */
+        text-align: center;
+    }
+
+        .season-text-box h6 {
+            color: white !important;
+            font-family: Playfair Display;
+            font-style:italic;
+            font-size: 60px;
+            font-weight: 400;
+            line-height:60px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+            pointer-events: none;
+            margin-bottom: 5px; /* fixed */
+        }
+
+        .season-text-box p {
+            color: white !important;
+            font-size: 16px;
+            font-weight: normal;            
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+            pointer-events: none;
+            margin-top: 5px;
+            margin-bottom: 0px; /* fixed */
+        }
+  
+
+
+    .season-heading {
+        margin-bottom: 64px;
+    }
+
+        .season-heading h2 {
+            font-family: Playfair Display;
+            font-weight: 400;
+            font-style: Italic;
+            font-size: 88px;
+            line-height: 100%;
+            letter-spacing: -2%;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+
+    /* Responsive adjustments */
+    @@media (max-width: 768px) {
+        .season-heading h2 {
+            font-size: 48px;
+        }
+    }
+
+    @@media (max-width: 480px) {
+        season-heading h2 {
+            font-size: 42px;
+        }
+    }
+</style>

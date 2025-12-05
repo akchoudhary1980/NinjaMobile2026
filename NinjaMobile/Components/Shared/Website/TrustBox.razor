@@ -1,0 +1,55 @@
+﻿<MudGrid Spacing="2" Class="trust-box">
+
+    <MudItem xs="12" sm="12">
+        <div class="trust-box-heading">
+            <h2>Built on trust.<br />Perfected with care.</h2>           
+        </div>
+    </MudItem>
+
+    <MudItem xs="6" sm="3">
+        <TrustCard Heading="Verified Vendors" Content="Book with confidence safe payments and verified processes." Icon="trust1-vector.svg" GradientColor="trust-box-card-content-blue"></TrustCard>
+    </MudItem>
+    <MudItem xs="6" sm="3">
+        <TrustCard Heading="Verified Vendors" Content="Book with confidence safe payments and processes." Icon="trust2-vector.svg" GradientColor="trust-box-card-content-pink"></TrustCard>
+    </MudItem>
+    <MudItem xs="6" sm="3">
+        <TrustCard Heading="Hassle Free Planning" Content="Plan events in minutes with a simple, guided flow." Icon="trust3-vector.svg" GradientColor="trust-box-card-content-blue"></TrustCard>
+    </MudItem>
+    <MudItem xs="6" sm="3">
+        <TrustCard Heading="Trusted by Many" Content="Thousands of happy users rely on EasyGather for stress-free events." Icon="trust4-vector.svg" GradientColor="trust-box-card-content-pink"></TrustCard>
+    </MudItem>
+</MudGrid>
+
+<style>
+    trust-box
+    {       
+        margin-bottom:20px;
+        height:auto;
+    }
+    .trust-box-heading {
+       
+        margin-bottom: 64px;
+    }
+        .trust-box-heading h2 {
+            font-family: Playfair Display;
+            font-weight: 400;
+            font-style: Italic;
+            font-size: 88px;
+            line-height: 100%;
+            letter-spacing: -2%;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+    /* Responsive adjustments */
+    @@media (max-width: 768px) {
+        .trust-box-heading h2 {
+            font-size: 64px;
+        }
+    }
+
+    @@media (max-width: 480px) {
+        .trust-box-heading h2 {
+            font-size: 42px;
+        }       
+    }
+</style>

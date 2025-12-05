@@ -1,0 +1,176 @@
+﻿<MudGrid Spacing="1" Class="marquee-container">
+
+    <MudItem xs="12" sm="12">        
+        <div class="marque-heading">
+            <h2>From Feat to Finale</h2>
+        </div>
+    </MudItem>
+
+
+     <MudItem xs="12" sm="12">
+            <div class="marquee">
+                <div class="marquee-content">
+                    <ExploreFood />
+                    <ExploreFood />
+                </div>
+            </div>
+        </MudItem>
+</MudGrid>
+
+<style>
+
+    .marquee-container {
+      
+        position:relative;
+    }
+
+    .marque-blur-circle {
+        position: absolute;
+        width: 625px;
+        height: 625px; 
+        top: 20px;
+        left: -219px;
+
+        border-radius: 50%;
+        background-color: #FF6F61;
+        filter: blur(250px);
+        opacity: 0.1;
+    }
+
+    .marquee {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+    }
+
+    .marquee-content {
+        display: inline-flex;
+        animation: scroll 30s linear infinite;
+    }
+
+    .marquee-icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 840px;
+        height: 360px;       
+        margin: 10px;
+        padding: 64px;       
+        background-color: #ffffff;
+        border-radius: 30px;
+        padding: 64px;
+        background-image: url('/images/web-content/quoet-vector.svg'); /* your SVG */
+        background-repeat: no-repeat;
+        background-position: top 40px right 40px;
+    }
+
+    .marquee-client-name {
+        color: #171717;
+    }
+
+        .marquee-client-name h6 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 0px;
+        }
+
+    .marquee-client-designation {
+        color: #737373;
+    }
+
+        .marquee-client-designation p {
+            font-size: 16px;
+            margin-bottom: 0px;
+        }
+
+    .marquee-content-area {
+        font-family: Source Sans 3;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -2%;
+        text-wrap:auto;
+    }
+
+    .marque-heading {
+        margin-bottom: 64px;
+    }
+
+        .marque-heading h2 {
+            font-family: Playfair Display;
+            font-weight: 400;
+            font-style: Italic;
+            font-size: 88px;
+            line-height: 100%;
+            letter-spacing: -2%;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+
+    /* Responsive adjustments */
+    @@media (max-width: 768px) {
+        .marque-heading h2 {
+            font-size: 48px;
+        }
+    }
+
+    @@media (max-width: 480px) {
+        marque-heading h2 {
+            font-size: 42px;
+        }
+    }
+
+
+    @@keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
+    }
+</style>
+
+
+
+@code {
+    private Breakpoint _currentBreakpoint;
+    private List<CardModel>
+    Cards = new()
+    {
+    new("Mark Roberts", "Working with DigitX was a pleasure. Their web design team created a stunning website that perfectly captured our brand's essence. The feedback from our customers has been overwhelmingly positive.","mark.png"),
+    new("Jena Johns", "Working with DigitX was a pleasure. Their web design team created a stunning website that perfectly captured our brand's essence. The feedback from our customers has been overwhelmingly positive.","jena.png"),   
+    };
+
+    private void OnBreakpointChanged(Breakpoint breakpoint)
+    {
+    _currentBreakpoint = breakpoint;
+    }
+    private List<List<CardModel>> GetSlides()
+    {
+        int cardsPerSlide = _currentBreakpoint < Breakpoint.Md ? 1 : 2;
+        var slides = new List<List<CardModel>>();
+
+        for (int i = 0; i < Cards.Count; i += cardsPerSlide)
+        {
+            slides.Add(Cards.Skip(i).Take(cardsPerSlide).ToList());
+        }
+
+        return slides;
+    }
+    public class CardModel
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Picture { get; set; }
+
+        public CardModel(string title, string description,string picture)
+        {
+            Title = title;
+            Description = description;
+            Picture = picture;
+        }
+    }
+}

@@ -1,0 +1,75 @@
+﻿<div class="trust-card-box">
+    <div class="@GradientColor">
+        <div>
+            <img src="/images/web-content/@Icon" alt="Alternate Text" />
+        </div>
+        <div class="trust-card-heading">
+            @Heading
+        </div>
+        <div class="trust-card-content">
+            @Content
+        </div>
+        
+    </div>
+</div>
+
+@code
+{
+    [Parameter]
+    public string GradientColor { get; set; } = "trust-box-card-content-blue";
+    [Parameter]
+    public string Icon { get; set; } = "trust1-vector.svg";
+    [Parameter]
+    public string Heading { get; set; } = "";
+    [Parameter]
+    public string Content { get; set; } = "";
+}
+
+<style>
+    .trust-card-box {       
+        height: 328px;
+        width:auto;
+        border-radius: 30px;       
+        background: #FFFFFF;
+        border: 1px solid #F8EFFE;
+        padding : 32px 12px 12px 12px;
+    }
+    .trust-box-card-content-blue {
+        height: 284px;
+        border-radius: 24px;
+        background: linear-gradient( 148.87deg, rgba(155, 81, 224, 0.104) -10.56%, rgba(155, 81, 224, 0.0208) 72.47% );
+        /* opacity: 0.4;*/
+        padding: 12px;
+    }
+
+    .trust-box-card-content-pink {
+        height: 284px;
+        border-radius: 24px;
+        background: linear-gradient(148.52deg, rgba(252, 226, 224, 0.56) -11.1%, rgba(252, 226, 224, 0.112) 73.9%);
+        /* opacity: 0.4;*/
+        padding: 12px;
+    } 
+
+    .trust-card-heading {
+        width: 150px;   
+        margin-top : 12px;
+        color: #171717;      
+        font-family: "Source Sans 3";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 40px; /* 125% */
+        letter-spacing: -0.64px;
+    }
+    .trust-card-content {
+        width: auto;
+        margin-top : 12px;
+        color: #737373;       
+        font-family: "Source Sans 3";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px; /* 125% */
+        letter-spacing: -0.4px;
+    }
+</style>
