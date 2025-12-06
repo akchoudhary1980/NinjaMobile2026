@@ -1,12 +1,35 @@
 ﻿<MudGrid Spacing="2" Class="trust-box">
 
     <MudItem xs="12" sm="12">
-        <div class="trust-box-heading">
+        <div class="trust-box-heading mt-2">
             <h2>Built on trust.<br />Perfected with care.</h2>           
         </div>
     </MudItem>
 
-    <MudItem xs="6" sm="3">
+    <MudItem xs="12" sm="12">
+        <div class="trust-marquee">
+            <div class="trust-marquee-content">
+                <MudStack Spacing="3" Row="true" AlignItems="AlignItems.Center">
+
+                <TrustCard Heading="Verified Vendors" Content="Book with confidence safe payments and verified processes." Icon="trust1-vector.svg" GradientColor="trust-box-card-content-blue"></TrustCard>
+                <TrustCard Heading="Verified Vendors" Content="Book with confidence safe payments and processes." Icon="trust2-vector.svg" GradientColor="trust-box-card-content-pink"></TrustCard>
+                <TrustCard Heading="Hassle Free Planning" Content="Plan events in minutes with a simple, guided flow." Icon="trust3-vector.svg" GradientColor="trust-box-card-content-blue"></TrustCard>
+                <TrustCard Heading="Trusted by Many" Content="Thousands of happy users rely on EasyGather for stress-free events." Icon="trust4-vector.svg" GradientColor="trust-box-card-content-pink"></TrustCard>
+                </MudStack>
+
+                <!-- duplicate entry-->
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
+
+                    <TrustCard Heading="Verified Vendors" Content="Book with confidence safe payments and verified processes." Icon="trust1-vector.svg" GradientColor="trust-box-card-content-blue"></TrustCard>
+                    <TrustCard Heading="Verified Vendors" Content="Book with confidence safe payments and processes." Icon="trust2-vector.svg" GradientColor="trust-box-card-content-pink"></TrustCard>
+                    <TrustCard Heading="Hassle Free Planning" Content="Plan events in minutes with a simple, guided flow." Icon="trust3-vector.svg" GradientColor="trust-box-card-content-blue"></TrustCard>
+                    <TrustCard Heading="Trusted by Many" Content="Thousands of happy users rely on EasyGather for stress-free events." Icon="trust4-vector.svg" GradientColor="trust-box-card-content-pink"></TrustCard>
+                </MudStack>
+            </div>
+        </div>
+    </MudItem>
+
+    @* <MudItem xs="6" sm="3">
         <TrustCard Heading="Verified Vendors" Content="Book with confidence safe payments and verified processes." Icon="trust1-vector.svg" GradientColor="trust-box-card-content-blue"></TrustCard>
     </MudItem>
     <MudItem xs="6" sm="3">
@@ -17,7 +40,7 @@
     </MudItem>
     <MudItem xs="6" sm="3">
         <TrustCard Heading="Trusted by Many" Content="Thousands of happy users rely on EasyGather for stress-free events." Icon="trust4-vector.svg" GradientColor="trust-box-card-content-pink"></TrustCard>
-    </MudItem>
+    </MudItem> *@
 </MudGrid>
 
 <style>
@@ -31,25 +54,24 @@
         margin-bottom: 64px;
     }
         .trust-box-heading h2 {
-            font-family: Playfair Display;
-            font-weight: 400;
-            font-style: Italic;
-            font-size: 88px;
-            line-height: 100%;
-            letter-spacing: -2%;
+            color: #111;
             text-align: center;
-            margin-bottom: 0px;
+            font-family: "Playfair Display";
+            font-size: 48px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: 100%; /* 48px */
+            letter-spacing: -0.96px;
         }
-    /* Responsive adjustments */
-    @@media (max-width: 768px) {
-        .trust-box-heading h2 {
-            font-size: 64px;
-        }
+
+    .trust-marquee {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
     }
 
-    @@media (max-width: 480px) {
-        .trust-box-heading h2 {
-            font-size: 42px;
-        }       
+    .trust-marquee-content {
+        display: inline-flex;
+        animation: scroll 30s linear infinite;
     }
 </style>

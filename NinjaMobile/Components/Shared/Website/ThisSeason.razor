@@ -7,6 +7,9 @@
     </MudItem>
 
     <MudGrid Spacing="4">
+          <div class="marquee">
+                <div class="marquee-content">
+        <MudStack Spacing="3" Row="true" AlignItems="AlignItems.Center">
         <MudItem xs="12" sm="4">
             <div class="season-img">
                 <img src="/images/web-content/navratri.png" alt="img" />
@@ -34,6 +37,9 @@
                 </div>
             </div>           
         </MudItem>
+        </MudStack>
+        </div>
+        </div>
     </MudGrid>
 
 </MudGrid>
@@ -46,6 +52,8 @@
 
     .season-img img {
         border-radius:30px;
+            width: 280px;
+            height: 350px;
     }
 
     .season-text-box {
@@ -61,22 +69,25 @@
             color: white !important;
             font-family: Playfair Display;
             font-style:italic;
-            font-size: 60px;
+            font-size: 48px;
             font-weight: 400;
-            line-height:60px;
+            line-height:40px;
             text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
             pointer-events: none;
             margin-bottom: 5px; /* fixed */
+            letter-spacing:-0.96px;
+
         }
 
         .season-text-box p {
             color: white !important;
-            font-size: 16px;
-            font-weight: normal;            
-            text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-            pointer-events: none;
-            margin-top: 5px;
-            margin-bottom: 0px; /* fixed */
+            text-align: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 21px */
+            letter-spacing: -0.28px;
+            text-wrap:wrap;
         }
   
 

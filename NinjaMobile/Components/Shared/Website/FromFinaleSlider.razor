@@ -1,17 +1,27 @@
 ﻿<MudGrid Spacing="1" Class="marquee-container">
 
-    <MudItem xs="12" sm="12">        
-        <div class="marque-heading">
-            <h2>From Feat to Finale</h2>
+    <MudItem xs="12" sm="12">    
+        <div class="hero-text-box1">
+            <div class="hero-hosting-text1">
+                From feast <br />
+                <span><b class="hero-made-text1">to</b>Finale</span>
+            </div>
         </div>
+        <div>
+            <span class="hero-para1">We’ve Got It Covered</span>
+       </div>
     </MudItem>
 
 
-     <MudItem xs="12" sm="12">
+     <MudItem xs="12" sm="12" Class="mt-2">
             <div class="marquee">
                 <div class="marquee-content">
+
+                    <MudStack Spacing="3" Row="true" AlignItems="AlignItems.Center">
+                       <ExploreFood />
                     <ExploreFood />
-                    <ExploreFood />
+                    </MudStack>
+                  
                 </div>
             </div>
         </MudItem>
@@ -108,28 +118,52 @@
             margin-bottom: 0px;
         }
 
-    /* Responsive adjustments */
-    @@media (max-width: 768px) {
-        .marque-heading h2 {
-            font-size: 48px;
-        }
+
+    .hero-text-box1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #111;
+        font-family: "Playfair Display";
+        font-size: 48px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.96px;
     }
 
-    @@media (max-width: 480px) {
-        marque-heading h2 {
-            font-size: 42px;
-        }
+    .hero-hosting-text1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 56px;
+        font-weight: 400;
+        font-style: italic;
+        color: #111111;
+        letter-spacing: -2%;
+        line-height: 100%;
+        text-align: left;
     }
 
-
-    @@keyframes scroll {
-        from {
-            transform: translateX(0);
-        }
-
-        to {
-            transform: translateX(-50%);
-        }
+    .hero-made-text1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 32px;
+        font-weight: 500;
+        font-style: italic;
+        color: #111111;
+        letter-spacing: -2%;
+        line-height: 100%;
+        vertical-align: top;
+        display: inline-block;
+    }
+    .hero-para1{
+        width: 159px;
+        height: 25.012px;
+        color: #111;
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.4px;
+        padding-left:101px;
     }
 </style>
 
