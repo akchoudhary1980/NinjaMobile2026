@@ -10,4 +10,8 @@
     <PackageReference Include="MudBlazor" Version="8.13.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Components\Shared\BentoBox\" />
+  </ItemGroup>
+
 </Project>

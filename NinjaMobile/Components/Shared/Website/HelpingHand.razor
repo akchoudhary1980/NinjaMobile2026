@@ -1,0 +1,58 @@
+﻿<MudGrid Spacing="0" Class="helping-hand">
+    <MudItem xs="12" sm="12">
+        <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceAround">
+
+            <div>
+                <img src="/images/web-content/halping-hand.png" />
+            </div>
+
+            <div>
+                <p style="visibility:hidden">Add a Helping</p>
+            </div>
+
+            <div class="mt-8">
+                <h3>Add a Helping Hand</h3>
+                <p>Add a server for ₹299 relax and enjoy your event.</p>
+            </div>
+
+            <div class="mt-8 text-end">
+                <h3>₹299</h3>
+                <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Medium" Class="btn-primary" StartIcon="@Icons.Material.Filled.Add">Add</MudButton>
+            </div>
+
+        </MudStack>
+    </MudItem>
+</MudGrid>
+
+<style>
+    .helping-hand {
+        position:relative;
+        width: auto;
+        height: 120px;
+        background: #15607F;
+        color:#fff;
+        border-radius: 24px;
+        overflow:visible;
+    }
+        .helping-hand img {           
+           position:absolute;
+           bottom:0px;
+           left:25px;
+        }
+
+        .helping-hand h3 {
+            font-weight: 700;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 130%;
+            letter-spacing: -2%;
+        }
+
+        .helping-hand p {           
+            font-weight: 400;
+            font-style: normal;
+            font-size: 12px;           
+            line-height: 130%;
+            letter-spacing: -2%;
+        }
+</style>

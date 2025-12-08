@@ -1,0 +1,60 @@
+﻿<MudGrid Spacing="0" Class="pujari-hand">
+    <MudItem xs="12" sm="12">
+        <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceAround">
+
+            <div>
+                <img src="/images/web-content/pujari-hand.png" />
+            </div>
+
+            <div>
+                <p style="visibility:hidden">Add a Helping</p>
+            </div>
+
+            <div class="mt-8">
+                <h3>Poojari Assistant</h3>
+                <p>
+                    Let rituals flow smoothly we’ll handle the details.
+                </p>
+            </div>
+
+            <div class="mt-8 text-end">
+                <h3>₹1000</h3>
+                <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Medium" Class="btn-primary" StartIcon="@Icons.Material.Filled.Add">Add</MudButton>
+            </div>
+
+        </MudStack>
+    </MudItem>
+</MudGrid>
+
+<style>
+    .pujari-hand {
+        position: relative;
+        width: auto;
+        height: 120px;
+        background-color: #FFD54D;     
+        color: #111111;
+        border-radius: 24px;
+        overflow: visible;
+    }
+        .pujari-hand img {
+            position: absolute;
+            bottom: 0px;
+            left: 25px;
+        }
+
+        .pujari-hand h3 {
+            font-weight: 700;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 130%;
+            letter-spacing: -2%;
+        }
+
+        .pujari-hand p {
+            font-weight: 400;
+            font-style: normal;
+            font-size: 12px;
+            line-height: 130%;
+            letter-spacing: -2%;
+        }
+</style>
