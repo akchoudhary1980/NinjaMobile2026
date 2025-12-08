@@ -1,28 +1,29 @@
 ﻿<MudGrid Spacing="0" Class="dj-hand">
     <MudItem xs="12" sm="12">
-        <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceAround">
-
-            <div>
-                <img src="/images/web-content/dj-hand.png" />
-            </div>
-
-            <div>
-                <p style="visibility:hidden">Add a Helping</p>
-            </div>
-
-            <div class="mt-8">
+        <MudGrid Spacing="0">
+            <MudItem xs="4" sm="4" Class="dj-img-container">
+                <img class="dj-img" src="/images/web-content/dj-hand.png" />
+            </MudItem>
+            <MudItem xs="8" sm="8">
                 <h3>Turn up with DJ</h3>
                 <p>
                     Keep the crowd dancing beats start at just ₹499.
                 </p>
-            </div>
+            </MudItem>
+        </MudGrid>
 
-            <div class="mt-8 text-end">
-                <h3>₹499</h3>
+    </MudItem>
+
+    <MudItem xs="12" sm="12" Class="dj-bottom-div">
+        <MudGrid Spacing="0" Class="d-flex justify-content-center align-items-center">
+            <MudItem xs="6" sm="6">
+                <h3>₹100</h3>
+            </MudItem>
+            <MudItem xs="6" sm="6" Class="text-end p-2">
                 <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Medium" Class="btn-primary" StartIcon="@Icons.Material.Filled.Add">Add</MudButton>
-            </div>
 
-        </MudStack>
+            </MudItem>
+        </MudGrid>
     </MudItem>
 </MudGrid>
 
@@ -30,31 +31,51 @@
     .dj-hand {
         position: relative;
         width: auto;
-        height: 120px;
+        height: 142px;
         background-color: #FFC5C0;
         color: #111111;
         border-radius: 24px;
         overflow: visible;
     }
-        .dj-hand img {
-            position: absolute;
-            bottom: 0px;
-            left: 25px;
-        }
 
-        .dj-hand h3 {
-            font-weight: 700;
-            font-style: normal;
-            font-size: 24px;
-            line-height: 130%;
-            letter-spacing: -2%;
-        }
+    .dj-img-container {
+        position: relative;
+    }
 
-        .dj-hand p {
-            font-weight: 400;
-            font-style: normal;
-            font-size: 12px;
-            line-height: 130%;
-            letter-spacing: -2%;
-        }
+    .dj-img {
+        position: absolute;
+        width: 85px;
+          height: 108px;
+        bottom: 0px;
+        left: 16px;
+    }
+
+
+    .dj-hand h3 {
+        font-weight: 700;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 130%;
+        letter-spacing: -2%;
+        padding-left: 16px;
+        padding-top: 16px;
+    }
+
+    .dj-hand p {
+        width: 200px;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        line-height: 130%;
+        letter-spacing: -2%;
+        text-wrap: wrap;
+        padding-left: 16px;
+    }
+
+    .dj-bottom-div {
+        width: auto;
+        height: 53px;
+        background-color: #FFD9D6;
+        border-radius: 0px 0px 24px 24px;
+    }
 </style>

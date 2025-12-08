@@ -1,0 +1,128 @@
+﻿
+<MudGrid Spacing="0">
+    <MudItem xs="12">
+        <img class="img-package" style="width:100%" src="/images/web-content/packagetab.png" />
+    </MudItem>
+    <MudItem class="headingadd mt-2" sm="12">
+        <h2>Basic Indian</h2>
+        <p>
+            A curated selection of Indian staples — aromatic rice, wholesome curries,
+            and breads prepared fresh for everyday events, offering the perfect blend of comfort, taste, and tradition.
+        </p>
+    </MudItem>
+
+
+    <MudItem xs="12" sm="12">
+       
+
+            <MudTabs Centered="true" Rounded="false" Outlined="false" Elevation="0" ApplyEffectsToContainer="true">
+                <MudTabPanel Text="Package">
+                    <MudGrid Spacing="0">
+                        <MudItem xs="12">
+                            <PackageTab />
+
+                        </MudItem>
+
+                    </MudGrid>
+                </MudTabPanel>
+                <MudTabPanel Text="Add-on">
+                    <MudGrid Spacing="0" Class="p-3">
+                        <MudItem xs="12">
+                            <MudTextField T="string" Label="Search" Variant="Variant.Outlined" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" AdornmentColor="Color.Secondary" />
+                        </MudItem>
+                        <MudItem xs="12" sm="12" Class="mt-2">
+                            <MudStack Row="true" Wrap="Wrap.Wrap" AlignItems="AlignItems.Center" Justify="Justify.FlexStart" >
+
+                                <MudButton Class="rounded-pill" Variant="Variant.Filled" Color="Color.Success" Size="Size.Small">All</MudButton>
+                                <MudButton Class="rounded-pill" Variant="Variant.Filled" Size="Size.Small">Food</MudButton>
+                                <MudButton Class="rounded-pill" Variant="Variant.Filled" Size="Size.Small">Setup Service</MudButton>
+                                <MudButton Class="rounded-pill" Variant="Variant.Filled" Size="Size.Small">Pooja</MudButton>
+                                <MudButton Class="rounded-pill" Variant="Variant.Filled" Size="Size.Small">Deco</MudButton>
+                                <MudButton Class="rounded-pill"  Variant="Variant.Filled" Size="Size.Small">Dj</MudButton>
+
+                            </MudStack>
+                        </MudItem>
+                        <MudItem xs="12">
+                            <MudStack Row="false" AlignItems="AlignItems.Center">
+                                <MudGrid Spacing="0" >
+                                    <MudItem xs="12" Class="mt-5">
+                                        <PujariHand />
+                                    </MudItem>
+                                    <MudItem xs="12" Class="mt-5">
+                                        <DjHand />
+                                    </MudItem>
+                                    <MudItem xs="12" Class="mt-5">
+                                        <HelpingHand />
+                                    </MudItem>
+                                </MudGrid>
+
+
+                            </MudStack>
+                        </MudItem>
+
+                    </MudGrid>
+                </MudTabPanel>
+            </MudTabs>
+
+        </MudItem>
+    
+
+    <MudItem xs="12" class="footer-add-div">
+        <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center">
+            <div>
+                <h6> ₹ 13,513.50</h6>
+                <p>Inclusive of all taxes</p>
+            </div>
+
+            <div>
+                <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Medium" Class="btn-primary" StartIcon="@Icons.Material.Filled.Add">Place Order</MudButton>
+
+            </div>
+        </MudStack>
+    </MudItem>
+
+</MudGrid>
+
+
+<style>
+    .img-package {
+        height: 250px;
+        opacity: 1;
+        border-radius: 24px;
+    }
+    .headingadd {
+        padding: 10px;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+        .heading h2 {
+            font-family: DM Sans;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 130%;
+            letter-spacing: -2%;
+        }
+
+        .heading p {
+            font-family: DM Sans;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: -2%;
+            width: 328px;
+            height: 72px;
+            top: 353px;
+            left: 16px;
+            opacity: 1;
+        }
+
+    .footer-add-div {
+            width: 360px;
+            height: 56px;
+            background-color: #3E1268;
+            color: #FFFFFF;
+            padding-left: 20px;
+            padding-right: 20px;
+    }
+</style>
