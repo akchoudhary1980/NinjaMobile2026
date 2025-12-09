@@ -1,5 +1,4 @@
-﻿<MudDialog Class="custom-dialog">
-    <DialogContent>
+﻿
         <MudGrid Spacing="0" Class="event-container">
             <MudItem xs="12" sm="12">
                 <div class="event-top-bar">
@@ -9,18 +8,15 @@
                     <div>
                         <p>Share your event details so we can craft a catering plan tailored to your occasion and guest experience.</p>
                     </div>
-                    <div>
-                        <img src="/images/web-content/client-info.png" alt="img" />
-                    </div>
 
-                    <div class="event-top-bar-closebtn">
-                        <MudIconButton Icon="@Icons.Material.Filled.Close" @onclick="CloseDialog" Size="Size.Medium" />
-                    </div>
+                    @*<div class="event-top-bar-closebtn">
+                        <MudIconButton Icon="@Icons.Material.Filled.Close" Size="Size.Medium" />
+                    </div>*@
                 </div>
             </MudItem>
             <MudItem xs="12" sm="12">
                 <div class="event-form-box">
-                    <MudForm @ref="form" @bind-IsValid="@success" @bind-Errors="@errors">
+                    <MudForm>
 
                         <MudGrid Spacing="3">
                             <MudItem xs="12" sm="12">
@@ -69,7 +65,7 @@
                             </MudItem>
 
                             <MudItem xs="12" sm="12">
-                                <MudButton Variant="Variant.Filled" @onclick="CustomisedPackageShow" Class="btn-primary" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Check" FullWidth="true">Save & Continue</MudButton>
+                                <MudButton Variant="Variant.Filled" Class="btn-primary" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Check" FullWidth="true">Save & Continue</MudButton>
                             </MudItem>
                         </MudGrid>
 
@@ -77,82 +73,12 @@
                 </div>
             </MudItem>
         </MudGrid>
-    </DialogContent>
-</MudDialog>
-
 
 
 @code {
-
-    [Parameter]
-    public string ProductFor { get; set; } = "GatherrBox";
-
-    [CascadingParameter]
-    private IMudDialogInstance MudDialog { get; set; }
-
-    [Inject] IDialogService Dialog { get; set; } = default!;
-
-    private readonly DialogOptions _noHeader = new()
-    {
-        MaxWidth = MaxWidth.Large,
-        NoHeader = true,
-        CloseButton = true,
-        CloseOnEscapeKey = true
-    };
-
-    private async Task CustomisedPackageShow()
-    {
-        switch (ProductFor)
-        {
-            case "GatherrBox":
-                await Dialog.ShowAsync<CustomisedPackage>("Customised  Gatherr Package", _noHeader);
-                break;
-            case "GatherrFeast":
-                await Dialog.ShowAsync<CustomisedPackage>("Customised Bento Package", _noHeader);
-                break;
-            case "GatherrBento":
-                await Dialog.ShowAsync<CustomisedBentoPackage>("Customised Bento Package", _noHeader);
-                break;
-        }
-
-    }
-
-    private void CloseDialog()
-    {
-        MudDialog.Close();
-    }
-}
-
-
-
-@code {
-    bool success;
-    string[] errors = { };
-    MudTextField<string> pwField1;
-    MudForm form;
     private DateTime? _date = DateTime.Today;
     private TimeSpan? _time = new TimeSpan(00, 45, 00);
-
-    // show model here
-
 }
-
-
-<style>
-    .custom-dialog {
-        border-radius: 24px !important;
-        background-color: transparent !important;
-        box-shadow: none !important;
-        overflow: visible !important;
-    }
-
-        .custom-dialog .mud-dialog-content {
-            overflow: visible !important;
-            padding: 0px;
-            margin: 0px;
-            position: relative;
-        }
-</style>
 
 <style>
     .event-container {
@@ -166,7 +92,6 @@
         padding: 24px 32px 24px 32px;
         border-top-left-radius: 24px;
         border-top-right-radius: 24px;
-        background-image: url('/images/web-content/client-info-bg.svg');
         background-repeat: no-repeat;
         background-position: right 32px bottom;
     }
