@@ -1,0 +1,51 @@
+﻿<MudStack Class="veg-numeric" Spacing="2" Row="true" AlignItems="AlignItems.Center">
+    <MudText Typo="Typo.body2">Veg</MudText>
+    <MudIconButton Variant="Variant.Outlined" Size="Size.Small"  @onclick="Decrement" Class="rounded-circle white-btn" Icon="@Icons.Material.Filled.Remove"></MudIconButton>  
+    <input type="number" step="@Step" min="@Min" max="@Max" value="@Value" @onchange="OnValueChanged" class="white-text-filed">
+    <MudIconButton Variant="Variant.Outlined" Size="Size.Small" @onclick="Increment" Class="rounded-circle white-btn" Icon="@Icons.Material.Filled.Add"></MudIconButton>  
+</MudStack>
+
+
+<style>
+    .veg-numeric {
+        width: fit-content;
+        height: 32px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 40px;
+        background-color: #0EB559;
+        color: white;
+    }
+    .white-btn{
+        height:22px;
+        width:22px;
+        border:1.5px solid #fff!important;
+        color:#fff!important;
+    }
+    .white-text-filed {
+        height: 22px;
+        width: 32px;
+        color: #333333;
+        border-radius: 15px;
+        text-align: center;
+        display: inline-block;
+        font-size: 13px;
+    }
+        /* Hide spin buttons */
+        .white-text-filed::-webkit-inner-spin-button,
+        .white-text-filed::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .white-text-filed:focus {
+            outline: none; /* removes the default black outline */
+            box-shadow: none; /* removes any glow/shadow */
+            border: 1px solid #ccc; /* optional: add your own subtle border */
+        }
+
+    .white-text-filed {
+        -moz-appearance: textfield;
+    }
+</style>
+

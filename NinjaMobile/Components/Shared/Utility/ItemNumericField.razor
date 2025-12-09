@@ -1,0 +1,51 @@
+﻿<MudStack Class="item-numeric" Spacing="1" Row="true" AlignItems="AlignItems.Center">   
+    <MudIconButton Variant="Variant.Outlined" Size="Size.Small"  @onclick="Decrement" Class="rounded-circle black-btn" Icon="@Icons.Material.Filled.Remove"></MudIconButton>  
+    <input type="number" step="@Step" min="@Min" max="@Max" value="@Value" @onchange="OnValueChanged" class="black-text-filed">
+    <MudIconButton Variant="Variant.Outlined" Size="Size.Small" @onclick="Increment" Class="rounded-circle black-btn" Icon="@Icons.Material.Filled.Add"></MudIconButton>  
+</MudStack>
+
+
+<style>
+    .item-numeric {
+        width: fit-content;
+        height: 26px;
+        padding-left: 7px;
+        padding-right: 7px;
+        border-radius: 30px;
+        background-color: #333333;
+        color: white;
+    }
+    .black-btn {
+        height: 20px;
+        width: 20px;      
+        color: #fff !important;
+        background-color: #5E5E5E!important;
+    }
+    .black-text-filed {
+        height: 22px;
+        width: 32px;
+        background-color: #5E5E5E;
+        color: #fff;
+        border-radius: 15px;
+        text-align: center;
+        display: inline-block;
+        font-size: 13px;
+    }
+        /* Hide spin buttons */
+        .black-text-filed::-webkit-inner-spin-button,
+        .black-text-filed::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .black-text-filed:focus {
+            outline: none; /* removes the default black outline */
+            box-shadow: none; /* removes any glow/shadow */
+            border: 1px solid #ccc; /* optional: add your own subtle border */
+        }
+
+    .black-text-filed {
+        -moz-appearance: textfield;
+    }
+</style>
+
