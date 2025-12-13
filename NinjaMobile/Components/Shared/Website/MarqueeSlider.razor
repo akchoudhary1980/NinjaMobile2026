@@ -1,14 +1,9 @@
 ﻿<MudGrid Spacing="1" Class="marquee-container">
 
     <MudItem xs="12" sm="12">
-
-        @* <div class="marque-blur-circle">
-
-        </div> *@
-        <div class="marque-heading">
+        <div class="marque-heading mt-5 mb-3">
             <h2>What our<br />clients say</h2>
         </div>
-
     </MudItem>
      <MudItem xs="12" sm="12">
             <div class="marquee">
@@ -72,8 +67,7 @@
 <style>
 
     .marquee-container {
-      
-        position:relative;
+       position:relative;
     }
 
     .marque-blur-circle {
@@ -93,6 +87,8 @@
         overflow: hidden;
         white-space: nowrap;
         width: 100%;
+/*        padding: 24px 50px 24px 45px;
+*/
     }
 
     .marquee-content {
@@ -104,15 +100,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 840px;
+        width: auto;
         height: 360px;       
         margin: 10px;
-        padding: 64px;       
         background-color: #ffffff;
         border-radius: 30px;
-        padding: 64px;
         background-image: url('/images/web-content/quoet-vector.svg'); /* your SVG */
         background-repeat: no-repeat;
+        background-size:35px 28px;
         background-position: top 40px right 40px;
     }
 
@@ -139,10 +134,11 @@
         font-family: Source Sans 3;
         font-weight: 400;
         font-style: normal;
-        font-size: 24px;
+        font-size: 16px;
         line-height: 30px;
-        letter-spacing: -2%;
-        text-wrap:auto;
+        letter-spacing: -0.32px;
+        width:232px;
+        text-wrap: auto;
     }
 
     .marque-heading {
@@ -159,30 +155,6 @@
             text-align: center;
             margin-bottom: 0px;
         }
-
-    /* Responsive adjustments */
-    @@media (max-width: 768px) {
-        .marque-heading h2 {
-            font-size: 48px;
-        }
-    }
-
-    @@media (max-width: 480px) {
-        marque-heading h2 {
-            font-size: 42px;
-        }
-    }
-
-
-    @@keyframes scroll {
-        from {
-            transform: translateX(0);
-        }
-
-        to {
-            transform: translateX(-50%);
-        }
-    }
 </style>
 
 

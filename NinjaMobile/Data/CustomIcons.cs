@@ -58,47 +58,33 @@
         </svg>";
 
         public const string Veg = @"<svg xmlns=""http://www.w3.org/2000/svg"" xml:space=""preserve"" width=""18px"" height=""18px"" version=""1.1"" style=""shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd""
-        viewBox=""0 0 33.77 33.77""
-         xmlns:xlink=""http://www.w3.org/1999/xlink""
-         xmlns:xodm=""http://www.corel.com/coreldraw/odm/2003"">
-         <defs>
-          <style type=""text/css"">
-           <![CDATA[
-            .str0 {stroke:#48AC3C;stroke-width:3.5;stroke-miterlimit:22.9256}
-            .fil0 {fill:#FEFEFE}
-            .fil1 {fill:#48AC3C}
-           ]]>
-          </style>
-         </defs>
-         <g id=""Layer_x0020_1"">
-          <metadata id=""CorelCorpID_0Corel-Layer""/>
-          <g id=""_2470439860656"">
-           <rect class=""fil0 str0"" x=""1.75"" y=""1.75"" width=""30.26"" height=""30.26""/>
-           <circle class=""fil1"" cx=""16.88"" cy=""16.88"" r=""9.94""/>
-          </g>
-         </g>
-        </svg>";
-        public const string NonVeg = @"<svg xmlns=""http://www.w3.org/2000/svg"" xml:space=""preserve"" width=""18px"" height=""18px"" version=""1.1"" style=""shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd""
-        viewBox=""0 0 5.83 5.83""
-         xmlns:xlink=""http://www.w3.org/1999/xlink""
-         xmlns:xodm=""http://www.corel.com/coreldraw/odm/2003"">
-         <defs>
-          <style type=""text/css"">
-           <![CDATA[
-            .str0 {stroke:#E31E24;stroke-width:0.6;stroke-miterlimit:22.9256}
-            .fil0 {fill:#FEFEFE}
-            .fil1 {fill:#E31E24}
-           ]]>
-          </style>
-         </defs>
-         <g id=""Layer_x0020_1"">
-          <metadata id=""CorelCorpID_0Corel-Layer""/>
-          <g id=""_2470446514544"">
-           <rect class=""fil0 str0"" x=""0.3"" y=""0.3"" width=""5.22"" height=""5.22""/>
-           <circle class=""fil1"" cx=""2.91"" cy=""2.91"" r=""1.71""/>
-          </g>
-         </g>
-        </svg>";
+viewBox=""0 0 33.77 33.77""
+ xmlns:xlink=""http://www.w3.org/1999/xlink""
+ xmlns:xodm=""http://www.corel.com/coreldraw/odm/2003"">
+ <defs>
+  <style type=""text/css"">
+   <![CDATA[
+    .str0 {stroke:#48AC3C;stroke-width:3.5;stroke-miterlimit:22.9256}
+    .fil0 {fill:#FEFEFE}
+    .fil1 {fill:#48AC3C}
+   ]]>
+  </style>
+ </defs>
+ <g id=""Layer_x0020_1"">
+  <metadata id=""CorelCorpID_0Corel-Layer""/>
+  <g id=""_2470439860656"">
+   <rect class=""fil0 str0"" x=""1.75"" y=""1.75"" width=""30.26"" height=""30.26""/>
+   <circle class=""fil1"" cx=""16.88"" cy=""16.88"" r=""9.94""/>
+  </g>
+ </g>
+</svg>";
+
+        public const string NonVeg = @"
+    <svg xmlns='http://www.w3.org/2000/svg' width='18px' height='18px' viewBox='0 0 1.33 1.33'>
+      <polygon fill='#FEFEFE' stroke='#E03524' stroke-width='0.14'
+               points='0.07,0.07 1.26,0.07 1.26,1.26 0.07,1.26'/>
+      <circle cx='0.67' cy='0.67' r='0.39' fill='#E03524'/>
+    </svg>";
 
         public const string Circle = @"<svg xmlns=""http://www.w3.org/2000/svg"" xml:space=""preserve"" width=""18px"" height=""18px"" version=""1.1"" style=""shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd""
         viewBox=""0 0 2.98 2.98""
@@ -117,5 +103,21 @@
           <circle class=""fil0 str0"" cx=""1.49"" cy=""1.49"" r=""1.33""/>
          </g>
         </svg>";
+
+        public const string DeletIcon = @"<svg xmlns=""http://www.w3.org/2000/svg"" width=""21"" height=""21"" viewBox=""0 0 21 21"" fill=""none"">
+  <g clip-path=""url(#clip0_539_13809)"">
+    <path d=""M3.5 6.125H17.5"" stroke=""#666666"" stroke-width=""1.5"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M8.75 9.625V14.875"" stroke=""#666666"" stroke-width=""1.5"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M12.25 9.625V14.875"" stroke=""#666666"" stroke-width=""1.5"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M4.375 6.125L5.25 16.625C5.25 17.0891 5.43437 17.5342 5.76256 17.8624C6.09075 18.1906 6.53587 18.375 7 18.375H14C14.4641 18.375 14.9092 18.1906 15.2374 17.8624C15.5656 17.5342 15.75 17.0891 15.75 16.625L16.625 6.125"" stroke=""#666666"" stroke-width=""1.5"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M7.875 6.125V3.5C7.875 3.26794 7.96719 3.04538 8.13128 2.88128C8.29538 2.71719 8.51794 2.625 8.75 2.625H12.25C12.4821 2.625 12.7046 2.71719 12.8687 2.88128C13.0328 3.04538 13.125 3.26794 13.125 3.5V6.125"" stroke=""#666666"" stroke-width=""1.5"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+  </g>
+  <defs>
+    <clipPath id=""clip0_539_13809"">
+      <rect width=""21"" height=""21"" fill=""white""/>
+    </clipPath>
+  </defs>
+</svg>";
     }
+
 }

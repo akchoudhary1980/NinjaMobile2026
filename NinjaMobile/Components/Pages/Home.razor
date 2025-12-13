@@ -3,36 +3,52 @@
 
 <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="m-0 p-0">
     <HeroSection />
-    <MarqueeZigZagSlider/>
-    <FromFinaleSlider/>
-    @* <MenuCategory/> *@
-    <MudGrid Spacing="2">
+    <MarqueeZigZagSlider />
+    <FromFinaleSlider />
+    <div class="mt-3">
+        <MenuCategory />
+    </div>
+    <MudGrid Spacing="2" Class="mt-2 p-2">
         <MudItem xs="6">
             <PackageCard />
         </MudItem>
         <MudItem xs="6">
             <PackageCard />
         </MudItem>
-        <MudItem xs="6">
+        <MudItem xs="6">  
             <PackageCard />
         </MudItem>
         <MudItem xs="6">
             <PackageCard />
         </MudItem>
-    </MudGrid>  
-    <TrustBox/>
+        <MudItem xs="12" sm="12" Class="text-center mt-2">
+            <MudButton Variant="Variant.Outlined" Class="rounded-pill">View all</MudButton>
+
+        </MudItem>
+    </MudGrid>
+    <div style="margin-top:34px;">
+        <Gatherboxdiv />
+    </div>
+
+    <div class="mt-3">
+        <TrustBox />
+    </div>
+
     <div style="margin-top:110px;">
         <NeedGuidness />
 
     </div>
-    <MarqueeSlider/>
-    <div style="margin-top:28px;">
-    <Gatherboxdiv/>
+
+    <div class="mt-2">
+        <MarqueeSlider />
+
     </div>
-    <ThisSeason/>
+
+    <ThisSeason />
     <div style="margin-bottom:200px;">
-    <FrequentlyAasked />
+        <FrequentlyAasked />
     </div>
 </MudContainer>
+
 
 

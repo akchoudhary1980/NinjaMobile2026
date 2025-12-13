@@ -13,7 +13,6 @@
         <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
             <MudButton>Package</MudButton>
             <MudButton>Add-on</MudButton>
-            <MudButton Class="modify-btn">Modify Menu</MudButton>
         </MudStack>
     </MudItem>
     <MudItem xs="12" sm="12">
@@ -43,32 +42,18 @@
     </MudItem>
 
     <MudItem xs="12" Class="p-3">
-        <h2 class="all-heading">Fit for</h2>
-        <MudGrid Spacing="0">
-            <MudItem xs="6" sm="6">
-                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <div class="veg-div p-2">
-                        <img src="/images/web-content/veg.png" />
-                        <span>Veg</span>
-                        <div class="mt-2">
-                            <p class="p-2">10 people With increment of +5</p>
-
-                        </div>
-                    </div>
-                </MudStack>
-            </MudItem>
-            <MudItem xs="6" sm="6">
-                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <div class="veg-non-div p-2">
-                        <img src="/images/web-content/non-veg.png" />
-                        <span>Non-veg</span>
-                        <div class="mt-2">
-                            <p class="p-2">10 people With increment of +5</p>
-                        </div>
-                    </div>
-                </MudStack>
-            </MudItem>
-        </MudGrid>
+        <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+            <span class="all-heading">Fit for</span>
+            <span>Total: <span class="all-heading">20 Persons</span></span>
+        </MudStack>
+        <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween" Class="mt-2 mb-2">
+            <p>Veg</p>
+            <VegNumericField />
+        </MudStack>
+        <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+            <p>Non-Veg</p>
+            <NonVegNumericField />
+        </MudStack>
     </MudItem>
 
     <MudItem xs="12" sm="12">
@@ -78,43 +63,51 @@
     <MudItem xs="12" Class="p-3">
         <h2 class="all-heading">Starters 1</h2>
         <MudGrid Spacing="0">
-            <MudItem xs="8" sm="8">
+            <MudItem xs="10" sm="10">
                 <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
                     <img src="/images/web-content/veg.png" />
                     <span>Tandoori Achari Aloo</span>
                 </MudStack>
             </MudItem>
-            <MudItem xs="4" sm="4" Class="pl-10">
-                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <span>2 psc</span>
+            <MudItem xs="2" sm="2">
+                <MudStack Spacing="5" Row="true" AlignItems="AlignItems.Center" Class="pl-10">
+                    <MudIcon Icon="@CustomIcons.DeletIcon" />
                 </MudStack>
             </MudItem>
-            <MudItem xs="12" sm="12">
+            <MudItem xs="8" sm="8">
                 <p class="para">Baby potatoes marinated in spiced yogurt and roasted to smoky perfection.</p>
             </MudItem>
+            <MudItem xs="4" sm="4" Class="mt-5">
+                <ItemNumericField />
+            </MudItem>
+            <MudItem xs="12" sm="12">
+                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" FullWidth="true">+ Place Order</MudButton>
+            </MudItem>
         </MudGrid>
-    </MudItem>
-
-    <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
     </MudItem>
 
     <MudItem xs="12" Class="p-3">
         <h2 class="all-heading">Mains</h2>
         <MudGrid Spacing="0">
-            <MudItem xs="8" sm="8">
+            <MudItem xs="10" sm="10">
                 <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <img src="/images/web-content/non-veg.png" />
-                    <span>Dal Tadka </span>
+                    <img src="/images/web-content/veg.png" />
+                    <span>Dal Tadka</span>
                 </MudStack>
             </MudItem>
-            <MudItem xs="4" sm="4" Class="pl-10">
-                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <span>2 psc</span>
+            <MudItem xs="2" sm="2">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center" Class="pl-10">
+                    <MudIcon Icon="@CustomIcons.DeletIcon" />
                 </MudStack>
+            </MudItem>
+            <MudItem xs="8" sm="8">
+                <p class="para">Baby potatoes marinated in spiced yogurt and roasted to smoky perfection.</p>
+            </MudItem>
+            <MudItem xs="4" sm="4" Class="mt-5">
+                <ItemNumericField />
             </MudItem>
             <MudItem xs="12" sm="12">
-                <p class="para">Yellow lentils tempered with ghee, garlic, and spices..</p>
+                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" FullWidth="true">+ Place Order</MudButton>
             </MudItem>
         </MudGrid>
     </MudItem>
@@ -124,23 +117,33 @@
     </MudItem>
 
     <MudItem xs="12" Class="p-3">
-        @*<h2 class="all-heading">Bread / Rice</h2>*@
+        @*<h2 class="all-heading">Mains</h2>*@
         <MudGrid Spacing="0">
-            <MudItem xs="8" sm="8">
+            <MudItem xs="10" sm="10">
                 <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <img src="/images/web-content/veg.png" />
-                    <span>Chole Masala</span>
+                    <img src="/images/web-content/non-veg.png" />
+                    <span>Chole Masala </span>
                 </MudStack>
             </MudItem>
-            <MudItem xs="4" sm="4" Class="pl-10">
-                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <span>2 psc</span>
+            <MudItem xs="2" sm="2">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center" Class="pl-10">
+                    <MudIcon Icon="@CustomIcons.DeletIcon" />
                 </MudStack>
+            </MudItem>
+            <MudItem xs="8" sm="8">
+                <p class="para">Baby potatoes marinated in spiced yogurt and roasted to smoky perfection.</p>
+            </MudItem>
+            <MudItem xs="4" sm="4" Class="mt-5">
+                <ItemNumericField />
             </MudItem>
             <MudItem xs="12" sm="12">
-                <p class="para">Yellow lentils tempered with ghee, garlic, and spices.</p>
+                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" FullWidth="true">+ Place Order</MudButton>
             </MudItem>
         </MudGrid>
+    </MudItem>
+
+    <MudItem xs="12" sm="12">
+        <hr style="border:1px dashed black" />
     </MudItem>
 
     <MudItem xs="12" sm="12">
@@ -150,19 +153,22 @@
     <MudItem xs="12" Class="p-3">
         <h2 class="all-heading">Bread / Rice</h2>
         <MudGrid Spacing="0">
-            <MudItem xs="8" sm="8">
+            <MudItem xs="10" sm="10">
                 <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
                     <img src="/images/web-content/non-veg.png" />
                     <span>Wheat Tandoori Roti</span>
                 </MudStack>
             </MudItem>
-            <MudItem xs="4" sm="4" Class="pl-10">
-                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <span>2 psc</span>
+            <MudItem xs="2" sm="2">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center" Class="pl-10">
+                    <MudIcon Icon="@CustomIcons.DeletIcon" />
                 </MudStack>
             </MudItem>
-            <MudItem xs="12" sm="12">
-                <p class="para">Yellow lentils tempered with ghee, garlic, and spices.</p>
+            <MudItem xs="8" sm="8">
+                <p class="para">Baby potatoes marinated in spiced yogurt and roasted to smoky perfection.</p>
+            </MudItem>
+            <MudItem xs="4" sm="4" Class="mt-5">
+                <ItemNumericField />
             </MudItem>
         </MudGrid>
     </MudItem>
@@ -174,19 +180,25 @@
     <MudItem xs="12" Class="p-3">
         @*<h2 class="all-heading">Starters 1</h2>*@
         <MudGrid Spacing="0">
-            <MudItem xs="8" sm="8">
+            <MudItem xs="10" sm="10">
                 <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
                     <img src="/images/web-content/veg.png" />
                     <span>Steamed Rice</span>
                 </MudStack>
             </MudItem>
-            <MudItem xs="4" sm="4" Class="pl-10">
-                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <span>2 psc</span>
+            <MudItem xs="2" sm="2">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center" Class="pl-10">
+                    <MudIcon Icon="@CustomIcons.DeletIcon" />
                 </MudStack>
             </MudItem>
+            <MudItem xs="8" sm="8">
+                <p class="para">Baby potatoes marinated in spiced yogurt and roasted to smoky perfection.</p>
+            </MudItem>
+            <MudItem xs="4" sm="4" Class="mt-5">
+                <ItemNumericField />
+            </MudItem>
             <MudItem xs="12" sm="12">
-                <p class="para">Fluffy, perfectly cooked white rice light and wholesome.</p>
+                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" FullWidth="true">+ Place Order</MudButton>
             </MudItem>
         </MudGrid>
     </MudItem>
@@ -198,19 +210,25 @@
     <MudItem xs="12" Class="p-3">
         <h2 class="all-heading">Dessert</h2>
         <MudGrid Spacing="0">
-            <MudItem xs="8" sm="8">
+            <MudItem xs="10" sm="10">
                 <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
                     <img src="/images/web-content/non-veg.png" />
                     <span>Wheat Tandoori Roti</span>
                 </MudStack>
             </MudItem>
-            <MudItem xs="4" sm="4" Class="pl-10">
-                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <span>2 psc</span>
+            <MudItem xs="2" sm="2">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center" Class="pl-10">
+                    <MudIcon Icon="@CustomIcons.DeletIcon" />
                 </MudStack>
             </MudItem>
+            <MudItem xs="8" sm="8">
+                <p class="para">Baby potatoes marinated in spiced yogurt and roasted to smoky perfection.</p>
+            </MudItem>
+            <MudItem xs="4" sm="4" Class="mt-5">
+                <ItemNumericField />
+            </MudItem>
             <MudItem xs="12" sm="12">
-                <p class="para">Yellow lentils tempered with ghee, garlic, and spices.</p>
+                <MudButton Variant="Variant.Filled" Size="Size.Medium" FullWidth="true" Class="rounded-pill">+ Add More Dessert</MudButton>
             </MudItem>
         </MudGrid>
     </MudItem>
@@ -219,45 +237,46 @@
         <hr style="border:1px dashed black" />
     </MudItem>
 
+    <MudItem xs="12" sm="12" Class="mb-4 p-2">
+        <HelpingHand />
+
+    </MudItem>
+
 
     <MudItem xs="12" class="footer-div">
-        <MudStack Row="true" Justify="Justify.Center" AlignItems="AlignItems.Center">
+        <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center">
             <div>
-                <h6> ₹ 13,513.50</h6> 
+                <h6> ₹ 13,513.50</h6>
                 <p>Inclusive of all taxes</p>
             </div>
+
             <div>
-                <MudButton Variant="Variant.Outlined"
-                           Size="Size.Medium"
-                           Class="rounded-pill white-outline-btn">
-                    Modify
-                </MudButton>
-            </div>
-            <div>
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" Color="Color.Primary">Cart</MudButton>
+                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" Color="Color.Primary">Place Order</MudButton>
             </div>
         </MudStack>
     </MudItem>
+
 </MudGrid>
 
 <style>
     .img-package {
         height: 250px;
         opacity: 1;
-        border-radius:24px;
+        border-radius: 24px;
     }
 
     .heading {
         padding-left: 16px;
     }
 
-    .heading h2 {
-        font-family: DM Sans;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 130%;
-        letter-spacing: -2%;
-    }
+        .heading h2 {
+            font-family: DM Sans;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 130%;
+            letter-spacing: -2%;
+        }
+
         .heading p {
             font-family: DM Sans;
             font-weight: 400;
@@ -270,10 +289,12 @@
             left: 16px;
             opacity: 1;
         }
+
     .modify-btn {
         background-color: #EEEEEE;
-        border-radius:24px;
+        border-radius: 24px;
     }
+
     .all-heading {
         width: 150px;
         height: 18px;
@@ -283,8 +304,9 @@
         font-size: 14px;
         line-height: 100%;
         letter-spacing: -2%;
-        color:  #111111;
+        color: #111111;
     }
+
     .veg-div {
         width: auto;
         height: 102px;
@@ -294,6 +316,7 @@
         border-radius: 16px;
         background: linear-gradient(154.48deg, rgba(15, 181, 89, 0.4) -9.17%, rgba(15, 181, 89, 0.08) 62.92%);
     }
+
     .veg-non-div {
         width: auto;
         height: 102px;
@@ -303,6 +326,7 @@
         border-radius: 16px;
         background: linear-gradient(154.48deg, rgba(246, 20, 21, 0.4) -9.17%, rgba(246, 20, 21, 0.08) 62.92%);
     }
+
     .veg-div div {
         width: 144px;
         height: 60px;
@@ -312,6 +336,7 @@
         border-radius: 16px;
         background-color: #FFFFFF;
     }
+
     .veg-non-div div {
         width: 144px;
         height: 60px;
@@ -321,9 +346,10 @@
         border-radius: 16px;
         background-color: #FFFFFF;
     }
+
     .para {
-        width:auto;
-        text-wrap:wrap;
+        width: 183px;
+        text-wrap: wrap;
         color: #666;
         font-family: "DM Sans";
         font-size: 12px;
@@ -332,24 +358,13 @@
         line-height: normal;
         letter-spacing: -0.24px;
     }
+
     .footer-div {
         width: 360px;
         height: 56px;
         background-color: #3E1268;
         color: #FFFFFF;
+        padding-left: 20px;
+        padding-right: 20px;
     }
-    .footer-btn{
-
-    }
-    .white-outline-btn {
-        border: 1px solid white !important;
-        color: white !important;
-    }
-
-        .white-outline-btn:hover {
-            background-color: white !important;
-            color: #220A3A !important; 
-        }
-
-
 </style>

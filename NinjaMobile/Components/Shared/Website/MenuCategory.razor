@@ -1,29 +1,29 @@
 ﻿<MudGrid Spacing="0" Class="menu-container">
-    <MudItem sm="12">
-        <MudStack Spacing="10" Row="true" AlignItems="AlignItems.Center" Justify="Justify.Center">
+    <MudItem xs="12" sm="12">
+        <MudStack Spacing="12" Row="true" AlignItems="AlignItems.Center" Justify="Justify.Center">
 
             <MudPaper Outlined="false" Elevation="0" Class="menu-item text-center">
-                <MudIcon Icon="@Icons.Material.Filled.Lightbulb" />
+                <MudIcon Icon="@CustomIcons.FoodIcon" />
                 <br/>
                 <MudText Typo="Typo.caption">Food</MudText>               
             </MudPaper>
 
             <MudPaper Outlined="false" Elevation="0" Class="menu-item text-center">
-                <MudIcon Icon="@Icons.Material.Filled.Lightbulb" />
+                <MudIcon Icon="@CustomIcons.VenueIcons" />
                 <br/>
-                <MudText Typo="Typo.caption">@name</MudText>               
+                <MudText Typo="Typo.caption">Venue</MudText>               
             </MudPaper>
 
             <MudPaper Outlined="false" Elevation="0" Class="menu-item text-center">
-                <MudIcon Icon="@Icons.Material.Filled.Lightbulb" />
+                <MudIcon Icon="@CustomIcons.EventIcon" />
                 <br/>
-                <MudText Typo="Typo.caption">Food</MudText>
+                <MudText Typo="Typo.caption">Event</MudText>
             </MudPaper>
 
             <MudPaper Outlined="false" Elevation="0" Class="menu-item text-center ">
-                <MudIcon Icon="@Icons.Material.Filled.Lightbulb" />
+                <MudIcon Icon="@CustomIcons.CorporateIcon" />
                 <br/> 
-                <MudText Typo="Typo.caption">Food</MudText>
+                <MudText Typo="Typo.caption">Corporate</MudText>
             </MudPaper>
         </MudStack>
 
@@ -44,7 +44,7 @@
     }
     .menu-item{
         height:40px;
-        width:60px;
+        width:auto;
         color: #666666;
 
     }

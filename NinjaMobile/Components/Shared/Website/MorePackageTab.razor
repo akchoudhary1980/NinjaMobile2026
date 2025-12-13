@@ -42,26 +42,18 @@
     </MudItem>
 
     <MudItem xs="12" Class="p-3">
-        <MudGrid Spacing="0">
-            <MudItem xs="6" sm="6">
-                <span>Fit for</span>
-            </MudItem>
-            <MudItem xs="6" sm="6">
-                <span>Total: 20 Persons</span>
-            </MudItem>
-            <MudItem xs="6" sm="6">
-                <p>Veg</p>
-            </MudItem>
-            <MudItem xs="6" sm="6">
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" Color="Color.Primary">Place Order</MudButton>
-            </MudItem>
-            <MudItem xs="6" sm="6">
-                <p>Non-Veg</p>
-            </MudItem>
-            <MudItem xs="6" sm="6">
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" Color="Color.Primary">Place Order</MudButton>
-            </MudItem>
-        </MudGrid>
+        <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+            <span class="all-heading">Fit for</span>
+            <span>Total: <span class="all-heading">20 Persons</span></span>
+        </MudStack>
+        <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween" Class="mt-2 mb-2">
+            <p>Veg</p>
+            <VegNumericField />
+        </MudStack>
+        <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+            <p>Non-Veg</p>
+            <NonVegNumericField />
+        </MudStack>
     </MudItem>
 
     <MudItem xs="12" sm="12">
@@ -71,25 +63,51 @@
     <MudItem xs="12" Class="p-3">
         <h2 class="all-heading">Starters 1</h2>
         <MudGrid Spacing="0">
-            <MudItem xs="8" sm="8">
+            <MudItem xs="10" sm="10">
                 <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <img src="/images/web-content/_food.svg" />
+                    <img src="/images/web-content/veg.png" />
                     <span>Tandoori Achari Aloo</span>
                 </MudStack>
             </MudItem>
-            <MudItem xs="4" sm="4">
-                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <img src="/images/web-content/_food.svg" />
+            <MudItem xs="2" sm="2">
+                <MudStack Spacing="5" Row="true" AlignItems="AlignItems.Center" Class="pl-10">
+                    <MudIcon Icon="@CustomIcons.DeletIcon" />
                 </MudStack>
             </MudItem>
-            <MudItem xs="6" sm="6">
+            <MudItem xs="8" sm="8">
                 <p class="para">Baby potatoes marinated in spiced yogurt and roasted to smoky perfection.</p>
             </MudItem>
-            <MudItem xs="6" sm="6">
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" Color="Color.Primary">Place Order</MudButton>
+            <MudItem xs="4" sm="4" Class="mt-5">
+                <ItemNumericField />
             </MudItem>
             <MudItem xs="12" sm="12">
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" FullWidth="true" Color="Color.Primary">Place Order</MudButton>
+                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" FullWidth="true">+ Place Order</MudButton>
+            </MudItem>
+        </MudGrid>
+    </MudItem>
+
+    <MudItem xs="12" Class="p-3">
+        <h2 class="all-heading">Mains</h2>
+        <MudGrid Spacing="0">
+            <MudItem xs="10" sm="10">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
+                    <img src="/images/web-content/veg.png" />
+                    <span>Dal Tadka</span>
+                </MudStack>
+            </MudItem>
+            <MudItem xs="2" sm="2">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center" Class="pl-10">
+                    <MudIcon Icon="@CustomIcons.DeletIcon" />
+                </MudStack>
+            </MudItem>
+            <MudItem xs="8" sm="8">
+                <p class="para">Baby potatoes marinated in spiced yogurt and roasted to smoky perfection.</p>
+            </MudItem>
+            <MudItem xs="4" sm="4" Class="mt-5">
+                <ItemNumericField />
+            </MudItem>
+            <MudItem xs="12" sm="12">
+                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" FullWidth="true">+ Place Order</MudButton>
             </MudItem>
         </MudGrid>
     </MudItem>
@@ -99,29 +117,33 @@
     </MudItem>
 
     <MudItem xs="12" Class="p-3">
-        <h2 class="all-heading">Mains</h2>
+        @*<h2 class="all-heading">Mains</h2>*@
         <MudGrid Spacing="0">
+            <MudItem xs="10" sm="10">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
+                    <img src="/images/web-content/non-veg.png" />
+                    <span>Chole Masala </span>
+                </MudStack>
+            </MudItem>
+            <MudItem xs="2" sm="2">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center" Class="pl-10">
+                    <MudIcon Icon="@CustomIcons.DeletIcon" />
+                </MudStack>
+            </MudItem>
             <MudItem xs="8" sm="8">
-                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <img src="/images/web-content/_food.svg" />
-                    <span>Dal Tadka </span>
-                </MudStack>
-            </MudItem>
-            <MudItem xs="4" sm="4">
-                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <img src="/images/web-content/_food.svg" />
-                </MudStack>
-            </MudItem>
-            <MudItem xs="6" sm="6">
                 <p class="para">Baby potatoes marinated in spiced yogurt and roasted to smoky perfection.</p>
             </MudItem>
-            <MudItem xs="6" sm="6">
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" Color="Color.Primary">Place Order</MudButton>
+            <MudItem xs="4" sm="4" Class="mt-5">
+                <ItemNumericField />
             </MudItem>
             <MudItem xs="12" sm="12">
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" FullWidth="true" Color="Color.Primary">Place Order</MudButton>
+                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" FullWidth="true">+ Place Order</MudButton>
             </MudItem>
         </MudGrid>
+    </MudItem>
+
+    <MudItem xs="12" sm="12">
+        <hr style="border:1px dashed black" />
     </MudItem>
 
     <MudItem xs="12" sm="12">
@@ -131,25 +153,22 @@
     <MudItem xs="12" Class="p-3">
         <h2 class="all-heading">Bread / Rice</h2>
         <MudGrid Spacing="0">
-            <MudItem xs="8" sm="8">
+            <MudItem xs="10" sm="10">
                 <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <img src="/images/web-content/_food.svg" />
+                    <img src="/images/web-content/non-veg.png" />
                     <span>Wheat Tandoori Roti</span>
                 </MudStack>
             </MudItem>
-            <MudItem xs="4" sm="4">
-                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <img src="/images/web-content/_food.svg" />
+            <MudItem xs="2" sm="2">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center" Class="pl-10">
+                    <MudIcon Icon="@CustomIcons.DeletIcon" />
                 </MudStack>
             </MudItem>
-            <MudItem xs="6" sm="6">
+            <MudItem xs="8" sm="8">
                 <p class="para">Baby potatoes marinated in spiced yogurt and roasted to smoky perfection.</p>
             </MudItem>
-            <MudItem xs="6" sm="6">
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" Color="Color.Primary">Place Order</MudButton>
-            </MudItem>
-            <MudItem xs="12" sm="12">
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" FullWidth="true" Color="Color.Primary">Place Order</MudButton>
+            <MudItem xs="4" sm="4" Class="mt-5">
+                <ItemNumericField />
             </MudItem>
         </MudGrid>
     </MudItem>
@@ -159,57 +178,27 @@
     </MudItem>
 
     <MudItem xs="12" Class="p-3">
-        <h2 class="all-heading">Steamed Rice</h2>
+        @*<h2 class="all-heading">Starters 1</h2>*@
         <MudGrid Spacing="0">
+            <MudItem xs="10" sm="10">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
+                    <img src="/images/web-content/veg.png" />
+                    <span>Steamed Rice</span>
+                </MudStack>
+            </MudItem>
+            <MudItem xs="2" sm="2">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center" Class="pl-10">
+                    <MudIcon Icon="@CustomIcons.DeletIcon" />
+                </MudStack>
+            </MudItem>
             <MudItem xs="8" sm="8">
-                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <img src="/images/web-content/_food.svg" />
-                    <span>Tandoori Achari Aloo</span>
-                </MudStack>
-            </MudItem>
-            <MudItem xs="4" sm="4">
-                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <img src="/images/web-content/_food.svg" />
-                </MudStack>
-            </MudItem>
-            <MudItem xs="6" sm="6">
                 <p class="para">Baby potatoes marinated in spiced yogurt and roasted to smoky perfection.</p>
             </MudItem>
-            <MudItem xs="6" sm="6">
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" Color="Color.Primary">Place Order</MudButton>
+            <MudItem xs="4" sm="4" Class="mt-5">
+                <ItemNumericField />
             </MudItem>
             <MudItem xs="12" sm="12">
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" FullWidth="true" Color="Color.Primary">Place Order</MudButton>
-            </MudItem>
-        </MudGrid>
-    </MudItem>
-
-    <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
-    </MudItem>
-
-    <MudItem xs="12" Class="p-3">
-        <h2 class="all-heading">Starters 1</h2>
-        <MudGrid Spacing="0">
-            <MudItem xs="8" sm="8">
-                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <img src="/images/web-content/_food.svg" />
-                    <span>Tandoori Achari Aloo</span>
-                </MudStack>
-            </MudItem>
-            <MudItem xs="4" sm="4">
-                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <img src="/images/web-content/_food.svg" />
-                </MudStack>
-            </MudItem>
-            <MudItem xs="6" sm="6">
-                <p class="para">Baby potatoes marinated in spiced yogurt and roasted to smoky perfection.</p>
-            </MudItem>
-            <MudItem xs="6" sm="6">
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" Color="Color.Primary">Place Order</MudButton>
-            </MudItem>
-            <MudItem xs="12" sm="12">
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" FullWidth="true" Color="Color.Primary">Place Order</MudButton>
+                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" FullWidth="true">+ Place Order</MudButton>
             </MudItem>
         </MudGrid>
     </MudItem>
@@ -221,25 +210,25 @@
     <MudItem xs="12" Class="p-3">
         <h2 class="all-heading">Dessert</h2>
         <MudGrid Spacing="0">
-            <MudItem xs="8" sm="8">
+            <MudItem xs="10" sm="10">
                 <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <img src="/images/web-content/_food.svg" />
+                    <img src="/images/web-content/non-veg.png" />
                     <span>Wheat Tandoori Roti</span>
                 </MudStack>
             </MudItem>
-            <MudItem xs="4" sm="4">
-                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <img src="/images/web-content/_food.svg" />
+            <MudItem xs="2" sm="2">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center" Class="pl-10">
+                    <MudIcon Icon="@CustomIcons.DeletIcon" />
                 </MudStack>
             </MudItem>
-            <MudItem xs="6" sm="6">
+            <MudItem xs="8" sm="8">
                 <p class="para">Baby potatoes marinated in spiced yogurt and roasted to smoky perfection.</p>
             </MudItem>
-            <MudItem xs="6" sm="6">
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" Color="Color.Primary">Place Order</MudButton>
+            <MudItem xs="4" sm="4" Class="mt-5">
+                <ItemNumericField />
             </MudItem>
             <MudItem xs="12" sm="12">
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" FullWidth="true" Class="rounded-pill" Color="Color.Primary">Place Order</MudButton>
+                <MudButton Variant="Variant.Filled" Size="Size.Medium" FullWidth="true" Class="rounded-pill">+ Add More Dessert</MudButton>
             </MudItem>
         </MudGrid>
     </MudItem>
@@ -248,14 +237,13 @@
         <hr style="border:1px dashed black" />
     </MudItem>
 
-
     <MudItem xs="12" class="footer-div">
         <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center">
             <div>
                 <h6> ₹ 13,513.50</h6>
                 <p>Inclusive of all taxes</p>
             </div>
- 
+
             <div>
                 <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" Color="Color.Primary">Place Order</MudButton>
             </div>
@@ -354,7 +342,7 @@
     }
 
     .para {
-        width: auto;
+        width: 183px;
         text-wrap: wrap;
         color: #666;
         font-family: "DM Sans";
@@ -370,7 +358,7 @@
         height: 56px;
         background-color: #3E1268;
         color: #FFFFFF;
-        padding-left:20px;
-        padding-right:20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 </style>

@@ -1,0 +1,156 @@
+﻿
+
+<MudGrid Spacing="0" Class="eventpooja-container">
+    <MudItem xs="12" sm="12">
+        <div class="eventpooja-top-bar">
+            <div>
+                <h2>We’d Love to Organize<br /> Your Puja!</h2>
+            </div>
+            <div>
+                <p>Share your event details so we can craft a catering plan tailored to your occasion and guest experience.</p>
+            </div>
+            <div class="pooja-img-btn">
+                <MudFab Color="Color.Tertiary" StartIcon="@Icons.Material.Filled.Add" Size="Size.Medium" />
+            </div>
+        </div>
+
+        
+    </MudItem>
+    <MudItem xs="12" sm="12">
+        <div class="eventpooja-form-box">
+            <MudForm>
+
+                <MudGrid Spacing="3">
+                    <MudItem xs="12" sm="12">
+                        <MudText Typo="Typo.caption">Phone Number</MudText>
+                        <MudTextField T="string" Mask="@(new PatternMask("0000000000"))" Variant="Variant.Outlined" Margin="Margin.Dense" Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.Phone" AdornmentColor="Color.Primary" Required="true" RequiredError="Phone numbe is required !" />
+                    </MudItem>
+                    <MudItem xs="12" sm="12">
+                        <MudText Typo="Typo.caption">Event Date</MudText>
+                        <MudDatePicker Margin="Margin.Dense" Variant="Variant.Outlined" @bind-Date="_date" AdornmentIcon="@Icons.Material.Filled.CalendarMonth" AdornmentColor="Color.Primary" />
+                    </MudItem>
+
+                    <MudItem xs="6" sm="6">
+                        <MudText Typo="Typo.caption">Start Time</MudText>
+                        <MudTimePicker Label="12 hours" AmPm="true" @bind-Time="_time" Variant="Variant.Outlined" Margin="Margin.Dense" AdornmentIcon="@Icons.Material.Filled.Timer" AdornmentColor="Color.Primary" />
+                    </MudItem>
+                    <MudItem xs="6" sm="6">
+                        <MudText Typo="Typo.caption">End Time</MudText>
+                        <MudTimePicker Label="12 hours" AmPm="true" @bind-Time="_time" Variant="Variant.Outlined" Margin="Margin.Dense" AdornmentIcon="@Icons.Material.Filled.Timer" AdornmentColor="Color.Primary" />
+                    </MudItem>
+
+                    <MudItem xs="12" sm="12">
+                        <MudText Typo="Typo.caption">Occasion / Event</MudText>
+                        <MudSelect T="string" Variant="Variant.Outlined" Margin="Margin.Dense" Placeholder="Please Select" AdornmentIcon="@Icons.Material.Filled.Event" AdornmentColor="Color.Primary">
+                            <MudSelectItem Value="@("Pizza")">Birth Day</MudSelectItem>
+                            <MudSelectItem Value="@("Burger")">Party</MudSelectItem>
+                            <MudSelectItem Value="@("Hotdog")">Baby Shower</MudSelectItem>
+                        </MudSelect>
+                    </MudItem>
+
+
+                    <MudItem xs="6" sm="6">
+                        <MudText Typo="Typo.caption">Veg Guest Count</MudText>
+                        <MudSelect T="string" Variant="Variant.Outlined" Margin="Margin.Dense" Placeholder="Please Select" AdornmentIcon="@Icons.Material.Filled.Face4" AdornmentColor="Color.Primary">
+                            <MudSelectItem Value="@("Pizza")">10</MudSelectItem>
+                            <MudSelectItem Value="@("Burger")">20</MudSelectItem>
+                            <MudSelectItem Value="@("Hotdog")">30</MudSelectItem>
+                        </MudSelect>
+                    </MudItem>
+                    <MudItem xs="6" sm="6">
+                        <MudText Typo="Typo.caption">Non-Veg Guest Count</MudText>
+                        <MudSelect T="string" Variant="Variant.Outlined" Margin="Margin.Dense" Placeholder="Please Select" AdornmentIcon="@Icons.Material.Filled.Face5" AdornmentColor="Color.Primary">
+                            <MudSelectItem Value="@("Pizza")">10</MudSelectItem>
+                            <MudSelectItem Value="@("Burger")">20</MudSelectItem>
+                            <MudSelectItem Value="@("Hotdog")">30</MudSelectItem>
+                        </MudSelect>
+                    </MudItem>
+
+                    <MudItem xs="12" sm="12">
+                        <MudButton Variant="Variant.Filled" Class="btn-primary" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Check" FullWidth="true">Save & Continue</MudButton>
+                    </MudItem>
+                </MudGrid>
+
+            </MudForm>
+        </div>
+    </MudItem>
+</MudGrid>
+
+
+@code {
+    private DateTime? _date = DateTime.Today;
+    private TimeSpan? _time = new TimeSpan(00, 45, 00);
+}
+
+<style>
+    .eventpooja-container {
+        width: auto;
+    }
+
+    .eventpooja-top-bar {
+        position: relative;
+        height: 150px;
+        background-color: #FFD54D;
+        padding: 24px 32px 24px 32px;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+        background-repeat: no-repeat;
+        background-position: right 32px bottom;
+    }
+
+        .eventpooja-top-bar h2 {
+            color: #111;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: -0.48px;
+            width: 280px;
+            text-wrap:wrap;
+        }
+
+        .eventpooja-top-bar p {
+            color: #111;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%; /* 15.6px */
+            letter-spacing: -0.24px;
+        }
+
+        .eventpooja-top-bar img {
+            position: absolute;
+            bottom: 0px;
+            right: 38px;
+            overflow: visible;
+        }
+
+    .eventpooja-top-bar-closebtn {
+        position: absolute;
+        background-color: #ffffff;
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        top: -28px;
+        right: -28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .eventpooja-form-box {
+        padding: 32px;
+        background-color: #ffffff;
+        border-end-start-radius: 24px;
+        border-end-end-radius: 24px;
+    }
+
+
+    .pooja-img-btn {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 10px;
+        right:24px;
+    }
+</style>

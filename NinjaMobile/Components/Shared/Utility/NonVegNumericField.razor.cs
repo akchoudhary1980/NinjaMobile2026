@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 #nullable disable
-namespace Ninja.Components.Shared.Utility
+namespace NinjaMobile.Components.Shared.Utility
 {
     public partial class NonVegNumericField
     {

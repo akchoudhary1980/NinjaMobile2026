@@ -1,5 +1,6 @@
 ﻿<MudStack Class="veg-numeric" Spacing="2" Row="true" AlignItems="AlignItems.Center">
-    <MudText Typo="Typo.body2">Veg</MudText>
+    @*<MudText Typo="Typo.body2">Veg</MudText>*@
+
     <MudIconButton Variant="Variant.Outlined" Size="Size.Small"  @onclick="Decrement" Class="rounded-circle white-btn" Icon="@Icons.Material.Filled.Remove"></MudIconButton>  
     <input type="number" step="@Step" min="@Min" max="@Max" value="@Value" @onchange="OnValueChanged" class="white-text-filed">
     <MudIconButton Variant="Variant.Outlined" Size="Size.Small" @onclick="Increment" Class="rounded-circle white-btn" Icon="@Icons.Material.Filled.Add"></MudIconButton>  
