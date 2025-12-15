@@ -1,0 +1,204 @@
+﻿<MudGrid Spacing="0">
+    <MudItem xs="12" Class="loyalty-div">
+        <span class="first-layout"></span>
+
+    </MudItem>
+
+    <MudItem xs="12" Class="loyalty-div2">
+        <MudStack Row="true">
+            <MudItem xs="10">
+                <MudItem>
+                    <MudStack Row="true">
+                        <div class="img-div d-flex justify-content-center">
+                            <img class="d-flex mt-1 justify-content-center" src="/images/web-content/vectoricon.svg" />
+                        </div>
+                        <span>Refer and Earn</span>
+                    </MudStack>
+                </MudItem>
+                <MudItem>
+                    <p>Share our catering with friends and earn rewards when their event gets booked.</p>
+                </MudItem>
+            </MudItem>
+
+            <MudItem xs="2">
+                <MudButton Variant="Variant.Filled" Size="Size.Small" Class="rounded-pill" Color="Color.Primary">Refer now</MudButton>
+            </MudItem>
+        </MudStack>
+    </MudItem>
+
+
+    <MudItem xs="12">
+        <div class="h&p-div d-flex justify-content-between align-items-center">
+            <h6 class="mb-0">Recent Activity</h6>
+            <a href="#">View all</a>
+        </div>
+    </MudItem>
+
+
+    <MudItem xs="12" Style="width: 622px; height: 89px; top: 518px; left: 409px; border-radius: 24px; opacity: 1; ">
+        <MudStack Row="true" AlignItems="AlignItems.Center">
+            <MudItem xs="6">
+                <MudStack Row="false" AlignItems="AlignItems.Center">
+                    <span class="span-heading">Order : Basic indian</span>
+                    <p>Today, 2:30 PM</p>
+                </MudStack>
+            </MudItem>
+            <MudItem xs="6">
+                <MudStack Row="false" AlignItems="AlignItems.Center">
+                    <span class="span-heading positive"  style="color: #00A43D">+ 45</span>
+                    <p>Points</p>
+                </MudStack>
+            </MudItem>
+        </MudStack>
+    </MudItem>
+
+    <MudItem xs="12">
+        <MudStack Row="true" AlignItems="AlignItems.Center">
+            <MudItem xs="6">
+                <MudStack Row="false" AlignItems="AlignItems.Center">
+                    <span class="span-heading">Discount Applied</span>
+                    <p>Yesterday, 7:15 PM</p>
+                </MudStack>
+            </MudItem>
+            <MudItem xs="6">
+                <MudStack Row="false" AlignItems="AlignItems.Center">
+                    <span class="span-heading negative" style="color: #FF2B38">- 100</span>
+                    <p>Points</p>
+                </MudStack>
+            </MudItem>
+        </MudStack>
+    </MudItem>
+
+    <MudItem xs="12">
+        <MudStack Row="true" AlignItems="AlignItems.Center">
+            <MudItem xs="6">
+                <MudStack Row="false" AlignItems="AlignItems.Center">
+                    <span class="span-heading">Order: Sounth indian</span>
+                    <p>Nov 15, 10:00 AM</p>
+                </MudStack>
+            </MudItem>
+            <MudItem xs="6">
+                <MudStack Row="false" AlignItems="AlignItems.Center">
+                    <span class="span-heading positive"  style="color: #00A43D">+ 30</span>
+                    <p>Points</p>
+                </MudStack>
+            </MudItem>
+        </MudStack>
+    </MudItem>
+
+
+    <MudItem xs="12">
+        <MudStack Row="true" AlignItems="AlignItems.Center">
+            <MudItem xs="6">
+                <MudStack Row="false" AlignItems="AlignItems.Center">
+                    <span class="span-heading">Referral Bonus</span>
+                    <p>Nov 15, 10:00 AM</p>
+                </MudStack>
+            </MudItem>
+            <MudItem xs="6">
+                <MudStack Row="false" AlignItems="AlignItems.Center">
+                    <span class="span-heading positive" style="color: #00A43D">+ 200</span>
+                    <p>Points</p>
+                </MudStack>
+            </MudItem>
+        </MudStack>
+    </MudItem>
+
+
+</MudGrid>
+
+<style>
+    .loyalty-div {
+        position:relative;
+        background-color: #3E1268;
+        width: auto;
+        height: 224px;
+        border-radius:16px;
+    }
+/*    .first-layout {
+        position: absolute;
+        width: 307.0000305175781px;
+        height: 83.00880432128906px;
+        top: 155.37px;
+        left: 409px;
+        opacity: 1;
+    }*/
+    .loyalty-div2 {
+        position: relative;
+        width: 622px;
+        height: 125px;
+        fill: #FFF;
+        padding-top: 16px;
+        border-radius: 16px;
+    }
+
+    .img-div {
+        position: relative;
+        border-radius: 8px;
+        background: rgba(155, 81, 224, 0.10);
+        width: 31px;
+        height: 31px;
+        left: 28px;
+    }
+
+        .img-div img {
+            width: 24px;
+            height: 24px;
+        }
+
+    .loyalty-div2 span {
+        color: #000;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        letter-spacing: -0.48px;
+        padding-left: 22px;
+    }
+        .loyalty-div2 p {
+            color: #666;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: -0.28px;
+            padding-left:67px;
+            width:285px;
+            text-wrap:wrap;
+        }
+
+    .h&p-div h6{
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        letter-spacing: -0.32px;
+    }
+
+    .span-heading {
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%; 
+        letter-spacing: -0.32px;
+    }
+        .span-heading positive {
+            text-align: right;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+            letter-spacing: -0.4px;
+        }
+
+        .span-heading negative {
+            text-align: right;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+            letter-spacing: -0.4px;
+        }
+</style>

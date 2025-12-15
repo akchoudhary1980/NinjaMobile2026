@@ -1,0 +1,54 @@
+﻿<h3>Click Test</h3>
+
+<button @onclick="Toggle">Click me</button>
+
+@if (show)
+{
+    <p style="color:red; font-weight:bold;">
+        <EventInfoPooja />
+    </p>
+}
+
+@code {
+    bool show = false;
+
+    void Toggle()
+    {
+        show = !show;
+    }
+}
+
+
+
+
+<style>
+    .tooltip-host {
+        position: relative;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    .tooltip-box {
+        position: absolute;
+        bottom: 140%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #555;
+        color: white;
+        padding: 6px 10px;
+        border-radius: 6px;
+        white-space: nowrap;
+        z-index: 9999;
+    }
+
+        .tooltip-box::after {
+            content: "";
+            position: absolute;
+            left: 100%;
+            transform: translateX(-50%);
+            border-width: 6px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+</style>
