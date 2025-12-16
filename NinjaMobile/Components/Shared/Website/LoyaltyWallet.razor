@@ -1,12 +1,51 @@
-﻿<MudGrid Spacing="0">
+﻿<MudGrid Spacing="0" Style="padding-left:409px; padding-right:409px;">
     <MudItem xs="12" Class="loyalty-div">
-        <span class="first-layout"></span>
+        <div class="first-layout">
+            <img src="/images/web-content/loyalty-img-1.png" />
+        </div>
+        <div class="second-layout">
+            <img src="/images/web-content/loyalty-img-2.png" />
+        </div>
+        <div class="third-layout">
+            <img src="/images/web-content/loyalty-3.png" />
+        </div>
+        <div class="fourth-layout">
+            <img src="/images/web-content/loyalty-4.png" />
+        </div>
+        <div class="fifth-layout">
+            <img src="/images/web-content/loyalty-5.png" />
+        </div>
+        <div class="sixth-layout">
+            <img src="/images/web-content/loyalty-6.png" />
+        </div>
+        <div class="seven-layout">
+            <img src="/images/web-content/loyalty-7.png" />
+        </div>
+        <div class="eight-layout">
+            <img src="/images/web-content/loyalty-8.png" />
+        </div>
+        <div class="nine-layout">
+            <img style="width:348px;" src="/images/web-content/loyalty-9.png" />
+        </div>
+        <div class="ten-layout">
+            <img style="width:365px;" src="/images/web-content/loyalty-10.png" />
+        </div>
+
+        <div class="main-wallet">
+            <img style=" width: 74px; height: 74px;" src="/images/web-content/main-wallet1.png" />
+        </div>
+
+        <div class="wallet-text">
+            <span style="font-size: 12px;">Available Points</span>
+            <h2>850</h2>
+            <p>Points worth ₹ 643.50</p>
+        </div>
 
     </MudItem>
 
     <MudItem xs="12" Class="loyalty-div2">
         <MudStack Row="true">
-            <MudItem xs="10">
+            <MudItem xs="8">
                 <MudItem>
                     <MudStack Row="true">
                         <div class="img-div d-flex justify-content-center">
@@ -20,8 +59,8 @@
                 </MudItem>
             </MudItem>
 
-            <MudItem xs="2">
-                <MudButton Variant="Variant.Filled" Size="Size.Small" Class="rounded-pill" Color="Color.Primary">Refer now</MudButton>
+            <MudItem xs="4" Class="btn-class">
+                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" Color="Color.Primary">Refer now</MudButton>
             </MudItem>
         </MudStack>
     </MudItem>
@@ -35,7 +74,7 @@
     </MudItem>
 
 
-    <MudItem xs="12" Style="width: 622px; height: 89px; top: 518px; left: 409px; border-radius: 24px; opacity: 1; ">
+    <MudItem xs="12" Class="item-divs">
         <MudStack Row="true" AlignItems="AlignItems.Center">
             <MudItem xs="6">
                 <MudStack Row="false" AlignItems="AlignItems.Center">
@@ -52,7 +91,7 @@
         </MudStack>
     </MudItem>
 
-    <MudItem xs="12">
+    <MudItem xs="12" Class="item-divs">
         <MudStack Row="true" AlignItems="AlignItems.Center">
             <MudItem xs="6">
                 <MudStack Row="false" AlignItems="AlignItems.Center">
@@ -69,7 +108,7 @@
         </MudStack>
     </MudItem>
 
-    <MudItem xs="12">
+    <MudItem xs="12" Class="item-divs">
         <MudStack Row="true" AlignItems="AlignItems.Center">
             <MudItem xs="6">
                 <MudStack Row="false" AlignItems="AlignItems.Center">
@@ -87,7 +126,7 @@
     </MudItem>
 
 
-    <MudItem xs="12">
+    <MudItem xs="12" Class="item-divs">
         <MudStack Row="true" AlignItems="AlignItems.Center">
             <MudItem xs="6">
                 <MudStack Row="false" AlignItems="AlignItems.Center">
@@ -111,18 +150,120 @@
     .loyalty-div {
         position:relative;
         background-color: #3E1268;
-        width: auto;
+        width: 622px;
         height: 224px;
         border-radius:16px;
     }
-/*    .first-layout {
+    .first-layout {
+        position:absolute;
+        width: 307px;
+        height: 83.009px;
+        top:71px;
+    }
+    .second-layout {
         position: absolute;
-        width: 307.0000305175781px;
-        height: 83.00880432128906px;
-        top: 155.37px;
+        width: 312px;
+        height: 45.999px;
+        top: 29px;
+    }
+    .third-layout {
+        position: absolute;
+        width: 208.894px;
+        height: 79.189px;
+        left:103px;
+    }
+    .fourth-layout {
+        position: absolute;
+        width: 98.137px;
+        height: 79px;
+        left:213px;
+    }
+    .fifth-layout {
+        position: absolute;
+        width: 61.574px;
+        height: 87.799px;
+        left:273px;
+    }
+    .sixth-layout {
+        position: absolute;
+        width: 61.574px;
+        height: 87.799px;
+        left:300px;
+    }
+    .seven-layout {
+        position: absolute;
+        width: 98.137px;
+        height: 79px;
+        left:320px;
+    }
+    .eight-layout {
+        position: absolute;
+        width: 208.894px;
+        height: 79.189px;
+        left:329px;
+        right:102px;
+        top:0px;
+    }
+    .nine-layout {
+        position: absolute;
+        width: 400px;
+        height: 55.999px;
+        left: 340px;
+        right: 0px;
+        top: 20px;
+    }
+    .ten-layout {
+        position: absolute;
+        width: 400px;
+        height: 98.009px;
+        left:324px;
+        top:62px;
+        right:0px;
+    }
+
+    .item-divs {
+        width: 622px;
+        height: 89px;
+        top: 518px;
         left: 409px;
+        border-radius: 24px;
         opacity: 1;
-    }*/
+        background-color: greenyellow;
+        margin-top: 10px;
+        padding-top: 24px;
+    }
+    .main-wallet {
+        position:absolute;
+        width: 740px;
+        height: 740px;
+        left:289px;
+        right:279px;
+        top:28px;
+        bottom:148px;
+    }
+
+    .wallet-text {
+        position: relative;
+        left: 269px;
+        color: #fff;
+        top:108px;
+    }
+    .wallet-text p{
+        position:relative;
+        left:-29px;
+    }
+
+        .wallet-text h2 {
+            position: relative;
+            color: #FFF;
+            text-align: center;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            letter-spacing: -0.96px;
+            left:-300px;
+        }
     .loyalty-div2 {
         position: relative;
         width: 622px;
@@ -167,7 +308,11 @@
             text-wrap:wrap;
         }
 
-    .h&p-div h6{
+    .btn-class{
+        padding-top:38px;
+    }
+
+    .h&p-div h6 {
         color: #000;
         font-size: 16px;
         font-style: normal;
