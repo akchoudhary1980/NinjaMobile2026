@@ -1,0 +1,84 @@
+﻿<MudGrid Spacing="0" Class="expender-box">
+    <MudItem xs="12" sm="12">
+
+        <MudGrid Spacing="0">
+            <MudItem xs="11" sm="11">
+                <h3>@Heading</h3>
+            </MudItem>
+            <MudItem xs="1" sm="1">
+                <div class="expender-icon-box" @onclick="OnExpandCollapseClick">
+                    <MudIcon Icon="@(_expanded?Icons.Material.Filled.ArrowDropDown : Icons.Material.Filled.ArrowDropUp)" Color="@(_expanded?Color.Dark:Color.Default)" Size="Size.Large"></MudIcon>
+                </div>
+            </MudItem>
+        </MudGrid>
+
+
+
+        <MudGrid Spacing="0" Class="mt-3">
+            <MudItem xs="11" sm="11">
+                <MudCollapse Expanded="_expanded" >
+                    <p>@Content</p>
+                </MudCollapse>
+            </MudItem>
+            <MudItem xs="1" sm="1">
+
+            </MudItem>
+        </MudGrid>
+
+    </MudItem>
+</MudGrid>
+
+@code {
+    [Parameter]
+    public string Heading { get; set; } = "";
+    [Parameter]
+    public string Content { get; set; } = "";
+
+    bool _expanded = false;
+
+    private void OnExpandCollapseClick()
+    {
+        _expanded = !_expanded;
+    }
+}
+
+
+<style>
+    .expender-box {
+        min-height: 140px;
+        height: auto;
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 30px;
+    }
+
+        .expender-box h3 {
+            font-weight: 600;
+            font-style: normal;
+            font-size: 24px;
+/*            line-height: 100%;*/
+            letter-spacing: -2%;
+            color:#111111;
+        }
+
+        .expender-box p {
+            font-weight: 400;
+            font-style: normal;
+            font-size: 16px;
+/*            line-height: 100%;*/
+            letter-spacing: -2%;
+            color: #858585;
+        }
+
+    .expender-icon-box {
+        height: 50px;
+        width: 50px;
+        border-radius: 12px;
+        background-color: #EEEEEE;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+

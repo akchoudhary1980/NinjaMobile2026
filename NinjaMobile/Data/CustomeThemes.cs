@@ -131,9 +131,9 @@ namespace NinjaMobile.Data
             {
                 Default = new DefaultTypography
                 {
-                    FontFamily = ["Roboto", "Helvetica", "Arial", "sans-serif"],
-                    FontWeight = "400",
-                    FontSize = ".875rem",
+                    FontFamily = ["DM Sans", "sans-serif"],
+                    FontWeight = "500",
+                    FontSize = ".875rem",                   
                     LineHeight = "1.43",
                     LetterSpacing = ".01071em",
                     TextTransform = "none",
