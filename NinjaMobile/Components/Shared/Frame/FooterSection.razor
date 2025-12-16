@@ -4,30 +4,24 @@
         <MudItem xs="12" sm="12">
             <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
                 <MudText Typo="Typo.h6" Class="mb-0">Let’s keep in touch!</MudText>
-                <MudButton Variant="Variant.Filled" Class="pill-button">Send</MudButton>
+                <MudButton Variant="Variant.Filled" Size="Size.Small"  Class="pill-button">Send</MudButton>
             </MudStack>
         </MudItem>
+
         <MudItem xs="12" sm="12">
             <hr />
         </MudItem>
-        <MudItem xs="6" sm="4">
-            <MudStack Row="false" Spacing="2">
+
+        <MudItem xs="12" sm="12">
+            <MudStack Row="false" Spacing="4">
                 <MudLink Color="Color.Inherit">Individuals</MudLink>
                 <MudLink Color="Color.Inherit">Business</MudLink>
                 <MudLink Color="Color.Inherit">Solutions</MudLink>
                 <MudLink Color="Color.Inherit">Partners</MudLink>
-            </MudStack>
-        </MudItem>
-        <MudItem xs="6" sm="4">
-            <MudStack Row="false" Spacing="2">
                 <MudLink Color="Color.Inherit">About</MudLink>
                 <MudLink Color="Color.Inherit">FAQ</MudLink>
                 <MudLink Color="Color.Inherit">Partner with us</MudLink>
                 <MudLink Color="Color.Inherit">Contact</MudLink>
-            </MudStack>
-        </MudItem>
-        <MudItem xs="12" sm="4">
-            <MudStack Row="false" Spacing="2">
                 <MudLink Color="Color.Inherit">Privacy policy</MudLink>
                 <MudLink Color="Color.Inherit">Terms & conditions</MudLink>
             </MudStack>
@@ -40,13 +34,9 @@
         </MudItem>
     </MudGrid>
 
-    <MudGrid Spacing="1" Class="mt-2 mb-5">
-        <MudItem xs="12" sm="9">
-            <MudStack Row="true" Style="height:50px" AlignItems="AlignItems.Center" Justify="Justify.FlexStart">
-                <MudText Typo="Typo.caption">© 2025 EZGatherr. All rights reserved.</MudText>
-            </MudStack>
-        </MudItem>
-        <MudItem xs="12" sm="3">
+    <MudGrid Spacing="1" Class="mt-4 mb-5">
+
+        <MudItem xs="12" sm="12">
             <MudStack Row="true" Style="height:50px" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
                 <div class="layout-link-icons">
                     <MudIcon Icon="@Icons.Custom.Brands.Facebook"></MudIcon>
@@ -65,6 +55,12 @@
                 </div>
             </MudStack>
         </MudItem>
+
+        <MudItem xs="12" sm="12" Class="mt-4">
+            <MudStack Row="true" Style="height:50px" AlignItems="AlignItems.Center" Justify="Justify.FlexStart">
+                <MudText Typo="Typo.caption">© 2025 EZGatherr. All rights reserved.</MudText>
+            </MudStack>
+        </MudItem>
     </MudGrid>
 
 </footer>
@@ -78,9 +74,7 @@
         color: #FFFFFF;
         border-start-end-radius: 20px;
         border-start-start-radius: 20px;
-        padding-top: 60px;
-        padding-left: 80px;
-        padding-right: 80px;
+        padding:24px;
         border: 1px solid #10051A;
     }
 
@@ -110,6 +104,7 @@
         cursor: pointer;
         font-size: 14px;
         transition: background-color 0.3s ease;
+        text-transform: uppercase;
     }
 
         .pill-button:hover {
@@ -128,6 +123,7 @@
         font-weight: 100;
         font-style: italic;
         color: #ffffff;
+
     }
     /* Responsive adjustments */
     @@media (max-width: 768px) {
