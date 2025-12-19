@@ -11,47 +11,56 @@
     </MudItem>
     <MudItem xs="12">
         <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-            <MudButton>Package</MudButton>
-            <MudButton>Add-on</MudButton>
-            <MudButton Class="modify-btn">Modify Menu</MudButton>
+            <MudItem xs="7" sm="7">
+                <MudTabs Centered="false" Rounded="false" Outlined="false" Elevation="0" MinimumTabWidth="0px" ApplyEffectsToContainer="true">
+                    <MudTabPanel Text="Package">
+
+                    </MudTabPanel>
+                    <MudTabPanel Text="Add On">
+
+                    </MudTabPanel>
+                </MudTabs>
+            </MudItem>
+            <MudItem xs="5" sm="5">
+                <MudButton Class="modify-btn">Modify Menu</MudButton>
+            </MudItem>
         </MudStack> 
     </MudItem>
-    <MudItem xs="12" sm="12">
+    @*<MudItem xs="12" sm="12">
         <hr style="border:1px solid red" />
-    </MudItem>
+    </MudItem>*@
 
     <MudItem xs="12" Class="p-3">
         <h2 class="all-heading">Includes</h2>
         <MudGrid Spacing="0">
-            <MudItem xs="6" sm="6">
+            <MudItem xs="4" sm="4">
                 <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
                     <img src="/images/web-content/_food.svg" />
                     <span>Food</span>
                 </MudStack>
             </MudItem>
-            <MudItem xs="6" sm="6">
+            <MudItem xs="8" sm="8">
                 <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-                    <img src="/images/web-content/_food.svg" />
+                    <img style="height:18px; width:18px;" src="/images/web-content/waiter.png" />
                     <span>Waiters</span>
                 </MudStack>
             </MudItem>
-        </MudGrid>
-    </MudItem>
+            <div class="dashed-hr2">
 
-    <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
+            </div>
+        </MudGrid>
     </MudItem>
 
     <MudItem xs="12" Class="p-3">
         <h2 class="all-heading">Fit for</h2>
-        <MudGrid Spacing="0">
+        <MudGrid Spacing="6">
             <MudItem xs="6" sm="6">
                 <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
                     <div class="veg-div p-2">
                         <img src="/images/web-content/veg.png" />
-                        <span>Veg</span>
+                        <span style="font-size: 14px; color: #111;" class="mt-3">Veg</span>
                         <div class="mt-2">
-                            <p class="p-2">10 people With increment of +5</p>
+                            <p class="p-2" style="color: #666; font-size:14px;">10 people With increment of +5</p>
 
                         </div>
                     </div>
@@ -61,19 +70,19 @@
                 <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
                     <div class="veg-non-div p-2">
                         <img src="/images/web-content/non-veg.png" />
-                        <span>Non-veg</span>
+                        <span style="font-size: 14px; color: #111;" class="mt-3">Non-veg</span>
                         <div class="mt-2">
-                            <p class="p-2">10 people With increment of +5</p>
+                            <p class="p-2" style="color: #666; font-size:14px;">10 people With increment of +5</p>
                         </div>
                     </div>
                 </MudStack>
             </MudItem>
         </MudGrid>
+        <div class="dashed-hr2">
+
+        </div>
     </MudItem>
 
-    <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
-    </MudItem>
 
     <MudItem xs="12" Class="p-3">
         <h2 class="all-heading">Starters 1</h2>
@@ -93,12 +102,12 @@
                 <p class="para">Baby potatoes marinated in spiced yogurt and roasted to smoky perfection.</p>
             </MudItem>
         </MudGrid>
+        <div class="dashed-hr2">
+
+        </div>
     </MudItem>
 
-    <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
-    </MudItem>
-
+ 
     <MudItem xs="12" Class="p-3">
         <h2 class="all-heading">Mains</h2>
         <MudGrid Spacing="0">
@@ -117,11 +126,12 @@
                 <p class="para">Yellow lentils tempered with ghee, garlic, and spices..</p>
             </MudItem>
         </MudGrid>
+        <div class="dashed-hr2">
+
+        </div>
     </MudItem>
 
-    <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
-    </MudItem>
+  
 
     <MudItem xs="12" Class="p-3">
         @*<h2 class="all-heading">Bread / Rice</h2>*@
@@ -141,11 +151,11 @@
                 <p class="para">Yellow lentils tempered with ghee, garlic, and spices.</p>
             </MudItem>
         </MudGrid>
+        <div class="dashed-hr2">
+
+        </div>
     </MudItem>
 
-    <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
-    </MudItem>
 
     <MudItem xs="12" Class="p-3">
         <h2 class="all-heading">Bread / Rice</h2>
@@ -165,10 +175,9 @@
                 <p class="para">Yellow lentils tempered with ghee, garlic, and spices.</p>
             </MudItem>
         </MudGrid>
-    </MudItem>
+        <div class="dashed-hr2">
 
-    <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
+        </div>
     </MudItem>
 
     <MudItem xs="12" Class="p-3">
@@ -189,10 +198,9 @@
                 <p class="para">Fluffy, perfectly cooked white rice light and wholesome.</p>
             </MudItem>
         </MudGrid>
-    </MudItem>
+        <div class="dashed-hr2">
 
-    <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
+        </div>
     </MudItem>
 
     <MudItem xs="12" Class="p-3">
@@ -215,10 +223,7 @@
         </MudGrid>
     </MudItem>
 
-    <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
-    </MudItem>
-
+  
 
     <MudItem xs="12" class="footer-div">
         <MudStack Row="true" Justify="Justify.Center" AlignItems="AlignItems.Center">
@@ -234,7 +239,7 @@
                 </MudButton>
             </div>
             <div>
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" Color="Color.Primary">Cart</MudButton>
+                <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Medium" Class="btn-primary mb-2">Cart</MudButton>
             </div>
         </MudStack>
     </MudItem>
@@ -252,14 +257,14 @@
     }
 
     .heading h2 {
-        font-family: DM Sans;
         font-weight: 600;
         font-size: 24px;
         line-height: 130%;
         letter-spacing: -2%;
+        color:#000;
     }
         .heading p {
-            font-family: DM Sans;
+            color: #666;
             font-weight: 400;
             font-size: 14px;
             line-height: 100%;
@@ -272,13 +277,13 @@
         }
     .modify-btn {
         background-color: #EEEEEE;
-        border-radius:24px;
+        color: #000;
+        border-radius: 24px;
     }
     .all-heading {
         width: 150px;
         height: 18px;
         opacity: 1;
-        font-family: DM Sans;
         font-weight: 600;
         font-size: 14px;
         line-height: 100%;
@@ -290,7 +295,6 @@
         height: 102px;
         top: 626px;
         left: 16px;
-        opacity: 0.4;
         border-radius: 16px;
         background: linear-gradient(154.48deg, rgba(15, 181, 89, 0.4) -9.17%, rgba(15, 181, 89, 0.08) 62.92%);
     }
@@ -299,9 +303,9 @@
         height: 102px;
         top: 626px;
         left: 16px;
-        opacity: 0.4;
         border-radius: 16px;
         background: linear-gradient(154.48deg, rgba(246, 20, 21, 0.4) -9.17%, rgba(246, 20, 21, 0.08) 62.92%);
+
     }
     .veg-div div {
         width: 144px;
@@ -312,6 +316,7 @@
         border-radius: 16px;
         background-color: #FFFFFF;
     }
+  
     .veg-non-div div {
         width: 144px;
         height: 60px;
@@ -325,12 +330,12 @@
         width:auto;
         text-wrap:wrap;
         color: #666;
-        font-family: "DM Sans";
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         letter-spacing: -0.24px;
+        padding-left:28px;
     }
     .footer-div {
         width: 360px;
@@ -338,9 +343,7 @@
         background-color: #3E1268;
         color: #FFFFFF;
     }
-    .footer-btn{
-
-    }
+ 
     .white-outline-btn {
         border: 1px solid white !important;
         color: white !important;
@@ -350,6 +353,14 @@
             background-color: white !important;
             color: #220A3A !important; 
         }
+
+    .dashed-hr2 {
+        border: 1px dashed #DDD;
+        width: 328px;
+        height: 0;
+        padding-right:16px;
+        margin-top:16px;
+    }
 
 
 </style>

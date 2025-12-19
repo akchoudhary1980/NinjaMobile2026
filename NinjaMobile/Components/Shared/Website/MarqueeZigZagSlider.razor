@@ -1,10 +1,14 @@
 ﻿<MudGrid Spacing="1">
     <MudItem xs="12" sm="12">
         <div class="zig-marquee">
+
             <div class="zig-marquee-content">
                 <!-- First set of icons -->
                 <div class="zig-icon-wrapper">
                     <img src="/images/web-content/pandit.png" alt="img" />
+                    <div class="bg-zigzig">
+
+                    </div>
                     <div class="zig-text-box">
                         <h6>Pandit</h6>
                         <p>Service</p>
@@ -12,6 +16,9 @@
                 </div>
                 <div class="zig-icon-wrapper">
                     <img src="/images/web-content/gather.png" alt="img" />
+                    <div class="bg-zigzig">
+
+                    </div>
                     <div class="zig-text-box">
                         <h6>Gather</h6>
                         <p>Feast</p>
@@ -19,6 +26,9 @@
                 </div>
                 <div class="zig-icon-wrapper">
                     <img src="/images/web-content/venue.png" alt="img" />
+                    <div class="bg-zigzig">
+
+                    </div>
                     <div class="zig-text-box">
                         <h6>Venue</h6>
                         <p>Decor</p>
@@ -29,6 +39,9 @@
                 <!-- Duplicate set of icons for seamless loop -->
                 <div class="zig-icon-wrapper">
                     <img src="/images/web-content/pandit.png" alt="img" />
+                    <div class="bg-zigzig">
+
+                    </div>
                     <div class="zig-text-box">
                         <h6>Pandit</h6>
                         <p>Service</p>
@@ -36,6 +49,9 @@
                 </div>
                 <div class="zig-icon-wrapper">
                     <img src="/images/web-content/gather.png" alt="img" />
+                    <div class="bg-zigzig">
+
+                    </div>
                     <div class="zig-text-box">
                         <h6>Gather</h6>
                         <p>Feast</p>
@@ -43,6 +59,9 @@
                 </div>
                 <div class="zig-icon-wrapper">
                     <img src="/images/web-content/venue.png" alt="img" />
+                    <div class="bg-zigzig">
+
+                    </div>
                     <div class="zig-text-box">
                         <h6>Venue</h6>
                         <p>Decor</p>
@@ -54,6 +73,10 @@
     </MudItem>
 </MudGrid>
 
+
+
+
+
 <style>
     .zig-marquee {
         overflow: hidden;
@@ -61,12 +84,11 @@
         width: 100%;
         height: 380px;
         padding: 10px;
-/*        border: 1px solid green;*/
+        /*        border: 1px solid green;*/
         background-image: url('/images/web-content/carosol-bg.svg'); /* your SVG */
         background-repeat: no-repeat;
         background-position: top 0px left -130px;
-        background-size: 1628px 305px; /* width height */
-
+        background-size: 1628px 305px;
     }
 
     .zig-marquee-content {
@@ -80,9 +102,11 @@
         justify-content: center;
         width: 264px; /* adjust spacing */
         height: 264px; /* adjust height 200 then 260 */
-        margin: 16px;        
+        margin: 16px;
         position: relative; /* needed for top offset */
+        overflow: hidden;
     }
+
         .zig-icon-wrapper img {
             border-radius: 32px;
             width: 100%;
@@ -90,18 +114,18 @@
             object-fit: cover; /* keeps image nicely scaled */
         }
 
-/*    .zig-text-box {
+    /*    .zig-text-box {
         position: absolute;
-        left: 32px;  
-        bottom: 32px;  
+        left: 32px;
+        bottom: 32px;
     }
 
-    zig-text-box h6 {        
-        color: white!important;  
-        font-size: 24px;  
+    zig-text-box h6 {
+        color: white!important;
+        font-size: 24px;
         font-weight: 900;
-        text-shadow: 2px 2px 6px rgba(0,0,0,0.6);  
-        pointer-events: none;  
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+        pointer-events: none;
         margin-bottom:0px;
     }
     zig-text-box p {
@@ -109,8 +133,8 @@
         font-size: 24px;
         font-weight: normal;
         font-style: italic;
-        text-shadow: 2px 2px 6px rgba(0,0,0,0.6);  
-        pointer-events: none;  
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+        pointer-events: none;
         margin-bottom: 0px;
     }*/
 
@@ -127,7 +151,6 @@
             text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
             pointer-events: none;
             margin-bottom: 0px; /* fixed */
-
         }
 
         .zig-text-box p {
@@ -137,18 +160,30 @@
             font-style: italic;
             text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
             pointer-events: none;
-            margin-top:-5px;
+            margin-top: -5px;
             margin-bottom: 0px; /* fixed */
         }
+
+
+    .bg-zigzig {
+        position: absolute;
+        border-radius: 32px;
+        background: linear-gradient(220deg, rgba(0, 0, 0, 0.00) 68.23%, #000 100%);
+        width: 264px;
+        height: 264px;
+    }
+
+
+
     /* Odd items */
     .zig-icon-wrapper:nth-child(odd) {
         top: 0px;
     }
 
-        /* Even items */
-        .zig-icon-wrapper:nth-child(even) {
-            top: 80px;
-        }
+    /* Even items */
+    .zig-icon-wrapper:nth-child(even) {
+        top: 80px;
+    }
 
     @@keyframes scroll {
         from {

@@ -11,19 +11,19 @@
             <MudPaper Outlined="false" Elevation="0" Class="menu-item text-center">
                 <MudIcon Icon="@CustomIcons.VenueIcons" />
                 <br/>
-                <MudText Typo="Typo.caption">Venue</MudText>               
+                <p>Venue</p>             
             </MudPaper>
 
             <MudPaper Outlined="false" Elevation="0" Class="menu-item text-center">
                 <MudIcon Icon="@CustomIcons.EventIcon" />
                 <br/>
-                <MudText Typo="Typo.caption">Event</MudText>
+                <p>Event</p>
             </MudPaper>
 
             <MudPaper Outlined="false" Elevation="0" Class="menu-item text-center ">
                 <MudIcon Icon="@CustomIcons.CorporateIcon" />
                 <br/> 
-                <MudText Typo="Typo.caption">Corporate</MudText>
+                <p class="menu-item-para">Corporate</p>
             </MudPaper>
         </MudStack>
 
@@ -46,10 +46,20 @@
         height:40px;
         width:auto;
         color: #666666;
+        padding-top:2px;
 
     }
     .menu-item:hover{
        color:red;
     }
 
+    .menu-item-para {
+        color: #666;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+  
 </style>
