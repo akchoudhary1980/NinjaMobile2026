@@ -1,6 +1,9 @@
 ﻿<MudGrid Spacing="0">
     <MudItem xs="12">
         <img class="img-package" style="width:100%" src="/images/web-content/packagetab.png" />
+        <div class="satya-img-btn">
+            <img src="/images/web-content/cutbutton.png" />
+        </div>
     </MudItem>
     <MudItem class="heading mt-2" sm="12">
         <h2>Basic Indian</h2>
@@ -45,13 +48,13 @@
                     <span>Waiters</span>
                 </MudStack>
             </MudItem>
-            <div class="dashed-hr2">
+            <div class="dashed-hr2 mt-4">
 
             </div>
         </MudGrid>
     </MudItem>
 
-    <MudItem xs="12" Class="p-3">
+    <MudItem xs="12" Class="p-2">
         <h2 class="all-heading">Fit for</h2>
         <MudGrid Spacing="6">
             <MudItem xs="6" sm="6">
@@ -78,13 +81,13 @@
                 </MudStack>
             </MudItem>
         </MudGrid>
-        <div class="dashed-hr2">
+        <div class="dashed-hr2 mt-4">
 
         </div>
     </MudItem>
 
 
-    <MudItem xs="12" Class="p-3">
+    <MudItem xs="12" Class="p-2">
         <h2 class="all-heading">Starters 1</h2>
         <MudGrid Spacing="0">
             <MudItem xs="8" sm="8">
@@ -93,7 +96,7 @@
                     <span>Tandoori Achari Aloo</span>
                 </MudStack>
             </MudItem>
-            <MudItem xs="4" sm="4" Class="pl-10">
+            <MudItem xs="4" sm="4" Class="pl-16">
                 <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
                     <span>2 psc</span>
                 </MudStack>
@@ -117,7 +120,7 @@
                     <span>Dal Tadka </span>
                 </MudStack>
             </MudItem>
-            <MudItem xs="4" sm="4" Class="pl-10">
+            <MudItem xs="4" sm="4" Class="pl-16">
                 <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
                     <span>2 psc</span>
                 </MudStack>
@@ -142,7 +145,7 @@
                     <span>Chole Masala</span>
                 </MudStack>
             </MudItem>
-            <MudItem xs="4" sm="4" Class="pl-10">
+            <MudItem xs="4" sm="4" Class="pl-16">
                 <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
                     <span>2 psc</span>
                 </MudStack>
@@ -166,7 +169,7 @@
                     <span>Wheat Tandoori Roti</span>
                 </MudStack>
             </MudItem>
-            <MudItem xs="4" sm="4" Class="pl-10">
+            <MudItem xs="4" sm="4" Class="pl-16">
                 <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
                     <span>2 psc</span>
                 </MudStack>
@@ -189,7 +192,7 @@
                     <span>Steamed Rice</span>
                 </MudStack>
             </MudItem>
-            <MudItem xs="4" sm="4" Class="pl-10">
+            <MudItem xs="4" sm="4" Class="pl-16">
                 <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
                     <span>2 psc</span>
                 </MudStack>
@@ -212,7 +215,7 @@
                     <span>Wheat Tandoori Roti</span>
                 </MudStack>
             </MudItem>
-            <MudItem xs="4" sm="4" Class="pl-10">
+            <MudItem xs="4" sm="4" Class="pl-16">
                 <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
                     <span>2 psc</span>
                 </MudStack>
@@ -227,11 +230,10 @@
 
     <MudItem xs="12" class="footer-div">
         <MudStack Row="true" Justify="Justify.Center" AlignItems="AlignItems.Center">
-            <div>
-                <h6> ₹ 13,513.50</h6> 
-                <p>Inclusive of all taxes</p>
+            <div class="mt-1">
+                <h6> ₹ 13,513.50 <br /> <span>Inclusive of all taxes</span></h6> 
             </div>
-            <div>
+            <div class="footer-div-btnmodify">
                 <MudButton Variant="Variant.Outlined"
                            Size="Size.Medium"
                            Class="rounded-pill white-outline-btn">
@@ -239,7 +241,7 @@
                 </MudButton>
             </div>
             <div>
-                <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Medium" Class="btn-primary mb-2">Cart</MudButton>
+                <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Medium" Class="btn-primary ml-2 mb-2 mt-1">Cart</MudButton>
             </div>
         </MudStack>
     </MudItem>
@@ -250,6 +252,13 @@
         height: 250px;
         opacity: 1;
         border-radius:24px;
+    }
+    .satya-img-btn {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 10px;
+        right: 8px;
     }
 
     .heading {
@@ -343,7 +352,16 @@
         background-color: #3E1268;
         color: #FFFFFF;
     }
- 
+
+        .footer-div h6 {
+            font-size: 20px;
+        }
+
+        .footer-div span {
+            font-size: 12px;
+            color: #D8D0E1;
+        }
+
     .white-outline-btn {
         border: 1px solid white !important;
         color: white !important;
@@ -358,9 +376,12 @@
         border: 1px dashed #DDD;
         width: 328px;
         height: 0;
-        padding-right:16px;
-        margin-top:16px;
+    
     }
 
+    .footer-div-btnmodify{
+        padding-bottom:8px;
+        padding-top:4px;
+    }
 
 </style>

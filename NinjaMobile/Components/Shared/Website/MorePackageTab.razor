@@ -1,6 +1,9 @@
 ﻿<MudGrid Spacing="0">
     <MudItem xs="12">
         <img class="img-package" style="width:100%" src="/images/web-content/packagetab.png" />
+        <div class="satya-img-btn">
+            <img src="/images/web-content/cutbutton.png" />
+        </div>
     </MudItem>
     <MudItem class="heading mt-2" sm="12">
         <h2>Basic Indian</h2>
@@ -34,12 +37,12 @@
                     <span>Waiters</span>
                 </MudStack>
             </MudItem>
+            <div class="dashed-hr12 mt-4">
+
+            </div>
         </MudGrid>
     </MudItem>
 
-    <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
-    </MudItem>
 
     <MudItem xs="12" Class="p-3">
         <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
@@ -54,11 +57,12 @@
             <p>Non-Veg</p>
             <NonVegNumericField />
         </MudStack>
+        <div class="dashed-hr12 mt-4">
+
+        </div>
     </MudItem>
 
-    <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
-    </MudItem>
+  
 
     <MudItem xs="12" Class="p-3">
         <h2 class="all-heading">Starters 1</h2>
@@ -81,7 +85,7 @@
                 <ItemNumericField />
             </MudItem>
             <MudItem xs="12" sm="12">
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" FullWidth="true">+ Place Order</MudButton>
+                <button class="addmore-btn">+ Add More Starters</button>
             </MudItem>
         </MudGrid>
     </MudItem>
@@ -107,14 +111,14 @@
                 <ItemNumericField />
             </MudItem>
             <MudItem xs="12" sm="12">
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" FullWidth="true">+ Place Order</MudButton>
+                <button class="addmore-btn">+ Add More Starters</button>
             </MudItem>
+            <div class="dashed-hr12 mt-4">
+
+            </div>
         </MudGrid>
     </MudItem>
 
-    <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
-    </MudItem>
 
     <MudItem xs="12" Class="p-3">
         @*<h2 class="all-heading">Mains</h2>*@
@@ -137,18 +141,11 @@
                 <ItemNumericField />
             </MudItem>
             <MudItem xs="12" sm="12">
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" FullWidth="true">+ Place Order</MudButton>
+                <button class="addmore-btn">+ Add More Starters</button>
             </MudItem>
         </MudGrid>
     </MudItem>
 
-    <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
-    </MudItem>
-
-    <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
-    </MudItem>
 
     <MudItem xs="12" Class="p-3">
         <h2 class="all-heading">Bread / Rice</h2>
@@ -170,12 +167,12 @@
             <MudItem xs="4" sm="4" Class="mt-5">
                 <ItemNumericField />
             </MudItem>
+            <div class="dashed-hr12 mt-4">
+
+            </div>
         </MudGrid>
     </MudItem>
 
-    <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
-    </MudItem>
 
     <MudItem xs="12" Class="p-3">
         @*<h2 class="all-heading">Starters 1</h2>*@
@@ -198,13 +195,9 @@
                 <ItemNumericField />
             </MudItem>
             <MudItem xs="12" sm="12">
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" FullWidth="true">+ Place Order</MudButton>
+                <button class="addmore-btn">+ Add More Starters</button>
             </MudItem>
         </MudGrid>
-    </MudItem>
-
-    <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
     </MudItem>
 
     <MudItem xs="12" Class="p-3">
@@ -228,14 +221,11 @@
                 <ItemNumericField />
             </MudItem>
             <MudItem xs="12" sm="12">
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" FullWidth="true" Class="rounded-pill">+ Add More Dessert</MudButton>
+                <button class="addmore-btn">+ Add More Starters</button>
             </MudItem>
         </MudGrid>
     </MudItem>
 
-    <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
-    </MudItem>
 
     <MudItem xs="12" class="footer-div">
         <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center">
@@ -257,6 +247,13 @@
         height: 250px;
         opacity: 1;
         border-radius: 24px;
+    }
+    .satya-img-btn {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 10px;
+        right: 8px;
     }
 
     .heading {
@@ -283,6 +280,16 @@
             left: 16px;
             opacity: 1;
         }
+    .addmore-btn {
+        width: 328px;
+        height: 32px;
+        stroke-width: 1px;
+        border: 1px dashed #CCC;
+        border-radius: 40px;
+        background-color: #F9F9F9;
+        font-size: 12px;
+        color: #666;
+    }
 
     .modify-btn {
         background-color: #EEEEEE;
@@ -360,5 +367,10 @@
         color: #FFFFFF;
         padding-left: 20px;
         padding-right: 20px;
+    }
+    .dashed-hr12 {
+        border: 1px dashed #DDD;
+        width: 328px;
+        height: 0;
     }
 </style>

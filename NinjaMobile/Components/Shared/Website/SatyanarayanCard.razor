@@ -3,11 +3,11 @@
     <MudItem xs="12" sm="12">
         <img class="satya-img-package" style="width:100%" src="/images/web-content/satya.png" />
         <div class="satya-img-btn">
-            <MudFab Color="Color.Tertiary" StartIcon="@Icons.Material.Filled.Add" Size="Size.Medium" />
+            <img src="/images/web-content/cutbutton.png" />
         </div>
     </MudItem>
     <MudItem xs="12" sm="12" Class="pl-3 mt-2">
-        <h2 class="bento-heading">Classic Box</h2>
+        <h2 class="bento-heading">Satyanarayanx</h2>
         <p class="bento-para">
             Perfect for: Everyday meals with a homely touch. Includes:
         </p>
@@ -18,7 +18,7 @@
     </MudItem>
 
     <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
+        <hr style="border: 2px solid #EEE;" />
     </MudItem>
 
     <MudItem xs="12" sm="12" Class="p-2">
@@ -28,10 +28,9 @@
             <span>2.All Puja Samagar</span>>
             <span>3.Dakshina</span>
         </MudStack>
-    </MudItem>
+        <div class="dashed-hr123 mt-4">
 
-    <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
+        </div>
     </MudItem>
 
     <MudItem xs="12" sm="12" Class="p-2">
@@ -47,10 +46,13 @@
             <li>Satyanarayan Katha, Puja & Havan</li>
             <li>Aarti & Prasad Distribution</li>
         </ul>
+
     </MudItem>
 
     <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
+        <div class="dashed-hr123 mt-4">
+
+        </div>
     </MudItem>
 
     <MudItem xs="12" sm="12" Class="p-2">
@@ -65,13 +67,8 @@
 
     </MudItem>
 
-    <MudItem xs="12" sm="12">
-        <hr style="border:1px dashed black" />
-    </MudItem>
-
-
     <MudItem xs="12" sm="12" Class="p-2">
-        <h2 class="satya-heading">Add-On</h2>
+        <hr style="border: 2px solid #EEE;" />
     </MudItem>
 
 
@@ -176,15 +173,16 @@
         </MudStack>
     </MudItem>
 
-    <MudItem xs="12" class="footer-div mt-2">
+    <MudItem xs="12" class="footer-div">
         <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center">
-            <div>
-                <h6> ₹ 13,513.50</h6>
+            <div class="mt-2">
+                <h > ₹ 13,513.50</h>
                 <p>Inclusive of all taxes</p>
             </div>
 
-            <div>
-                <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" Color="Color.Primary">Place Order</MudButton>
+            <div class="mb-2">
+                <MudButton Variant="Variant.Filled" Size="Size.Medium"  Class="btn-primary  m-2" Color="Color.Primary">Place Order</MudButton>
+
             </div>
         </MudStack>
     </MudItem>
@@ -202,8 +200,8 @@
         position: absolute;
         width: 32px;
         height: 32px;
-        top: 3px;
-        right:24px;
+        top: 10px;
+        right:8px;
     }
     .satya-heading {
         width: 150px;
@@ -392,5 +390,13 @@
 /*    ul*/
     .purple-dots li::marker {
         color: #B985E9;
+    }
+
+    .dashed-hr123 {
+        border: 1px dashed #DDD;
+        width:auto;
+        height: 0;
+        padding-left:16px;
+        padding-right:16px;
     }
 </style>
