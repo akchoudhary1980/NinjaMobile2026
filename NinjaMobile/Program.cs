@@ -1,11 +1,23 @@
-using MudBlazor.Services;
+﻿using MudBlazor.Services;
 using NinjaMobile.Components;
 
 var builder = WebApplication.CreateBuilder(args);
+//For linux server
+builder.WebHost.UseUrls("http://0.0.0.0:5003");
+
 
 // Add services to the container.
 builder.Services.AddRazorComponents().AddInteractiveServerComponents();
 builder.Services.AddMudServices();
+
+// ⭐ your API base URL
+//var apiBaseUrl = "https://localhost:7238/api/";
+//var apiBaseUrl = "https://localhost:7238/api/";
+//builder.Services.AddScoped(sp => new HttpClient
+//{
+//    BaseAddress = new Uri(apiBaseUrl)
+//});
+// end 
 
 var app = builder.Build();
 
