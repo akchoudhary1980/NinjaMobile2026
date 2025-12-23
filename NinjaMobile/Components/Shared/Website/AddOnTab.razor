@@ -2,6 +2,9 @@
 <MudGrid Spacing="0">
     <MudItem xs="12">
         <img class="img-package" style="width:100%" src="/images/web-content/packagetab.png" />
+        <div class="addon-img-btn">
+            <img src="/images/web-content/cutbutton.png" />
+        </div>
     </MudItem>
     <MudItem class="headingadd mt-2" sm="12">
         <h2>Basic Indian</h2>
@@ -218,18 +221,20 @@
                 <MudTabPanel Text="Add-on">
                     <MudGrid Spacing="0" Class="p-3">
                         <MudItem xs="12">
-                            <MudTextField T="string" Label="Search" Variant="Variant.Outlined" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" AdornmentColor="Color.Secondary" />
+                            <div class="search-box">
+                                <img  alt="search" class="search-icon" src="/images/web-content/search-icon.png" />
+                                <input type="text" placeholder="Search" />
+                            </div>
                         </MudItem>
                         <MudItem xs="12" sm="12" Class="mt-2">
-                            <MudStack Row="true" Wrap="Wrap.Wrap" AlignItems="AlignItems.Center" Justify="Justify.FlexStart" >
-
+                            <MudStack Row="true" Wrap="Wrap.Wrap" AlignItems="AlignItems.Center" Justify="Justify.FlexStart">
                                 <MudButton Class="rounded-pill" Variant="Variant.Filled" Color="Color.Success" Size="Size.Small">All</MudButton>
-                                <MudButton Class="rounded-pill" Variant="Variant.Filled" Size="Size.Small">Food</MudButton>
-                                <MudButton Class="rounded-pill" Variant="Variant.Filled" Size="Size.Small">Setup Service</MudButton>
-                                <MudButton Class="rounded-pill" Variant="Variant.Filled" Size="Size.Small">Pooja</MudButton>
-                                <MudButton Class="rounded-pill" Variant="Variant.Filled" Size="Size.Small">Deco</MudButton>
-                                <MudButton Class="rounded-pill"  Variant="Variant.Filled" Size="Size.Small">Dj</MudButton>
 
+                                <button class="btn-all">Food</button>
+                                <button class="btn-all">Setup Service</button>
+                                <button class="btn-all">Pooja</button>
+                                <button class="btn-all">Deco</button>
+                                <button class="btn-all">Dj</button>
                             </MudStack>
                         </MudItem>
                         <MudItem xs="12">
@@ -259,13 +264,13 @@
 
     <MudItem xs="12" class="footer-add-div">
         <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center">
-            <div>
+            <div class="mt-1">
                 <h6> ₹ 13,513.50</h6>
                 <p>Inclusive of all taxes</p>
             </div>
 
-            <div>
-                <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Medium" Class="btn-primary" StartIcon="@Icons.Material.Filled.Add">Place Order</MudButton>
+            <div class="pb-3" >
+                <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Medium" Class="btn-primary">Place Order</MudButton>
 
             </div>
         </MudStack>
@@ -280,22 +285,33 @@
         opacity: 1;
         border-radius: 24px;
     }
+
+
+    .addon-img-btn {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 10px;
+        right: 8px;
+    }
     .headingadd {
+
         padding: 10px;
         text-align: justify;
         text-justify: inter-word;
     }
 
-        .heading h2 {
-            font-family: DM Sans;
-            font-weight: 600;
-            font-size: 24px;
-            line-height: 130%;
-            letter-spacing: -2%;
-        }
+    .heading h2 {
+        color:#000;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 130%;
+        letter-spacing: -2%;
+        font-style: normal;
+        letter-spacing: -0.48px;
+    }
 
         .heading p {
-            font-family: DM Sans;
             font-weight: 400;
             font-size: 14px;
             line-height: 100%;
@@ -417,15 +433,27 @@
         letter-spacing: -0.24px;
     }
 
+    .btn-all {
+        width: fit-content;
+        padding:4px 12px 4px 12px;
+        height: 26px;
+        background-color: #F2ECF8;
+        border: 1px solid #F9F5FC;
+        border-radius: 40px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #777777;
+    }
+
     .footer-div {
-        width: 360px;
+        width: 400px;
         height: 56px;
         background-color: #3E1268;
         color: #FFFFFF;
     }
 
-    .footer-btn {
-    }
 
     .white-outline-btn {
         border: 1px solid white !important;
@@ -436,4 +464,31 @@
             background-color: white !important;
             color: #220A3A !important;
         }
+
+
+    .search-box {
+        width: auto;
+        height: 46px;
+        background: #f9f9f9;
+        border: 1px solid #EEEEEE;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        padding: 0 14px;
+        gap: 10px;
+    }
+
+    .search-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .search-box input {
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: 14px;
+        width: 100%;
+    }
+
 </style>

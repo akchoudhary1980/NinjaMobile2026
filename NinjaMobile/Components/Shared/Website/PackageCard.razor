@@ -2,6 +2,9 @@
 
     <MudItem xs="12" sm="12">
         <MudImage Class="package-img" Src="/images/web-content/_dish.png"></MudImage>
+        <div class="img-item-div">
+            <img class="veg1-img" src="/images/web-content/veg.png" />
+        </div>
     </MudItem>
 
     <MudItem xs="12" sm="12">
@@ -28,8 +31,8 @@
             <MudItem xs="12" sm="12" Class="mt-1">
                 <span class="package-gst"><b class="package-price">209</b> +GST</span>
             </MudItem>
-            <MudItem xs="12" sm="12" Class="mt-3">
-                <MudButton Variant="Variant.Filled" Color="Color.Primary" Class="card-btn-plan" StartIcon="@shopingIcon">Add to cart</MudButton>
+            <MudItem xs="12" sm="12" Class="ms-2 me-2">
+                <MudButton Variant="Variant.Filled" Color="Color.Primary" Class="card-btn-plan" FullWidth="true" StartIcon="@shopingIcon">Add to cart</MudButton>
             </MudItem>
 
         </MudGrid>
@@ -64,23 +67,25 @@
 
 <style>
     .package-card {
+        background-color: #ffff;
         width: auto;
-        height: auto;
-        padding-left:24px;
+        height: 340px;
+        opacity: 1;
+        border-radius: 24px;
+    }
+    .img-item-div {
+        position: relative;
     }
 
-        /*.package-card:hover {
-            transform: scale(1.03);*/ 
-            /*  border: 1px solid #999999;*/
-            /*box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-
-            cursor: pointer;
-        }*/
-
     .package-img {
-        width: 148px;
-        height: 110px;
-        border-radius:24px;
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+    }
+    .veg1-img {
+        position: absolute;
+        top: -130px;
+        right: 10px;
     }
 
     .package-heading {
@@ -90,6 +95,7 @@
         font-weight: 500;
         line-height: 130%; /* 20.8px */
         letter-spacing: -0.32px;
+        padding-left: 12px;
     }
 
     .package-details {
@@ -97,8 +103,9 @@
         font-size: 12px;
         font-style: normal;
         font-weight: 500;
-        line-height: 150%;  
+        line-height: 150%;
         letter-spacing: -0.24px;
+        padding-left: 12px;
     }
 
     .package-icons {
@@ -108,7 +115,7 @@
 
     .package-price {
         color: #000000;
-        font-size: 28px;
+        font-size: 18px;
         font-weight: 700;
     }
 
@@ -117,6 +124,7 @@
         font-size: 14px;
         font-weight: 500;
         font-style: normal;
+        padding-left: 12px;
     }
 
     .package-fitfor {
@@ -126,6 +134,7 @@
         font-weight: 500;
         line-height: normal;
         letter-spacing: -0.24px;
+        padding-left: 12px;
     }
 
     .package-people {
@@ -138,7 +147,6 @@
     }
 
     .card-btn-plan {
-        width: 148px;
         height: 40px;
         border-radius: 40px;
         background-color: #FF3B30 !important;
@@ -154,10 +162,6 @@
         font-weight: 600;
         line-height: normal;
     }
-
-/*        .card-btn-plan:hover {
-            background-color: #FF3B30 !important;
-        }*/
 
         .card-btn-plan .mud-icon-root {
             margin-top: 4px;
