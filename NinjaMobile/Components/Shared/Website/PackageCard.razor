@@ -1,4 +1,4 @@
-﻿<MudGrid Spacing="0" Class="package-card" >
+﻿<MudGrid Spacing="0" Class="package-card">
 
     <MudItem xs="12" sm="12">
         <div class="package-img">
@@ -21,7 +21,7 @@
 
 
                 <MudStack Row="true" AlignItems="AlignItems.Center">
-                    <p class="package-details">Starters 1 • Mains 1 <br /> Dessert 1• Bread / Rice 1</p>
+                    <p class="package-details">Starters 1 • Mains 1 <br /> Dessert 1 • Bread / Rice 1</p>
                 </MudStack>
             </MudItem>
 
@@ -35,12 +35,66 @@
                 <span class="package-gst"><b class="package-price">209</b> +GST</span>
             </MudItem>
             <MudItem xs="12" sm="12" Class="ms-2 me-2 mb-2">
-                <MudButton Variant="Variant.Filled" Color="Color.Primary" Class="card-btn-plan" FullWidth="true" StartIcon="@shopingIcon">Add to cart</MudButton>
+                <MudButton @onclick="OpenDrawer" Variant="Variant.Filled"  Color="Color.Primary" Class="card-btn-plan" FullWidth="true" StartIcon="@shopingIcon">Add to cart</MudButton>
             </MudItem>
 
         </MudGrid>
     </MudItem>
 </MudGrid>
+
+
+<MudDrawer @bind-Open="@_open" Height="100%" Width="100%" Anchor="Anchor.Bottom" Elevation="1" Variant="@DrawerVariant.Temporary" OverlayAutoClose="false">
+  
+    <div style="height:90vh; overflow-y:auto;">
+        <AddOnTab IsClose="_open" IsCloseChanged="CloseDrawer" />
+    </div>
+    
+</MudDrawer>
+
+@code{
+    private bool _open;
+
+    private void OpenDrawer()
+    {
+        _open = true;
+    }
+    private async Task CloseDrawer( bool isclose)
+    {
+        if(isclose==false)
+        {
+            _open = isclose;
+        }
+        else
+        {
+            // open model here then close drawer 
+            await ShowEventInfo();
+            _open = false;
+        }
+    }
+
+    // open dialog
+    [Inject] IDialogService Dialog { get; set; }
+
+    private readonly DialogOptions _noHeader = new()
+    {
+        MaxWidth = MaxWidth.Small,
+        NoHeader = true,
+        BackgroundClass = "custom-dialog",
+
+        CloseButton = true,
+        CloseOnEscapeKey = true
+    };
+
+    private async Task ShowEventInfo()
+    {
+        //MudDialog.Close();
+        var parameters = new DialogParameters
+        {
+             { "ProductFor", "GatherrBento" },
+        };
+        await Dialog.ShowAsync<EventInformation>("Event Information Dialog", _noHeader);
+    }
+}
 
 
 @code {
