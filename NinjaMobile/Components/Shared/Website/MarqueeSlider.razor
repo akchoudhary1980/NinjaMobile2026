@@ -5,7 +5,7 @@
             <h2>What our<br />clients say</h2>
         </div>
     </MudItem>
-    <MudItem xs="12" sm="12">
+    <MudItem xs="12" sm="12" Class="mt-8">
         <div class="marquee">
             <div class="marquee-content">
                 @foreach (var card in Cards)
@@ -61,7 +61,7 @@
                 }
             </div>
         </div>
-        <div class="zig-indicators12">
+        <div class="zig-indicators12 mt-8">
             @for (int i = 0; i < 3; i++)
             {
                 <span class="zig-dot @(i == activeDot ? "active" : "")"></span>
