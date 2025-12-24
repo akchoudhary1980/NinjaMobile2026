@@ -34,7 +34,7 @@
             <MudItem xs="12" sm="12" Class="mt-1">
                 <span class="package-gst"><b class="package-price">209</b> +GST</span>
             </MudItem>
-            <MudItem xs="12" sm="12" Class="ms-2 me-2 mb-2">
+            <MudItem xs="12" sm="12" Class="mb-2">
                 <MudButton @onclick="OpenDrawer" Variant="Variant.Filled"  Color="Color.Primary" Class="card-btn-plan" FullWidth="true" StartIcon="@shopingIcon">Add to cart</MudButton>
             </MudItem>
 
@@ -46,7 +46,7 @@
 <MudDrawer @bind-Open="@_open" Height="100%" Width="100%" Anchor="Anchor.Bottom" Elevation="1" Variant="@DrawerVariant.Temporary" OverlayAutoClose="false">
   
     <div style="height:90vh; overflow-y:auto;">
-        <AddOnTab IsClose="_open" IsCloseChanged="CloseDrawer" />
+        <PackageTab IsClose="_open" IsCloseChanged="CloseDrawer" />
     </div>
     
 </MudDrawer>

@@ -1,10 +1,19 @@
 ﻿<MudGrid Spacing="0">
     <MudItem xs="12">
-        <img class="img-package" style="width:100%" src="/images/web-content/packagetab.png" />
-        <div class="satya-img-btn">
-            <img src="/images/web-content/cutbutton.png" />
+        <div class="img-wrapper">
+            <img class="img-package" src="/images/web-content/packagetab.png" />
+
+            <span class="addon-img-btn">
+                <MudIconButton Icon="@Icons.Material.Filled.Close"
+                               @onclick="OnClose"
+                               Size="Size.Small"
+                               Color="Color.Default" />
+            </span>
         </div>
     </MudItem>
+
+
+
     <MudItem class="heading mt-2" sm="12">
         <h2>Basic Indian</h2>
         <p>
@@ -27,11 +36,11 @@
             <MudItem xs="5" sm="5">
                 <MudButton Class="modify-btn">Modify Menu</MudButton>
             </MudItem>
-        </MudStack> 
+        </MudStack>
     </MudItem>
     @*<MudItem xs="12" sm="12">
-        <hr style="border:1px solid red" />
-    </MudItem>*@
+            <hr style="border:1px solid red" />
+        </MudItem>*@
 
     <MudItem xs="12" Class="p-3">
         <h2 class="all-heading">Includes</h2>
@@ -110,7 +119,7 @@
         </div>
     </MudItem>
 
- 
+
     <MudItem xs="12" Class="p-3">
         <h2 class="all-heading">Mains</h2>
         <MudGrid Spacing="0">
@@ -134,7 +143,7 @@
         </div>
     </MudItem>
 
-  
+
 
     <MudItem xs="12" Class="p-3">
         @*<h2 class="all-heading">Bread / Rice</h2>*@
@@ -226,12 +235,12 @@
         </MudGrid>
     </MudItem>
 
-  
+
 
     <MudItem xs="12" class="footer-div">
         <MudStack Row="true" Justify="Justify.Center" AlignItems="AlignItems.Center">
             <div class="mt-1">
-                <h6> ₹ 13,513.50 <br /> <span>Inclusive of all taxes</span></h6> 
+                <h6> ₹ 13,513.50 <br /> <span>Inclusive of all taxes</span></h6>
             </div>
             <div class="footer-div-btnmodify">
                 <MudButton Variant="Variant.Outlined"
@@ -241,19 +250,48 @@
                 </MudButton>
             </div>
             <div>
-                <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Medium" Class="btn-primary ml-2 mb-2 mt-1">Cart</MudButton>
+                <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Medium" Class="btn-primary ml-2 mb-2 mt-1">Add to Cart</MudButton>
             </div>
         </MudStack>
     </MudItem>
 </MudGrid>
 
+
+@code{
+
+    [Parameter]
+    public bool IsClose { get; set; } = true;
+
+    [Parameter]
+    public EventCallback<bool> IsCloseChanged { get; set; }
+
+
+    private async Task OnClose()
+    {
+        IsClose = false;
+        await IsCloseChanged.InvokeAsync(IsClose);
+    }
+
+    private async Task PlaceOrder()
+    {
+        IsClose = true;
+        await IsCloseChanged.InvokeAsync(IsClose);
+    }
+
+}
 <style>
+
+    .img-wrapper {
+        position: relative;
+    }
+
     .img-package {
+        position:relative;
         height: 250px;
         opacity: 1;
-        border-radius:24px;
+        border-radius: 24px;
     }
-    .satya-img-btn {
+    .addon-img-btn {
         position: absolute;
         width: 32px;
         height: 32px;
@@ -265,13 +303,14 @@
         padding-left: 16px;
     }
 
-    .heading h2 {
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 130%;
-        letter-spacing: -2%;
-        color:#000;
-    }
+        .heading h2 {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 130%;
+            letter-spacing: -2%;
+            color: #000;
+        }
+
         .heading p {
             color: #666;
             font-weight: 400;
@@ -284,11 +323,13 @@
             left: 16px;
             opacity: 1;
         }
+
     .modify-btn {
         background-color: #EEEEEE;
         color: #000;
         border-radius: 24px;
     }
+
     .all-heading {
         width: 150px;
         height: 18px;
@@ -297,8 +338,9 @@
         font-size: 14px;
         line-height: 100%;
         letter-spacing: -2%;
-        color:  #111111;
+        color: #111111;
     }
+
     .veg-div {
         width: auto;
         height: 102px;
@@ -307,6 +349,7 @@
         border-radius: 16px;
         background: linear-gradient(154.48deg, rgba(15, 181, 89, 0.4) -9.17%, rgba(15, 181, 89, 0.08) 62.92%);
     }
+
     .veg-non-div {
         width: auto;
         height: 102px;
@@ -314,8 +357,8 @@
         left: 16px;
         border-radius: 16px;
         background: linear-gradient(154.48deg, rgba(246, 20, 21, 0.4) -9.17%, rgba(246, 20, 21, 0.08) 62.92%);
-
     }
+
     .veg-div div {
         width: 144px;
         height: 60px;
@@ -325,7 +368,7 @@
         border-radius: 16px;
         background-color: #FFFFFF;
     }
-  
+
     .veg-non-div div {
         width: 144px;
         height: 60px;
@@ -335,17 +378,19 @@
         border-radius: 16px;
         background-color: #FFFFFF;
     }
+
     .para {
-        width:auto;
-        text-wrap:wrap;
+        width: auto;
+        text-wrap: wrap;
         color: #666;
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         letter-spacing: -0.24px;
-        padding-left:28px;
+        padding-left: 28px;
     }
+
     .footer-div {
         width: 360px;
         height: 56px;
@@ -369,19 +414,17 @@
 
         .white-outline-btn:hover {
             background-color: white !important;
-            color: #220A3A !important; 
+            color: #220A3A !important;
         }
 
     .dashed-hr2 {
         border: 1px dashed #DDD;
         width: 328px;
         height: 0;
-    
     }
 
-    .footer-div-btnmodify{
-        padding-bottom:8px;
-        padding-top:4px;
+    .footer-div-btnmodify {
+        padding-bottom: 8px;
+        padding-top: 4px;
     }
-
 </style>
