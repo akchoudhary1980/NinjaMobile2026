@@ -1,0 +1,201 @@
+﻿
+<MudGrid Spacing="0" Class="food-filter-box">
+    <MudItem xs="12" sm="12" Class="filter-h6">
+        <h6>Filters</h6>
+    </MudItem>
+
+    <MudGrid Spacing="0" Class="food-box1">
+        <MudItem xs="12" sm="12">
+            <h6 class="h6-food1">Food type</h6>
+            <div class="food-div1">
+                <MudStack Row="true">
+                    <MudStack Row="true">
+                        <button Class="food-both-btn">Both</button>
+                    </MudStack>
+                    <MudStack Row="true">
+                        <img style="height:16px; width:16px;" src="/images/web-content/veg.png" />
+                        <button>Veg</button>
+
+                    </MudStack>
+                    <MudStack Row="true">
+                        <img style="height:16px; width:16px;" src="/images/web-content/non-veg.png" />
+                        <button>Non-Veg</button>
+
+                    </MudStack>
+
+                </MudStack>
+            </div>
+        </MudItem>
+
+        <MudItem sm="12" xs="12" Class="mt-6">
+            <div style="border: 1px solid #EEE">
+            </div>
+        </MudItem>
+
+        <MudItem xs="12" sm="12" Class="mt-6">
+            <h6 class="filter-h62">Event type</h6>
+        </MudItem>
+        <MudItem xs="12" sm="12">
+            <MudRadioGroup T="bool">
+                <MudStack Row="false">
+                    <MudRadio T="bool" Color="Color.Success">House party </MudRadio>
+                    <MudRadio T="bool" Color="Color.Success">Birthday </MudRadio>
+                    <MudRadio T="bool" Color="Color.Success">Office </MudRadio>
+                    <MudRadio T="bool" Color="Color.Success">Anniversary </MudRadio>
+                    <MudRadio T="bool" Color="Color.Success">Pooja </MudRadio>
+                    <MudRadio T="bool" Color="Color.Success">Wedding </MudRadio>
+                </MudStack>
+            </MudRadioGroup>
+        </MudItem>
+
+        <MudItem sm="12" xs="12" Class="mt-6">
+            <div style="border: 1px solid #EEE">
+            </div>
+        </MudItem>
+
+        <MudItem xs="12" sm="12">
+            <h6 class="filter-h62">Cuisine type</h6>
+        </MudItem>
+        <MudItem xs="12" sm="12">
+            <MudStack Row="false">
+                <MudCheckBox T="bool" Color="Color.Success">North Indian</MudCheckBox>
+                <MudCheckBox T="bool" Color="Color.Success">South Indian</MudCheckBox>
+                <MudCheckBox T="bool" Color="Color.Success">Pan Asian</MudCheckBox>
+                <MudCheckBox T="bool" Color="Color.Success">International</MudCheckBox>
+
+            </MudStack>
+        </MudItem>
+
+
+        <MudItem xs="12" sm="12">
+            <h6 class="filter-h62">Pricing</h6>
+        </MudItem>
+        <MudItem xs="12" sm="12">
+
+            <MudSlider T="double" Size="Size.Large" Value="@value" Color="Color.Primary">Volume</MudSlider>
+            <MudStack Row="true">
+                <p>₹250</p>
+                <p>₹500</p>
+                <p>₹1000</p>
+                <p>₹1500</p>
+                <p>₹2000</p>
+            </MudStack>
+        </MudItem>
+    </MudGrid>
+
+    <MudItem sm="12" xs="12" Class="mt-10">
+        <div style="border: 1px solid #EEE">
+        </div>
+    </MudItem>
+
+    <MudItem xs="12" sm="12" Style="height:88px; padding:24px;">
+        <MudStack Row="true" Justify="Justify.SpaceBetween">
+            <button class="food-filter1-btn1">Clear all</button>
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Medium" Class="btn-primary">Apply</MudButton>
+
+        </MudStack>
+
+    </MudItem>
+
+</MudGrid>
+
+
+
+@code {
+    double value = 50.0;
+}
+
+<style>
+    .food-filter-box {
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+    }
+
+    .filter-h6 {
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px; /* 150% */
+        letter-spacing: -0.449px;
+        padding-top: 21px;
+        padding-bottom: 21px;
+        border-bottom: 1px solid #EEE;
+        padding-left:24px;
+    }
+    .filter-h62 {
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px; /* 150% */
+        letter-spacing: -0.449px;
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+
+    .food-box1 {
+        padding: 24px 24px 0px 24px;
+    }
+
+    .h6-food1 {
+        color: #111;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 150% */
+        letter-spacing: -0.312px;
+    }
+
+    .food-div1 {
+        display: flex;
+        width: auto;
+        height: 52px;
+        padding: 0 5.992px 0 6px;
+        align-items: center;
+        gap: 12px;
+        flex-shrink: 0;
+        border-radius: 16px;
+        background: #F7F7F7;
+    }
+
+    .food-both-btn {
+        display: flex;
+        width: 92px;
+        height: 40px;
+        padding: 1px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 50px;
+        background: #FFF;
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.20);
+    }
+
+        .food-both-btn::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background-image: url("/images/web-content/veg.png"); /* your svg path */
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+    .food-filter1-btn1 {
+        display: flex;
+        padding: 11.93px 42px 11.07px 42px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 16777200px;
+        border: 1px solid #D1D5DC;
+        background: #FFF;
+        color: #364153;
+        text-align: center;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px; /* 150% */
+        letter-spacing: -0.312px;
+    }
+</style>

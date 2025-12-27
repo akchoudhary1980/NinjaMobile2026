@@ -1,10 +1,10 @@
 ﻿<MudGrid Spacing="0">
-    <MudItem xs="12">
-        <div class="img-wrapper">
+    <MudItem xs="12" >
+        <div Class="img-wrapper">
             <img class="img-package" src="/images/web-content/packagetab.png" />
 
             <span class="addon-img-btn">
-                <MudIconButton Icon="@Icons.Material.Filled.Close"
+                <MudIconButton Style="color: white; background-color: #000000;" Icon="@Icons.Material.Filled.Close"
                                @onclick="OnClose"
                                Size="Size.Small"
                                Color="Color.Default" />
@@ -283,6 +283,12 @@
 
     .img-wrapper {
         position: relative;
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+        background-image: url(/images/web-content/packagetab.png);
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     .img-package {
@@ -290,6 +296,7 @@
         height: 250px;
         opacity: 1;
         border-radius: 24px;
+        visibility:hidden;
     }
     .addon-img-btn {
         position: absolute;
@@ -297,6 +304,8 @@
         height: 32px;
         top: 10px;
         right: 8px;
+/*        background-color: #000000;
+        opacity:2;*/
     }
 
     .heading {

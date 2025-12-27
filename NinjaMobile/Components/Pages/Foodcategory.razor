@@ -7,55 +7,57 @@
     <HeaderSection />
 </div>
 
-    <MudGrid Spacing="0" Class="select-category">
-        <MudItem xs="4" sm="4">
-          
-        </MudItem>
-        <MudItem xs="4" sm="4">
-           <div></div>
-   
-        </MudItem>
-        <MudItem xs="4" sm="4">
-     
-        </MudItem>
-    </MudGrid>
+<MudGrid Spacing="0" Class="select-category">
+    <MudItem xs="4" sm="4">
 
-    <MudGrid Spacing="0" Class="category-img">
-        <MudItem xs="12" sm="12">
-                <div class="black-img">
+    </MudItem>
+    <MudItem xs="4" sm="4">
+        <div></div>
 
-                </div>
-            
-            <div class="category-text">
-                <h4>Gather Box</h4>
-                <p>Enjoy your big day stress-free. EzGatherr brings your dream event together beautifully,
-                while you savor each moment.</p>
-            </div>
-        </MudItem>
-    </MudGrid>
+    </MudItem>
+    <MudItem xs="4" sm="4">
+
+    </MudItem>
+</MudGrid>
+
+<MudGrid Spacing="0" Class="category-img">
+    <MudItem xs="12" sm="12">
+        <div class="black-img">
+
+        </div>
+
+        <div class="category-text">
+            <h4>Gather Box</h4>
+            <p>
+                Enjoy your big day stress-free. EzGatherr brings your dream event together beautifully,
+                while you savor each moment.
+            </p>
+        </div>
+    </MudItem>
+</MudGrid>
 
 <MudGrid Spacing="0" Class="mt-6">
-<MudItem xs="12" sm="12" Class="filter-box">
-    <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
-        <div>
-            <p class="m-0">Menu Options</p>
-        </div>
+    <MudItem xs="12" sm="12" Class="filter-box">
+        <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+            <div>
+                <p class="m-0">Menu Options</p>
+            </div>
 
-        <div>
-            <button>
-                <img src="/images/web-content/category-filter-btn.png" />
-                filter
-            </button>
-        </div>
+            <div>
+                <button>
+                    <img src="/images/web-content/category-filter-btn.png" />
+                    filter
+                </button>
+            </div>
 
-        @*<div style="padding-right:16px;">
-            <button>
-                <img src="/images/web-content/category-filter-btn.png" />
-                filter
-            </button>
-        </div>*@
-    </MudStack>
-</MudItem>
+            @*<div style="padding-right:16px;">
+                    <button>
+                        <img src="/images/web-content/category-filter-btn.png" />
+                        filter
+                    </button>
+                </div>*@
+        </MudStack>
+    </MudItem>
 </MudGrid>
 
 
@@ -69,7 +71,6 @@
                     <img src="/images/web-content/veg.png" />
                 </div>
             </div>
-
         </MudItem>
 
         <MudItem xs="12" sm="12">
@@ -101,7 +102,7 @@
                     <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
                         <div>
                             <button class="m-0">
-                                  Add
+                                Add
                             </button>
                         </div>
 
@@ -117,53 +118,13 @@
         </MudItem>
     </MudItem>
 
-    <MudItem xs="6" sm="12">
-        <MudItem xs="12" sm="12">
-            <div class="cate-package-img">
-                <MudImage Style="width:100%; height:auto; border-radius:16px;" Src="/images/web-content/_dish.png" />
-                <div class="cate-veg1-img">
-                    <img src="/images/web-content/veg.png" />
-                </div>
-            </div>
-
-        </MudItem>
-
-        <MudItem xs="12" sm="12">
-            <MudGrid Spacing="1">
-
-                <MudItem xs="12" sm="12" Class="mt-3">
-                    <h6 class="cate-package-heading">Basic Indian</h6>
-                </MudItem>
-
-                <MudItem xs="12" sm="12" Class="mt-1">
-
-
-                    <MudStack Row="true" AlignItems="AlignItems.Center">
-                        <p class="cate-package-details">Starters 1 • Mains 1 <br /> Dessert 1 • Bread / Rice 1</p>
-                    </MudStack>
-                </MudItem>
-
-                <MudItem xs="12" sm="12" Class="mt-1">
-                    <MudStack Row="true" AlignItems="AlignItems.Center">
-                        <span class="cate-package-fitfor">Fit For: <b class="package-people">10 people</b></span>
-                    </MudStack>
-                </MudItem>
-
-                <MudItem xs="12" sm="12" Class="mt-1">
-                    <span class="cate-package-gst"><b class="package-price">209</b> +GST</span>
-                </MudItem>
-                <MudItem xs="12" sm="12" Class="mb-2">
-
-                </MudItem>
-
-            </MudGrid>
-        </MudItem>
-    </MudItem>
-
-
-
-
 </MudGrid>
+
+
+<MudItem xs="12" sm="12" Class="text-end mt-6 pl-4 pe-4">
+    <MudButton Variant="Variant.Filled" FullWidth="true" Color="Color.Primary" Size="Size.Medium" Class="btn-primary">View All</MudButton>
+
+</MudItem>
 
 
 
@@ -171,7 +132,7 @@
     .select-category {
         width: auto;
         height: 96px;
-        background-color:antiquewhite;
+        background-color: antiquewhite;
     }
 
     .category-img {
@@ -182,6 +143,7 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
+
     .black-img {
         position: absolute;
         background: linear-gradient(90deg, #18052A 0%, rgba(24, 5, 42, 0.80) 50%, rgba(0, 0, 0, 0.00) 100%);
@@ -191,12 +153,14 @@
         left: 0;
         z-index: 1;
     }
+
     .category-text {
         position: absolute;
-        padding-top:38px;
+        padding-top: 38px;
         z-index: 2;
         padding-left: 24px;
     }
+
         .category-text p {
             color: #E5E7EB;
             font-size: 14px;
@@ -205,7 +169,7 @@
             line-height: 22.75px; /* 162.5% */
             letter-spacing: -0.15px;
             width: 310px;
-            text-wrap:wrap;
+            text-wrap: wrap;
         }
 
         .category-text h4 {
@@ -218,8 +182,9 @@
         }
 
     .filter-box {
-        padding:12px 16px 12px 16px;
+        padding: 12px 16px 12px 16px;
     }
+
         .filter-box p {
             color: #101828;
             font-size: 18px;
@@ -227,6 +192,7 @@
             font-weight: 500;
             letter-spacing: -0.439px;
         }
+
         .filter-box button {
             border-radius: 10px;
             border: 1px solid #D1D5DC;
@@ -243,7 +209,7 @@
         }
 
 
-/*        card*/
+    /*        card*/
 
     .cate-package-card {
         background-color: #ffff;
@@ -326,6 +292,7 @@
 
     .card-box-btn {
     }
+
         .card-box-btn button {
             border-radius: 40px;
             border: 1px solid #000;
@@ -345,4 +312,4 @@
             line-height: normal;
         }
 </style>
-  
+
