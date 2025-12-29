@@ -3,7 +3,7 @@ using NinjaMobile.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 //For linux server
-//builder.WebHost.UseUrls("http://0.0.0.0:5003");
+builder.WebHost.UseUrls("http://0.0.0.0:5003");
 
 
 // Add services to the container.
