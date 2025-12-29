@@ -1,0 +1,87 @@
+﻿<div class="range-wrapper">
+
+    <input type="range" min="0" max="100" @bind-value="MinValue" @bind-value:event="oninput" />
+    <input type="range" min="0" max="100" @bind-value="MaxValue" @bind-value:event="oninput" />
+
+    <div class="range-track"
+         style="left:@($"{MinValue}%"); width:@($"{MaxValue - MinValue}%");">
+    </div>
+
+    <br />
+    <div class="value-text">
+        Range: @MinValue – @MaxValue
+    </div>
+
+</div>
+
+
+@code {
+    int _min = 25;
+    int _max = 75;
+
+    int MinValue
+    {
+        get => _min;
+        set => _min = Math.Min(value, _max - 1);
+    }
+
+    int MaxValue
+    {
+        get => _max;
+        set => _max = Math.Max(value, _min + 1);
+    }
+}
+
+
+<style>
+    .range-wrapper {
+        position: relative;
+        width: auto;
+        height: 6px;
+        background-color:#ddd;
+        border-radius:6px;
+    }
+        .range-wrapper input[type="range"] {
+            -webkit-appearance: none; /* Chrome / Safari */
+            appearance: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 6px;
+            background: none;
+            pointer-events: none;
+        }
+
+            /* Thumb */
+            .range-wrapper input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                border: 4px solid #fff;
+                background-color: #FF3B30;              
+                box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.18);
+                pointer-events: auto;
+                position: relative;
+                z-index: 3;
+            }
+
+    .range-track {
+        position: absolute;
+        top: 0px;
+        height: 6px;
+        background: #FF3B30;
+        z-index: 1;
+        border-radius: 3px;
+    }
+
+    .value-text {
+        display:flex;
+        align-items:center;
+        justify-content:center;      
+        font-weight: 500;
+    }
+
+</style>

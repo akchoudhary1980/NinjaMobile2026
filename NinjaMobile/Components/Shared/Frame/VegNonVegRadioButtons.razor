@@ -1,0 +1,104 @@
+﻿<div class="container">
+    <div class="button-wrap">
+
+        @foreach (var listitem in OptionsList)
+        {
+            var id = listitem.Label.Replace(" ", "-").ToLower();
+            <input class="hidden radio-label"
+                   id="@id"
+                   type="radio"
+                   name="@GroupName"                  
+                   value="@listitem"
+                   checked="@(SelectedOption == listitem.Label)"
+                   @onchange="() => OnSelected(listitem.Label)" />
+
+            <label class="button-label" for="@id">
+                <MudStack Row="true" Spacing="1" AlignItems="AlignItems.Center" Justify="Justify.Center" Style="height:26px;">
+                    <div>
+                        <img src="/images/web-content/@listitem.Icon" alt="Icon" /> 
+                    </div>
+
+                    <div>
+                        <span>@listitem.Label</span>
+                    </div>
+                   
+                </MudStack>               
+            </label>
+        }
+    </div>
+</div>
+
+@code{
+#nullable disable
+    [Parameter] public List<IconRadionButton> OptionsList { get; set; } = new();
+    [Parameter] public string SelectedOption { get; set; }
+    [Parameter] public EventCallback<string> SelectedOptionChanged { get; set; }
+
+    // Optional: unique group name so multiple components don’t clash
+    [Parameter] public string GroupName { get; set; } = Guid.NewGuid().ToString();
+
+    private async Task OnSelected(string item)
+    {
+        SelectedOption = item;
+        await SelectedOptionChanged.InvokeAsync(SelectedOption);
+    }
+}
+<style>
+
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* horizontal center */
+        align-items: center; /* vertical center */
+    }
+
+    .button-wrap {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .button-label {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40px; /* button height */
+        padding: 10px 22px; /* button width */
+
+        background-color: #F7F7F7;
+        color: #666;
+       /* border: 2px solid #220D3B;*/
+      /*  border-radius: 24px;*/
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        transition: all 0.25s ease;
+        user-select: none;
+    }
+
+        /* Hover / Active */
+        .button-label:hover {
+            cursor: pointer;
+            background-color: #fff;
+            color: #111;          
+            border-radius: 50px;           
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.20);
+        }
+
+        .button-label:active {
+            transform: translateY(1px);
+        }
+
+    /* Checked states */
+    .radio-label:checked + .button-label {
+        background-color: #fff;
+        color: #111;
+        border-radius: 50px;
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.20);
+    }
+    /* Hide radio */
+    .hidden {
+        display: none;
+    }
+</style>

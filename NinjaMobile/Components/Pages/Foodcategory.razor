@@ -7,7 +7,11 @@
     <HeaderSection />
 </div>
 
-<MudGrid Spacing="0" Class="select-category">
+<div class="food-menu-box">
+    <ActiveIconVerticalNavbar MenuItems="MenuItems" DefaultActive="Gatherr Box" />
+</div>
+
+@*<MudGrid Spacing="0" Class="select-category">
     <MudItem xs="4" sm="4">
 
     </MudItem>
@@ -18,7 +22,7 @@
     <MudItem xs="4" sm="4">
 
     </MudItem>
-</MudGrid>
+</MudGrid>*@
 
 <MudGrid Spacing="0" Class="category-img">
     <MudItem xs="12" sm="12">
@@ -125,6 +129,60 @@
     <MudButton Variant="Variant.Filled" FullWidth="true" Color="Color.Primary" Size="Size.Medium" Class="btn-primary">View All</MudButton>
 
 </MudItem>
+
+@code
+{
+    private List<MenuItem> MenuItems;
+
+    protected override void OnInitialized()
+    {
+        MenuItems = new()
+     {
+         new MenuItem
+         {
+             Title = "Gatherr Box",
+             NormalIcon = CustomIcons.FoodIcon,
+             ActiveIcon = CustomIcons.FoodIconRed,
+             Action = () => OnMenuClick("GatherrBox")
+         },
+
+         new MenuItem
+         {
+             Title = "Gatherr Feast",
+             NormalIcon = CustomIcons.VenueIcons,
+             ActiveIcon = CustomIcons.VenueIconsRed,
+             Action = () => OnMenuClick("GatherrFeast")
+         },
+         new MenuItem
+         {
+             Title = "Bento Box",
+             NormalIcon = CustomIcons.EventIcon,
+             ActiveIcon = CustomIcons.EventIconRed,
+             Action = () => OnMenuClick("BentoBox")
+         },
+     };
+    }
+
+    void OnMenuClick(string title)
+    {
+        //switch (title)
+        //{
+        //    case "Food":
+        //        _currentMainMenu = 0;
+        //        break;
+        //    case "Venue":
+        //        _currentMainMenu = 1;
+        //        break;
+        //    case "Event":
+        //        _currentMainMenu = 2;
+        //        break;
+        //    case "Corporate":
+        //        _currentMainMenu = 3;
+        //        break;
+        //}
+        //StateHasChanged();
+    }
+}
 
 
 

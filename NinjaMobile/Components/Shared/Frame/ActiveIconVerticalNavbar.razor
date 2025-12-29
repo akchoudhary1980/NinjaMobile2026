@@ -1,0 +1,130 @@
+﻿<div class="active-icon-navbar-container">
+    <ul>
+        @foreach (var item in MenuItems)
+        {
+            <li class="nav-link @(item.Title == ActiveItem ? "active-link" : "")" @onclick="() => SetActive(item)">
+                <a  href="javascript:void(0)">
+                    <MudStack Row="false" AlignItems="AlignItems.Center" >
+                        <div>
+                            @*<MudIcon Icon="@(item.Title == ActiveItem ? item.ActiveIcon : item.NormalIcon)" />*@
+                            <img src="/images/web-content/sample1.png" />
+                        </div>
+                        <div>
+                            @item.Title
+                        </div>
+                    </MudStack>
+                </a>
+                <div class="underline"></div>
+            </li>
+        }
+    </ul>
+</div>
+
+@code {
+#nullable disable
+    [Parameter]
+    public List<MenuItem> MenuItems { get; set; } = new();
+
+    [Parameter]
+    public string DefaultActive { get; set; }
+
+    private string ActiveItem;
+
+    protected override void OnParametersSet()
+    {
+        ActiveItem ??= DefaultActive ?? MenuItems.FirstOrDefault()?.Title;
+    }
+
+    private void SetActive(MenuItem item)
+    {
+        ActiveItem = item.Title;
+        item.Action?.Invoke();
+    }
+}
+
+
+
+<style>
+    a {
+        outline: none;
+    }
+
+    .active-icon-navbar-container {
+        text-align: center;
+        background-color: #fff;
+        padding: 0px;       
+        font-size: 0;      
+    }
+
+        .active-icon-navbar-container ul {
+            margin: 0;
+            padding: 0;
+            text-align: right;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+            .active-icon-navbar-container ul li {
+                display: inline-block;
+                font-size: 14px;
+                cursor: pointer;
+            }
+
+                .active-icon-navbar-container ul li a {
+                    color: #666666;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    padding: 10px 37px 10px 37px;
+                    /*  padding: 10px;*/
+                    text-decoration: none;
+                    display: inline-block;
+                    transition: color 0.5s;
+
+                    display: flex;
+                    align-items: center; /* vertical center */
+                    justify-content: center; /* horizontal center (optional) */
+                    /*gap: 8px;*/ /* space between icon & text */
+                    text-decoration: none;
+                }
+
+                .active-icon-navbar-container ul li.active-link a {
+                    color: #FF3B30;
+                }
+
+                .active-icon-navbar-container ul li .underline {
+                    height: 4px;
+                    border-radius: 2px;
+                    background-color: transparent;
+                    width: 0%;
+                    transition: width 0.2s, background-color 0.5s;
+                    margin: 0 auto;
+                }
+
+                .active-icon-navbar-container ul li.active-link .underline {
+                    width: 60%;
+                    background-color: #FF3B30;
+                }
+
+                .active-icon-navbar-container ul li:hover .underline {
+                    background-color: #FF3B30;
+                    width: 60%;
+                }
+
+                .active-icon-navbar-container ul li:active a {
+                    transition: none;
+                    color: #FF3B30;
+                }
+                .active-icon-navbar-container ul li:hover a {
+                    transition: none;
+                    color: #FF3B30;
+                }
+/*                .active-icon-navbar-container .nav-link:hover a svg {
+                    stroke: #4cff00;
+                }*/
+
+                .active-icon-navbar-container ul li:active .underline {
+                    transition: none;
+                    background-color: #fff;
+                }
+</style>

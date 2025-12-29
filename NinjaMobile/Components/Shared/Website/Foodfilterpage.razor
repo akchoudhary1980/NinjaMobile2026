@@ -7,7 +7,7 @@
     <MudGrid Spacing="0" Class="food-box1">
         <MudItem xs="12" sm="12">
             <h6 class="h6-food1">Food type</h6>
-            <div class="food-div1">
+            @*<div class="food-div1">
                 <MudStack Row="true">
                     <MudStack Row="true">
                         <button Class="food-both-btn">Both</button>
@@ -24,6 +24,12 @@
                     </MudStack>
 
                 </MudStack>
+            </div>*@
+        </MudItem>
+
+        <MudItem xs="12" sm="12" Class="mt-3">
+            <div class="category-food-type-box">
+                <VegNonVegRadioButtons OptionsList="optionList" SelectedOption="@selectedItem"></VegNonVegRadioButtons>
             </div>
         </MudItem>
 
@@ -37,8 +43,8 @@
         </MudItem>
         <MudItem xs="12" sm="12">
             <MudRadioGroup T="bool">
-                <MudStack Row="false">
-                    <MudRadio T="bool" Color="Color.Success">House party </MudRadio>
+                <MudStack Row="false" Spacing="1">
+                    <MudRadio T="bool"  Color="Color.Success">House party </MudRadio>
                     <MudRadio T="bool" Color="Color.Success">Birthday </MudRadio>
                     <MudRadio T="bool" Color="Color.Success">Office </MudRadio>
                     <MudRadio T="bool" Color="Color.Success">Anniversary </MudRadio>
@@ -57,7 +63,7 @@
             <h6 class="filter-h62">Cuisine type</h6>
         </MudItem>
         <MudItem xs="12" sm="12">
-            <MudStack Row="false">
+            <MudStack Row="false" Spacing="1">
                 <MudCheckBox T="bool" Color="Color.Success">North Indian</MudCheckBox>
                 <MudCheckBox T="bool" Color="Color.Success">South Indian</MudCheckBox>
                 <MudCheckBox T="bool" Color="Color.Success">Pan Asian</MudCheckBox>
@@ -72,14 +78,16 @@
         </MudItem>
         <MudItem xs="12" sm="12">
 
-            <MudSlider T="double" Size="Size.Large" Value="@value" Color="Color.Primary">Volume</MudSlider>
+            <DualSlider />
+
+            @*<MudSlider T="double" Size="Size.Large" Value="@value" Color="Color.Primary">Volume</MudSlider>
             <MudStack Row="true">
                 <p>₹250</p>
                 <p>₹500</p>
                 <p>₹1000</p>
                 <p>₹1500</p>
                 <p>₹2000</p>
-            </MudStack>
+            </MudStack>*@
         </MudItem>
     </MudGrid>
 
@@ -92,9 +100,7 @@
         <MudStack Row="true" Justify="Justify.SpaceBetween">
             <button class="food-filter1-btn1">Clear all</button>
             <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Medium" Class="btn-primary">Apply</MudButton>
-
         </MudStack>
-
     </MudItem>
 
 </MudGrid>
@@ -103,6 +109,17 @@
 
 @code {
     double value = 50.0;
+
+
+    List<IconRadionButton> optionList = new List<IconRadionButton>
+ {
+
+      new IconRadionButton { Icon = "_both-circle.svg", Label = "Both" },
+      new IconRadionButton { Icon = "_veg-circle.svg", Label = "Veg" },
+      new IconRadionButton { Icon = "_non-veg-circle.svg", Label = "Non-Veg" },
+
+     };
+    string selectedItem = "Both";
 }
 
 <style>
@@ -197,5 +214,16 @@
         font-weight: 500;
         line-height: 24px; /* 150% */
         letter-spacing: -0.312px;
+    }
+
+    .category-food-type-box {
+        width: auto;
+        height: 56px;
+        padding: 6px;
+        border-radius: 30px;
+        background: #F7F7F7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 </style>
