@@ -1,0 +1,85 @@
+﻿<div class="speed-dial-container">
+    <!-- Main FAB -->
+    <MudFab Color="@(IsOpen ? Color.Tertiary : Color.Primary)" @onclick="Toggle" StartIcon="@(IsOpen ? close : add )" Size="Size.Small" /> 
+    <!-- Action Buttons -->
+    @if (IsOpen)
+    {
+        <div class="speed-dial-actions">
+            @foreach (var item in Items)
+            {
+                <MudFab Class="speed-dial-action" onclick="() => item.Action.Invoke()" Color="@item.Color" StartIcon="@item.Icon" Size="Size.Small" />
+            }
+        </div>
+    }
+</div>
+
+@code {
+#nullable disable
+    private bool IsOpen = false;
+    private string add = Icons.Material.Filled.Phone;
+    private string close = Icons.Material.Filled.Close;
+
+    [Parameter]
+    public List<SpeedDialItem> Items { get; set; } = new();
+
+    void Toggle()
+    {
+        IsOpen = !IsOpen;
+    }
+}
+
+<style>
+   /* Main container (fixed bottom-right) */
+    .speed-dial-container {
+        position: fixed;
+/*        bottom: 20px;*/
+        bottom: 70px;
+        right: 12px;
+        display: flex;
+        flex-direction: column-reverse; /* makes actions go UP */
+        align-items: flex-end;
+    }
+
+
+/* Action buttons open upward */
+.speed-dial-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+.speed-dial-action {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+    padding: 10px 14px;
+/*    background: white;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 30px;*/
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    animation: fadeUp 0.3s ease-out;
+    transition: transform 0.2s;
+}
+
+/*.speed-dial-action:hover {
+    background: #f0f0f0;
+    transform: translateX(-4px);
+}*/
+
+/* Smooth upward animation */
+@@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+

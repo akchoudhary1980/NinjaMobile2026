@@ -1,5 +1,5 @@
-﻿<div class="main-container d-flex justify-content-center align-items-center">
-    <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
+﻿<div class="gather-box-container">
+    <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceAround" Style="height:46px;">
         <MudButton Class="semi-btn">Gather Box</MudButton>
         <MudButton Class="semi-btn">Gather feast</MudButton>
         <MudButton Class="semi-btn">Bento Box</MudButton>
@@ -7,16 +7,17 @@
 </div>
 
 <style>
-    .main-container {
+    .gather-box-container {
         background-color: #220A3A;
         height: 46px;
-        display: flex;
-        align-items: center;
+/*        display: flex;
+        align-items: center;*/
         border-radius:24px;
     }
 
     .semi-btn{
         color: #7F7093;
+        text-transform:none
     }
 
     .semi-btn:hover{
