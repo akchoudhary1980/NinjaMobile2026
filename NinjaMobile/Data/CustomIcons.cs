@@ -2,6 +2,98 @@
 {
     public static class CustomIcons
     {
+        public const string LoyalyWallet = @"<svg xmlns=""http://www.w3.org/2000/svg"" width=""21"" height=""21"" viewBox=""0 0 21 21"" fill=""none"">
+  <g clip-path=""url(#clip0_3148_1306)"">
+    <path d=""M14.8779 7.00018V4.37518C14.8779 4.14312 14.7857 3.92056 14.6216 3.75646C14.4576 3.59237 14.235 3.50018 14.0029 3.50018H5.25293C4.7888 3.50018 4.34368 3.68456 4.01549 4.01275C3.6873 4.34093 3.50293 4.78605 3.50293 5.25018M3.50293 5.25018C3.50293 5.71431 3.6873 6.15943 4.01549 6.48762C4.34368 6.81581 4.7888 7.00018 5.25293 7.00018H15.7529C15.985 7.00018 16.2076 7.09237 16.3716 7.25646C16.5357 7.42056 16.6279 7.64312 16.6279 7.87518V10.5002M3.50293 5.25018V15.7502C3.50293 16.2143 3.6873 16.6594 4.01549 16.9876C4.34368 17.3158 4.7888 17.5002 5.25293 17.5002H15.7529C15.985 17.5002 16.2076 17.408 16.3716 17.2439C16.5357 17.0798 16.6279 16.8572 16.6279 16.6252V14.0002"" stroke=""#3E1268"" stroke-width=""1.575"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M17.5015 10.5V14H14.0015C13.5373 14 13.0922 13.8156 12.764 13.4874C12.4358 13.1592 12.2515 12.7141 12.2515 12.25C12.2515 11.7859 12.4358 11.3408 12.764 11.0126C13.0922 10.6844 13.5373 10.5 14.0015 10.5H17.5015Z"" stroke=""#3E1268"" stroke-width=""1.575"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+  </g>
+  <defs>
+    <clipPath id=""clip0_3148_1306"">
+      <rect width=""21"" height=""21"" fill=""white""/>
+    </clipPath>
+  </defs>
+</svg>";
+        public const string ReferandEarn = @"<svg xmlns=""http://www.w3.org/2000/svg"" width=""21"" height=""21"" viewBox=""0 0 21 21"" fill=""none"">
+  <g clip-path=""url(#clip0_3148_1314)"">
+    <path d=""M4.37646 6.125C4.37646 7.05326 4.74521 7.9435 5.40159 8.59987C6.05797 9.25625 6.94821 9.625 7.87646 9.625C8.80472 9.625 9.69496 9.25625 10.3513 8.59987C11.0077 7.9435 11.3765 7.05326 11.3765 6.125C11.3765 5.19674 11.0077 4.3065 10.3513 3.65013C9.69496 2.99375 8.80472 2.625 7.87646 2.625C6.94821 2.625 6.05797 2.99375 5.40159 3.65013C4.74521 4.3065 4.37646 5.19674 4.37646 6.125Z"" stroke=""#3E1268"" stroke-width=""1.575"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M2.62891 18.375V16.625C2.62891 15.6967 2.99766 14.8065 3.65403 14.1501C4.31041 13.4937 5.20065 13.125 6.12891 13.125H9.62891C10.4689 13.125 11.2389 13.4207 11.8427 13.9134"" stroke=""#3E1268"" stroke-width=""1.575"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M14.0029 2.73883C14.7558 2.93159 15.4231 3.36944 15.8996 3.98335C16.3761 4.59726 16.6348 5.35231 16.6348 6.12946C16.6348 6.9066 16.3761 7.66165 15.8996 8.27556C15.4231 8.88947 14.7558 9.32732 14.0029 9.52008"" stroke=""#3E1268"" stroke-width=""1.575"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M14.0029 19.2497H16.426C16.7473 19.2497 17.0555 19.122 17.2827 18.8948C17.5099 18.6676 17.6375 18.3594 17.6375 18.0381V13.9997M17.6375 13.9997L16.0222 15.615M17.6375 13.9997L19.2529 15.615"" stroke=""#3E1268"" stroke-width=""1.575"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+  </g>
+  <defs>
+    <clipPath id=""clip0_3148_1314"">
+      <rect width=""21"" height=""21"" fill=""white""/>
+    </clipPath>
+  </defs>
+</svg>";
+        public const string Orders = @"<svg xmlns=""http://www.w3.org/2000/svg"" width=""21"" height=""21"" viewBox=""0 0 21 21"" fill=""none"">
+  <g clip-path=""url(#clip0_3148_1324)"">
+    <path d=""M10.5029 2.625L17.5029 6.5625V14.4375L10.5029 18.375L3.50293 14.4375V6.5625L10.5029 2.625Z"" stroke=""#3E1268"" stroke-width=""1.575"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M10.5039 10.5L17.5039 6.5625"" stroke=""#3E1268"" stroke-width=""1.575"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M10.5039 10.5V18.375"" stroke=""#3E1268"" stroke-width=""1.575"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M10.5029 10.5L3.50293 6.5625"" stroke=""#3E1268"" stroke-width=""1.575"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M14.0015 4.59375L7.00146 8.53125"" stroke=""#3E1268"" stroke-width=""1.575"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+  </g>
+  <defs>
+    <clipPath id=""clip0_3148_1324"">
+      <rect width=""21"" height=""21"" fill=""white""/>
+    </clipPath>
+  </defs>
+</svg>";
+        public const string Addresses = @"<svg xmlns=""http://www.w3.org/2000/svg"" width=""21"" height=""21"" viewBox=""0 0 21 21"" fill=""none"">
+  <g clip-path=""url(#clip0_3148_1335)"">
+    <path d=""M7.87891 9.62482C7.87891 10.321 8.15547 10.9887 8.64775 11.481C9.14003 11.9733 9.80771 12.2498 10.5039 12.2498C11.2001 12.2498 11.8678 11.9733 12.3601 11.481C12.8523 10.9887 13.1289 10.321 13.1289 9.62482C13.1289 8.92862 12.8523 8.26094 12.3601 7.76866C11.8678 7.27638 11.2001 6.99982 10.5039 6.99982C9.80771 6.99982 9.14003 7.27638 8.64775 7.76866C8.15547 8.26094 7.87891 8.92862 7.87891 9.62482Z"" stroke=""#3E1268"" stroke-width=""1.575"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M15.4528 14.5751L11.7402 18.2878C11.412 18.6156 10.9672 18.7997 10.5034 18.7997C10.0395 18.7997 9.5947 18.6156 9.26656 18.2878L5.55306 14.5751C4.57413 13.5962 3.90748 12.3489 3.63741 10.991C3.36734 9.63316 3.50599 8.22571 4.03581 6.94665C4.56563 5.66759 5.46284 4.57436 6.61398 3.80521C7.76512 3.03605 9.11848 2.62552 10.5029 2.62552C11.8874 2.62552 13.2408 3.03605 14.3919 3.80521C15.543 4.57436 16.4402 5.66759 16.9701 6.94665C17.4999 8.22571 17.6385 9.63316 17.3685 10.991C17.0984 12.3489 16.4317 13.5962 15.4528 14.5751Z"" stroke=""#3E1268"" stroke-width=""1.575"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+  </g>
+  <defs>
+    <clipPath id=""clip0_3148_1335"">
+      <rect width=""21"" height=""21"" fill=""white""/>
+    </clipPath>
+  </defs>
+</svg>";
+        public const string Profile = @"<svg xmlns=""http://www.w3.org/2000/svg"" width=""21"" height=""21"" viewBox=""0 0 21 21"" fill=""none"">
+  <g clip-path=""url(#clip0_3148_1485)"">
+    <path d=""M7.00146 6.125C7.00146 7.05326 7.37021 7.9435 8.02659 8.59987C8.68297 9.25625 9.57321 9.625 10.5015 9.625C11.4297 9.625 12.32 9.25625 12.9763 8.59987C13.6327 7.9435 14.0015 7.05326 14.0015 6.125C14.0015 5.19674 13.6327 4.3065 12.9763 3.65013C12.32 2.99375 11.4297 2.625 10.5015 2.625C9.57321 2.625 8.68297 2.99375 8.02659 3.65013C7.37021 4.3065 7.00146 5.19674 7.00146 6.125Z"" stroke=""#3E1268"" stroke-width=""1.575"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M5.25391 18.375V16.625C5.25391 15.6967 5.62266 14.8065 6.27903 14.1501C6.93541 13.4937 7.82565 13.125 8.75391 13.125H9.19141H11.1602"" stroke=""#3E1268"" stroke-width=""1.575"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M16.3588 12.9437C16.5311 12.7713 16.6279 12.5376 16.6279 12.294C16.6279 12.0503 16.5311 11.8166 16.3588 11.6443C16.1865 11.472 15.9528 11.3752 15.7091 11.3752C15.4655 11.3752 15.2318 11.472 15.0595 11.6443L11.3779 15.3127V16.6252H12.6904L16.3588 12.9437Z"" stroke=""#3E1268"" stroke-width=""1.05"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M14.8765 12.2498L15.7515 13.1248"" stroke=""#3E1268"" stroke-width=""0.581096"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+  </g>
+  <defs>
+    <clipPath id=""clip0_3148_1485"">
+      <rect width=""21"" height=""21"" fill=""white""/>
+    </clipPath>
+  </defs>
+</svg>";
+        public const string CallUs = @"<svg xmlns=""http://www.w3.org/2000/svg"" width=""21"" height=""21"" viewBox=""0 0 21 21"" fill=""none"">
+  <g clip-path=""url(#clip0_3148_1296)"">
+    <path d=""M4.375 3.5H7.875L9.625 7.875L7.4375 9.1875C8.37459 11.0876 9.91241 12.6254 11.8125 13.5625L13.125 11.375L17.5 13.125V16.625C17.5 17.0891 17.3156 17.5342 16.9874 17.8624C16.6592 18.1906 16.2141 18.375 15.75 18.375C12.3369 18.1676 9.11763 16.7182 6.69973 14.3003C4.28182 11.8824 2.83242 8.66314 2.625 5.25C2.625 4.78587 2.80937 4.34075 3.13756 4.01256C3.46575 3.68437 3.91087 3.5 4.375 3.5Z"" stroke=""#3E1268"" stroke-width=""1.575"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+  </g>
+  <defs>
+    <clipPath id=""clip0_3148_1296"">
+      <rect width=""21"" height=""21"" fill=""white""/>
+    </clipPath>
+  </defs>
+</svg>";
+        public const string MenuCart = @"<svg xmlns=""http://www.w3.org/2000/svg"" width=""24"" height=""24"" viewBox=""0 0 24 24"" fill=""none"">
+  <rect width=""24"" height=""24"" fill=""white""/>
+  <path d=""M4 19C4 19.5304 4.21071 20.0391 4.58579 20.4142C4.96086 20.7893 5.46957 21 6 21C6.53043 21 7.03914 20.7893 7.41421 20.4142C7.78929 20.0391 8 19.5304 8 19C8 18.4696 7.78929 17.9609 7.41421 17.5858C7.03914 17.2107 6.53043 17 6 17C5.46957 17 4.96086 17.2107 4.58579 17.5858C4.21071 17.9609 4 18.4696 4 19Z"" stroke=""#111111"" stroke-width=""2"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+  <path d=""M15 19C15 19.5304 15.2107 20.0391 15.5858 20.4142C15.9609 20.7893 16.4696 21 17 21C17.5304 21 18.0391 20.7893 18.4142 20.4142C18.7893 20.0391 19 19.5304 19 19C19 18.4696 18.7893 17.9609 18.4142 17.5858C18.0391 17.2107 17.5304 17 17 17C16.4696 17 15.9609 17.2107 15.5858 17.5858C15.2107 17.9609 15 18.4696 15 19Z"" stroke=""#111111"" stroke-width=""2"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+  <path d=""M17 17H6V3H4"" stroke=""#111111"" stroke-width=""2"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+  <path d=""M6 5L20 6L19 13H6"" stroke=""#111111"" stroke-width=""2"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+</svg>";
+        public const string MenuIcon = @"<svg xmlns=""http://www.w3.org/2000/svg"" width=""24"" height=""24"" viewBox=""0 0 24 24"" fill=""none"">
+  <g clip-path=""url(#clip0_2841_18830)"">
+    <path d=""M10 6H20"" stroke=""black"" stroke-width=""2"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M4 12H20"" stroke=""black"" stroke-width=""2"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M7 12H20"" stroke=""black"" stroke-width=""2"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M4 18H14"" stroke=""black"" stroke-width=""2"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+  </g>
+  <defs>
+    <clipPath id=""clip0_2841_18830"">
+      <rect width=""24"" height=""24"" fill=""white""/>
+    </clipPath>
+  </defs>
+</svg>"; 
 
 
         //        public const string FoodIcon = @"<svg width=""24"" height=""24"" viewBox=""0 0 24 24"" fill=""none"" xmlns=""http://www.w3.org/2000/svg"">

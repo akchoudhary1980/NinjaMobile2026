@@ -1,84 +1,115 @@
 ﻿
-        <MudGrid Spacing="0" Class="event-container">
-            <MudItem xs="12" sm="12">
-                <div class="event-top-bar">
-                    <div>
-                        <h2>We’d Love to <br />Cook for You!</h2>
-                    </div>
-                    <div>
-                        <p>Share your event details so we can craft a catering plan tailored to your occasion and guest experience.</p>
-                    </div>
+<MudGrid Spacing="0" Class="event-container">
+    <MudItem xs="12" sm="12">
+        <div class="event-top-bar">
+            <div>
+                <h2>We’d Love to <br />Cook for You!</h2>
+            </div>
+            <div>
+                <p>Share your event details so we can craft a catering plan tailored to your occasion and guest experience.</p>
+            </div>
 
-                    @*<div class="event-top-bar-closebtn">
-                        <MudIconButton Icon="@Icons.Material.Filled.Close" Size="Size.Medium" />
-                    </div>*@
-                </div>
-            </MudItem>
-            <MudItem xs="12" sm="12">
-                <div class="event-form-box">
-                    <MudForm>
+            @*<div class="event-top-bar-closebtn">
+                    <MudIconButton Icon="@Icons.Material.Filled.Close" Size="Size.Medium" />
+                </div>*@
+            <span class="addon-img-btn">
+                <MudIconButton Style="color: white; background-color: #2E0D4E;" Icon="@Icons.Material.Filled.Close"
+                               @onclick="OnClose"
+                               Size="Size.Small"
+                               Color="Color.Default" />
+            </span>
+        </div>
+    </MudItem>
+    <MudItem xs="12" sm="12">
+        <div class="event-form-box">
+            <MudForm>
 
-                        <MudGrid Spacing="3">
-                            <MudItem xs="12" sm="12">
-                                <MudText Typo="Typo.caption">Phone Number</MudText>
-                                <MudTextField T="string" Mask="@(new PatternMask("0000000000"))" Variant="Variant.Outlined" Margin="Margin.Dense" Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.Phone" AdornmentColor="Color.Primary" Required="true" RequiredError="Phone numbe is required !" />
-                            </MudItem>
-                            <MudItem xs="12" sm="12">
-                                <MudText Typo="Typo.caption">Event Date</MudText>
-                                <MudDatePicker Margin="Margin.Dense" Variant="Variant.Outlined" @bind-Date="_date" AdornmentIcon="@Icons.Material.Filled.CalendarMonth" AdornmentColor="Color.Primary" />
-                            </MudItem>
+                <MudGrid Spacing="3">
+                    <MudItem xs="12" sm="12">
+                        <MudText Typo="Typo.caption">Phone Number</MudText>
+                        <MudTextField T="string" Mask="@(new PatternMask("0000000000"))" Variant="Variant.Outlined" Margin="Margin.Dense" Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.Phone" AdornmentColor="Color.Primary" Required="true" RequiredError="Phone numbe is required !" />
+                    </MudItem>
+                    <MudItem xs="12" sm="12">
+                        <MudText Typo="Typo.caption">Event Date</MudText>
+                        <MudDatePicker Margin="Margin.Dense" Variant="Variant.Outlined" @bind-Date="_date" AdornmentIcon="@Icons.Material.Filled.CalendarMonth" AdornmentColor="Color.Primary" />
+                    </MudItem>
 
-                            <MudItem xs="6" sm="6">
-                                <MudText Typo="Typo.caption">Start Time</MudText>
-                                <MudTimePicker Label="12 hours" AmPm="true" @bind-Time="_time" Variant="Variant.Outlined" Margin="Margin.Dense" AdornmentIcon="@Icons.Material.Filled.Timer" AdornmentColor="Color.Primary" />
-                            </MudItem>
-                            <MudItem xs="6" sm="6">
-                                <MudText Typo="Typo.caption">End Time</MudText>
-                                <MudTimePicker Label="12 hours" AmPm="true" @bind-Time="_time" Variant="Variant.Outlined" Margin="Margin.Dense" AdornmentIcon="@Icons.Material.Filled.Timer" AdornmentColor="Color.Primary" />
-                            </MudItem>
+                    <MudItem xs="6" sm="6">
+                        <MudText Typo="Typo.caption">Start Time</MudText>
+                        <MudTimePicker Label="12 hours" AmPm="true" @bind-Time="_time" Variant="Variant.Outlined" Margin="Margin.Dense" AdornmentIcon="@Icons.Material.Filled.Timer" AdornmentColor="Color.Primary" />
+                    </MudItem>
+                    <MudItem xs="6" sm="6">
+                        <MudText Typo="Typo.caption">End Time</MudText>
+                        <MudTimePicker Label="12 hours" AmPm="true" @bind-Time="_time" Variant="Variant.Outlined" Margin="Margin.Dense" AdornmentIcon="@Icons.Material.Filled.Timer" AdornmentColor="Color.Primary" />
+                    </MudItem>
 
-                            <MudItem xs="12" sm="12">
-                                <MudText Typo="Typo.caption">Occasion / Event</MudText>
-                                <MudSelect T="string" Variant="Variant.Outlined" Margin="Margin.Dense" Placeholder="Please Select" AdornmentIcon="@Icons.Material.Filled.Event" AdornmentColor="Color.Primary">
-                                    <MudSelectItem Value="@("Pizza")">Birth Day</MudSelectItem>
-                                    <MudSelectItem Value="@("Burger")">Party</MudSelectItem>
-                                    <MudSelectItem Value="@("Hotdog")">Baby Shower</MudSelectItem>
-                                </MudSelect>
-                            </MudItem>
+                    <MudItem xs="12" sm="12">
+                        <MudText Typo="Typo.caption">Occasion / Event</MudText>
+                        <MudSelect T="string" Variant="Variant.Outlined" Margin="Margin.Dense" Placeholder="Please Select" AdornmentIcon="@Icons.Material.Filled.Event" AdornmentColor="Color.Primary">
+                            <MudSelectItem Value="@("Pizza")">Birth Day</MudSelectItem>
+                            <MudSelectItem Value="@("Burger")">Party</MudSelectItem>
+                            <MudSelectItem Value="@("Hotdog")">Baby Shower</MudSelectItem>
+                        </MudSelect>
+                    </MudItem>
 
 
-                            <MudItem xs="6" sm="6">
-                                <MudText Typo="Typo.caption">Veg Guest Count</MudText>
-                                <MudSelect T="string" Variant="Variant.Outlined" Margin="Margin.Dense" Placeholder="Please Select" AdornmentIcon="@Icons.Material.Filled.Face4" AdornmentColor="Color.Primary">
-                                    <MudSelectItem Value="@("Pizza")">10</MudSelectItem>
-                                    <MudSelectItem Value="@("Burger")">20</MudSelectItem>
-                                    <MudSelectItem Value="@("Hotdog")">30</MudSelectItem>
-                                </MudSelect>
-                            </MudItem>
-                            <MudItem xs="6" sm="6">
-                                <MudText Typo="Typo.caption">Non-Veg Guest Count</MudText>
-                                <MudSelect T="string" Variant="Variant.Outlined" Margin="Margin.Dense" Placeholder="Please Select" AdornmentIcon="@Icons.Material.Filled.Face5" AdornmentColor="Color.Primary">
-                                    <MudSelectItem Value="@("Pizza")">10</MudSelectItem>
-                                    <MudSelectItem Value="@("Burger")">20</MudSelectItem>
-                                    <MudSelectItem Value="@("Hotdog")">30</MudSelectItem>
-                                </MudSelect>
-                            </MudItem>
+                    <MudItem xs="6" sm="6">
+                        <MudText Typo="Typo.caption">Veg Guest Count</MudText>
+                        <MudSelect T="string" Variant="Variant.Outlined" Margin="Margin.Dense" Placeholder="Please Select" AdornmentIcon="@Icons.Material.Filled.Face4" AdornmentColor="Color.Primary">
+                            <MudSelectItem Value="@("Pizza")">10</MudSelectItem>
+                            <MudSelectItem Value="@("Burger")">20</MudSelectItem>
+                            <MudSelectItem Value="@("Hotdog")">30</MudSelectItem>
+                        </MudSelect>
+                    </MudItem>
+                    <MudItem xs="6" sm="6">
+                        <MudText Typo="Typo.caption">Non-Veg Guest Count</MudText>
+                        <MudSelect T="string" Variant="Variant.Outlined" Margin="Margin.Dense" Placeholder="Please Select" AdornmentIcon="@Icons.Material.Filled.Face5" AdornmentColor="Color.Primary">
+                            <MudSelectItem Value="@("Pizza")">10</MudSelectItem>
+                            <MudSelectItem Value="@("Burger")">20</MudSelectItem>
+                            <MudSelectItem Value="@("Hotdog")">30</MudSelectItem>
+                        </MudSelect>
+                    </MudItem>
 
-                            <MudItem xs="12" sm="12">
-                                <MudButton Variant="Variant.Filled" Class="btn-primary" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Check" FullWidth="true">Save & Continue</MudButton>
-                            </MudItem>
-                        </MudGrid>
+                    <MudItem xs="12" sm="12">
+                        <MudButton Variant="Variant.Filled" Class="btn-primary" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Check" FullWidth="true">Save & Continue</MudButton>
+                    </MudItem>
+                </MudGrid>
 
-                    </MudForm>
-                </div>
-            </MudItem>
-        </MudGrid>
+            </MudForm>
+        </div>
+    </MudItem>
+</MudGrid>
 
 
 @code {
     private DateTime? _date = DateTime.Today;
     private TimeSpan? _time = new TimeSpan(00, 45, 00);
 }
+
+
+@code{
+
+    [Parameter]
+    public bool IsClose { get; set; } = true;
+
+    [Parameter]
+    public EventCallback<bool> IsCloseChanged { get; set; }
+
+
+    private async Task OnClose()
+    {
+        IsClose = false;
+        await IsCloseChanged.InvokeAsync(IsClose);
+    }
+
+    private async Task PlaceOrder()
+    {
+        IsClose = true;
+        await IsCloseChanged.InvokeAsync(IsClose);
+    }
+
+}
+
 
 <style>
     .event-container {
@@ -141,5 +172,13 @@
         background-color: #ffffff;
         border-end-start-radius: 24px;
         border-end-end-radius: 24px;
+    }
+
+    .addon-img-btn {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 10px;
+        right: 8px;
     }
 </style>

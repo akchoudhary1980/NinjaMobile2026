@@ -15,9 +15,31 @@
         </div>
     </MudItem>
     <MudItem sm="12" xs="12" Class="text-center">
-        <MudButton Variant="Variant.Filled" Color="Color.Primary" Class="hero-btn-plan">Start Planning Now</MudButton>
+        <MudButton @onclick="OpenDrawer" Variant="Variant.Filled" Color="Color.Primary" Class="hero-btn-plan">Start Planning Now</MudButton>
     </MudItem>
 </MudGrid>
+
+<MudDrawer @bind-Open="@_open" Height="100%" Width="100%" Anchor="Anchor.Bottom" Elevation="1" Variant="@DrawerVariant.Temporary" OverlayAutoClose="false">
+
+    <div style="height:90vh; overflow-y:auto;">
+        <PlanYourEvent IsButonClose="_open" OnChange="CloseDrawer" />
+    </div>
+
+</MudDrawer>
+
+@code {
+    private bool _open;
+
+    private void OpenDrawer()
+    {
+        _open = true;
+    }
+    private void CloseDrawer()
+    {
+        _open = false;
+
+    }
+}
 
 <style>
 

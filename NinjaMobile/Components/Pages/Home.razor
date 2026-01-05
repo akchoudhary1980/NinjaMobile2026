@@ -2,6 +2,7 @@
 <PageTitle>Home Page</PageTitle>
 
 <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="m-0 p-0">
+    <MenuSection />
     <HeroSection />
     <MarqueeZigZagSlider />
     <div class="mt-12">
@@ -17,7 +18,7 @@
     <PackageViewer />
 </MudContainer>
 
-<div style="margin-top:24px;padding:8px;">
+<div style="margin-top:24px;padding:8px; position:sticky; bottom:0;top:0; z-index:1;">
     <Gatherboxdiv />
 </div>
 
@@ -30,6 +31,12 @@
 <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge">
     <div style="margin-top:107px;">
         <NeedGuidness />
+    </div>
+</MudContainer>
+
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="m-0 p-0">
+    <div class="mt-12">
+        <DealOfMonthSlider />
     </div>
 </MudContainer>
 

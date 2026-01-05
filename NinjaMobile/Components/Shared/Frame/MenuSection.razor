@@ -1,0 +1,101 @@
+﻿<MudGrid Spacing="0" Class="menu-bar">
+    <MudItem xs="12" sm="12">
+        <MudStack style="height:32px;" Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+            <div>
+                <img src="/images/logo-horizontal.svg" height="32" />
+            </div>
+            <div>
+                <MudStack Spacing="4" Row="true" AlignItems="AlignItems.Center">
+                    <MudIcon Icon="@CustomIcons.MenuCart" Title="Favorite" />
+                    <MudIcon Icon="@CustomIcons.MenuIcon" @onclick="OpenDrawer" Title="Add" />
+                </MudStack>
+            </div>
+        </MudStack>      
+   </MudItem>
+</MudGrid>
+
+<MudDrawer Open="@_open"  Elevation="0" Anchor="Anchor.Left" Width="100%" Height="100%" Variant="DrawerVariant.Temporary">
+    <MudGrid Spacing="0" Class="">
+        <MudItem xs="12" sm="12">
+            <MudPaper  Width="100%" Class="d-inline-flex" Elevation="0">
+                <MudNavMenu Class="menu11-btn mud-width-full">
+                    <MudText Typo="Typo.h6" Class="menu-heanding12 px-8 mt-8">Menu</MudText>
+
+                    <MudNavGroup Class="menu-title1" Title="Food 4 Party" IconColor="Color.Dark" ExpandIcon="@Icons.Material.Filled.KeyboardArrowDown" Expanded="false">
+                        <MudNavLink Href="/users" Match="NavLinkMatch.Prefix">Gather Box</MudNavLink>
+                        <MudNavLink Href="/security" Match="NavLinkMatch.Prefix">Gather Feast</MudNavLink>
+                    </MudNavGroup>
+
+                    <MudNavGroup Class="menu-title1"  Title="Plan n Event" IconColor="Color.Dark" ExpandIcon="@Icons.Material.Filled.KeyboardArrowDown" Expanded="false">
+                        <MudNavLink Href="/users" Match="NavLinkMatch.Prefix">Pooja Services</MudNavLink>
+                        <MudNavLink Href="/security" Match="NavLinkMatch.Prefix">Decor (Ballon & Art Decor)</MudNavLink>
+                    </MudNavGroup>
+                    <MudNavLink Class="menu-title1" Href="/dashboard">Corporate orders</MudNavLink>
+                    <MudNavLink Class="menu-title1" Href="/dashboard">Search Venue</MudNavLink>
+                    <MudDivider></MudDivider>
+                    <MudNavLink Class="menu-title1 px-4" Href="/dashboard" Icon="@CustomIcons.LoyalyWallet">Loyaly Wallet</MudNavLink>
+                    <MudNavLink Class="menu-title1 px-4" Href="/dashboard" Icon="@CustomIcons.ReferandEarn">Refer and Earn</MudNavLink>
+                    <MudNavLink Class="menu-title1 px-4" Href="/dashboard" Icon="@CustomIcons.Orders">Orders</MudNavLink>
+                    <MudNavLink Class="menu-title1 px-4" Href="/dashboard" Icon="@CustomIcons.Addresses">Address</MudNavLink>
+                    <MudNavLink Class="menu-title1 px-4" Href="/dashboard" Icon="@CustomIcons.Profile">Profile</MudNavLink>
+                    <MudNavLink Class="menu-title1 px-4" Href="/dashboard" Icon="@CustomIcons.CallUs">Call us: +91 8760803361</MudNavLink>
+                    <div class="menu12-btn">
+                        <MudFab @onclick="CloseDrawer" Style="background-color:white;" StartIcon="@Icons.Material.Filled.Close" Size="Size.Small" Color="Color.Default" DropShadow="false"></MudFab>
+                    </div>
+                </MudNavMenu>
+            </MudPaper>
+
+        </MudItem>
+        <MudItem xs="12" sm="12" Class="px-4 mt-12">
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" Class="card-btn-plan rounded-pill" FullWidth="true">Sign Up</MudButton>
+
+        </MudItem>
+    </MudGrid>
+
+</MudDrawer>
+
+@code{
+    private bool _open = false;
+    private void OpenDrawer()
+    {
+        _open = true;
+    }
+    private void CloseDrawer()
+    {
+        _open = false;
+    }
+}
+
+
+<style>
+    .menu-heanding12 {
+        color: #3E1268;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .menu-bar {
+        width: 100%;
+        height: 56px;
+        background: #FFF;
+        padding:12px 24px 12px 24px;
+    }
+
+    .menu11-btn {
+        position: relative;
+    }
+
+     .menu12-btn {
+        position: absolute;
+        top: 8px;
+        right: 4px;
+    }
+    .menu-title1 {
+        color: #111;
+        font-size: 16px !important;
+        font-style: normal;
+        font-weight: 600 !important;
+        line-height: normal;
+    }
+</style>

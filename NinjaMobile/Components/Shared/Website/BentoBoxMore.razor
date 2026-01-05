@@ -1,12 +1,20 @@
 ﻿<MudGrid Spacing="0">
+
+    <MudItem xs="12" sm="12" Class="bentotab-box1">
+        <MudStack Row="true">
+            <img class="bentotab-img1" src="/images/web-content/backbutton.svg" />
+            <h6 class="bentotab-heading1"> Basic Indian</h6>
+        </MudStack>
+    </MudItem>
+
     <MudItem xs="12" sm="12">
         <img class="bento-img-package" style="width:100%" src="/images/web-content/bentobox.png" />
-        <div class="bento-img-btn">
+        @*<div class="bento-img-btn">
             <MudFab Color="Color.Tertiary" StartIcon="@Icons.Material.Filled.Add" Size="Size.Medium" />
-        </div>
+        </div>*@
 
     </MudItem>
-    <MudItem xs="12" sm="12" Class="pl-3 mt-2">
+    <MudItem xs="12" sm="12" Class="mt-2">
         <h2 class="bento-heading">Classic Box</h2>
         <p class="bento-para">
             Perfect for: Everyday meals with a homely touch. Includes:
@@ -14,8 +22,6 @@
     </MudItem>
 
     <MudItem xs="12" sm="12">
-
-
         <MudTabs Centered="false" Rounded="false" Outlined="false" Elevation="0" MinimumTabWidth="0" ApplyEffectsToContainer="true">
             <MudTabPanel Text="Veg" Icon="@CustomIcons.Veg">
                 <MudGrid Spacing="0">
@@ -36,7 +42,11 @@
                                         <MudRadio Value="true" Color="Color.Success"></MudRadio>
                                     </MudStack>
                                 </MudItem>
+                                <MudItem xs="12" sm="12">
+                                    <p class="bentopara-span">Yellow lentils tempered with ghee, garlic, and spices.</p>
+                                </MudItem>
                             </MudGrid>
+
                             <MudGrid Spacing="0" Class="d-flex align-items-center">
                                 <MudItem xs="8" sm="8">
                                     <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
@@ -50,7 +60,11 @@
                                         <MudRadio Value="true" Color="Color.Success"></MudRadio>
                                     </MudStack>
                                 </MudItem>
+                                <MudItem xs="12" sm="12">
+                                    <p class="bentopara-span">Yellow lentils tempered with ghee, garlic, and spices.</p>
+                                </MudItem>
                             </MudGrid>
+
                             <MudGrid Spacing="0" Class="d-flex align-items-center">
                                 <MudItem xs="8" sm="8">
                                     <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
@@ -64,7 +78,11 @@
                                         <MudRadio Value="true" Color="Color.Success"></MudRadio>
                                     </MudStack>
                                 </MudItem>
+                                <MudItem xs="12" sm="12">
+                                    <p class="bentopara-span">Yellow lentils tempered with ghee, garlic, and spices.</p>
+                                </MudItem>
                             </MudGrid>
+
                             <MudGrid Spacing="0" Class="d-flex align-items-center">
                                 <MudItem xs="8" sm="8">
                                     <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
@@ -78,7 +96,11 @@
                                         <MudRadio Value="true" Color="Color.Success"></MudRadio>
                                     </MudStack>
                                 </MudItem>
+                                <MudItem xs="12" sm="12">
+                                    <p class="bentopara-span">Yellow lentils tempered with ghee, garlic, and spices.</p>
+                                </MudItem>
                             </MudGrid>
+
                             <MudGrid Spacing="0" Class="d-flex align-items-center">
                                 <MudItem xs="8" sm="8">
                                     <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
@@ -92,13 +114,15 @@
                                         <MudRadio Value="true" Color="Color.Success"></MudRadio>
                                     </MudStack>
                                 </MudItem>
+                                <MudItem xs="12" sm="12">
+                                    <p class="bentopara-span">Yellow lentils tempered with ghee, garlic, and spices.</p>
+                                </MudItem>
                             </MudGrid>
                         </MudRadioGroup>
+                       <MudItem xs="12" sm="12">
+                            <div style="border: 1px dashed #DDD;" />
+                        </MudItem>
 
-                    </MudItem>
-
-                    <MudItem xs="12" sm="12">
-                        <hr style="border:1px dashed black" />
                     </MudItem>
 
                     <MudItem xs="12" Class="p-3">
@@ -132,15 +156,18 @@
                                             <MudRadio Value="true" Color="Color.Success"></MudRadio>
                                         </MudStack>
                                     </MudItem>
+                                    <MudItem xs="12" sm="12">
+                                        <p class="bentopara-span">Yellow lentils tempered with ghee, garlic, and spices.</p>
+                                    </MudItem>
                                 </MudGrid>
                             </MudRadioGroup>
-
                         </MudGrid>
+                        <MudItem xs="12" sm="12">
+                            <div style="border: 1px dashed #DDD;" />
+                        </MudItem>
                     </MudItem>
 
-                    <MudItem xs="12" sm="12">
-                        <hr style="border:1px dashed black" />
-                    </MudItem>
+                
                     <MudItem xs="12" Class="p-3">
                         <h2 class="bento-heading">Add More</h2>
                         <h2 class="all-heading">Starters 1</h2>
@@ -176,11 +203,11 @@
                                 </MudGrid>
                             </MudRadioGroup>
                         </MudGrid>
+                        <MudItem xs="12" sm="12">
+                            <div style="border: 1px dashed #DDD;" />
+                        </MudItem>
                     </MudItem>
-
-                    <MudItem xs="12" sm="12">
-                        <hr style="border:1px dashed black" />
-                    </MudItem>
+               
 
                     <MudItem xs="12" Class="p-3">
                         <h2 class="all-heading">Mains</h2>
@@ -233,18 +260,23 @@
                     </MudItem>
 
 
-                    <MudGrid Class="bottom-grid" Justify="Justify.Center">
-                        <MudItem xs="6" sm="6">
-                            <MudStack Row="true" Justify="Justify.Center" AlignItems="AlignItems.Center">
-                                <img src="/images/web-content/veg.png" />
-                                <span>Veg : 2 Items</span>
+                    <MudGrid Class="bottom-grid mt-6" Justify="Justify.Center">
+                        <MudItem xs="5" sm="5" Class="bottombento-item">
+                            <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="1">
+                                <img class="food-icon" src="/images/web-content/veg.png" />
+                                <span class="bottombento-para">Veg : 2 Items</span>
                             </MudStack>
+
+                        </MudItem>
+                        <MudItem xs="1" sm="1">
+                            <span  style="color: #5A2191; width: 2px; height: 18px; ">|</span>
                         </MudItem>
                         <MudItem xs="6" sm="6">
-                            <MudStack Row="true" Justify="Justify.Center" AlignItems="AlignItems.Center">
-                                <img src="/images/web-content/non-veg.png" />
-                                <span>Non-Veg : 2 Items</span>
+                            <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="1">
+                                <img class="food-icon" src="/images/web-content/non-veg.png" />
+                                <span class="bottombento-para">Non-Veg : 2 Items</span>
                             </MudStack>
+
                         </MudItem>
                     </MudGrid>
 
@@ -252,11 +284,11 @@
                     <MudItem xs="12" class="footer-div">
                         <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center">
                             <div>
-                                <h6> ₹ 13,513.50</h6>
+                                <h6 class="mt-2"> ₹ 13,513.50</h6>
                                 <p>Inclusive of all taxes</p>
                             </div>
 
-                            <div>
+                            <div class="mb-3">
                                 <MudButton Variant="Variant.Filled" Size="Size.Medium" Class="rounded-pill" Color="Color.Primary">Place Order</MudButton>
                             </div>
                         </MudStack>
@@ -274,11 +306,34 @@
 </MudGrid>
 
 <style>
+
+
+    .bentotab-box1 {
+        display: flex;
+        width: auto;
+        height: 57px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bentotab-img1 {
+        padding-left: 24px;
+        padding-top: 16px;
+    }
+
+    .bentotab-heading1 {
+        color: #111;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 150% */
+        padding-top: 18px;
+    }
+
     .bento-img-package {
         position:relative;
         height: 250px;
         opacity: 1;
-        border-radius: 24px;
     }
     .bento-img-btn {
         position: absolute;
@@ -293,20 +348,19 @@
         font-size: 24px;
         line-height: 130%;
         letter-spacing: -2%;
+        padding-left:16px;
     }
 
-        .bento-para {
-            font-family: DM Sans;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 100%;
-            letter-spacing: -2%;
-            width: 328px;
-            height: 72px;
-            top: 353px;
-            left: 16px;
-            opacity: 1;
-        }
+    .bento-para {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: -2%;
+        width: 328px;
+        height: 72px;
+        opacity: 1;
+        padding-left: 16px;
+    }
 
     .modify-btn {
         background-color: #EEEEEE;
@@ -384,8 +438,7 @@
         color: #FFFFFF;
     }
 
-    .footer-btn {
-    }
+
 
     .white-outline-btn {
         border: 1px solid white !important;
@@ -399,8 +452,26 @@
     .bottom-grid {
         background-color:#4A177B;
         color:#fff;
-        font-size:14px;
+        padding-left:40px;
     }
+    .bottombento-item{
+        padding-bottom:20px;
+    }
+    .bottombento-para {
+        color: #FFF;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.28px;
+        opacity: 0.8;
+    }
+    .food-icon {
+        width: 10px;
+        height: 10px;
+        display: block; /* removes baseline shift */
+    }
+
 
     .footer-div {
         width: 360px;
@@ -409,6 +480,19 @@
         color: #FFFFFF;
         padding-left: 20px;
         padding-right: 20px;
+        padding-bottom:8px;
+    }
+
+    .bentopara-span {
+        width:183px;
+        text-wrap:wrap;
+        color: #666;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.24px;
+        padding-left:25px;
     }
 
 </style>

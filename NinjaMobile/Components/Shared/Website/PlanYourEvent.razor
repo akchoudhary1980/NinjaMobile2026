@@ -1,0 +1,173 @@
+﻿<MudGrid Spacing="0">
+        <MudItem xs="12" sm="12">
+            <div style="position:relative;">
+                <h6 class="planevent-heading1"> Plan Your Event</h6>
+                <div class="planevent-img">
+                    <MudFab Style="color:white;" @onclick="CloseButton" StartIcon="@Icons.Material.Filled.Close" Size="Size.Small" Color="Color.Default" DropShadow="false" />
+                </div>
+            </div>
+         </MudItem>
+
+        <MudGrid Spacing="0" Class="ps-4 pe-4 pb-4">
+            <MudItem xs="12" sm="12" Class="mt-5">
+                <MudGrid Spacing="0">
+                    <MudItem xs="6" sm="6">
+                        <img class="planevent-img1" src="/images/web-content/plan-your-food-pooja.png" />
+                    </MudItem>
+                    <MudItem xs="6" sm="6">
+                        <MudStack Row="false">
+                            <h6 class="planevent-heading2">food + Pooja</h6>
+                            <p class="planevent-para">Book with confidence safe payments and verified processes.</p>
+                            <button class="planevent-button">Book Now</button>
+                        </MudStack>
+                    </MudItem>
+                </MudGrid>
+            </MudItem>
+
+            <MudItem xs="12" sm="12" Class="mt-5">
+                <MudGrid Spacing="0">
+                    <MudItem xs="6" sm="6">
+                        <img class="planevent-img1" src="/images/web-content/plan-your-food-decor.png" />
+                    </MudItem>
+                    <MudItem xs="6" sm="6">
+                        <MudStack Row="false">
+                            <h6 class="planevent-heading2">food + Decor</h6>
+                            <p class="planevent-para">Book with confidence safe payments and verified processes.</p>
+                            <button class="planevent-button">Book Now</button>
+                        </MudStack>
+                    </MudItem>
+                </MudGrid>
+            </MudItem>
+
+            <MudItem xs="12" sm="12" Class="mt-5">
+                <MudGrid Spacing="0">
+                    <MudItem xs="6" sm="6">
+                        <img class="planevent-img1" src="/images/web-content/plan-your-pooja.png" />
+                    </MudItem>
+                    <MudItem xs="6" sm="6">
+                        <MudStack Row="false">
+                            <h6 class="planevent-heading2">Pooja Booking</h6>
+                            <p class="planevent-para">Book with confidence safe payments and verified processes.</p>
+                            <button class="planevent-button">Book Now</button>
+                        </MudStack>
+                    </MudItem>
+                </MudGrid>
+            </MudItem>
+
+            <MudItem xs="12" sm="12" Class="mt-5">
+                <MudGrid Spacing="0">
+                    <MudItem xs="6" sm="6">
+                        <img class="planevent-img1" src="/images/web-content/plan-your-decor.png" />
+                    </MudItem>
+                    <MudItem xs="6" sm="6">
+                        <MudStack Row="false">
+                            <h6 class="planevent-heading2">Event Decor</h6>
+                            <p class="planevent-para">Book with confidence safe payments and verified processes.</p>
+                            <button class="planevent-button">Book Now</button>
+                        </MudStack>
+                    </MudItem>
+                </MudGrid>
+            </MudItem>
+
+
+            <MudItem xs="12" sm="12" Class="mt-5">
+                <MudGrid Spacing="0">
+                    <MudItem xs="6" sm="6">
+                        <img class="planevent-img1" src="/images/web-content/plan-your-corporate.png" />
+                    </MudItem>
+                    <MudItem xs="6" sm="6">
+                        <MudStack Row="false">
+                            <h6 class="planevent-heading2">Event corporate</h6>
+                            <p class="planevent-para">Book with confidence safe payments and verified processes.</p>
+                            <button class="planevent-button">Book Now</button>
+                        </MudStack>
+                    </MudItem>
+                </MudGrid>
+            </MudItem>
+
+        </MudGrid>
+
+</MudGrid>
+
+@code{
+    [Parameter]
+    public bool IsButonClose { get; set; } = false;
+    [Parameter]
+    public EventCallback<bool> OnChange { get; set; }
+
+    private void CloseButton()
+    {
+        IsButonClose = true;
+        OnChange.InvokeAsync(IsButonClose);
+    }
+}
+
+
+<style>
+    .planevent-heading1 {
+        color: #FFF;
+        width: auto;
+        height: 80px;
+        text-align: center;
+        font-family: "Playfair Display";
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.48px;
+        background: #3E1268;
+        text-align: center;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .planevent-img {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+    }
+    .planevent-img1 {
+        width: 148px;
+        height: 151px;
+        aspect-ratio: 148/221;
+        border-radius:24px;
+    }
+    .planevent-heading2 {
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%; /* 20.8px */
+        letter-spacing: -0.32px;
+        margin:0;
+        padding-top:8px;
+        padding-left:8px;
+    }
+    .planevent-para {
+        color: #666;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 18px */
+        letter-spacing: -0.24px;
+        margin: 0;
+        padding-left: 8px;
+    }
+    .planevent-button {
+        display: flex;
+        height: 36px;
+        padding: 8px 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        border-radius: 20px;
+        border: 1px solid #000;
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding-left: 8px;
+    }
+
+</style>

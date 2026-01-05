@@ -14,4 +14,8 @@
     <Folder Include="Components\Shared\BentoBox\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\images\web-content\check-earphone.png" />
+  </ItemGroup>
+
 </Project>

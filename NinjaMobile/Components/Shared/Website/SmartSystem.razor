@@ -1,0 +1,84 @@
+﻿<MudGrid Spacing="0" Class="white-bg">
+    <MudItem xs="12" sm="12">
+        <MudGrid Spacing="0" Class="gradient-bg">
+            <MudItem xs="12" sm="12">
+                <img src="/images/web-content/home-ai-img.svg" />
+            </MudItem>
+            <MudItem xs="12" sm="12">
+                <h6 class="smart-heading1">Smart System recommendations</h6>
+            </MudItem>
+            <MudItem xs="12" sm="12">
+                <p class="smart-para1">
+                    These quantities are suggested by the Smart System based on average consumption and our past order experience.
+                    You can activate manual mode either by editing the values or simply turning on the manual toggle.
+                </p>
+            </MudItem>
+            <img src="~/images/web-content/guidance-bg.svg" />
+            <div class="smart1-btn">
+                <MudFab Style="background-color:white;" StartIcon="@Icons.Material.Filled.Close" Size="Size.Small" Color="Color.Default" DropShadow="false"></MudFab>
+            </div>
+        </MudGrid>
+    </MudItem>
+    <MudItem xs="12" Class="mt-3">
+            <MudStack Row="true"  AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween" Style="height:52px;">
+                <p class="mt-3">Switch <i style="font-size:14px; color:#111;">manual</i> selection mode </p>
+                <MudSwitch T="bool" Color="Color.Default" Style="color: #15607F;" />
+
+            </MudStack>
+    </MudItem>
+
+</MudGrid>
+
+
+<style>
+    .white-bg {
+        width: auto;
+        height: auto;
+        background-color: #FFF;
+        padding:8px;
+        border-start-start-radius:24px;
+        border-start-end-radius:24px; 
+        border:1px solid red;
+    }
+    .gradient-bg {
+        position:relative;
+        width: auto;
+        height: 236px;
+        background: linear-gradient(146deg, rgba(155, 81, 224, 0.40) -11.34%, rgba(155, 81, 224, 0.08) 77.84%);
+        opacity: 0.7;
+        padding:16px;
+        border-radius:24px;
+
+    }
+    .smart-heading1 {
+        color: #000;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 28.8px */
+        letter-spacing: -0.48px;
+        opacity:1;
+    }
+
+
+
+        .content-row span {
+            font-size: 12px;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+    .smart-para1 {
+        color: #666;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.24px;
+    }
+    .smart1-btn{
+        position:absolute;
+        top:16px;
+        right:16px;
+
+    }
+</style>

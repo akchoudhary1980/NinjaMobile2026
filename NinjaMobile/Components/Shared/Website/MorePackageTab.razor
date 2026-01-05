@@ -1,26 +1,39 @@
 ﻿<MudGrid Spacing="0">
+    <MudItem xs="12" sm="12" Class="packagetab-box1">
+        <MudStack Row="true">
+            <img class="packagetab-img1" src="/images/web-content/backbutton.svg" />
+            <h6 class="packagetab-heading1"> Basic Indian</h6>
+        </MudStack>
+    </MudItem>
+
     <MudItem xs="12">
         <img class="img-package" style="width:100%" src="/images/web-content/packagetab.png" />
         <div class="satya-img-btn">
-            <img src="/images/web-content/cutbutton.png" />
+            @*<img src="/images/web-content/cutbutton.png" />*@
         </div>
     </MudItem>
-    <MudItem class="heading mt-2" sm="12">
-        <h2>Basic Indian</h2>
+
+    <MudItem class="heading mt-4" xs="12" sm="12">
         <p>
             A curated selection of Indian staples — aromatic rice, wholesome curries,
             and breads prepared fresh for everyday events, offering the perfect blend of comfort, taste, and tradition.
         </p>
     </MudItem>
-    <MudItem xs="12">
-        <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
-            <MudButton>Package</MudButton>
-            <MudButton>Add-on</MudButton>
-        </MudStack>
+
+    <MudItem xs="12" Class="pl-4">
+        <MudTabs Centered="false" Elevation="0" Rounded="true" Outlined="false" MinimumTabWidth="0" PanelClass="">
+            <MudTabPanel Style="text-transform:none" Text="Package">
+
+            </MudTabPanel>
+            <MudTabPanel Style="text-transform:none" Text="Add-on">
+
+            </MudTabPanel>
+        </MudTabs>
     </MudItem>
-    <MudItem xs="12" sm="12">
+
+    @*<MudItem xs="12" sm="12">
         <hr style="border:1px solid red" />
-    </MudItem>
+    </MudItem>*@
 
     <MudItem xs="12" Class="p-3">
         <h2 class="all-heading">Includes</h2>
@@ -62,7 +75,7 @@
         </div>
     </MudItem>
 
-  
+
 
     <MudItem xs="12" Class="p-3">
         <h2 class="all-heading">Starters 1</h2>
@@ -226,6 +239,19 @@
         </MudGrid>
     </MudItem>
 
+    <MudItem xs="12" Class="mt-6">
+        <div class="top-shadow-card">
+            <MudStack Row="true"
+                      AlignItems="AlignItems.Center"
+                      Class="content-row">
+                <img src="/images/web-content/home-ai-img.svg" />
+                <p>Switch <i style="font-size:14px; color:#111;">manual</i> selection mode <span>KNOW MORE</span></p>
+                <MudSwitch T="bool" Color="Color.Secondary" />
+
+            </MudStack>
+        </div>
+    </MudItem>
+
 
     <MudItem xs="12" class="footer-div">
         <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center">
@@ -243,10 +269,33 @@
 </MudGrid>
 
 <style>
+
+
+    .packagetab-box1 {
+        display: flex;
+        width: auto;
+        height: 57px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .packagetab-img1 {
+        padding-left: 24px;
+        padding-top: 16px;
+    }
+
+    .packagetab-heading1 {
+        color: #111;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 150% */
+        padding-top: 18px;
+    }
+
     .img-package {
         height: 250px;
         opacity: 1;
-        border-radius: 24px;
     }
     .satya-img-btn {
         position: absolute;
@@ -257,7 +306,10 @@
     }
 
     .heading {
-        padding-left: 16px;
+        width:auto;
+        padding: 10px;
+        text-align: justify;
+        text-justify: inter-word;
     }
 
         .heading h2 {
@@ -373,4 +425,28 @@
         width: 328px;
         height: 0;
     }
+
+
+    .top-shadow-card {
+        background: #FFF;
+        filter: drop-shadow(0 -10px 12px rgba(0, 0, 0, 0.08));
+    }
+
+    .content-row {
+        padding: 12px 20px;
+    }
+
+        .content-row img {
+            margin-right: 8px;
+        }
+
+        .content-row p {
+            margin: 0;
+        }
+
+        .content-row span {
+            font-size: 12px;
+            font-weight: 500;
+            text-decoration: underline;
+        }
 </style>
