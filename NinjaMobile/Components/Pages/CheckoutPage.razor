@@ -1,54 +1,325 @@
 ﻿@page "/checkout"
 @layout EmptyLayout
 
-<PageTitle>Test</PageTitle>
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="p-0 m-0" Style="margin-top:-70px!important;">
 
-<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="m-0 p-0">
-    <MudItem xs="12" sm="12" Class="check-box1">
-        <MudStack Row="true">
-            <img class="check-img1" src="/images/web-content/backbutton.svg" />
-            <h6 class="check-heading1"> My Order</h6>
-        </MudStack>
-    </MudItem>
+    <MudGrid Spacing="0" Class="checkout-top-strip"Justify="Justify.Center">
+        <MudItem xs="3" sm="3">
+            <div class="checkout-top-strip-img">
+                <img src="/images/logo-horizontal.svg" height="60" />
+            </div>
+           
+        </MudItem>
+        <MudItem xs="6" sm="6">
+            <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.Center">
+                <div>
+                    <button type="button" class="link-button">CART</button>
+                    <div class="underline-div"></div>
+                </div>
 
-    <MudItem sm="12" xs="12" Class="mt-3 pl-4">
-        <MudTabs Centered="false" Rounded="false" MinimumTabWidth="0" Outlined="false" Elevation="0" ApplyEffectsToContainer="true">
-            <MudTabPanel Text="Ongoing">
-            </MudTabPanel>
+                <div>
+                    <MudText Style="color: #999">------------------</MudText>
+                </div>
+                <div>
+                    <button type="button" class="link-button-normal">ADDRESS</button>                   
+                </div>
+                <div>
+                    <MudText Style="color: #999">------------------</MudText>
+                </div>
+                <div>
+                    <button type="button" class="link-button-normal">PAYMENT</button>                 
+                </div>
 
-            <MudTabPanel Text="Order History">
-
-            </MudTabPanel>
-        </MudTabs>
-    </MudItem>
-
-    <div style="margin-top:16px;padding:16px;">
-        <Checkout1 />
-    </div>
-
+            </MudStack>
+        </MudItem>
+        <MudItem xs="3" sm="3">
+         <MudIcon Icon="@CustomIcons.SecureIcon" Class="me-2"/><span>100% Secure</span>
+        </MudItem>
+    </MudGrid>
 </MudContainer>
 
+<MudContainer MaxWidth="MaxWidth.Large" Style="padding:24px;">
+
+    <MudGrid Spacing="3" >
+        <MudItem xs="8" sm="8">    
+            @*<BoxPackageHorizontalFull/>*@
+          @*<BoxCardHorizontal/>*@
+        </MudItem>  
+        
+
+        <MudItem xs="4" sm="4">
+            <div class="checkout-summery-box">
+                <MudGrid Spacing="0">
+                    <MudItem xs="12">
+                        <div class="checkout-redeam-box">
+                            <MudStack Row="true">
+                                <div>
+                                    <MudIcon Icon="@CustomIcons.RedeamIcon" />
+                                </div>
+
+                                <div>
+                                    <h6><b>You have 850 points</b></h6>
+                                    <p>Redeem now and save up to ₹200 on this order</p>
+                                </div>
+
+                                <div>
+                                    <MudButton Variant="Variant.Outlined" @onclick="AddRedeamPoints" Color="Color.Default" Class="checkout-point-redeam-button">Redeem</MudButton>
+                                </div>
+                            </MudStack>
+                        </div>
+                    </MudItem>
+
+                    <MudItem xs="12" Class="mt-3">
+                        <MudGrid Spacing="2" Style="padding:12px;">
+                            <MudItem xs="12">
+                                <h6><b>Order Summery</b></h6>
+                            </MudItem>
+                            <MudItem xs="12" Style="color:#666;font-weight:500;">
+                                <MudStack Row="true" Class="mt-2" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                                    <span>Food Cost</span>
+                                    <span>12,870.00</span>
+                                </MudStack>
+                                <MudStack Row="true" Class="mt-2" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                                    <span>Sub Total</span>
+                                    <span>12,870.00</span>
+                                </MudStack>
+                                <MudStack Row="true" Class="mt-2" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                                    <span>GST @@ 5%</span>
+                                    <span>643.50</span>
+                                </MudStack>
+                                <MudStack Row="true" Class="mt-2" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                                    <span>Delivery</span>
+                                    <span style="color:green;font-weight:bold">Free</span>
+                                </MudStack>
+                            </MudItem>
+
+                            <MudItem xs="12">
+                                <hr style="border:1px solid grey" />
+                            </MudItem>
+                            <MudItem xs="12">
+                                <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                                    <h5><b>Total Amount</b></h5>
+                                    <h5><b>13,513.50</b></h5>
+                                </MudStack>
+                            </MudItem>
+
+                            <MudItem xs="12">
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Class="btn-primary" Href="/address" FullWidth="true" Size="Size.Large">Proceed to checkout</MudButton>
+                            </MudItem>
+
+                            <MudItem xs="12" Class="text-center" Style="color:#666;font-weight:500;">
+                                <span>By proceeding, you agree to our <a href="#">terms and conditions</a></span>
+                            </MudItem>
+                        </MudGrid>
+                    </MudItem>
+
+
+
+                </MudGrid>
+            </div>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+
+@code{
+    [Inject] IDialogService Dialog { get; set; } = default!;
+
+    private readonly DialogOptions _noHeader = new()
+    {
+        MaxWidth = MaxWidth.Medium,
+        NoHeader = true,
+        CloseButton = true,
+        CloseOnEscapeKey = true
+    };
+
+    private async Task AddRedeamPoints()
+    {
+        await Dialog.ShowAsync<RedeamPoints>("Redeam Points", _noHeader);
+    }
+
+    //private async Task EditPackage()
+    //{
+    //    await Dialog.ShowAsync<CustomisedPackage>("CustomisedPackage", _noHeader);
+    //}
+
+    private async Task ConfirmDelPackage()
+    {
+        await Dialog.ShowAsync<DeletePackage>("Confirm Delete Package", _noHeader);
+    }
+}
+
 <style>
-    .check-box1 {
-        display: flex;
+    .checkout-top-strip {
         width: auto;
-        height: 57px;
-        flex-direction: column;
-        align-items: flex-start;
-        border-bottom: 1px solid #F7F7F7;
+        height: 60px;
+        background-color: #fff;
+        display: flex;
+        align-items: center; /* vertical centering */
+    }
+    .checkout-top-strip-img {       
+        display: flex;
+        align-items: center; /* vertical centering */
+        justify-content:center; 
+    }
+    .checkout-package-box {
+        width: auto;
+        height: 230px;
+        padding:8px;
+        border-radius:24px;
+        background-color: #fff;
     }
 
-    .check-img1 {
-        padding-left: 16px;
-        padding-top: 10px;
+    .checkout-price-section {
+        position:relative;
+        display:flex;
+        align-items:end;
+    }
+    .checkout-price-del-button {
+        position: absolute;
+        right: 0px;
+        top: 0px;
     }
 
-    .check-heading1 {
-        color: #111;
+    .checkout-price-edit-button {
+        position:absolute;
+        right:35px;
+        top:0px;
+    }
+
+    .checkout-summery-box {
+        width: auto;
+        height: 450px;
+        padding: 8px;
+        border-radius: 24px;
+        background-color: #fff;
+    }
+    .checkout-redeam-box {
+        width: auto;
+        height: 90px;
+        border-radius: 24px;
+        padding: 16px;
+        background: linear-gradient(148.87deg, rgba(155, 81, 224, 0.104) -10.56%, rgba(155, 81, 224, 0.0208) 72.47%);
+    }
+
+
+    .package-icons {
+        width: 24px;
+        height: 24px;
+    }
+
+    .package-price {
+        color: #000000;
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    .package-gst {
+        color: #999999;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .package-fitfor {
+        color: #999999;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .package-people {
+        color: #333333;
+        font-size: 14px;
+        font-weight: 600;
+        font-style: normal;
+    }
+
+
+    .package-non-veg-icon {
+      /*  position: absolute;*/
+        width: fit-content;
+        padding-left: 7px;
+        padding-right: 7px;
+        height: 28px;
+        border-radius: 50px;
+        background-color: #F61415;
+      /*  left: 117px;
+        top: 24px;*/
+    }
+
+    .package-veg-icon {
+      /*  position: absolute;*/
+        width: fit-content;
+        padding-left: 7px;
+        padding-right: 7px;
+        height: 28px;
+        border-radius: 50px;
+        background-color: #0EB559;
+      /*  top: 24px;
+        right: 24px;*/
+    }
+
+    .package-small-circle {
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        border: 1.5px solid #fff;
+    }
+
+    .package-small-text {
+        font-weight: 500;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: -2%;
+        color: white;
+    }
+
+    .checkout-point-redeam-button {
+        width: 90px;
+        height: 36px;
+        border: 1.5px solid #000;
+        background-color: #fff;
+        border-radius: 40px;
+        color: #000;
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
-        line-height: 24px; /* 150% */
-        padding-top: 16px;
     }
+
+        .checkout-point-redeam-button:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+    .link-button {
+        height: 25px;
+        width: fit-content;
+        color: #FF3B30;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+    .underline-div {
+        height: 2px;
+        width: 100%;
+        background-color: #FF3B30;
+        border-radius: 2px; /* gives rounded ends */
+        margin-top: 4px; /* spacing below the button */
+    }
+
+    .link-button-normal {
+        color: #666;       
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    
+
+
 </style>

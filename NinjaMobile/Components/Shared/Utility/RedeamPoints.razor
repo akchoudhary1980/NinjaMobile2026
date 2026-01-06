@@ -1,0 +1,145 @@
+﻿
+<MudDialog Class="redeam-custom-dialog">
+    <DialogContent>
+
+        <MudGrid Spacing="0" Class="redeam-point-box">
+
+
+            <div class="redeam-point-close-button">
+                <MudIconButton Icon="@Icons.Material.Filled.Close" @onclick="CloseDialog" Size="Size.Medium" />
+            </div>
+
+            <MudItem xs="12" sm="12" Class="text-center">
+                <h5 style="font-size: 24px; font-weight: 600; color: #000">Redeem Points</h5>
+            </MudItem>
+
+            <MudItem xs="12" sm="12">
+
+                <MudGrid Spacing="0" Class="redeam-point-gradient-box">
+
+                    <MudItem xs="12" sm="12" Class="text-center">
+                        <span style="font-size: 14px; font-weight: 500; color: #666666">Available Points</span>
+                        <h1 style="font-size: 48px; font-weight: 800; color: #3E1268;margin-bottom:0px;">850</h1>
+                        <span style="font-size: 14px; font-weight: 500; color: #666666">Max redeemable: 400 points</span>
+                    </MudItem>
+
+                    <MudItem xs="12" sm="12" Class="mt-4">
+                       <div style="height: 1px; width: auto; background-color: #E4DFE7;"></div>
+                    </MudItem>
+
+                    <MudItem xs="12" sm="12" Class="text-center">
+                        <div class="mt-8">
+                            <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                                <span><b>Points to redeem</b> </span>
+                                <h5><b>@value1</b></h5>
+                            </MudStack>
+                        </div>
+                       
+                        <div class="mt-3">
+                            <SingleIconSliderIcon Min="0" Max="400" Step="50" @bind-Value="value1" />
+                        </div>
+                        <div class="mt-3">
+                            <span style="font-size: 12px; font-weight: 500; color: #666666">Drag to choose how many points to redeem</span>
+                        </div>
+                       
+                       
+                    </MudItem>
+
+                    <MudItem xs="12" sm="12" Class="mt-4">
+                        <div class="redeam-point-white-box">
+                            <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                                <div>
+                                    <span style="font-size: 16px; font-weight: 600; color: #333">Discount Value</span>
+                                </div>
+                                <div>
+                                    <h5><b style="color: #00A43D;font-weight:700;font-size:24px;">400</b></h5>
+                                </div>
+                            </MudStack>
+                        </div>
+                    </MudItem>
+
+                </MudGrid>
+
+            </MudItem>
+
+            <MudItem xs="12" sm="12" Class="mt-8">
+                <MudButton Variant="Variant.Filled" Color="Color.Primary" Class="btn-primary" FullWidth="true" Size="Size.Large">Apply 400 Points</MudButton>
+            </MudItem>
+
+        </MudGrid>
+
+    </DialogContent>
+</MudDialog>
+        @code
+{
+#nullable disable
+
+            public int value1 = 400;
+
+            [CascadingParameter]
+            private IMudDialogInstance MudDialog { get; set; }
+            private void CloseDialog()
+            {
+                MudDialog.Close();
+            }
+        }
+
+
+<style>
+    .redeam-custom-dialog {
+        width: 560px;
+        border-radius: 24px !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        overflow: visible !important;      
+    }
+
+    .redeam-custom-dialog .mud-dialog-content {
+        overflow: visible !important;
+        padding: 0px;
+        margin: 0px;
+        position: relative;
+    }
+</style>
+
+
+        <style>
+
+
+            .redeam-point-box {
+                position: relative;
+                width: 558px;
+                height: 546px;
+                padding: 24px;
+                border-radius: 24px;
+                background-color: #fff;
+            }
+
+            .redeam-point-gradient-box {
+                padding: 24px;
+                border-radius: 24px;
+                background: linear-gradient(148.87deg, rgba(155, 81, 224, 0.104) -10.56%, rgba(155, 81, 224, 0.0208) 72.47%);
+            }
+
+            .redeam-point-white-box {
+                border-radius: 16px;
+                margin-top: 30px;
+                height: 60px;
+                padding: 16px;
+                background-color: #fff;
+                border: 1px solid #F2EBF7;
+            }
+
+            .redeam-point-close-button {
+                position: absolute;
+                background-color: #ffffff;
+                border-radius: 50%;
+                width: 56px;
+                height: 56px;
+                top: -28px;
+                right: -28px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>

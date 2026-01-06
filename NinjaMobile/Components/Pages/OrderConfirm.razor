@@ -1,0 +1,140 @@
+﻿@page "/orderconfirm"
+@layout EmptyLayout
+
+<MudGrid Spacing="0" Class="order-confirmation">
+
+    <div class="order-confirmation-blur-cirlce"></div>
+    <div class="order-confirmation-left">
+        <img src="/images/web-content/_order-confirm-left.svg" alt="left image" />
+    </div>
+    <div class="order-confirmation-right">
+        <img src="/images/web-content/_order-confirm-right.svg" alt="right image" />
+    </div>
+
+    <MudItem xs="12" sm="12">
+        <MudGrid Spacing="0">
+            <MudItem xs="12" sm="12">
+                <div class="order-confirmation-check-img">
+                    <img src="/images/web-content/_order-confirm-check.svg" alt="right image" />
+                </div>
+
+            </MudItem>
+            <MudItem xs="12" sm="12" Class="mt-12">
+                <h2>Order Confirmed</h2>
+            </MudItem>
+            <MudItem xs="12" sm="12" Class="mt-12">
+                <p>Thank you for choosing <span>EZ Gatherr.</span> <br />We wish your event is filled with happiness and joy.</p>
+            </MudItem>
+
+            <MudItem xs="12" sm="12" Class="mt-12 text-center">
+                <button type="button" class="order-confirmation-button">Continue Exploring</button>
+                @*<MudButton Variant="Variant.Filled" Color="Color.Primary" Class="order-confirmation-button">Continue Exploring</MudButton>*@
+            </MudItem>
+
+            <MudItem xs="12" sm="12" Class="mt-3 text-center">
+                <h6 class="order-confirmation-text">A confirmation email has been sent to your inbox</h6>
+            </MudItem>
+        </MudGrid>
+    </MudItem>
+
+</MudGrid>
+
+<style>
+    .order-confirmation {
+        margin-top:-70px!important;
+        width: 100%;
+        min-height: 100%;
+        background-color: #F9F5FC;
+        position: relative;
+    }
+        .order-confirmation h2 {
+            color: #000;
+            text-align: center;
+            font-family: "Playfair Display";
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 0px;
+        }
+
+        .order-confirmation p {
+            color: #666;
+            text-align: center;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%; /* 28.8px */
+            margin-bottom: 0px;
+        }
+
+        .order-confirmation span {
+            color: #333;          
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%;
+        }
+    .order-confirmation-text {
+        color: #666;
+        text-align: center;       
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 19.2px */
+        margin-bottom:0px;
+    }
+
+    .order-confirmation-check-img {
+        margin-top:128px;
+       display: flex;
+       align-items:center;
+       justify-content:center;
+    }
+
+
+        .order-confirmation-blur-cirlce {
+            position: absolute;
+            width: 625px;
+            height: 625px;
+            left: -201px;
+            top: -242px;
+            border-radius: 625px;
+            opacity: 0.1;
+            background: #FF6F61;
+            filter: blur(125px);
+        }
+
+    .order-confirmation-left {
+        position: absolute;
+        width: 273px;
+        height: 272px;
+        left: 60px;
+        top: 60px;             
+    }
+    .order-confirmation-right {
+        position: absolute;
+        width: 172px;
+        height: 172px;
+        right: 60px;
+        top: 60px;        
+    }
+
+    .order-confirmation-button {
+        height: 49px;
+        padding: 12px 24px 12px 24px;
+        text-transform: none !important;
+        background-color: #FF3B30;
+        border-radius: 49px;
+        color: #fff !important;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        box-shadow: 0px 4px 7.1px 0px #FFFFFF80 inset;
+    }
+
+        .order-confirmation-button:hover {
+            box-shadow: none;
+        }
+        
+</style>

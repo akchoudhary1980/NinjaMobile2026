@@ -1,0 +1,128 @@
+﻿<MudDialog Class="del-package-custom-dialog">
+    <DialogContent>
+
+        <MudGrid Spacing="0" Class="del-package-box">
+            <MudItem xs="12" sm="12">
+
+                <MudGrid Spacing="0">
+
+                    <div class="redeam-point-close-button">
+                        <MudIconButton Icon="@Icons.Material.Filled.Close" @onclick="CloseDialog" Size="Size.Medium" />
+                    </div>
+
+                    <MudItem xs="12" sm="12" Class="text-center">
+                        <img src="/images/web-content/_package_del-vector.svg" />
+                    </MudItem>
+
+                    <MudItem xs="12" sm="12" Class="mt-6 text-center">
+                        <h6 class="del-package-text">
+                            Are you sure you want <br /> to delete this iteam
+                        </h6>
+                    </MudItem>
+
+                    <MudItem xs="12" sm="12" Class="mt-8">
+                        <MudStack Row="true" Spacing="6" AlignItems="AlignItems.Center" Justify="Justify.Center">
+                            <MudButton Variant="Variant.Filled" Size="Size.Large" Color="Color.Primary" Class="del-delete-button">Delete</MudButton>
+                            <MudButton Variant="Variant.Outlined" Size="Size.Large" Color="Color.Default" @onclick="CloseDialog" Class="del-cancel-button">Cancel</MudButton>
+                        </MudStack>
+                    </MudItem>
+
+                </MudGrid>
+
+            </MudItem>
+        </MudGrid>
+
+    </DialogContent>
+</MudDialog>
+
+@code{
+#nullable disable
+    [CascadingParameter]
+    private IMudDialogInstance MudDialog { get; set; }
+    private void CloseDialog()
+    {
+        MudDialog.Close();
+    }
+}
+
+<style>
+    .del-package-custom-dialog {
+        width: 550px;
+        border-radius: 24px !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        overflow: visible !important;
+    }
+
+        .del-package-custom-dialog .mud-dialog-content {
+            overflow: visible !important;
+            padding: 0px;
+            margin: 0px;
+            position: relative;
+        }
+</style>
+
+<style>
+    .del-package-box {
+        position: relative;
+        width: 558px;
+        height: 377px;
+        background: #fff;
+        border-radius: 24px;
+        padding: 64px 108px 64px 108px;
+    }
+
+    .del-package-text {
+        font-weight: 600;
+        font-size: 32px;      
+        letter-spacing: -2%;
+        text-align: center;
+    }
+
+    .redeam-point-close-button {
+        position: absolute;
+        background-color: #ffffff;
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        top: -28px;
+        right: -28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .del-delete-button {
+        width: 120px;
+        height: 49px;
+        border-radius: 40px;
+        color: #fff;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        background-color: #FF3B30!important;
+        box-shadow: 0 4px 7.1px 0 rgba(255, 255, 255, 0.50) inset;
+    }
+
+        .del-delete-button:hover {
+            box-shadow: none;
+        }
+
+    .del-cancel-button {
+        width: 120px;
+        height: 49px;
+        border: 1.5px solid #000;
+        background-color: #fff;
+        border-radius: 40px;
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+    }
+
+        .del-cancel-button:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    
+</style>

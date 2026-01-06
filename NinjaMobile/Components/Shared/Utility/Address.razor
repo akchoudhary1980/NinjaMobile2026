@@ -1,0 +1,339 @@
+﻿<MudDialog Class="address-custom-dialog">
+    <DialogContent>
+
+        <MudGrid Spacing="0" Class="address-container">
+
+            
+            <MudItem xs="12" sm="12">
+                <div class="address-top-bar">
+                    <h2>Add New Address</h2>
+                </div>
+
+                <div class="address-top-bar-button">
+                    <MudIconButton Icon="@Icons.Material.Filled.Close" @onclick="CloseDialog" Size="Size.Medium" />
+                </div>
+            </MudItem>
+
+
+            <MudItem xs="12" sm="12">
+                <div class="address-form-box">
+                    <MudForm @ref="form" @bind-IsValid="@success" @bind-Errors="@errors">
+
+                        <MudItem xs="12" sm="12">
+                            <MudStack Row="true" Spacing="6" AlignItems="AlignItems.Center">
+                                <div>
+                                    <MudText Style="font-size:14px;font-weight:500;color:#333;">Name</MudText>
+                                </div>
+                                <div>
+                                    @*<ValidationMessage For="@(() => model.Name)" />*@
+                                </div>
+                            </MudStack>
+                            <div class="corporate-text mt-2">
+                                <input type="text" placeholder="Please enter your name" />
+                            </div>
+                        </MudItem>
+
+                        <MudItem xs="12" sm="12" Class="mt-3">
+                            <MudStack Row="true" Spacing="6" AlignItems="AlignItems.Center">
+                                <div>
+                                    <MudText Style="font-size:14px;font-weight:500;color:#333;">Phone Number</MudText>
+                                </div>
+                                <div>
+                                    @*<ValidationMessage For="@(() => model.Phone)" />*@
+                                </div>
+                            </MudStack>
+                            <div class="corporate-text mt-2">
+                                <input type="text" placeholder="Your mobile number" />
+                            </div>
+                        </MudItem>
+
+                        <MudItem xs="12" sm="12" Class="mt-3">
+
+                            <MudGrid Spacing="2">
+                                <MudItem xs="6" sm="6">
+                                    <MudStack Row="true" Spacing="6" AlignItems="AlignItems.Center">
+                                        <div>
+                                            <MudText Style="font-size:14px;font-weight:500;color:#333;">Pincode</MudText>
+                                        </div>
+                                        <div>
+                                            @*<ValidationMessage For="@(() => model.Name)" />*@
+                                        </div>
+                                    </MudStack>
+                                    <div class="corporate-text mt-2">
+                                        <input type="text" placeholder="Please enter pincode" />
+                                    </div>
+                                </MudItem>
+                                <MudItem xs="6" sm="6">
+                                    <MudStack Row="true" Spacing="6" AlignItems="AlignItems.Center">
+                                        <div>
+                                            <MudText Style="font-size:14px;font-weight:500;color:#333;">State</MudText>
+                                        </div>
+                                        <div>
+                                            @*<ValidationMessage For="@(() => model.Name)" />*@
+                                        </div>
+                                    </MudStack>
+                                    <div class="corporate-text mt-2">
+                                        <input type="text" placeholder="Please enter state" />
+                                    </div>
+                                </MudItem>
+                            </MudGrid>
+                        </MudItem>
+
+                        <MudItem xs="12" sm="12" Class="mt-3">
+                            <MudStack Row="true" Spacing="6" AlignItems="AlignItems.Center">
+                                <div>
+                                    <MudText Style="font-size:14px;font-weight:500;color:#333;">House Number/Tower/Block</MudText>
+                                </div>
+                                <div>
+                                    @*<ValidationMessage For="@(() => model.Phone)" />*@
+                                </div>
+                            </MudStack>
+                            <div class="corporate-text mt-2">
+                                <input type="text" placeholder="Your enter House Number/Tower/Block" />
+                            </div>
+                        </MudItem>
+
+                        <MudItem xs="12" sm="12" Class="mt-3">
+                            <MudStack Row="true" Spacing="6" AlignItems="AlignItems.Center">
+                                <div>
+                                    <MudText Style="font-size:14px;font-weight:500;color:#333;">Address (Building, Street, Area)</MudText>
+                                </div>
+                                <div>
+                                    @*<ValidationMessage For="@(() => model.Phone)" />*@
+                                </div>
+                            </MudStack>
+                            <div class="corporate-text mt-2">
+                                <input type="text" placeholder="Please enter Address (Building, Street, Area)" />
+                            </div>
+                        </MudItem>
+
+                        <MudItem xs="12" sm="12" Class="mt-3">
+                            <MudStack Row="true" Spacing="6" AlignItems="AlignItems.Center">
+                                <div>
+                                    <MudText Style="font-size:14px;font-weight:500;color:#333;">Address Type</MudText>
+                                </div>
+                                <div>
+                                    @*<ValidationMessage For="@(() => model.Phone)" />*@
+                                </div>
+                            </MudStack>
+                            <div mt-2">
+                                <MudRadioGroup T="bool">
+                                    <MudRadio T="bool" Size="Size.Small" Color="Color.Success">Home 1</MudRadio>
+                                    <MudRadio T="bool" Size="Size.Small" Color="Color.Success">Home 2</MudRadio>
+                                    <MudRadio T="bool" Size="Size.Small" Color="Color.Success">Office</MudRadio>
+                                </MudRadioGroup>
+                            </div>
+                        </MudItem>
+
+                        <MudItem xs="12" sm="12" Class="mt-3">
+                            <div style="height: 3px; background-color:#EEEEEE;">
+                            </div>
+                        </MudItem>
+
+                        <MudItem xs="12" sm="12" Class="mt-3">
+                            <MudCheckBox T="bool" Size="Size.Small" Color="Color.Default">Make this as my default address</MudCheckBox>
+                        </MudItem>
+
+                        <MudItem xs="12" sm="12" Class="mt-3">
+                            <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center">
+                                <button type="button" class="address-cancel">Cancel</button>
+                                <button type="button" class="address-save">Save</button>
+                            </MudStack>
+                        </MudItem>
+                    </MudForm>
+                </div>
+            </MudItem>
+        </MudGrid>
+
+    </DialogContent>
+</MudDialog>
+
+@code {
+#nullable disable
+
+
+    [CascadingParameter]
+    private IMudDialogInstance MudDialog { get; set; }
+
+    private void CloseDialog()
+    {
+        MudDialog.Close();
+    }
+}
+
+
+
+@code {
+#nullable disable
+    bool success;
+    string[] errors = { };
+    //MudTextField<string> pwField1;
+    MudForm form;
+    private DateTime? _date = DateTime.Today;
+    private TimeSpan? _time = new TimeSpan(00, 45, 00);
+
+    // show model here
+
+}
+
+<style>
+    .address-custom-dialog {
+        width: 560px;
+        border-radius: 24px !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        overflow: visible !important;
+    }
+
+        .address-custom-dialog .mud-dialog-content {
+            overflow: visible !important;
+            padding: 0px;
+            margin: 0px;
+            position: relative;
+        }
+</style>
+<style>
+    .address-container {
+        width: auto;
+        position: relative;
+    }
+
+
+    
+
+    .address-top-bar {
+        position: relative;
+        height: 90px;
+        background-color: #3E1268;
+        padding: 24px 32px 24px 32px;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+    }
+
+        .address-top-bar h2 {
+            color: #FFF;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: -0.64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .address-top-bar p {
+            width: 262px;
+            color: #FFF;
+            font-family: "DM Sans";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%; /* 18.2px */
+            letter-spacing: -0.28px;
+        }
+
+        .address-top-bar img {
+            position: absolute;
+            bottom: 0px;
+            right: 38px;
+            overflow: visible;
+        }
+
+    .address-top-bar-button {
+        position: absolute;
+        background-color: #ffffff;
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        top: -28px;
+        right: -28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+
+    .address-form-box {
+        padding: 32px;
+        background-color: #ffffff;
+        border-end-start-radius: 24px;
+        border-end-end-radius: 24px;
+    }
+
+    .address-cancel {
+        width: 162px;
+        height: 49px;
+        border: 1.5px solid #000;
+        background-color: #fff;
+        border-radius: 40px;
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+    }
+
+        .address-cancel:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+    .address-save {
+        width: 162px;
+        height: 49px;
+        background-color: #FF3B30;
+        border-radius: 40px;
+        color: #fff;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        box-shadow: 0px 4px 7.1px 0px #FFFFFF80 inset;
+    }
+
+        .address-save:hover {
+            box-shadow: none;
+        }
+
+    /* Container */
+    .corporate-text {
+        display: inline-block;
+        width: 100%;
+    }
+
+        /* Base input style */
+        .corporate-text input[type="text"] {
+            border-radius: 12px;
+            color: #333;
+            font-size: 16px;
+            font-weight: 400;
+            background-color: #F9F9F9;
+            border: 1px solid #BBBBBB;
+            height: 48px;
+            width: 100%; /* full width of container */
+            padding: 0 12px;
+            transition: height 0.3s ease, border-color 0.3s ease;
+        }
+
+            /* Hover border */
+            .corporate-text input[type="text"]:hover {
+                border-color: #bbb;
+            }
+
+            /* Focus: increase height by 5px */
+            .corporate-text input[type="text"]:focus {
+                height: 58px; /* 48px + 5px */
+                border-color: #eee; /* brand color */
+                outline: none; /* remove default blue outline */
+            }
+
+            /* Placeholder size */
+            .corporate-text input[type="text"]::placeholder {
+                font-weight: 400;
+                font-style: normal;
+                font-size: 16px;
+                line-height: 100%;
+                letter-spacing: -2%;
+                color: #A3A3A3;
+            }
+</style>
