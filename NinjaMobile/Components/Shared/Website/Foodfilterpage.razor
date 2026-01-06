@@ -2,29 +2,12 @@
 <MudGrid Spacing="0" Class="food-filter-box">
     <MudItem xs="12" sm="12" Class="filter-h6">
         <h6>Filters</h6>
+        <MudFab Class="filter-h6-btn" StartIcon="@Icons.Material.Filled.Close" Size="Size.Small" Color="Color.Default" DropShadow="false" />
     </MudItem>
 
     <MudGrid Spacing="0" Class="food-box1">
         <MudItem xs="12" sm="12">
             <h6 class="h6-food1">Food type</h6>
-            @*<div class="food-div1">
-                <MudStack Row="true">
-                    <MudStack Row="true">
-                        <button Class="food-both-btn">Both</button>
-                    </MudStack>
-                    <MudStack Row="true">
-                        <img style="height:16px; width:16px;" src="/images/web-content/veg.png" />
-                        <button>Veg</button>
-
-                    </MudStack>
-                    <MudStack Row="true">
-                        <img style="height:16px; width:16px;" src="/images/web-content/non-veg.png" />
-                        <button>Non-Veg</button>
-
-                    </MudStack>
-
-                </MudStack>
-            </div>*@
         </MudItem>
 
         <MudItem xs="12" sm="12" Class="mt-3">
@@ -41,10 +24,11 @@
         <MudItem xs="12" sm="12" Class="mt-6">
             <h6 class="filter-h62">Event type</h6>
         </MudItem>
+
         <MudItem xs="12" sm="12">
             <MudRadioGroup T="bool">
                 <MudStack Row="false" Spacing="1">
-                    <MudRadio T="bool"  Color="Color.Success">House party </MudRadio>
+                    <MudRadio T="bool" Color="Color.Success">House party </MudRadio>
                     <MudRadio T="bool" Color="Color.Success">Birthday </MudRadio>
                     <MudRadio T="bool" Color="Color.Success">Office </MudRadio>
                     <MudRadio T="bool" Color="Color.Success">Anniversary </MudRadio>
@@ -72,6 +56,10 @@
             </MudStack>
         </MudItem>
 
+        <MudItem sm="12" xs="12" Class="mt-6">
+            <div style="border: 1px solid #EEE">
+            </div>
+        </MudItem>
 
         <MudItem xs="12" sm="12">
             <h6 class="filter-h62">Pricing</h6>
@@ -129,6 +117,7 @@
     }
 
     .filter-h6 {
+        position:relative;
         color: #000;
         font-size: 20px;
         font-style: normal;
@@ -139,6 +128,11 @@
         padding-bottom: 21px;
         border-bottom: 1px solid #EEE;
         padding-left:24px;
+    }
+    .filter-h6-btn{
+        position:absolute;
+        top:8px;
+        right:8px;
     }
     .filter-h62 {
         color: #000;
@@ -219,7 +213,6 @@
     .category-food-type-box {
         width: auto;
         height: 56px;
-        padding: 6px;
         border-radius: 30px;
         background: #F7F7F7;
         display: flex;
