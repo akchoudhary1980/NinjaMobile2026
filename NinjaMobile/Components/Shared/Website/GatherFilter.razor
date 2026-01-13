@@ -1,0 +1,89 @@
+﻿<MudGrid Spacing="0">
+    <MudItem xs="12">
+        <MudStack Row="true" Justify="Justify.SpaceBetween" Class="filter-tabs">
+
+            @foreach (var item in Tabs)
+            {
+                <div class="filter-tab @(SelectedTab == item.Id ? "active" : "")"
+                     @onclick="() => SelectTab(item.Id)">
+
+                    <img src="@item.Icon" />
+                    <div class="filter-tab-text">@item.Title</div>
+
+                </div>
+            }
+
+        </MudStack>
+    </MudItem>
+</MudGrid>
+
+
+@code {
+
+    int SelectedTab = 1;
+
+    List<TabItem> Tabs = new()
+{
+        new TabItem { Id = 1, Title = "Gather Box", Icon = "/images/web-content/gatherfilter1.svg" },
+        new TabItem { Id = 2, Title = "Gather Feast", Icon = "/images/web-content/gatherfilter2.svg" },
+        new TabItem { Id = 3, Title = "Bento Box", Icon = "/images/web-content/gatherfilter3.svg" },
+    };
+
+    void SelectTab(int id)
+    {
+        SelectedTab = id;
+    }
+
+    class TabItem
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Icon { get; set; }
+    }
+}
+
+
+<style>
+    .filter-tabs {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+
+    .filter-tab {
+        width: 120px;
+        height: 56px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        background: transparent;
+        border-top: 2px solid transparent;
+        transition: all 0.2s ease;
+    }
+
+        .filter-tab img {
+            width: 24px;
+            height: 24px;
+        }
+
+    .filter-tab-text {
+        color: #333;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    /* ✅ ACTIVE TAB */
+    .filter-tab.active {
+        background: #FEF0EF;
+        border-top: 2px solid #FF3B30;
+    }
+
+        .filter-tab.active .filter-tab-text {
+            color: #FF3B30;
+            font-weight: 600;
+        }
+
+</style>

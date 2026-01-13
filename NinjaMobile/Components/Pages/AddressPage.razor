@@ -1,7 +1,7 @@
 ﻿@page "/address"
 @layout EmptyLayout
 
-        <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="p-0 m-0" Style="margin-top: -70px !important;">
+        <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="p-0 m-0">
 
             <MudGrid Spacing="0" Class="checkout-top-strip" Justify="Justify.Center">
                 <MudItem xs="3" sm="3">
@@ -16,14 +16,14 @@
                         </div>
 
                         <div>
-                            <MudText Style="color: #999">------------------</MudText>
+                            <MudText Style="color: #999">-----</MudText>
                         </div>
                         <div>
                             <button type="button" class="link-button">ADDRESS</button>
                             <div class="underline-div"></div>
                         </div>
                         <div>
-                            <MudText Style="color: #999">------------------</MudText>
+                            <MudText Style="color: #999">-----</MudText>
                         </div>
                         <div>
                             <button type="button" class="link-button-normal">PAYMENT</button>
@@ -42,7 +42,7 @@
         <MudContainer MaxWidth="MaxWidth.Large">
             <MudGrid Spacing="0" Justify="Justify.SpaceBetween">
 
-                <MudItem xs="7" sm="7">
+                <MudItem xs="12" sm="12">
                     <MudGrid Spacing="0" Class="address-container">
                         <MudItem xs="12" sm="12" Class="mt-8">
                             <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
@@ -117,7 +117,6 @@
                                                 </MudGrid>
                                             </div>
                                         </MudStack>
-
                                     </MudItem>
 
                                 </MudGrid>
@@ -190,7 +189,7 @@
                     </MudGrid>
                 </MudItem>
 
-                <MudItem xs="4" sm="4">
+                @*<MudItem xs="12" sm="12">
 
                     <div class="address-summery-box">
                         <MudGrid Spacing="0">
@@ -257,7 +256,7 @@
                         </MudGrid>
                     </div>
 
-                </MudItem>
+                </MudItem>*@
             </MudGrid>
         </MudContainer>
 

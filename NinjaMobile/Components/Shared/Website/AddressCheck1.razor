@@ -1,0 +1,105 @@
+﻿<MudGrid Spacing="0" Class="order-confirm-box">
+    <MudItem xs="12" sm="12">
+        <div>
+            <div class="order-confirm-blur-circle">
+            </div>
+            <div class="order-confirm-left-svg">
+                <img src="/images/web-content/address-orderconfirm-img.svg" />
+            </div>
+        </div>
+    </MudItem>
+
+    <MudGrid Spacing="0">
+        <MudItem xs="12" sm="12" Class="d-flex align-items-center justify-content-center" Style="margin-top:300px;">
+            <img src="/images/web-content/address-orderconfirm-img2.svg" />
+        </MudItem>
+    </MudGrid>
+
+    <MudGrid Spacing="0"Class="mt-8">
+        <MudItem xs="12" sm="12" Class="d-flex align-items-center justify-content-center">
+            <h6 class="order-confim-main-heading">Order Confirmed</h6>
+        </MudItem>
+        <MudItem xs="12" sm="12" Class="d-flex align-items-center justify-content-center">
+            <MudStack Row="false">
+                <p class="order-confim-main-para">
+                    Thank you for choosing <span style="font-weight:600;"> EZ Gatherr.</span>
+                    We wish your event is filled with happiness and joy.
+                </p>
+                <div class="mt-4">
+                    <MudButton Variant="Variant.Filled" FullWidth="true" Color="Color.Primary" Size="Size.Medium" Class="btn-primary">Apply 400 Points</MudButton>
+                </div>
+                <p class="order-confim-main-lastpara">
+                    A confirmation email has been sent to your inbox
+                </p>
+            </MudStack>         
+        </MudItem>
+    </MudGrid>
+
+    <MudGrid Spacing="0">
+        <MudItem xs="12" sm="12">
+            <div class="order-confim-left-box" style="border:">
+                <img style="" src="/images/web-content/address-orderconfirm-left-img.svg" />
+            </div>
+        </MudItem>
+    </MudGrid>
+    
+
+</MudGrid>
+
+<style>
+    .order-confirm-box {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: #F9F5FC;
+    }
+    .order-confirm-blur-circle {
+        position: absolute;
+        width: 360px;
+        height: 360px;
+        background-color: #FDE0E8;
+        border-radius: 50%;
+        top: -150px;
+        left: -163px;
+        filter: blur(39.15px);
+    }
+    .order-confirm-left-svg {
+        position: absolute;
+        width: 87.048px;
+        height: 85px;
+        top: 32px;
+        left: 32px;
+    }
+    .order-confim-main-heading {
+        color: #000;
+        text-align: center;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .order-confim-main-para {
+        color: #666;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 19.2px */
+        width: 296px;
+        text-wrap:wrap;
+    }
+    .order-confim-main-lastpara {
+        color: #666;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 14.4px */
+    }
+    .order-confim-left-box {
+        position:absolute;
+        right:24px;
+        bottom:69px;
+        top:675px;
+    }
+</style>

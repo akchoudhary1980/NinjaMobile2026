@@ -1,17 +1,78 @@
 ﻿<MudGrid Spacing="0">
-        <MudItem xs="12" Class="checkout-box2 mt-4">
-            <MudGrid Spacing="0">
-                <MudItem xs="4">
-                    <img class="check-imgs2" src="/images/web-content/_dish.png" />
-                </MudItem>
-                <MudItem xs="8">
-                    <MudStack Row="true">
+    <MudItem xs="12" Class="checkout-box2 mt-4">
+        <MudGrid Spacing="0">
+            <MudItem xs="2">
+                <img class="check-imgs2" src="/images/web-content/_dish.png" />
+            </MudItem>
+            <MudItem xs="10">
+                <MudStack Row="true" Justify="Justify.SpaceBetween">
+                    <div>
                         <h6 class="headingcheck12">Basic Indian</h6>
-                        <img class="check-earphone" src="/images/web-content/check-earphone.png" />
-                    </MudStack>
-                </MudItem>
-            </MudGrid>
-        </MudItem>
+                    </div>
+                    <div>
+                        <MudStack Spacing="2" Row="true">
+                            <MudIcon Class="" Icon="@CustomIcons.DeletIcon" />
+                            <MudIcon Icon="@CustomIcons.EditIcon" />
+                        </MudStack>
+                    </div>
+                </MudStack>
+
+                <MudGrid Spacing="0" Class="ps-10">
+                    <MudItem xs="12" sm="12">
+                        <MudStack Row="true">
+                            <div class="checkout-nonveg-div">
+                                <MudStack Row="true" Spacing="1" Style="height:27px;" AlignItems="AlignItems.Center">
+                                    <div>
+                                        <div style="height:12px; width:12px; border-radius:50%; border:1.5px solid #FFF;"></div>
+                                    </div>
+                                    <div>
+                                        <span style="font-size:14px;">Non-Veg</span>
+                                    </div>
+                                </MudStack>
+                            </div>
+                            <div class="checkout-veg-div">
+                                <MudStack Row="true" Spacing="1" Style="height:27px;" AlignItems="AlignItems.Center">
+                                    <div>
+                                        <div style="height:12px; width:12px; border-radius:50%; border:1.5px solid #FFF;"></div>
+                                    </div>
+                                    <div>
+                                        <span style="font-size:14px;"> Veg</span>
+                                    </div>
+                                </MudStack>
+                            </div>
+                        </MudStack>
+                    </MudItem>
+                </MudGrid>
+
+            </MudItem>
+        </MudGrid>
+
+        <MudGrid Spacing="0">
+            <MudItem xs="12" sm="12" Class="mt-2">
+                <MudStack Row="true">
+                    <MudIcon Style="padding-left:12px;" Icon="@CustomIcons.Food" />
+                    <span class="checkout-spanlist">Starters 1 • Mains • Dessert 1 • Bread / Rice 1</span>
+                </MudStack>
+            </MudItem>
+            <MudItem xs="12" sm="12">
+                <MudStack Row="true">
+                    <MudIcon Icon="@CustomIcons.Profile" />
+                    <p class="checkout-paralist"><span class="checkout-spanlist">Fit for: </span>10 people</p> 
+                </MudStack>
+            </MudItem>
+
+            <MudItem xs="12" sm="12">
+                <MudStack Row="true">
+                    <MudIcon Icon="@CustomIcons.EditProfileIcon" />
+                    <p class="checkout-paralist">3 Add-ons added</p>
+                </MudStack>
+            </MudItem>
+            <MudItem xs="12" sm="12">
+                <p class="checkout-rssing">₹ 12,870.00 <span class="checkout-spanlist"> +GST</span></p>
+            </MudItem>
+        </MudGrid>
+
+    </MudItem>
 </MudGrid>
 
 <style>
@@ -24,11 +85,10 @@
         background: #FFF;
         margin-top:16px;
         padding:16px;
-        border:1px solid black;
     }
     .check-imgs2 {
-        width:auto;
-        height: 96px;
+        width:70px;
+        height: 70px;
         flex-shrink: 0;
         align-self: stretch;
         border-radius: 16px;
@@ -47,5 +107,55 @@
         height: 24px;
         flex-shrink: 0;
         background-color: #EEEEEE;
+    }
+    .checkout-nonveg-div {
+        width: 89px;
+        height: 27px;
+        background-color: #F61415;
+        border-radius: 50px;
+        color: #FFF;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.28px;
+        padding: 0px 8px 0px 8px;
+    }
+    .checkout-veg-div {
+        width: 57px;
+        height: 27px;
+        background-color: #0EB559;
+        color: #FFF;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.28px;
+        border-radius: 50px;
+        padding:0px 8px 0px 8px;
+    }
+    .checkout-spanlist {
+        color: #666;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.24px;
+    }
+    .checkout-paralist {
+        color: #333;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.28px;
+    }
+    .checkout-rssing {
+        color: #111;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.4px;
     }
 </style>

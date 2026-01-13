@@ -1,0 +1,108 @@
+﻿@page "/myorder"
+@layout EmptyLayout
+
+
+    <MudItem xs="12" Class="myorder-box1">
+        <MudStack Row="true" Class="text-center">
+            <img class="myorder-img1" src="/images/web-content/backbutton.svg" />
+            <h6 class="myorder-heading1">My Order</h6>
+        </MudStack>
+    </MudItem>
+
+    <MudItem xs="12">
+        <MudTabs Elevation="0" Rounded="false" ApplyEffectsToContainer="true" >
+            <MudTabPanel Text="Ongoing">
+                @*<MudText>Content One</MudText>*@
+
+            </MudTabPanel>
+            <MudTabPanel Text="Order History">
+                @*<MudText>Content Two</MudText>*@
+
+            </MudTabPanel>
+        </MudTabs>
+    </MudItem>
+
+
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge">  
+        <MudGrid Spacing="0" Class="mt-4 p-4" Style="background-color: white; border-radius: 24px; ">
+            <MudItem xs="4">
+                <MudStack Row="true">
+                    <img class="myorder-imgs" src="/images/web-content/_dish.png" />
+                </MudStack>
+            </MudItem>
+            <MudItem xs="8">
+                <MudStack Row="true" Justify="Justify.SpaceBetween">
+                    <h6 class="myorder-heading2">Basic Indian</h6>
+                    <MudIcon  Icon="@CustomIcons.HeadphoneIcon" />
+                </MudStack>
+                <MudItem xs="12" Class="mt-4">
+                    <MudStack Row="true">
+                        <MudIcon Icon="@CustomIcons.MyorderBox" />
+                        <h6 class="myorder-para">Order ID:<span class="myorder-heading2" style="font-size:14px;">ORD-2025-001</span> </h6>
+                    </MudStack>
+                    <MudStack Row="true" Class="mt-2">
+                        <MudIcon Icon="@CustomIcons.Myordertruck" />
+                        <h6 class="myorder-para">Delivery in 2 days</h6>
+                    </MudStack>
+                    <MudStack Row="true" Class="mt-2">
+                        <MudIcon Icon="@CustomIcons.MyorderCoin" />
+                        <h6 class="myorder-para">Points Earned:<span class="myorder-heading2" style="font-size:14px;"> 150 Points</span> </h6>
+                    </MudStack>
+                </MudItem>
+            </MudItem>
+            <MudItem xs="12" Class="mt-3">
+                <MudButton Variant="Variant.Filled" FullWidth="true" Color="Color.Primary" Size="Size.Medium" Class="btn-primary">Track Order</MudButton>
+            </MudItem>
+        </MudGrid>   
+</MudContainer>
+
+
+
+
+<style>
+    .myorder-box1 {
+        display: flex;
+        width:auto;
+        height: 57px;
+        padding: 16px 16px 1px 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: 1px solid #F7F7F7;
+        background: #FFF;
+    }
+    .myorder-img1 {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+    }
+
+    .myorder-heading1 {
+        color: #111;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 150% */
+    }
+    .myorder-imgs {
+        width: 96px;
+        height: 96px;
+        border-radius: 16px;
+        opacity: 1;
+    }
+    .myorder-heading2 {
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%; /* 26px */
+        letter-spacing: -0.4px;
+    }
+    .myorder-para {
+        color: #666;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.28px;
+    }
+</style>

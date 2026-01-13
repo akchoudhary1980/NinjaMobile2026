@@ -1,0 +1,118 @@
+﻿<MudGrid Spacing="0">
+    <MudItem xs="12" Class="profile-edit-box">
+        <MudStack Row="true">
+            <MudIcon Icon="@CustomIcons.BackButton" />
+            <MudText Class="profile-edit-heading1">Edit Profile</MudText>
+        </MudStack>
+    </MudItem>
+
+    <MudItem xs="12" Class="p-4">
+        <MudText Class="profile-edit-heading2">Phone Number</MudText>
+        <MudTextField T="string"
+                      Placeholder="+91 8760803361"
+                      Variant="Variant.Outlined"
+                      Margin="Margin.Dense"
+                      Class="custom-phone-input mt-2" />
+
+        <MudText Class="profile-edit-heading2">Name</MudText>
+        <MudTextField T="string"
+                      Placeholder="+91 8760803361"
+                      Variant="Variant.Outlined"
+                      Margin="Margin.Dense"
+                      Class="custom-phone-input mt-2" />
+
+        <MudText Class="profile-edit-heading2">Company</MudText>
+        <MudTextField T="string"
+                      Placeholder="+91 8760803361"
+                      Variant="Variant.Outlined"
+                      Margin="Margin.Dense"
+                      Class="custom-phone-input mt-2" />
+
+        <MudText Class="profile-edit-heading2">Email</MudText>
+        <MudTextField T="string"
+                      Placeholder="+91 8760803361"
+                      Variant="Variant.Outlined"
+                      Margin="Margin.Dense"
+                      Class="custom-phone-input mt-2" />
+
+        <MudText Class="profile-edit-heading2">Alternate mobile details</MudText>
+        <MudTextField T="string"
+                      Placeholder="+91 8760803361"
+                      Variant="Variant.Outlined"
+                      Margin="Margin.Dense"
+                      Class="custom-phone-input mt-2" />
+    </MudItem>
+
+    <MudItem xs="12"  Class="p-4">
+        <MudButton Variant="Variant.Filled" FullWidth="true" Color="Color.Primary" Size="Size.Medium" Class="btn-primary">Save Details</MudButton>
+    </MudItem>
+</MudGrid>
+
+
+<style>
+    .profile-edit-box {
+        border-bottom: 1px solid #EEE;
+        background: #FFF;
+        display: flex;
+        width: auto;
+        height: 64px;
+        padding-left: 16px;
+        align-items: center;
+        gap: 12px;
+    }
+    .profile-edit-heading1 {
+        color: #111;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 150% */
+    }
+    .profile-edit-heading2 {
+        color: #333;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.24px;
+        padding-left:12px;
+        margin-top:16px;
+    }
+
+    .custom-phone-input {
+        width: auto;
+        height: 46px;
+        background: #F9F9F9;
+    }
+
+        /* Real border (fieldset) */
+        .custom-phone-input .mud-input-outlined-border {
+            border: 1px solid #BBB !important;
+            border-radius: 12px !important;
+        }
+
+        /* Input text & placeholder */
+        .custom-phone-input input {
+            height: 46px;
+            padding: 0 16px;
+            color: #333;
+            font-family: "DM Sans";
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: -0.28px;
+        }
+
+            /* Placeholder */
+            .custom-phone-input input::placeholder {
+                color: #333;
+                opacity: 1;
+            }
+
+        /* Remove blue focus ring */
+        .custom-phone-input.mud-input-focused .mud-input-outlined-border {
+            border-color: #BBB !important;
+        }
+
+
+
+
+</style>

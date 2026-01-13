@@ -1,0 +1,148 @@
+﻿<MudGrid Spacing="0">
+    <MudItem xs="12" sm="12">
+        <div class="checkout12-div">
+            <MudGrid Spacing="0">
+                <MudItem xs="9" sm="9" Class="checkout12-item-div">
+                    <MudStack Row="true">
+                        <MudIcon Icon="@CustomIcons.CheckoutWalletIcon" />
+                        <h6>You have 850 points</h6>
+                    </MudStack>
+                    <p>Redeem now and save up to ₹200 on this order</p>
+                </MudItem>
+                <MudItem xs="3" sm="3">
+                    <button class="checkout12-btn-div">Redeem </button>
+                </MudItem>
+            </MudGrid>
+        </div>
+    </MudItem>
+
+    <MudItem xs="12" sm="12">
+        <div class="checkout12-main-heading">
+            <h6>Order Summary</h6>
+        </div>
+    </MudItem>
+
+    <MudItem xs="12" sm="12" Class="mt-4">
+        <MudStack Row="true" Justify="Justify.SpaceBetween">
+            <p class="checkout12-main-para">Food Cost</p>
+            <p class="checkout12-main-para">₹ 12,870.00</p>
+        </MudStack>
+    </MudItem>
+    <MudItem xs="12" sm="12">
+        <MudStack Row="true" Justify="Justify.SpaceBetween">
+            <p class="checkout12-main-para">Sub Total</p>
+            <p class="checkout12-main-para">₹ 12,870.00</p>
+        </MudStack>
+    </MudItem>
+    <MudItem xs="12" sm="12">
+        <MudStack Row="true" Justify="Justify.SpaceBetween">
+            <p class="checkout12-main-para">GST @@ 5%</p>
+            <p class="checkout12-main-para">₹ 12,870.00</p>
+        </MudStack>
+    </MudItem>
+    <MudItem xs="12" sm="12">
+        <MudStack Row="true" Justify="Justify.SpaceBetween">
+            <p class="checkout12-main-para">Delivery</p>
+            <p class="checkout12-main-para" style="color: #00A43D;">Free</p>
+        </MudStack>
+    </MudItem>
+
+    <MudItem xs="12" sm="12">
+        <div style="border: 1px solid #EEE;">
+        </div>
+    </MudItem>
+
+    <MudItem xs="12" sm="12" Class="mt-3">
+        <MudStack Row="true" Justify="Justify.SpaceBetween">
+            <p class="checkout12-main-lastpara">Total Amount</p>
+            <p class="checkout12-main-lastpara">₹ 12,870.00</p>
+        </MudStack>
+    </MudItem>
+
+    <MudItem xs="12" sm="12" Class="mt-8 text-center">
+        <MudButton Variant="Variant.Filled" FullWidth="true" Color="Color.Primary" Size="Size.Medium" Class="btn-primary">Proceed to checkout</MudButton>
+        <p class="checkout12-main-lastpara12">By proceeding, you agree to our <span style="text-decoration:underline;">terms and conditions</span></p>
+    </MudItem>
+
+</MudGrid>
+
+
+
+<style>
+    .checkout12-div {
+        width: auto;
+        height: 96px;
+        background: linear-gradient(153deg, rgba(155, 81, 224, 0.40) -9.56%, rgba(155, 81, 224, 0.08) 65.58%);
+        border-radius:24px;
+        padding:16px;
+    }
+    .checkout12-item-div h6 {
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%; /* 18.2px */
+        letter-spacing: -0.28px;
+    }
+    .checkout12-item-div p {
+        color: #666;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.24px;
+        margin-top:8px;
+    }
+
+    .checkout12-btn-div {
+        display: flex;
+        height: 36px;
+        padding: 8px 10px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        border: 1px solid #000;
+        margin-top: 15px;
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .checkout12-main-heading {
+        color: #111;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%; /* 23.4px */
+        letter-spacing: -0.36px;
+        margin-top:16px;
+        padding-left:16px;
+    }
+    .checkout12-main-para {
+        color: #666;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.28px;
+        padding-left: 16px;
+    }
+    .checkout12-main-lastpara {
+        color: #111;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%; /* 26px */
+        letter-spacing: -0.4px;
+    }
+    .checkout12-main-lastpara12 {
+        color: #666;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 133.333% */
+        margin-top:12px;
+    }
+</style>

@@ -1,54 +1,126 @@
-﻿@page "/checkout"
+﻿@page "/checkout12"
 @layout EmptyLayout
 
 <PageTitle>Test</PageTitle>
 
-<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="m-0 p-0">
-    <MudItem xs="12" sm="12" Class="check-box1">
-        <MudStack Row="true">
-            <img class="check-img1" src="/images/web-content/backbutton.svg" />
-            <h6 class="check-heading1"> My Order</h6>
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge">
+    <MudItem xs="12" sm="12" Class="p-4">
+        <MudStack Row="true" Justify="Justify.SpaceBetween">
+            <div>
+                <MudStack Row="true" Spacing="4">
+                    <div>
+                        <img src="/images/web-content/backbutton.svg" />
+                    </div>
+                    <div>
+                        <h6 class="check-heading1"> Logo Here</h6>
+                    </div>
+                </MudStack>
+            </div>
+            <div>
+                <MudStack Row="true" Spacing="1">
+                    <div>
+                        <MudIcon Icon="@CustomIcons.CheckoutTopIcon" />
+                    </div>
+                    <div>
+                        <p class="check-headingpra2 ">100% Secure</p>
+                    </div>
+                </MudStack>
+            </div>
         </MudStack>
     </MudItem>
 
-    <MudItem sm="12" xs="12" Class="mt-3 pl-4">
-        <MudTabs Centered="false" Rounded="false" MinimumTabWidth="0" Outlined="false" Elevation="0" ApplyEffectsToContainer="true">
-            <MudTabPanel Text="Ongoing">
-            </MudTabPanel>
-
-            <MudTabPanel Text="Order History">
-
-            </MudTabPanel>
-        </MudTabs>
+    <MudItem xs="12" sm="12">
+        <div class="check-top-item">
+        </div>
     </MudItem>
 
-    <div style="margin-top:16px;padding:16px;">
+    <MudItem xs="12" sm="12" Class="mt-3">
+        <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.Center">
+            <div>
+                <button type="button" class="checklink-button">CART</button>
+                <div class="checkunderline-div"></div>
+            </div>
+
+            <div>
+                <MudText Style="color: #999">-----</MudText>
+            </div>
+            <div>
+                <button type="button" class="checklink-button-normal">ADDRESS</button>
+            </div>
+            <div>
+                <MudText Style="color: #999">-----</MudText>
+            </div>
+            <div>
+                <button type="button" class="checklink-button-normal">PAYMENT</button>
+            </div>
+
+        </MudStack>
+    </MudItem>
+
+</MudContainer>
+
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge">
+   <div style="padding:16px;">
         <Checkout1 />
+    </div>
+
+    <div style="padding:16px;">
+        <CheckOut12 />
     </div>
 
 </MudContainer>
 
 <style>
-    .check-box1 {
-        display: flex;
-        width: auto;
-        height: 57px;
-        flex-direction: column;
-        align-items: flex-start;
+    .check-top-item {
         border-bottom: 1px solid #F7F7F7;
+        background: #FFF;
     }
-
-    .check-img1 {
-        padding-left: 16px;
-        padding-top: 10px;
-    }
-
     .check-heading1 {
-        color: #111;
+        color: #666;
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
-        line-height: 24px; /* 150% */
-        padding-top: 16px;
+        margin-bottom:0px;
     }
+    .check-headingpra2 {
+        color: #666;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+        text-transform: uppercase;
+        margin-bottom: 0px;
+    }
+
+
+    .checklink-button {
+        height: 25px;
+        width: fit-content;
+        color: #FF3B30;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    .checkunderline-div {
+        height: 2px;
+        width: 100%;
+        background-color: #FF3B30;
+        border-radius: 2px; 
+        margin-top: 4px; 
+    }
+
+    .checklink-button-normal {
+        color: #666;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    
+
 </style>

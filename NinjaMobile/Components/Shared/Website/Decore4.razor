@@ -1,0 +1,73 @@
+﻿
+<MudGrid Spacing="0" Class="decore4-box">
+    <MudItem xs="12">
+        <div Class="decore4-box2" >
+            <div>
+                <h6 class="decore4-heading1">Occasion</h6>
+            </div>
+            <div class="decore4-btn">
+                <MudFab Color="Color.Default" StartIcon="@Icons.Material.Filled.Close" Size="Size.Small" DropShadow="false" />
+            </div>
+        </div>
+    </MudItem>
+    <MudItem xs="12" Class="pl-6 mt-6">
+        <h6 class="decore4-heading2">Event Type</h6>
+        <MudRadioGroup T="bool">
+            <MudStack Row="false">
+                <MudRadio Class="decore4-radio-btn" T="bool" Color="Color.Success" Size="Size.Small">Wedding Decor</MudRadio>
+                <MudRadio Class="decore4-radio-btn" T="bool" Color="Color.Success" Size="Size.Small">Birthday Decor</MudRadio>
+                <MudRadio Class="decore4-radio-btn" T="bool" Color="Color.Success" Size="Size.Small">Religious Decor</MudRadio>
+                <MudRadio Class="decore4-radio-btn" T="bool" Color="Color.Success" Size="Size.Small">reception Decor</MudRadio>
+                <MudRadio Class="decore4-radio-btn" T="bool" Color="Color.Success" Size="Size.Small">Other Services</MudRadio>
+                <MudRadio Class="decore4-radio-btn" T="bool" Color="Color.Success" Size="Size.Small">Corporate Decor</MudRadio>
+                <MudRadio Class="decore4-radio-btn" T="bool" Color="Color.Success" Size="Size.Small">Temple Decor</MudRadio>
+            </MudStack>          
+        </MudRadioGroup>
+    </MudItem>      
+</MudGrid>
+
+
+<style>
+    .decore4-box {
+        position:relative;
+        border-start-start-radius:10px;
+        border-start-end-radius:10px;
+    }
+    .decore4-box2 {
+        width:auto;
+        height:71px;
+        border-bottom: 1px solid #EEE;
+        background: #FFF;
+        padding-right:24px;
+        padding:24px;
+    }
+    .decore4-heading1 {
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px; 
+        letter-spacing: -0.449px;
+    }
+    .decore4-btn{
+        position:absolute;
+        top:8px;
+        right:8px;
+    }
+    .decore4-heading2 {
+        color: #111;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; 
+        letter-spacing: -0.312px;
+    }
+    .decore4-radio-btn {
+        color: #666;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.28px;
+    }
+</style>

@@ -1,0 +1,251 @@
+﻿@page "/profile"
+@layout EmptyLayout
+
+<MudItem xs="12" Class="profile-box1">
+    <MudStack Row="true" Class="text-center">
+        <img class="profile-img1" src="/images/web-content/backbutton.svg" />
+        <h6 class="profile-heading1">Loyalty Wallet</h6>
+    </MudStack>
+</MudItem>
+
+
+<MudContainer MaxWidth="MaxWidth.ExtraLarge">
+    <MudGrid Spacing="12">
+        <MudItem xs="12">
+            <div class="profile-box2">
+                <img class="profile-banner-img" src="/images/web-content/Untitled-1.svg" />
+                <img class="profile-wallet-img" src="/images/web-content/main-wallet1.png" />
+                <div class="profile-box3">
+                    <div class="profile-wallet-p1">Available Points</div>
+                    <div class="profile-wallet-h6">850</div>
+                    <div class="profile-wallet-p2">Points worth ₹ <span>643.50</span></div>
+                </div>
+            </div>
+
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge">
+    <MudGrid Spacing="0" Class="mt-4 p-4" Style="background-color: white; border-radius: 16px; ">
+        <MudItem xs="12">
+            <MudStack Row="true">
+                <MudIcon Icon="@CustomIcons.Profile" />
+                <p class="profile-heading1">Refer and Earn</p>
+            </MudStack>
+            <span style="color: #666; font-size: 14px; width: 285px;text-wrap:wrap;">Share our catering with friends and earn rewards when their event gets booked.</span>
+        </MudItem>
+
+        <MudItem xs="12" Class="mt-3">
+            <MudButton Variant="Variant.Filled" FullWidth="true" Color="Color.Primary" Size="Size.Medium" Class="btn-primary">Refer now</MudButton>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+
+<MudItem xs="12" Class="p-4">
+    <MudStack Row="true" Justify="Justify.SpaceBetween">
+        <span class="profile-heading1" style="font-size:16px;">Recent Activity</span>
+        <span class="profile-heading1" style="text-decoration:underline;font-size:14px;">View all</span>
+    </MudStack>
+</MudItem>
+
+
+<MudContainer>
+    <MudGrid Spacing="0" Class="p-3 w-100" Style="background-color: white; border-radius: 16px;height:76px;">
+        <MudStack Row="false" Spacing="0" AlignItems="AlignItems.Center" Class="w-100">
+            <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Class="w-100">
+                <div class="profile-heading1" style="font-size:16px;">
+                    Order : Basic indian
+                </div>
+
+                <div style="font-size: 16px; color: #00A43D; font-weight: 700; ">
+                    +45
+                </div>
+            </MudStack>
+
+            <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Class="w-100 mt-2">
+                <div style="font-size:12px;color: #666;">
+                    Today, 2:30 PM
+                </div>
+
+                <div style="font-size:12px;color: #666;">
+                    Points
+                </div>
+            </MudStack>
+        </MudStack>
+    </MudGrid>
+</MudContainer>
+
+<MudContainer Class="mt-2">
+    <MudGrid Spacing="0" Class="p-3 w-100" Style="background-color: white; border-radius: 16px;height:76px;">
+        <MudStack Row="false" Spacing="0" AlignItems="AlignItems.Center" Class="w-100">
+            <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Class="w-100">
+                <div class="profile-heading1" style="font-size:16px;">
+                    Discount Applied
+                </div>
+
+                <div style="font-size: 16px; color: #FF3B30; font-weight: 700;">
+                    -100
+                </div>
+            </MudStack>
+
+            <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Class="w-100 mt-2">
+                <div style="font-size:12px;color: #666;">
+                    Today, 2:30 PM
+                </div>
+
+                <div style="font-size:12px;color: #666;">
+                    Points
+                </div>
+            </MudStack>
+        </MudStack>
+    </MudGrid>
+</MudContainer>
+
+<MudContainer Class="mt-2">
+    <MudGrid Spacing="0" Class="p-3 w-100" Style="background-color: white; border-radius: 16px;height:76px;">
+        <MudStack Row="false" Spacing="0" AlignItems="AlignItems.Center" Class="w-100">
+            <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Class="w-100">
+                <div class="profile-heading1" style="font-size:16px;">
+                    Order: Sounth indian
+                </div>
+
+                <div style="font-size:16px;color:#00A43D; font-weight:700;">
+                    +30
+                </div>
+            </MudStack>
+
+            <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Class="w-100 mt-2">
+                <div style="font-size:12px;color: #666;">
+                    Today, 2:30 PM
+                </div>
+
+                <div style="font-size:12px;color: #666;">
+                    Points
+                </div>
+            </MudStack>
+        </MudStack>
+    </MudGrid>
+</MudContainer>
+
+
+<MudContainer Class="mt-2">
+    <MudGrid Spacing="0" Class="p-3 w-100" Style="background-color: white; border-radius: 16px;height:76px;">
+        <MudStack Row="false" Spacing="0" AlignItems="AlignItems.Center" Class="w-100">
+            <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Class="w-100">
+                <div class="profile-heading1" style="font-size:16px;">
+                    Referral Bonus
+                </div>
+
+                <div style="font-size:16px;color:#00A43D; font-weight:700;">
+                    +200
+                </div>
+            </MudStack>
+
+            <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Class="w-100 mt-2">
+                <div style="font-size:12px;color: #666;">
+                    Today, 2:30 PM
+                </div>
+
+                <div style="font-size:12px;color: #666;">
+                    Points
+                </div>
+            </MudStack>
+        </MudStack>
+    </MudGrid>
+</MudContainer>
+
+
+
+
+<style>
+    .profile-box1 {
+        display: flex;
+        width: auto;
+        height: 57px;
+        padding: 16px 16px 1px 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: 1px solid #F7F7F7;
+        background: #FFF;
+    }
+
+    .profile-img1 {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+    }
+
+    .profile-heading1 {
+        color: #111;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 150% */
+    }
+
+    .profile-box2 {
+        position: relative;
+        width: auto;
+        height: 220px;
+        background-color: #3E1268;
+        overflow: hidden;
+        border-radius: 24px;
+    }
+
+    .profile-banner-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .profile-wallet-img {
+        position: absolute;
+        width: 52px;
+        height: 52px;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        object-fit: cover;
+        display: block;
+    }
+
+    .profile-box3 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        object-fit: cover;
+        display: block;
+        top: 126px;
+    }
+
+    .profile-wallet-p1 {
+        color: #D8D0E1;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+    }
+
+    .profile-wallet-h6 {
+        color: #FFF;
+        text-align: center;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        letter-spacing: -0.8px;
+    }
+
+    .profile-wallet-p2 {
+        color: #D8D0E1;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%; /* 18.2px */
+        letter-spacing: -0.28px;
+    }
+</style>

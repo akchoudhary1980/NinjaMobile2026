@@ -1,0 +1,523 @@
+﻿@page "/addressm"
+@layout EmptyLayout
+
+<PageTitle>Test</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge">
+    <AddressCheck1 />
+</MudContainer>
+
+@*<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge">
+    <MudItem xs="12" sm="12" Class="p-4">
+        <MudStack Row="true" Justify="Justify.SpaceBetween">
+            <div>
+                <MudStack Row="true" Spacing="4">
+                    <div>
+                        <img src="/images/web-content/backbutton.svg" />
+                    </div>
+                    <div>
+                        <h6 class="check-heading1"> Logo Here</h6>
+                    </div>
+                </MudStack>
+            </div>
+            <div>
+                <MudStack Row="true" Spacing="1">
+                    <div>
+                        <MudIcon Icon="@CustomIcons.CheckoutTopIcon" />
+                    </div>
+                    <div>
+                        <p class="check-headingpra2 ">100% Secure</p>
+                    </div>
+                </MudStack>
+            </div>
+        </MudStack>
+    </MudItem>
+
+    <MudItem xs="12" sm="12">
+        <div class="check-top-item">
+        </div>
+    </MudItem>
+
+    <MudItem xs="12" sm="12" Class="mt-3">
+        <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.Center">
+            <div>
+                <button type="button" class="checklink-button">CART</button>
+                <div class="checkunderline-div"></div>
+            </div>
+
+            <div>
+                <MudText Style="color: #999">-----</MudText>
+            </div>
+            <div>
+                <button type="button" class="checklink-button-normal">ADDRESS</button>
+            </div>
+            <div>
+                <MudText Style="color: #999">-----</MudText>
+            </div>
+            <div>
+                <button type="button" class="checklink-button-normal">PAYMENT</button>
+            </div>
+
+        </MudStack>
+    </MudItem>
+
+</MudContainer>
+
+<MudItem xs="12" sm="12">
+    <div style="background-color:#F9F5FC;">
+        <MudItem xs="12" sm="12" Class="p-4">
+            <div>
+                <MudStack Row="true" Justify="Justify.SpaceBetween" Class="mt-5">
+                    <div class="addressm-heading1">
+                        Select Delivery Address
+                    </div>
+                    <div class="addressm-heading1" style="text-decoration:underline; font-size:14px;">
+                        + Add new address
+                    </div>
+                </MudStack>
+
+                <div style="border: 2px solid #FFF;" class="mt-3">
+
+                </div>
+
+                <div class="addressm-heading1 mt-6">
+                    Dafault Address
+                </div>
+            </div>
+
+        </MudItem>
+    </div>
+</MudItem>
+
+<MudGrid Spacing="0" Class="p-4">
+    <MudItem xs="12" sm="12">
+        <MudRadioGroup T="bool">
+            <MudGrid Spacing="0">
+                <MudItem xs="12" sm="12">
+                    <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                        <MudStack Row="true" AlignItems="AlignItems.Center">
+                            <div>
+                                <MudRadio Value="true" Dense="true" Color="Color.Success"></MudRadio>
+                            </div>
+                            <div class="address-type-box">
+                                Office
+                            </div>
+                        </MudStack>
+                        <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                            <div>
+                                <MudIconButton Icon="@CustomIcons.EditButton" Size="Size.Medium" Color="Color.Default" />
+                            </div>
+                            <div>
+                                <MudIconButton Icon="@CustomIcons.DeleteButton" Size="Size.Medium" Color="Color.Default" />
+                            </div>
+                        </MudStack>
+                    </MudStack>
+                </MudItem>
+
+                <MudItem xs="12" sm="12" Class="mt-4">
+                    <h6 class="address-type-box-name">Ahammed Jamil</h6>
+                </MudItem>
+
+                <MudItem xs="12" sm="12" Class="mt-3">
+                    <p class="address-type-box-address">
+                        154H, 5th cross street, TM Nagar, Mattuthavani
+                        Uthangudi
+                        Madurai - 625107
+                        Tamil Nadu
+                    </p>
+                </MudItem>
+
+                <MudItem xs="12" sm="12" Class="mt-3">
+                    <MudStack Row="true" Justify="Justify.SpaceBetween">
+                        <p class="address-type-box-address"> Mobile: 8760803361</p>
+                        <p style="margin-bottom: 0px; color: #FF3B30; font-size:12px;font-weight:600;">Make This Default</p>
+                    </MudStack>
+                </MudItem>
+
+                <MudItem xs="12" sm="12">
+                    <div style="background-color:#F9F5FC;">
+                        <MudItem xs="12" sm="12" Class="p-4">
+                            <div class="addressm-heading1">
+                                Dafault Address
+                            </div>
+                        </MudItem>
+                    </div>
+                </MudItem>
+
+
+                <MudItem xs="12" sm="12">
+                    <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                        <MudStack Row="true" AlignItems="AlignItems.Center">
+                            <div>
+                                <MudRadio Value="true" Dense="true" Color="Color.Success"></MudRadio>
+                            </div>
+                            <div class="address-type-box">
+                                Office
+                            </div>
+                        </MudStack>
+                        <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                            <div>
+                                <MudIconButton Icon="@CustomIcons.EditButton" Size="Size.Medium" Color="Color.Default" />
+                            </div>
+                            <div>
+                                <MudIconButton Icon="@CustomIcons.DeleteButton" Size="Size.Medium" Color="Color.Default" />
+                            </div>
+                        </MudStack>
+                    </MudStack>
+                </MudItem>
+
+                <MudItem xs="12" sm="12" Class="mt-4">
+                    <h6 class="address-type-box-name">Ahammed Jamil</h6>
+                </MudItem>
+
+                <MudItem xs="12" sm="12" Class="mt-3">
+                    <p class="address-type-box-address">
+                        154H, 5th cross street, TM Nagar, Mattuthavani
+                        Uthangudi
+                        Madurai - 625107
+                        Tamil Nadu
+                    </p>
+                </MudItem>
+
+                <MudItem xs="12" sm="12" Class="mt-3">
+                    <MudStack Row="true" Justify="Justify.SpaceBetween">
+                        <p class="address-type-box-address"> Mobile: 8760803361</p>
+                        <p style="margin-bottom: 0px; color: #FF3B30; font-size:12px;font-weight:600;">Make This Default</p>
+                    </MudStack>
+                </MudItem>
+
+
+                <MudItem xs="12" sm="12">
+                    <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                        <MudStack Row="true" AlignItems="AlignItems.Center">
+                            <div>
+                                <MudRadio Value="true" Dense="true" Color="Color.Success"></MudRadio>
+                            </div>
+                            <div class="address-type-box">
+                                Office
+                            </div>
+                        </MudStack>
+                        <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                            <div>
+                                <MudIconButton Icon="@CustomIcons.EditButton" Size="Size.Medium" Color="Color.Default" />
+                            </div>
+                            <div>
+                                <MudIconButton Icon="@CustomIcons.DeleteButton" Size="Size.Medium" Color="Color.Default" />
+                            </div>
+                        </MudStack>
+                    </MudStack>
+                </MudItem>
+
+                <MudItem xs="12" sm="12" Class="mt-4">
+                    <h6 class="address-type-box-name">Ahammed Jamil</h6>
+                </MudItem>
+
+                <MudItem xs="12" sm="12" Class="mt-3">
+                    <p class="address-type-box-address">
+                        154H, 5th cross street, TM Nagar, Mattuthavani
+                        Uthangudi
+                        Madurai - 625107
+                        Tamil Nadu
+                    </p>
+                </MudItem>
+
+                <MudItem xs="12" sm="12" Class="mt-3">
+                    <MudStack Row="true" Justify="Justify.SpaceBetween">
+                        <p class="address-type-box-address"> Mobile: 8760803361</p>
+                        <p style="margin-bottom: 0px; color: #FF3B30; font-size:12px;font-weight:600;">Make This Default</p>
+                    </MudStack>
+                </MudItem>
+
+
+            </MudGrid>
+        </MudRadioGroup>
+    </MudItem>
+</MudGrid>
+
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge">
+    <MudItem xs="12" sm="12" Class="text-center">
+        <div>
+            <button class="address-last-addbtn">
+                +  Add New Address
+            </button>
+        </div>
+
+    </MudItem>
+
+</MudContainer>
+
+
+
+<MudItem xs="12" sm="12">
+    <MudGrid Spacing="0" Class="p-4">
+        <MudItem xs="12">
+            <div class="address-lastone-gradient">
+
+                <MudStack Row="true" Class="p-2 mt-4 align-center">
+                    <div class="mt-4 ps-2">
+                        <img style="width:53px; height:50px; border-radius:12px;"
+                             src="/images/web-content/_dish.png" />
+                    </div>
+
+                    <div class="address-lastone-div-heading mt-2">
+                        Estimated delivery by <span style="font-weight:700;">17 Oct 2026</span>
+                    </div>
+                </MudStack>
+
+            </div>
+        </MudItem>
+
+        <MudItem xs="12" sm="12" Class="mt-4">
+            <div class="addressm-main-heading">
+                <h6>Order Summary</h6>
+            </div>
+        </MudItem>
+
+        <MudItem xs="12" sm="12" Class="mt-4">
+            <MudStack Row="true" Justify="Justify.SpaceBetween">
+                <p class="addressm-main-para">Food Cost</p>
+                <p class="addressm-main-para">₹ 12,870.00</p>
+            </MudStack>
+        </MudItem>
+        <MudItem xs="12" sm="12">
+            <MudStack Row="true" Justify="Justify.SpaceBetween">
+                <p class="addressm-main-para">Sub Total</p>
+                <p class="addressm-main-para">₹ 12,870.00</p>
+            </MudStack>
+        </MudItem>
+      
+        <MudItem xs="12" sm="12">
+            <MudStack Row="true" Justify="Justify.SpaceBetween">
+                <p class="addressm-main-para">GST @@ 5%</p>
+                <p class="addressm-main-para">₹ 643.34</p>
+            </MudStack>
+        </MudItem>
+        <MudItem xs="12" sm="12">
+            <MudStack Row="true" Justify="Justify.SpaceBetween">
+                <p class="addressm-main-para">Delivery</p>
+                <p class="addressm-main-para" style="color: #00A43D;">Free</p>
+            </MudStack>
+        </MudItem>
+
+        <MudItem xs="12" sm="12">
+            <div style="border: 1px solid #EEE;">
+            </div>
+        </MudItem>
+
+        <MudItem xs="12" sm="12" Class="mt-3">
+            <MudStack Row="true" Justify="Justify.SpaceBetween">
+                <p class="addressm-main-lastpara">Total Amount</p>
+                <p class="addressm-main-lastpara">₹ 12,870.00</p>
+            </MudStack>
+        </MudItem>
+
+        <MudItem xs="12" sm="12" Class="mt-8 text-center">
+            <MudButton Variant="Variant.Filled" FullWidth="true" Color="Color.Primary" Size="Size.Medium" Class="btn-primary">Proceed to checkout</MudButton>
+            <p class="addressm-main-lastpara12">By proceeding, you agree to our <span style="text-decoration:underline;">Continue</span></p>
+        </MudItem>
+
+    </MudGrid>
+</MudItem>*@
+
+
+
+    <style>
+        .check-top-item {
+            border-bottom: 1px solid #F7F7F7;
+            background: #FFF;
+        }
+
+        .check-heading1 {
+            color: #666;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            margin-bottom: 0px;
+        }
+
+        .check-headingpra2 {
+            color: #666;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px;
+            text-transform: uppercase;
+            margin-bottom: 0px;
+        }
+
+
+        .checklink-button {
+            height: 25px;
+            width: fit-content;
+            color: #FF3B30;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+
+        .checkunderline-div {
+            height: 2px;
+            width: 100%;
+            background-color: #FF3B30;
+            border-radius: 2px;
+            margin-top: 4px;
+        }
+
+        .checklink-button-normal {
+            color: #666;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+
+        .addressm-heading1 {
+            color: #000;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%; /* 20.8px */
+            letter-spacing: -0.32px;
+        }
+
+        .address-type-box {
+            display: flex;
+            height: 24px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 6px;
+            background-color: #EEE;
+            color: #111;
+            text-align: right;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%; /* 15.6px */
+            letter-spacing: -0.24px;
+        }
+
+        .address-type-box-name {
+            color: #000;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%; /* 20.8px */
+            letter-spacing: -0.32px;
+        }
+
+        .address-type-box-address {
+            color: #666;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%; /* 18.2px */
+            letter-spacing: -0.28px;
+        }
+        .address-last-addbtn {
+            width: 328px;
+            height: 34px;
+            border-radius: 40px;
+            border-width: 1px;
+            border-style: dashed;
+            opacity: 1;
+            border: 1px dashed #CCCCCC;
+            color: #666;
+            text-align: right;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: -0.28px;
+        }
+
+        .address-lastone-gradient {
+            background: linear-gradient(153deg, rgba(155, 81, 224, 0.40) -9.56%, rgba(155, 81, 224, 0.08) 65.58%);
+            border-radius: 24px;
+            height: 96px;
+            width: auto;
+        }
+            .address-lastone-div-heading {
+                color: #000;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 130%; /* 18.2px */
+                letter-spacing: -0.28px;
+            }
+
+
+        .addressm-item-div h6 {
+            color: #000;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%; /* 18.2px */
+            letter-spacing: -0.28px;
+        }
+
+        .addressm-item-div p {
+            color: #666;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: -0.24px;
+            margin-top: 8px;
+        }
+
+        .addressm-btn-rs {
+            color: #00A43D;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: -0.4px;
+        }
+
+        .checkout3-main-heading {
+            color: #111;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%; /* 23.4px */
+            letter-spacing: -0.36px;
+            margin-top: 16px;
+            padding-left: 16px;
+        }
+
+        .addressm-main-para {
+            color: #666;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: -0.28px;
+            padding-left: 16px;
+        }
+
+        .addressm-main-lastpara {
+            color: #111;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%; /* 26px */
+            letter-spacing: -0.4px;
+        }
+
+        .addressm-main-lastpara12 {
+            color: #666;
+            text-align: center;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px; /* 133.333% */
+            margin-top: 12px;
+        }
+
+       
+    </style>

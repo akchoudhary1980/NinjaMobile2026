@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="328px" height="152px" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+viewBox="0 0 50.22 23.22"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+   <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="25.58" y1="0.61" x2="33.08" y2="0.77">
+    <stop offset="0" stop-opacity="1" stop-color="#461674"/>
+    <stop offset="1" stop-opacity="1" stop-color="#5B199B"/>
+   </linearGradient>
+   <linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="22.21" y1="3.22" x2="28.64" y2="2.45">
+    <stop offset="0" stop-opacity="1" stop-color="#461674"/>
+    <stop offset="1" stop-opacity="1" stop-color="#5B199B"/>
+   </linearGradient>
+   <linearGradient id="id2" gradientUnits="userSpaceOnUse" x1="26.19" y1="0.61" x2="42.12" y2="1.38">
+    <stop offset="0" stop-opacity="1" stop-color="#461674"/>
+    <stop offset="1" stop-opacity="1" stop-color="#5B199B"/>
+   </linearGradient>
+   <linearGradient id="id3" gradientUnits="userSpaceOnUse" x1="26.8" y1="4.75" x2="50.09" y2="7.66">
+    <stop offset="0" stop-opacity="1" stop-color="#461674"/>
+    <stop offset="1" stop-opacity="1" stop-color="#5B199B"/>
+   </linearGradient>
+   <linearGradient id="id4" gradientUnits="userSpaceOnUse" x1="27.11" y1="11.49" x2="50.39" y2="13.02">
+    <stop offset="0" stop-opacity="1" stop-color="#461674"/>
+    <stop offset="1" stop-opacity="1" stop-color="#5B199B"/>
+   </linearGradient>
+   <linearGradient id="id5" gradientUnits="userSpaceOnUse" x1="24.51" y1="0.61" x2="17" y2="0.77">
+    <stop offset="0" stop-opacity="1" stop-color="#461674"/>
+    <stop offset="1" stop-opacity="1" stop-color="#5B199B"/>
+   </linearGradient>
+   <linearGradient id="id6" gradientUnits="userSpaceOnUse" x1="27.88" y1="3.22" x2="21.44" y2="2.45">
+    <stop offset="0" stop-opacity="1" stop-color="#461674"/>
+    <stop offset="1" stop-opacity="1" stop-color="#5B199B"/>
+   </linearGradient>
+   <linearGradient id="id7" gradientUnits="userSpaceOnUse" x1="23.74" y1="0.61" x2="7.97" y2="1.38">
+    <stop offset="0" stop-opacity="1" stop-color="#461674"/>
+    <stop offset="1" stop-opacity="1" stop-color="#5B199B"/>
+   </linearGradient>
+   <linearGradient id="id8" gradientUnits="userSpaceOnUse" x1="23.28" y1="4.75" x2="0" y2="7.66">
+    <stop offset="0" stop-opacity="1" stop-color="#461674"/>
+    <stop offset="1" stop-opacity="1" stop-color="#5B199B"/>
+   </linearGradient>
+   <linearGradient id="id9" gradientUnits="userSpaceOnUse" x1="22.98" y1="11.49" x2="-0.15" y2="13.02">
+    <stop offset="0" stop-opacity="1" stop-color="#461674"/>
+    <stop offset="1" stop-opacity="1" stop-color="#5B199B"/>
+   </linearGradient>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <polygon fill="url(#id0)" fill-rule="nonzero" points="31.48,0 25.1,11.88 33.03,0 "/>
+  <polygon fill="url(#id1)" fill-rule="nonzero" points="27.17,0 23.26,13.21 28.24,0 "/>
+  <polygon fill="url(#id2)" fill-rule="nonzero" points="25.1,11.91 41.97,0 37.69,0 "/>
+  <polygon fill="url(#id3)" fill-rule="nonzero" points="50.22,4.33 25.02,11.25 50.22,9.43 "/>
+  <polygon fill="url(#id4)" fill-rule="nonzero" points="50.22,18.02 25.42,10.74 50.22,23.22 "/>
+  <polygon fill="url(#id5)" fill-rule="nonzero" points="18.74,0 25.12,11.88 17.19,0 "/>
+  <polygon fill="url(#id6)" fill-rule="nonzero" points="23.05,0 26.96,13.21 21.98,0 "/>
+  <polygon fill="url(#id7)" fill-rule="nonzero" points="25.12,11.91 8.25,0 12.53,0 "/>
+  <polygon fill="url(#id8)" fill-rule="nonzero" points="0,4.33 25.2,11.25 0,9.43 "/>
+  <polygon fill="url(#id9)" fill-rule="nonzero" points="0,18.02 24.8,10.74 0,23.22 "/>
+ </g>
+</svg>

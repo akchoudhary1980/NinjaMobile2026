@@ -1,0 +1,163 @@
+﻿
+    <MudGrid Spacing="0" Class="decor-card">
+            <MudItem xs="12" sm="12">
+                <div class="decor-img">
+                    <MudImage Style="width:100%; height:auto; border-radius:16px;" Src="/images/web-content/decor-card-img.png" />
+                </div>
+            </MudItem>
+
+            <MudItem xs="12" sm="12">
+                <MudGrid Spacing="0">
+                    <MudItem xs="12" sm="12" Class="mt-3">
+                        <h6 class="decor-heading">Wedding Decor</h6>
+                    </MudItem>
+
+                    <MudItem xs="12" sm="12">
+                            <p class="decor-details">Wedding decor focuses on creating a romantic... </p>
+                    </MudItem>
+
+                    <MudItem xs="12" sm="12" Class="mt-1">
+                        <span class="decor-gst"><b class="decor-price">₹ 3500</b> +GST</span>
+                    </MudItem>
+
+                    <MudItem xs="12" sm="12" Class="decor-card-box-btn mt-4">
+                        <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                            <div>
+                                <button class="m-0">
+                                    Customize
+                                </button>
+                            </div>
+
+                            <div>
+                                <button>
+                                    Add
+                                </button>
+                            </div>
+                        </MudStack>
+                    </MudItem>
+                </MudGrid>
+            </MudItem>
+     </MudGrid>
+
+<style>
+
+    .decor-card {
+        width: auto;
+        height: auto;
+        opacity: 1;
+        border-radius: 24px;
+    }
+
+
+    .decor-img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+    }
+
+    .decor-heading {
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%; /* 20.8px */
+        letter-spacing: -0.32px;
+        padding-left: 12px;
+    }
+
+    .decor-details {
+        color: #666;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: -0.24px;
+        padding-left: 12px;
+    }
+
+    .decor-icons {
+        width: 24px;
+        height: 24px;
+    }
+
+    .decor-price {
+        color: #000000;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .decor-gst {
+        color: #999999;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        padding-left: 12px;
+    }
+
+    .decor-fitfor {
+        color: #666;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.24px;
+        padding-left: 12px;
+    }
+
+    .decor-people {
+        color: #333;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.24px;
+    }
+
+    .decor-card-btn-plan {
+        height: 40px;
+        border-radius: 40px;
+        background-color: #FF3B30 !important;
+        text-transform: capitalize !important;
+        box-shadow: 0px 4px 7.1px 0px #FFFFFF80 inset;
+        padding-left: 24px;
+        display: inline-flex;
+        align-items: center; /* vertical center */
+        justify-content: center; /* horizontal center */
+        color: #FFF;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+        .decor-card-btn-plan .mud-icon-root {
+            margin-top: 4px;
+            color: #FFF;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+
+    .decor-card-box-btn {
+    }
+
+        .decor-card-box-btn button {
+            border-radius: 40px;
+            border: 1px solid #000;
+            display: flex;
+            width: auto;
+            height: 36px;
+            padding: 8px 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+            color: #000;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+</style>

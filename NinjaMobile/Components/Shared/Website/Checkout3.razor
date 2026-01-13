@@ -1,0 +1,156 @@
+﻿<MudGrid Spacing="0" Class="p-4">
+    <MudItem xs="12" sm="12">
+        <div class="checkout3-div">
+            <MudGrid Spacing="0">
+                <MudItem xs="9" sm="9" Class="checkout3-item-div mt-6">
+                    <MudStack Row="true">
+                        <MudIcon Icon="@CustomIcons.CheckoutIcon3" />
+                        <h6>400 points applied</h6>
+                    </MudStack>
+                </MudItem>
+                <MudItem xs="3" sm="3" Class="mt-4">
+                    <button class="checkout3-btn-rs">-₹ 200 </button>
+                    <span style="color: #111;
+                          font-size: 12px;
+                          font-style: normal;
+                          font-weight: 500;padding-left:16px;text-decoration:underline;">Remove</span>
+                </MudItem>
+            </MudGrid>
+        </div>
+    </MudItem>
+
+    <MudItem xs="12" sm="12">
+        <div class="checkout3-main-heading">
+            <h6>Order Summary</h6>
+        </div>
+    </MudItem>
+
+    <MudItem xs="12" sm="12" Class="mt-4">
+        <MudStack Row="true" Justify="Justify.SpaceBetween">
+            <p class="checkout3-main-para">Food Cost</p>
+            <p class="checkout3-main-para">₹ 12,870.00</p>
+        </MudStack>
+    </MudItem>
+    <MudItem xs="12" sm="12">
+        <MudStack Row="true" Justify="Justify.SpaceBetween">
+            <p class="checkout3-main-para">Sub Total</p>
+            <p class="checkout3-main-para">₹ 12,870.00</p>
+        </MudStack>
+    </MudItem>
+    <MudItem xs="12" sm="12">
+        <MudStack Row="true" Justify="Justify.SpaceBetween">
+            <p class="checkout3-main-para">Discount</p>
+            <p class="checkout3-main-para" style="color: #00A43D;">Free</p>
+        </MudStack>
+    </MudItem>
+    <MudItem xs="12" sm="12">
+        <MudStack Row="true" Justify="Justify.SpaceBetween">
+            <p class="checkout3-main-para">GST @@ 5%</p>
+            <p class="checkout3-main-para">₹ 643.34</p>
+        </MudStack>
+    </MudItem>
+    <MudItem xs="12" sm="12">
+        <MudStack Row="true" Justify="Justify.SpaceBetween">
+            <p class="checkout3-main-para">Delivery</p>
+            <p class="checkout3-main-para" style="color: #00A43D;">Free</p>
+        </MudStack>
+    </MudItem>
+
+    <MudItem xs="12" sm="12">
+        <div style="border: 1px solid #EEE;">
+        </div>
+    </MudItem>
+
+    <MudItem xs="12" sm="12" Class="mt-3">
+        <MudStack Row="true" Justify="Justify.SpaceBetween">
+            <p class="checkout3-main-lastpara">Total Amount</p>
+            <p class="checkout3-main-lastpara">₹ 12,870.00</p>
+        </MudStack>
+    </MudItem>
+
+    <MudItem xs="12" sm="12" Class="mt-2 text-center">
+        <MudButton Variant="Variant.Filled" FullWidth="true" Color="Color.Primary" Size="Size.Medium" Class="btn-primary">Proceed to checkout</MudButton>
+        <p class="checkout3-main-lastpara12">By proceeding, you agree to our <span style="text-decoration:underline;">terms and conditions</span></p>
+    </MudItem>
+
+</MudGrid>
+
+
+
+<style>
+    .checkout3-div {
+        width: auto;
+        height: 96px;
+        background: linear-gradient(136deg, rgba(0, 255, 77, 0.40) -13.9%, rgba(0, 255, 77, 0.08) 95.4%);
+        border-radius: 24px;
+        padding: 16px;
+    }
+
+    .checkout3-item-div h6 {
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%; /* 18.2px */
+        letter-spacing: -0.28px;
+    }
+
+    .checkout3-item-div p {
+        color: #666;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.24px;
+        margin-top: 8px;
+    }
+
+    .checkout3-btn-rs {
+        color: #00A43D;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.4px;
+    }
+
+    .checkout3-main-heading {
+        color: #111;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%; /* 23.4px */
+        letter-spacing: -0.36px;
+        margin-top: 16px;
+        padding-left: 16px;
+    }
+
+    .checkout3-main-para {
+        color: #666;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.28px;
+        padding-left: 16px;
+    }
+
+    .checkout3-main-lastpara {
+        color: #111;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%; /* 26px */
+        letter-spacing: -0.4px;
+    }
+
+    .checkout3-main-lastpara12 {
+        color: #666;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 133.333% */
+        margin-top: 12px;
+    }
+</style>

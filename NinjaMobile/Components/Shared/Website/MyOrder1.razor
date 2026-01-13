@@ -1,0 +1,414 @@
+﻿<MudGrid Spacing="0" Class="myorder1-box1 p-4">
+
+    <MudItem xs="12" sm="12" Class="mt-9">
+        <MudStack Row="true" Justify="Justify.SpaceBetween">
+            <h6 class="myorder1-heading1">Basic Indian</h6>
+            <MudStack Row="true">
+                <div class="myorder1-veg-btn">
+                    <MudStack Row="true" Spacing="1" Style="height:27px;" AlignItems="AlignItems.Center">
+                        <div>
+                            <div style="height:12px; width:12px; border-radius:50%; border:1.5px solid #FFF;"></div>
+                        </div>
+                        <div>
+                            <span style="font-size:14px;"> Veg</span>
+                        </div>
+                    </MudStack>
+                </div>
+            </MudStack>
+        </MudStack>
+    </MudItem>
+    <MudItem xs="12">
+        <div>
+            <span class="myorder1-addon-img-btn">
+                <MudIconButton Style="color:#111; background-color:#E3E3E3;" Icon="@Icons.Material.Filled.Close" @onclick="OnClose" Size="Size.Small" Color="Color.Default" />
+            </span>
+        </div>
+    </MudItem>
+
+
+
+    <MudItem class="myorder1-para1 mt-2" sm="12">
+        <p>
+            Classic Indian favorites crafted with homely flavors simple, fresh, and satisfying.
+        </p>
+    </MudItem>
+
+
+    <MudItem xs="12" Class="p-3">
+        <h2 class="myorder1-all-heading">Includes</h2>
+        <MudGrid Spacing="0">
+            <MudItem xs="4" sm="4">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
+                    <img src="/images/web-content/_food.svg" />
+                    <span>Food</span>
+                </MudStack>
+            </MudItem>
+            <MudItem xs="8" sm="8">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
+                    <img style="height:18px; width:18px;" src="/images/web-content/waiter.png" />
+                    <span>Waiters</span>
+                </MudStack>
+            </MudItem>
+            <div class="dashed-hr2 mt-4">
+
+            </div>
+        </MudGrid>
+    </MudItem>
+
+    <MudItem xs="12" Class="p-2">
+        <MudStack Row="true" Justify="Justify.SpaceBetween">
+            <h2 class="myorder1-all-heading">Fit for</h2>
+            <p>Total: <span class="myorder1-all-heading">20 Persons</span></p>
+        </MudStack>
+
+        <MudGrid Spacing="6">
+            <MudItem xs="6" sm="6">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
+                    <div class="myorder1-veg-div p-2">
+                        <img src="/images/web-content/veg.png" />
+                        <span style="font-size: 14px; color: #111;" class="mt-3">Veg</span>
+                        <div class="mt-2">
+                            <p class="p-2" style="color: #666; font-size:14px;">10 people With increment of +5</p>
+
+                        </div>
+                    </div>
+                </MudStack>
+            </MudItem>
+            <MudItem xs="6" sm="6">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
+                    <div class="myorder1-veg-non-div p-2">
+                        <img src="/images/web-content/non-veg.png" />
+                        <span style="font-size: 14px; color: #111;" class="mt-3">Non-veg</span>
+                        <div class="mt-2">
+                            <p class="p-2" style="color: #666; font-size:14px;">10 people With increment of +5</p>
+                        </div>
+                    </div>
+                </MudStack>
+            </MudItem>
+        </MudGrid>
+        <div class="dashed-hr2 mt-4">
+
+        </div>
+    </MudItem>
+
+
+    <MudItem xs="12" Class="p-2">
+        <h2 class="myorder1-all-heading">Starters 1</h2>
+        <MudGrid Spacing="0">
+            <MudItem xs="8" sm="8">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
+                    <img src="/images/web-content/veg.png" />
+                    <span>Tandoori Achari Aloo</span>
+                </MudStack>
+            </MudItem>
+            <MudItem xs="4" sm="4" Class="pl-16">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
+                    <span>2 psc</span>
+                </MudStack>
+            </MudItem>
+        </MudGrid>
+    </MudItem>
+
+    <MudItem xs="12" Class="mt-4">
+        <div class="dashed-hr2">
+
+        </div>
+    </MudItem>
+
+
+
+    <MudItem xs="12" Class="p-3">
+        <h2 class="myorder1-all-heading">Mains</h2>
+        <MudGrid Spacing="0">
+            <MudItem xs="8" sm="8">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
+                    <img src="/images/web-content/non-veg.png" />
+                    <span>Dal Tadka </span>
+                </MudStack>
+            </MudItem>
+            <MudItem xs="4" sm="4" Class="pl-16 mt-3">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
+                    <span>2 psc</span>
+                </MudStack>
+            </MudItem>
+            <MudItem xs="8" sm="8">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
+                    <img src="/images/web-content/veg.png" />
+                    <span>Chole Masala</span>
+                </MudStack>
+            </MudItem>
+            <MudItem xs="4" sm="4" Class="pl-16">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
+                    <span>2 psc</span>
+                </MudStack>
+            </MudItem>
+        </MudGrid>
+    </MudItem>
+
+    <MudItem xs="12" Class="mt-4">
+        <div class="dashed-hr2">
+
+        </div>
+    </MudItem>
+
+    <MudItem xs="12" Class="p-3">
+        <h2 class="myorder1-all-heading">Bread / Rice</h2>
+        <MudGrid Spacing="0">
+            <MudItem xs="8" sm="8">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
+                    <img src="/images/web-content/non-veg.png" />
+                    <span>Wheat Tandoori Roti</span>
+                </MudStack>
+            </MudItem>
+            <MudItem xs="4" sm="4" Class="pl-16 mt-3">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
+                    <span>2 psc</span>
+                </MudStack>
+            </MudItem>
+            <MudItem xs="8" sm="8">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
+                    <img src="/images/web-content/veg.png" />
+                    <span>Chole Masala</span>
+                </MudStack>
+            </MudItem>
+            <MudItem xs="4" sm="4" Class="pl-16">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
+                    <span>2 psc</span>
+                </MudStack>
+            </MudItem>
+        </MudGrid>
+    </MudItem>
+    <MudItem xs="12" Class="mt-4">
+        <div class="dashed-hr2">
+
+        </div>
+    </MudItem>
+
+
+    <MudItem xs="12" Class="p-3">
+        <h2 class="myorder1-all-heading">Dessert</h2>
+        <MudGrid Spacing="0">
+            <MudItem xs="8" sm="8">
+                <MudStack Spacing="2" Row="true" AlignItems="AlignItems.Center">
+                    <img src="/images/web-content/non-veg.png" />
+                    <span>Wheat Tandoori Roti</span>
+                </MudStack>
+            </MudItem>
+        </MudGrid>
+    </MudItem>
+
+    <MudItem xs="12" Class="mt-8">
+        <h2 class="myorder1-all-heading">Add-on</h2>
+        <div class="mt-6">
+            <HelpingHand />
+        </div>
+    </MudItem>
+
+    <MudItem xs="12" Class="mt-6">
+        <div class="myorder1-black-box" >
+            <MudStack Row="false">
+                <p>Contact customer support if you want to modify or cancel the order</p>
+                <MudStack Row="true">
+                    <span>
+                        <MudIcon Style="color:white;" Icon="@CustomIcons.MyorderPhoneIcon" />
+                    </span>
+                    <h6>+91 8760803361</h6>
+                </MudStack>
+            </MudStack>
+        </div>
+
+    </MudItem>
+ 
+</MudGrid>
+
+
+@code{
+
+    [Parameter]
+    public bool IsClose { get; set; } = true;
+
+    [Parameter]
+    public EventCallback<bool> IsCloseChanged { get; set; }
+
+
+    private async Task OnClose()
+    {
+        IsClose = false;
+        await IsCloseChanged.InvokeAsync(IsClose);
+    }
+
+    private async Task PlaceOrder()
+    {
+        IsClose = true;
+        await IsCloseChanged.InvokeAsync(IsClose);
+    }
+
+}
+<style>
+
+    .myorder1-box1 {
+        position: relative;
+        width: auto
+    }
+
+    .myorder1-img1 {
+        padding-left: 24px;
+        padding-top: 16px;
+    }
+
+    .myorder1-heading1 {
+        color: #0A0A0A;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px; /* 140% */
+        letter-spacing: -0.449px;
+    }
+
+    .myorder1-addon-img-btn {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 8px;
+        right: 8px;
+    }
+
+    .myorder1-para1 {
+        color: #666;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.28px;
+    }
+
+            .heading h2 {
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 130%;
+                letter-spacing: -2%;
+                color: #000;
+            }
+
+            .heading p {
+                color: #666;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 100%;
+                letter-spacing: -2%;
+                width: 328px;
+                height: 72px;
+                top: 353px;
+                left: 16px;
+                opacity: 1;
+            }
+
+    .myorder1-veg-btn {
+        width: 57px;
+        height: 27px;
+        background-color: #0EB559;
+        color: #FFF;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.28px;
+        border-radius: 50px;
+        padding: 0px 8px 0px 8px;
+    }
+
+
+    .myorder1-all-heading {
+        color: #111;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.28px;
+    }
+
+    .myorder1-veg-div {
+        width: auto;
+        height: 102px;
+        top: 626px;
+        left: 16px;
+        border-radius: 16px;
+        background: linear-gradient(154.48deg, rgba(15, 181, 89, 0.4) -9.17%, rgba(15, 181, 89, 0.08) 62.92%);
+    }
+
+    .myorder1-veg-non-div {
+        width: auto;
+        height: 102px;
+        top: 626px;
+        left: 16px;
+        border-radius: 16px;
+        background: linear-gradient(154.48deg, rgba(246, 20, 21, 0.4) -9.17%, rgba(246, 20, 21, 0.08) 62.92%);
+    }
+
+    .myorder1-veg-div div {
+        width: 144px;
+        height: 60px;
+        top: 38px;
+        left: 20px;
+        opacity: 1;
+        border-radius: 16px;
+        background-color: #FFFFFF;
+    }
+
+    .myorder1-veg-non-div div {
+        width: 144px;
+        height: 60px;
+        top: 38px;
+        left: 20px;
+        opacity: 1;
+        border-radius: 16px;
+        background-color: #FFFFFF;
+    }
+
+        .para {
+            width: auto;
+            text-wrap: wrap;
+            color: #666;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: -0.24px;
+            padding-left: 28px;
+        }
+
+        .dashed-hr2 {
+            border: 1px dashed #DDD;
+            width: 328px;
+            height: 0;
+        }
+    .myorder1-black-box {
+        width:auto;
+        height: auto;
+        background-color: #10051A;
+        border-radius:16px;
+    }
+        .myorder1-black-box p {
+            color: #DDD;
+            text-align: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: -0.28px;
+            margin-top:24px;
+        }
+        .myorder1-black-box span {
+            padding-left:63px;
+        }
+        .myorder1-black-box h6 {
+            color: #FFF;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    
+  
+</style>
