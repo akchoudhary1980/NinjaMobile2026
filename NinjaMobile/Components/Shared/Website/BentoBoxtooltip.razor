@@ -1,0 +1,89 @@
+﻿
+<MudGrid Spacing="0">
+    <MudItem xs="12">
+        <div class="mt-8">
+            <MenuCategory />
+        </div>
+
+        <MudItem xs="12" Class="d-flex justify-center mt-6">
+            <div class="info-container">
+                <p class="info-text">
+                    Good parties need a little more—minimum 20 boxes or ₹2,500 to kick things off!
+                    <span class="info-icon-wrapper" @onclick="ToggleInfo">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <g clip-path="url(#clip0_585_226)">
+                                <path d="M6.99935 1.1665C10.2211 1.1665 12.8327 3.77809 12.8327 6.99984C12.8339 8.53136 12.2328 10.0019 11.159 11.094C10.0853 12.1862 8.62519 12.8122 7.09386 12.837C5.56254 12.8618 4.08288 12.2834 2.97435 11.2267C1.86582 10.1699 1.21734 8.7196 1.16893 7.18884L1.16602 6.99984L1.16835 6.8365C1.25468 3.69059 3.83185 1.1665 6.99935 1.1665ZM6.99935 6.4165H6.41602C6.1 6.4165 5.83333 6.68317 5.83333 6.99984C5.83333 7.3165 6.1 7.58317 6.41602 7.58317V9.33317C6.41602 9.64984 6.68268 9.9165 6.99935 9.9165H7.58268C7.89935 9.9165 8.16602 9.64984 8.16602 9.33317C8.16602 9.0165 7.89935 8.74984 7.58268 8.74984V6.99984C7.58268 6.68317 7.31602 6.4165 6.99935 6.4165ZM6.99935 4.6665C6.68268 4.6665 6.41667 4.9325 6.41667 5.24984C6.41667 5.5665 6.68268 5.83317 6.99935 5.83317C7.31602 5.83317 7.58268 5.5665 7.58268 5.24984C7.58268 4.9325 7.31602 4.6665 6.99935 4.6665Z"
+                                      fill="#666666" />
+                            </g>
+                        </svg>
+                    </span>
+                </p>              
+
+                <!-- POPUP BOX -->
+                @if (showInfo)
+                {
+                    <div class="info-popup mt-2">
+                        You can mix bento boxes — two with 10 boxes each unlocks your party order of 20! 😀
+                    </div>
+                }
+            </div>
+        </MudItem>
+
+
+
+        <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge">
+            <PackageViewer />
+        </MudContainer>
+    </MudItem>
+
+</MudGrid>
+
+@code {
+    bool showInfo = false;
+
+    void ToggleInfo()
+    {
+        showInfo = !showInfo;
+    }
+}
+
+
+<style>
+    .info-container {
+        gap: 6px;
+        position: relative;
+        width: 238px;
+        text-wrap:wrap;
+    }
+
+    .info-text {
+        color: #111;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: -0.24px;
+    }
+
+    .info-icon-wrapper {
+        cursor: pointer;
+    }
+
+    /* POPUP BOX */
+    .info-popup {
+        position: absolute;
+        top: 30px;
+        right: -10px;
+        width: 145px;
+        min-height: 105px;
+        background: #000;
+        color: #FFF;
+        padding: 10px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: -0.24px;
+        z-index: 100;
+    }
+
+</style>

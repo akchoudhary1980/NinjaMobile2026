@@ -1,0 +1,428 @@
+﻿@page "/loyaltywallet"
+@layout EmptyLayout
+
+<MudGrid Spacing="0">
+    <MudItem xs="12" Class="loyalty-wallet-box1">
+        <MudStack Row="true">
+            <img class="loyalty-wallet-img1 mt-4" src="/images/web-content/backbutton.svg" />
+            <h6 class="loyalty-wallet-heading1 mt-4">Loyalty Wallet</h6>
+        </MudStack>
+    </MudItem>
+</MudGrid>
+
+<MudContainer Class="mt-6">
+    <MudGrid Spacing="12">
+        <MudItem xs="12">
+            <div class="loyalty-wallet-box2">
+                <img class="loyalty-wallet-banner-img" src="/images/web-content/Untitled-1.svg" />
+                <img class="loyalty-wallet-img2" src="/images/web-content/loyaltywallet-icon.svg" />
+                <div class="loyalty-wallet-box3">
+                    <h6 class="loyalty-wallet-p1 mt-3">invite Friends, Earn Together!</h6>
+                    <p class="loyalty-wallet-p2 mt-2">Share your unique code and both of you get rewarded</p>
+                </div>
+            </div>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+
+<MudContainer Class="mt-8">
+    <MudItem xs="12">
+        <h6 class="loyalty-wallet-h1">How it works</h6>
+    </MudItem>
+</MudContainer>
+
+<MudContainer MaxWidth="MaxWidth.Large">
+    <MudGrid Spacing="0" Class="loyalty-wallet-banner-box1">
+        <MudItem xs="12" Class="mt-4">
+            <MudStack Row="true">
+                <div class="loyalty-wallet-box4">
+                    <span class="loyalty-wallet-number">1</span>
+                </div>
+                <MudStack Spacing="0" Row="false">
+                    <h6 class="loyalty-wallet-h2">Share your code</h6>
+                    <p class="loyalty-wallet-h3">Send your referral code to friends and family</p>
+                    <div style="border: 1px solid #EEE;">
+                    </div>
+                </MudStack>
+            </MudStack>
+        </MudItem>
+
+        <MudItem xs="12" Class="mt-4">
+            <MudStack Row="true">
+                <div class="loyalty-wallet-box4">
+                    <span class="loyalty-wallet-number">2</span>
+                </div>
+                <MudStack Row="false" Spacing="0">
+                    <h6 class="loyalty-wallet-h2">They get 100 points</h6>
+                    <p class="loyalty-wallet-h3">When they sign up and place their first order</p>
+                    <div style="border: 1px solid #EEE;">
+                    </div>
+                </MudStack>
+            </MudStack>
+        </MudItem>
+
+        <MudItem xs="12" Class="mt-4">
+            <MudStack Row="true">
+                <div class="loyalty-wallet-box4" style="background-color:#EAF8F0">
+                    <span class="loyalty-wallet-number" style="color:#00A43D;">3</span>
+                </div>
+                <MudStack Row="false" Spacing="0">
+                    <h6 class="loyalty-wallet-h2">You get 200 points</h6>
+                    <p class="loyalty-wallet-h3">Bonus points added to your wallet instantly</p>
+                </MudStack>
+            </MudStack>
+        </MudItem>
+
+        <MudItem xs="12">
+            <img class="loyalty-wallet-dotimg" src="/images/web-content/dot-line.svg" />
+        </MudItem>
+        <MudItem xs="12">
+            <img class="loyalty-wallet-dotimg2" src="/images/web-content/dot-line.svg" />
+        </MudItem>
+
+    </MudGrid>
+</MudContainer>
+
+<MudContainer Class="mt-6">
+    <MudItem xs="12">
+        <h6 class="loyalty-wallet-h1">Your Referral Code</h6>
+    </MudItem>
+</MudContainer>
+
+<MudContainer MaxWidth="MaxWidth.Large">
+    <MudGrid Spacing="0" Class="loyalty-wallet-box5">
+        <MudItem xs="12" Class="mt-6">
+            <MudStack Spacing="0" Row="false">
+                <h6 style="color: #3E1268;text-align: center;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: normal;
+                    letter-spacing: -0.48px;">
+                    ANURAG2025
+                </h6>
+                <h6 style="color: #666; font-size: 14px; text-align: center; font-weight: 400; ">
+                    Share this code with friends
+                </h6>
+            </MudStack>
+        </MudItem>
+
+        <MudItem xs="12">
+            <MudStack Row="true" Justify="Justify.SpaceBetween" Class="p-4">
+                <div>
+                    <MudStack Row="true" Justify="Justify.SpaceBetween">
+                        <button class="loyalty-wallet-btn text-center">
+                            <MudIcon Class="mt-2" Icon="@CustomIcons.CopyIcon"></MudIcon>
+                            <h6 Class="mt-2">Copy Code</h6>
+                        </button>
+                    </MudStack>
+                </div>
+                <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Medium" StartIcon="@CustomIcons.ShareIcon" Class="btn-primary">Share Link</MudButton>
+            </MudStack>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+
+<MudContainer Class="mt-6">
+    <MudItem xs="12">
+        <h6 class="loyalty-wallet-h1">Your Referrals</h6>
+    </MudItem>
+</MudContainer>
+
+<MudContainer Class="mt-3">
+    <MudItem xs="12">
+        <MudStack Row="true" Spacing="0" Justify="Justify.SpaceBetween">
+            <div class="loyalty-wallet-div">
+                <MudStack Spacing="0" Class="text-center" Row="false">
+                    <p class="loyalty-wallet-number mt-4" style="font-size:24px;">2</p>
+                    <p style="color: #666; font-size: 14px; text-align: center; font-weight: 400;">Successful</p>
+                </MudStack>
+            </div>
+            <div class="loyalty-wallet-div">
+                <MudStack Spacing="0" Class="text-center" Row="false">
+                    <p class="loyalty-wallet-number2 mt-4">400</p>
+                    <p style="color: #666; font-size: 14px; text-align: center; font-weight: 400;">Points earned</p>
+                </MudStack>
+            </div>
+        </MudStack>
+    </MudItem>
+</MudContainer>
+
+<MudContainer Class="mt-2">
+    <MudGrid Spacing="0">
+        <MudItem xs="12" Class="loyalty-wallet-div-box12">
+            <MudStack Row="true" Justify="Justify.SpaceBetween">
+                <div>
+                    <MudStack Row="false" Spacing="0">
+                        <h6>Mothilal</h6>
+                        <p>Nov 15, 2024</p>
+                    </MudStack>
+                </div>
+                <div>
+                    <MudStack Row="false" Spacing="0">
+                        <h6 style="color: #00A43D;font-size: 20px; font-style: normal; font-weight: 700; line-height: 130%;">
+                            +45
+                        </h6>
+                        <p>Points</p>
+                    </MudStack>
+                </div>
+            </MudStack>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+
+<MudContainer Class="mt-2">
+    <MudGrid Spacing="0">
+        <MudItem xs="12" Class="loyalty-wallet-div-box12">
+            <MudStack Row="true" Justify="Justify.SpaceBetween">
+                <div>
+                    <MudStack Row="false" Spacing="0">
+                        <h6>Amit Kumar</h6>
+                        <p>Nov 10, 2024</p>
+                    </MudStack>
+                </div>
+                <div>
+                    <MudStack Row="false" Spacing="0">
+                        <h6 style="color: #FF3B30; font-size: 20px; font-style: normal; font-weight: 700; line-height: 130%;">
+                            -100
+                        </h6>
+                        <p>Points</p>
+                    </MudStack>
+                </div>
+            </MudStack>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+
+<MudContainer Class="mt-2">
+    <MudGrid Spacing="0">
+        <MudItem xs="12" Class="loyalty-wallet-div-box12">
+            <MudStack Row="true" Justify="Justify.SpaceBetween">
+                <div>
+                    <MudStack Row="false" Spacing="0">
+                        <h6>Ramya Sri</h6>
+                        <p>Nov 18, 2024</p>
+                    </MudStack>
+                </div>
+                <div>
+                    <MudStack Row="false" Spacing="0" Class="mt-4">
+                        <button class="loyaty-wallet-div-btn">
+                            Pending
+                        </button>                  
+                    </MudStack>
+                </div>
+            </MudStack>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+
+<style>
+    .loyalty-wallet-box1 {
+        display: flex;
+        width: auto;
+        height: 64px;
+        padding-left: 16px;
+        align-items: center;
+        gap: 12px;
+        background-color: #FFF;
+    }
+
+    .loyalty-wallet-img1 {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        aspect-ratio: 1/1;
+    }
+
+    .loyalty-wallet-heading1 {
+        color: #111;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 150% */
+    }
+
+    .loyalty-wallet-box2 {
+        position: relative;
+        width: auto;
+        height: 220px;
+        background-color: #3E1268;
+        overflow: hidden;
+        border-radius: 24px;
+    }
+
+    .loyalty-wallet-banner-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        overflow:hidden;
+    }
+
+    .loyalty-wallet-img2 {
+        position: absolute;
+        width: 52px;
+        height: 52px;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        object-fit: cover;
+        display: block;
+    }
+    .loyalty-wallet-box3 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        object-fit: cover;
+        display: block;
+        top: 105px;
+    }
+    .loyalty-wallet-p1 {
+        color: #FFF;
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        letter-spacing: -0.4px;
+    }
+
+    .loyalty-wallet-p2 {
+        color: #D8D0E1;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%; /* 18.2px */
+        letter-spacing: -0.28px;
+    }
+    .loyalty-wallet-h1 {
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%; /* 20.8px */
+        letter-spacing: -0.32px;
+    }
+    .loyalty-wallet-banner-box1 {
+        position: relative;
+        width: 100%;
+        border-radius: 16px;
+        background: #FFF;
+        padding:16px;
+    }
+    .loyalty-wallet-box4 {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #F0ECF3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .loyalty-wallet-number {
+        color: #3E1268;
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.32px;
+    }
+     .loyalty-wallet-number2{
+        color: #00A43D;
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        letter-spacing: -0.48px;
+    }
+    .loyalty-wallet-h2 {
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%; /* 20.8px */
+        letter-spacing: -0.32px;
+    }
+    .loyalty-wallet-h3 {
+        color: #666;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%; /* 15.6px */
+        letter-spacing: -0.24px;
+    }
+    .loyalty-wallet-dotimg{
+        position:absolute;
+        top:78px;
+        left:32px;
+    }
+    .loyalty-wallet-dotimg2 {
+        position: absolute;
+        top: 157px;
+        left: 32px;
+    }
+    .loyalty-wallet-box5 {
+        width: auto;
+        height: 178px;
+        background-color: #FFF;
+        border: 1px dashed #DDD;
+        border-radius:24px;
+    }
+    .loyalty-wallet-btn {
+        width: 136px;
+        height: 46px;
+        fill: #FFF;
+        border: 2px solid #000;
+       border-radius:40px;
+    }
+    .loyalty-wallet-div {
+        width: 160px;
+        height: 83px;
+        background-color:#FFF;
+        border-radius:16px;
+    }
+    .loyalty-wallet-div-box12 {
+        height: 76px;
+        padding:16px;
+        border-radius: 16px;
+        background: #FFF;
+    }
+
+        .loyalty-wallet-div-box12 h6 {
+            color: #111;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%; /* 20.8px */
+            letter-spacing: -0.32px;
+        }
+
+        .loyalty-wallet-div-box12 p {
+            color: #666;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%; /* 15.6px */
+            letter-spacing: -0.24px;
+        }
+
+    .loyaty-wallet-div-btn {
+        display: flex;
+        height: 24px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 6px;
+        background: rgba(255, 225, 135, 0.30);
+        color: #D66C01;
+        text-align: right;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%; /* 15.6px */
+        letter-spacing: -0.24px;
+    }
+</style>

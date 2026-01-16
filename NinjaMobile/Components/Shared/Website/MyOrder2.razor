@@ -9,100 +9,129 @@
     </MudItem>
 
     <MudItem xs="12">
-        <MudTabs Elevation="0" Rounded="false" ApplyEffectsToContainer="true">
-            <MudTabPanel Text="Ongoing">
-                @*<MudText>Content One</MudText>*@
-
-            </MudTabPanel>
-            <MudTabPanel Text="Order History">
-                @*<MudText>Content Two</MudText>*@
-            </MudTabPanel>
+        <MudTabs Elevation="0" Rounded="false">
+            <MudTabPanel Text="Ongoing" />
+            <MudTabPanel Text="Order History" />
         </MudTabs>
     </MudItem>
 
+    <MudContainer MaxWidth="MaxWidth.ExtraLarge">
+        <MudGrid Spacing="0" Class="mt-4 p-4" Style="background-color:white;border-radius:24px;">
 
-    <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge">
-        <MudGrid Spacing="0" Class="mt-4 p-4" Style="background-color: white; border-radius: 24px; ">
             <MudItem xs="4">
-                <MudStack Row="true">
-                    <img class="myorder2-imgs" src="/images/web-content/_dish.png" />
-                </MudStack>
+                <img class="myorder2-imgs" src="/images/web-content/_dish.png" />
             </MudItem>
+
             <MudItem xs="8">
                 <MudStack Row="true" Justify="Justify.SpaceBetween">
                     <h6 class="myorder2-heading2">Basic Indian</h6>
                     <MudIcon Icon="@CustomIcons.HeadphoneIcon" />
                 </MudStack>
-                <MudItem xs="12" Class="mt-4">
-                    <MudStack Row="true">
-                        <MudIcon Icon="@CustomIcons.MyorderBox" />
-                        <h6 class="myorder2-para">Order ID:<span class="myorder-heading2" style="font-size:14px;">ORD-2025-001</span> </h6>
-                    </MudStack>
-                    <MudStack Row="true" Class="mt-2">
-                        <MudIcon Icon="@CustomIcons.Myordertruck" />
-                        <h6 class="myorder2-para">Delivery in 2 days</h6>
-                    </MudStack>
-                    <MudStack Row="true" Class="mt-2">
-                        <MudIcon Icon="@CustomIcons.MyorderCoin" />
-                        <h6 class="myorder2-para">Points Earned:<span class="myorder-heading2" style="font-size:14px;"> 150 Points</span> </h6>
-                    </MudStack>
-                </MudItem>
-            </MudItem>
-            <!-- Toggle Button -->
-            <div class="order-status-toggle mt-8" @onclick="ToggleStatusBox">
-                <MudStack Row="true">
-                    <MudIcon Icon="@CustomIcons.Myordertruck"/>
-                    <span>Order status</span>
 
+                <MudStack Row="true" Class="mt-4">
+                    <MudIcon Icon="@CustomIcons.MyorderBox" />
+                    <h6 class="myorder2-para">Order ID: <b>ORD-2025-001</b></h6>
                 </MudStack>
 
-                <svg class="@(isStatusOpen ? "arrow rotate" : "arrow")" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                     viewBox="0 0 24 24" fill="none">
-                    <path d="M18 9L12 15L6 9" stroke="#B3FD60" stroke-width="1.66667" />
+                <MudStack Row="true" Class="mt-2">
+                    <MudIcon Icon="@CustomIcons.Myordertruck" />
+                    <h6 class="myorder2-para">Delivery in 2 days</h6>
+                </MudStack>
+
+                <MudStack Row="true" Class="mt-2">
+                    <MudIcon Icon="@CustomIcons.MyorderCoin" />
+                    <h6 class="myorder2-para">Points Earned: <b>150</b></h6>
+                </MudStack>
+            </MudItem>
+
+            <!-- Toggle Button -->
+            <div class="order-status-toggle mt-6" @onclick="ToggleStatusBox">
+                <MudStack Row="true">
+                    <MudIcon Icon="@Icons.Material.Filled.LocalShipping" />
+                    <span>Order status</span>
+                </MudStack>
+
+                <svg class="@(isStatusOpen ? "arrow rotate" : "arrow")" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M18 9L12 15L6 9" stroke="#B3FD60" stroke-width="1.6" />
                 </svg>
             </div>
 
             <!-- Black Box -->
             <div class="order-status-box @(isStatusOpen ? "open" : "closed")">
 
-                <div class="order-status-time">
+                <div class="order-status-time mt-6">
                     <div>Estimated delivery time</div>
-                    <h2>09:20</h2>
+                    <h2 class="mt-2">09:20</h2>
                 </div>
 
-                <div class="order-status-progress">
-                    <div class="step active">Order Placed</div>
-                    <div class="step active">Order Prepared</div>
-                    <div class="step">Order Dispatched</div>
-                    <div class="step">Order Delivered</div>
+                <!-- TRACKER -->
+                <div class="order-tracker-container mt-4">
+
+                    <div class="track-line-bg">
+
+                        <!-- START CIRCLE -->
+                        <div class="track-start-circle">
+                            <div class="track-start-circle-inner"></div>
+                        </div>
+
+                        <!-- PROGRESS LINE -->
+                        <div class="track-line-progress" style="width:@ProgressWidth"></div>
+
+                        <!-- MOVING CIRCLE -->
+                        <div class="track-circle-outer" style="left:@CirclePosition">
+                            <div class="track-circle-inner"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="track-labels mt-8">
+                        @for (int i = 0; i < Steps.Length; i++)
+                        {
+                            <div class="@(i <= CurrentStep ? "label-complete" : "label-pending")">
+                                @Steps[i]
+                            </div>
+                        }
+                    </div>
+
                 </div>
 
             </div>
+
         </MudGrid>
     </MudContainer>
+
 </MudGrid>
 
-
 @code {
+
     bool isStatusOpen = true;
+    void ToggleStatusBox() => isStatusOpen = !isStatusOpen;
 
-    void ToggleStatusBox()
+    // 🔥 0 = Placed, 1 = Prepared, 2 = Dispatched, 3 = Delivered
+    int CurrentStep = 1;
+
+    string[] Steps =
     {
-        isStatusOpen = !isStatusOpen;
-    }
+        "Order Placed",
+        "Order Prepared",
+        "Order Dispatched",
+        "Order Delivered"
+    };
+
+    double ProgressRatio => CurrentStep / 3.0;
+
+    // Progress line starts from center of start circle
+    string ProgressWidth => $"calc({ProgressRatio * 100}% + 10px)";
+
+    // Moving circle stays inside bar
+    string CirclePosition => $"calc({ProgressRatio * 100}% + 0px)";
 }
-
-
 
 
 <style>
     .myorder2-box1 {
-        display: flex;
-        width: auto;
         height: 57px;
-        padding: 16px 16px 1px 16px;
-        flex-direction: column;
-        align-items: flex-start;
+        padding: 16px;
         border-bottom: 1px solid #F7F7F7;
         background: #FFF;
     }
@@ -110,44 +139,30 @@
     .myorder2-img1 {
         width: 24px;
         height: 24px;
-        flex-shrink: 0;
     }
 
     .myorder2-heading1 {
-        color: #111;
         font-size: 16px;
-        font-style: normal;
         font-weight: 600;
-        line-height: 24px; 
     }
 
     .myorder2-imgs {
         width: 96px;
         height: 96px;
         border-radius: 16px;
-        opacity: 1;
     }
 
     .myorder2-heading2 {
-        color: #000;
         font-size: 20px;
-        font-style: normal;
         font-weight: 600;
-        line-height: 130%;
-        letter-spacing: -0.4px;
     }
 
     .myorder2-para {
-        color: #666;
         font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        letter-spacing: -0.28px;
+        color: #666;
     }
 
-
-/*    blackbox css*/
+    /* Toggle */
     .order-status-toggle {
         width: 328px;
         height: 56px;
@@ -158,33 +173,29 @@
         align-items: center;
         justify-content: space-between;
         padding: 0 16px;
-        cursor: pointer;
         margin: auto;
+        cursor: pointer;
     }
 
     .order-status-box {
         width: 328px;
         background: #000;
         border-radius: 24px;
-        margin: auto;
-        margin-top: 12px;
+        margin: 12px auto;
         overflow: hidden;
-        transition: all 0.35s ease;
+        transition: all 0.3s ease;
     }
 
-        /* Closed state */
         .order-status-box.closed {
             height: 0;
             padding: 0;
         }
 
-        /* Open state */
         .order-status-box.open {
-            height: 232px;
+            height: 230px;
             padding: 16px;
         }
 
-    /* Arrow animation */
     .arrow {
         transition: transform 0.3s ease;
     }
@@ -193,27 +204,101 @@
             transform: rotate(180deg);
         }
 
-    /* Inside content */
     .order-status-time {
-        color: #B3FD60;
+        color: #DDDDDD;
         text-align: center;
     }
 
-        .order-status-time h2 {
-            margin: 8px 0;
-            font-size: 32px;
-        }
+    /* TRACKER */
 
-    .order-status-progress {
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-between;
-        color: #777;
-        font-size: 12px;
+    .order-tracker-container {
+        max-width: 320px;
+        margin: auto;
     }
 
-        .order-status-progress .step.active {
-            color: #B3FD60;
-        }
+    .track-line-bg {
+        position: relative;
+        width: 296px;
+        height: 6px;
+        border-radius: 999px;
+        background: #2E6F07;
+        margin: auto;
+    }
+
+    .track-line-progress {
+        position: absolute;
+        height: 6px;
+        border-radius: 999px;
+        background: #B3FD60;
+        transition: 0.3s;
+    }
+
+    .track-circle-outer {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 999px;
+        border: 2px solid #B3FD60;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+    }
+
+    .track-circle-inner {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background-color:white;
+    }
+
+    .track-labels {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 12px;
+    }
+
+    .label-complete {
+        color: #B3FD60;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .label-pending {
+        color: #459B11;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    /* START CIRCLE */
+    .track-start-circle {
+        position: absolute;
+        left: -1px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 999px;
+        border: 2px solid #B3FD60;
+        background: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+    }
+
+    .track-start-circle-inner {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background-color: black;
+    }
+
+    /* Make sure moving circle is above line */
+    .track-circle-outer {
+        z-index: 6;
+    }
 
 </style>

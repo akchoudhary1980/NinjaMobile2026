@@ -1,0 +1,201 @@
+﻿<MudGrid Spacing="0">
+    <MudItem xs="12" Class="addaddress-box">
+        <h6>Add New Address</h6>
+        <div>
+            <MudFab StartIcon="@Icons.Material.Filled.Close" Size="Size.Small" Color="Color.Default" DropShadow="false" Style="color: white; background-color: #2E0D4E;" />
+        </div>
+    </MudItem>
+
+    <MudItem xs="12" Class="p-4">
+        <MudText Class="addaddress-heading2">Name</MudText>
+        <MudTextField T="string"
+                      Placeholder="Enter your name"
+                      Variant="Variant.Outlined"
+                      Margin="Margin.Dense" 
+                      Class="addaddress-custom-phone-input mt-2" />
+
+        <MudText Class="addaddress-heading2">Phone Number</MudText>
+        <MudTextField T="string"
+                      Placeholder="+91 8760803361"
+                      Variant="Variant.Outlined"
+                      Margin="Margin.Dense"
+                      Class="addaddress-custom-phone-input mt-2" />
+        <MudItem xs="12">
+            <MudStack Row="true" Justify="Justify.SpaceBetween">
+                <div>
+                    <MudText Class="addaddress-heading2">Pin Code</MudText>
+                    <MudTextField T="string"
+                                  Placeholder="please enter"
+                                  Variant="Variant.Outlined"
+                                  Margin="Margin.Dense"
+                                  Class="addaddress-custom-phone-input mt-2" />
+                </div>
+                <div>
+                    <MudText Class="addaddress-heading2">State</MudText>
+                    <MudTextField T="string"
+                                  Placeholder="please enter"
+                                  Variant="Variant.Outlined"
+                                  Margin="Margin.Dense"
+                                  Class="addaddress-custom-phone-input mt-2" />
+                </div>
+
+            </MudStack>
+        </MudItem>
+
+        <MudText Class="addaddress-heading2">House Number/Tower/Block</MudText>
+        <MudTextField T="string"
+                      Placeholder="Please enter"
+                      Variant="Variant.Outlined"
+                      Margin="Margin.Dense"
+                      Class="addaddress-custom-phone-input mt-2" />
+
+        <MudText Class="addaddress-heading2">Address (Building, Street, Area)</MudText>
+        <MudTextField T="string"
+                      Placeholder="Please enter"
+                      Variant="Variant.Outlined"
+                      Margin="Margin.Dense"
+                      Class="addaddress-custom-phone-input mt-2" />
+
+        <MudText Class="addaddress-heading2">Locality/Town</MudText>
+        <MudTextField T="string"
+                      Placeholder="Please enter"
+                      Variant="Variant.Outlined"
+                      Margin="Margin.Dense"
+                      Class="addaddress-custom-phone-input mt-2" />
+
+        <MudText Class="addaddress-heading2">City/District</MudText>
+        <MudTextField T="string"
+                      Placeholder="Please enter"
+                      Variant="Variant.Outlined"
+                      Margin="Margin.Dense"
+                      Class="addaddress-custom-phone-input mt-2" />
+    </MudItem>
+
+
+    <MudItem xs="12" Class="pl-4">
+        <h6 style="color: #333;
+            font-size: 14px;
+            font-weight: 500;">
+            Type of Address
+        </h6>
+        <MudRadioGroup T="bool">
+            <MudRadio T="bool" Color="Color.Success">Home</MudRadio>
+            <MudRadio T="bool" Color="Color.Success">Office</MudRadio>
+        </MudRadioGroup>
+    </MudItem>
+
+    <MudItem xs="12" Class="pl-4">
+        <div>
+            <p style="color: #333;font-size: 14px;font-weight: 500;">Is your office open on weekends?</p>
+            <MudCheckBox T="bool" Dense="true" Color="Color.Success">Open on Saturday</MudCheckBox>
+            <MudCheckBox T="bool" Dense="true" Color="Color.Success">Open on Saturday</MudCheckBox>
+
+        </div>  
+    </MudItem>
+
+    <MudItem xs="12" Class="p-4">
+        <div style="border:3px solid #EEE">
+
+        </div>
+    </MudItem>
+
+    <MudItem xs="12" Class="pl-4">
+        <MudCheckBox T="bool" Dense="false" Color="Color.Success">
+            Make this as my default address
+        </MudCheckBox>
+    </MudItem>
+
+    <MudItem xs="12" Class="p-4">
+        <MudStack Spacing="0" Row="true" Justify="Justify.SpaceBetween">
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Large" Class="btn-primary">Save</MudButton>
+            <button class="addaddress-btn">
+                Cancel
+            </button>
+        </MudStack>
+    </MudItem>
+
+</MudGrid>
+
+
+<style>
+    .addaddress-box {
+        position: relative;
+        width: auto;
+        height: 79px;
+        background-color:#3E1268;
+        border-start-start-radius:32px;
+        border-start-end-radius:32px;
+    }
+        .addaddress-box h6 {
+            color: #FFF;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: -0.48px;
+            padding:24px 83px 24px 83px;
+        }
+        .addaddress-box div {
+            position:absolute;
+            top:8px;
+            right:8px;
+        }
+
+    .addaddress-heading2 {
+        color: #333;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.24px;
+        padding-left: 12px;
+        margin-top: 16px;
+    }
+
+    .addaddress-custom-phone-input {
+        width: auto;
+        height: 46px;
+        background: #F9F9F9;
+    }
+
+        /* Real border (fieldset) */
+        .addaddress-custom-phone-input .mud-input-outlined-border {
+            border: 1px solid #BBB !important;
+            border-radius: 12px !important;
+        }
+
+        /* Input text & placeholder */
+        .addaddress-custom-phone-input input {
+            height: 46px;
+            padding: 0 16px;
+            color: #333;
+            font-family: "DM Sans";
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: -0.28px;
+        }
+
+            /* Placeholder */
+            .addaddress-custom-phone-input input::placeholder {
+                color: #333;
+                opacity: 1;
+            }
+
+        /* Remove blue focus ring */
+        .addaddress-custom-phone-input.mud-input-focused .mud-input-outlined-border {
+            border-color: #BBB !important;
+        }
+    .addaddress-btn {
+        width: 152px;
+        height: 46px;
+        fill: #FFF;
+        border:2px solid #000 ;
+        color: #000;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        border-radius:32px;
+    }
+</style>

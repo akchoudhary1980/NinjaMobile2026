@@ -1,0 +1,92 @@
+﻿<MudGrid Spacing="0">
+    <MudItem xs="12">
+        <div class="custom-select-wrapper">
+            <select class="custom-select" required>
+                <option value="" selected disabled hidden>Please select</option>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+            </select>
+
+            <span class="custom-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M6 9L12 15L18 9" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </span>
+        </div>
+    </MudItem>
+</MudGrid>
+
+<style>
+    .custom-select-wrapper {
+        position: relative;
+        width: 267px;
+        height: 48px;
+    }
+
+    .custom-select {
+        width: 100%;
+        height: 100%;
+        background: #FFFFFF;
+        border: 1px solid #EEE;
+        border-radius: 12px;
+        padding: 0 40px 0 16px;
+
+        color: #A3A3A3;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: -0.32px;
+
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        outline: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    /* Box hover */
+    .custom-select:hover {
+        background: #F9F9F9;
+        border-color: #DDD;
+    }
+
+    /* Box focus (when clicked) */
+    .custom-select:focus {
+        border-color: #B5B5B5;
+        box-shadow: 0 0 0 2px rgba(0,0,0,0.04);
+        background: #FFFFFF;
+    }
+
+    /* After selecting value */
+    .custom-select:valid {
+        color: #333;
+    }
+
+    /* Dropdown arrow */
+    .custom-arrow {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    /* Try to control option colors (browser limited) */
+    .custom-select option {
+        background: #FFFFFF;
+        color: #333;
+    }
+
+    .custom-select option:hover {
+        background: #ff0000 !important;
+        color: #000;
+    }
+
+    .custom-select option:checked {
+        background: red;
+        color: #000;
+    }
+</style>
