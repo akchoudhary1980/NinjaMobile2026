@@ -282,6 +282,43 @@
   </defs>
 </svg>";
 
+        public const string FacebookIcon = @"<svg xmlns=""http://www.w3.org/2000/svg"" width=""24"" height=""24"" viewBox=""0 0 24 24"" fill=""none"">
+  <g clip-path=""url(#clip0_3715_9159)"">
+    <path d=""M7 10V14H10V21H14V14H17L18 10H14V8C14 7.73478 14.1054 7.48043 14.2929 7.29289C14.4804 7.10536 14.7348 7 15 7H18V3H15C13.6739 3 12.4021 3.52678 11.4645 4.46447C10.5268 5.40215 10 6.67392 10 8V10H7Z"" stroke=""#666666"" stroke-width=""1.5"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+  </g>
+  <defs>
+    <clipPath id=""clip0_3715_9159"">
+      <rect width=""24"" height=""24"" fill=""white""/>
+    </clipPath>
+  </defs>
+</svg>";
+
+        public const string TwitterIcon = @"<svg xmlns=""http://www.w3.org/2000/svg"" width=""24"" height=""24"" viewBox=""0 0 24 24"" fill=""none"">
+  <g clip-path=""url(#clip0_3715_9162)"">
+    <path d=""M22 4.01001C21 4.50001 20.02 4.69901 19 5.00001C17.879 3.73501 16.217 3.66501 14.62 4.26301C13.023 4.86101 11.977 6.32301 12 8.00001V9.00001C8.755 9.08301 5.865 7.60501 4 5.00001C4 5.00001 -0.182 12.433 8 16C6.128 17.247 4.261 18.088 2 18C5.308 19.803 8.913 20.423 12.034 19.517C15.614 18.477 18.556 15.794 19.685 11.775C20.0218 10.5527 20.189 9.28987 20.182 8.02201C20.182 7.77301 21.692 5.25001 22 4.00901V4.01001Z"" stroke=""#666666"" stroke-width=""1.5"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+  </g>
+  <defs>
+    <clipPath id=""clip0_3715_9162"">
+      <rect width=""24"" height=""24"" fill=""white""/>
+    </clipPath>
+  </defs>
+</svg>";
+
+        public const string InstagramIcon = @"<svg xmlns=""http://www.w3.org/2000/svg"" width=""24"" height=""24"" viewBox=""0 0 24 24"" fill=""none"">
+  <g clip-path=""url(#clip0_3715_9165)"">
+    <path d=""M8 11V16"" stroke=""#666666"" stroke-width=""1.5"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M8 8V8.01"" stroke=""#666666"" stroke-width=""2"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M12 16V11"" stroke=""#666666"" stroke-width=""1.5"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M16 16V13C16 12.4696 15.7893 11.9609 15.4142 11.5858C15.0391 11.2107 14.5304 11 14 11C13.4696 11 12.9609 11.2107 12.5858 11.5858C12.2107 11.9609 12 12.4696 12 13"" stroke=""#666666"" stroke-width=""1.5"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+    <path d=""M3 7C3 5.93913 3.42143 4.92172 4.17157 4.17157C4.92172 3.42143 5.93913 3 7 3H17C18.0609 3 19.0783 3.42143 19.8284 4.17157C20.5786 4.92172 21 5.93913 21 7V17C21 18.0609 20.5786 19.0783 19.8284 19.8284C19.0783 20.5786 18.0609 21 17 21H7C5.93913 21 4.92172 20.5786 4.17157 19.8284C3.42143 19.0783 3 18.0609 3 17V7Z"" stroke=""#666666"" stroke-width=""1.5"" stroke-linecap=""round"" stroke-linejoin=""round""/>
+  </g>
+  <defs>
+    <clipPath id=""clip0_3715_9165"">
+      <rect width=""24"" height=""24"" fill=""white""/>
+    </clipPath>
+  </defs>
+</svg>";
+
         //        public const string FoodIcon = @"<svg width=""24"" height=""24"" viewBox=""0 0 24 24"" fill=""none"" xmlns=""http://www.w3.org/2000/svg"">
         //        <path d=""M14 9.01001L14.01 8.9989"" stroke=""  #666666"" stroke-width=""1.5"" stroke-linecap=""round"" stroke-linejoin=""round""/>
         //        <path d=""M8 8.01001L8.01 7.9989"" stroke=""  #666666"" stroke-width=""1.5"" stroke-linecap=""round"" stroke-linejoin=""round""/>

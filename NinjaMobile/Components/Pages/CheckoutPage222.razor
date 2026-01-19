@@ -3,21 +3,20 @@
 
 <PageTitle>Test</PageTitle>
 
-<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge">
-    <MudItem xs="12" sm="12" Class="p-4">
+<MudGrid Spacing="0" Style="background-color:#fff;">
+    <MudItem xs="12" sm="12" Class="p-3">
         <MudStack Row="true" Justify="Justify.SpaceBetween">
-            <div>
-                <MudStack Row="true" Spacing="4">
-                    <div>
+            
+                <MudStack Row="true" Spacing="2" Justify="Justify.SpaceBetween">
+                    <div class="mt-1">
                         <img src="/images/web-content/backbutton.svg" />
                     </div>
                     <div>
-                        <h6 class="check-heading1"> Logo Here</h6>
+                        <img class="check-logo-main" src="/images/web-content/logo-horizontal.svg" />
                     </div>
                 </MudStack>
-            </div>
             <div>
-                <MudStack Row="true" Spacing="1">
+                <MudStack Row="true" Spacing="1" Class="mt-2">
                     <div>
                         <MudIcon Icon="@CustomIcons.CheckoutTopIcon" />
                     </div>
@@ -37,12 +36,16 @@
     <MudItem xs="12" sm="12" Class="mt-3">
         <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.Center">
             <div>
-                <button type="button" class="checklink-button">CART</button>
-                <div class="checkunderline-div"></div>
+                <div>
+                    <button type="button" class="checklink-button mt-2">CART</button>
+                </div>
+
+                    <div class="checkunderline-div mt-2"></div>
             </div>
 
             <div>
                 <MudText Style="color: #999">-----</MudText>
+
             </div>
             <div>
                 <button type="button" class="checklink-button-normal">ADDRESS</button>
@@ -56,8 +59,7 @@
 
         </MudStack>
     </MudItem>
-
-</MudContainer>
+</MudGrid>
 
 <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge">
    <div style="padding:16px;">
@@ -75,12 +77,8 @@
         border-bottom: 1px solid #F7F7F7;
         background: #FFF;
     }
-    .check-heading1 {
-        color: #666;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        margin-bottom:0px;
+    .check-logo-main {
+       padding-left:16px;
     }
     .check-headingpra2 {
         color: #666;
@@ -109,10 +107,12 @@
         width: 100%;
         background-color: #FF3B30;
         border-radius: 2px; 
-        margin-top: 4px; 
+/*        margin-top: 4px; */
     }
 
     .checklink-button-normal {
+        height: 25px;
+        width: fit-content;
         color: #666;
         font-size: 14px;
         font-style: normal;

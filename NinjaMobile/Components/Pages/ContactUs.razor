@@ -1,0 +1,229 @@
+﻿@page "/contactus"
+<PageTitle>Contact Page</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Medium" Class="mt-6 mb-6">
+    <MudGrid Spacing="6" Class="contact-us-box">
+        <div class="contact-background-div">
+
+        </div>
+        <MudItem xs="6">
+            <div Style="width: 405px; height:auto;text-wrap:wrap;">
+
+                <div>
+                    <div>
+                        <h6 class="contact-us-h1">Need help? Get in touch</h6>
+                    </div>
+                    <div class="contact-us-p1">
+                        Get in touch with us through our contact form for any event inquiries, bookings, support requests.
+                    </div>
+                </div>
+
+                <div class="mt-7">
+                    <div>
+                        <h6 class="contact-us-h2">Our Address:</h6>
+                    </div>
+                    <div class="contact-us-p1">
+                        $100, 2nd street 12th main road koramangala, Bangalore
+                    </div>
+                </div>
+
+                <div class="mt-7">
+                    <div>
+                        <h6 class="contact-us-h2">Email Address:</h6>
+                    </div>
+                    <div class="contact-us-p1">
+                        EzGatherr@gmail.com
+                    </div>
+                </div>
+
+                <div class="mt-7">
+                    <div>
+                        <h6 class="contact-us-h2">Follw Us on</h6>
+                    </div>
+                    <div class="contact-us-p1">
+                        <MudStack Row="true">
+                            <MudIcon Icon="@CustomIcons.FacebookIcon" />
+                            <MudIcon Icon="@CustomIcons.TwitterIcon" />
+                            <MudIcon Icon="@CustomIcons.InstagramIcon" />
+                        </MudStack>
+                    </div>
+                </div>
+
+            </div>
+
+        </MudItem>
+
+        <MudItem xs="12" sm="6">
+            <div class="contact-card">
+
+                <!-- Header -->
+                <div class="contact-header">
+                    <h6 class="contact-title">Let’s Talk About Your Event</h6>
+                </div>
+
+                <div class="contact-body">
+
+                    <div class="form-group">
+                        <label class="form-label">Your Name</label>
+                        <input class="custom-input" placeholder="Enter Your Name" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Your Email</label>
+                        <input class="custom-input" placeholder="Enter E-Mail" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Message</label>
+                        <textarea class="custom-textarea" placeholder="Your Message"></textarea>
+                    </div>
+
+                    <button class="send-btn">Send</button>
+
+                </div>
+            </div>
+        </MudItem>
+
+    </MudGrid>
+    </MudContainer>
+
+
+<style>
+    .contact-us-box{
+        position:relative;
+    }
+    .contact-background-div {
+        position:absolute;
+        top:-34px;
+        left:-335px;
+        width: 625px;
+        height: 625px;
+        border-radius: 625px;
+        opacity: 0.1;
+        background: #FF6F61;
+        filter: blur(125px);
+    }
+    .contact-us-h1 {
+        color: #333;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .contact-us-h2 {
+        color: #333;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .contact-us-p1 {
+        color: #666;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 30px */
+    }
+    .contact-us-right-h1 {
+        color: #FFF;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 110%; /* 26.4px */
+        letter-spacing: -0.48px;
+    }
+
+    .contact-card {
+        width: 513px;
+        height: 573px;
+        background: #FFFFFF;
+        border-radius: 32px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        overflow: hidden;
+    }
+
+    /* Header */
+    .contact-header {
+        width: 100%;
+        height: 74px;
+        background: #3E1268;
+        border-top-left-radius: 32px;
+        border-top-right-radius: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-title {
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    /* Body */
+    .contact-body {
+        padding: 24px 32px;
+    }
+
+    /* Form */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 6px;
+        color: #000;
+    }
+
+    /* Input */
+    .custom-input {
+        width: 449px;
+        height: 48px;
+        background: #F9F9F9;
+        border: 1px solid #BBB;
+        border-radius: 10px;
+        padding: 0 14px;
+        font-family: "DM Sans";
+        font-size: 16px;
+        outline: none;
+    }
+
+    /* Textarea */
+    .custom-textarea {
+        width: 449px;
+        height: 120px;
+        background: #F9F9F9;
+        border: 1px solid #BBB;
+        border-radius: 10px;
+        padding: 12px 14px;
+        font-family: "DM Sans";
+        font-size: 16px;
+        resize: none;
+        outline: none;
+    }
+
+        /* Placeholder */
+        .custom-input::placeholder,
+        .custom-textarea::placeholder {
+            color: #A3A3A3;
+            font-family: "DM Sans";
+            font-size: 16px;
+        }
+
+    /* Button */
+    .send-btn {
+        width: 449px;
+        height: 54px;
+        border-radius: 27px;
+        border: none;
+        background: linear-gradient(180deg, #FF5A5A 0%, #FF2A2A 100%);
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+</style>
