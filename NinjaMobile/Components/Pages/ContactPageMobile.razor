@@ -1,0 +1,162 @@
+﻿@page "/contactpage"
+<PageTitle>Contact</PageTitle>
+
+<MudGrid Spacing="0">
+
+    <!-- TOP PURPLE HEADER -->
+    <MudItem xs="12" Class="contact-main-box">
+        <div class="contact-header-content">
+            <h6 class="contact-main-h1">Need help? Get in touch</h6>
+            <p class="contact-main-para">
+                Get in touch with us through our contact form for any event inquiries, bookings, support requests.
+            </p>
+        </div>
+    </MudItem>
+
+    <!-- WHITE CARD -->
+    <MudItem xs="12">
+        <div class="contact-main-card">
+
+            <h6 class="contact-main-title">Let’s Talk About Your Event</h6>
+
+            <div class="form-group">
+                <label>Your Name</label>
+                <input class="custom-input" placeholder="Enter Your Name" />
+            </div>
+
+            <div class="form-group">
+                <label>Your Email</label>
+                <input class="custom-input" placeholder="Enter E-Mail" />
+            </div>
+
+            <div class="form-group">
+                <label>Message</label>
+                <textarea class="custom-textarea" placeholder="Your Message"></textarea>
+            </div>
+
+            <MudButton FullWidth="true" Class="send-btn">
+                Send
+            </MudButton>
+
+            <div class="divider-line"></div>
+
+            <div class="info-block">
+                <div>
+                    <div class="contact-main-h2">Our Address:</div>
+                    <div class="contact-main-para2">$100, 2nd street 12th main road koramangala, Bangalore</div>
+                </div>
+
+                <div>
+                    <div class="contact-main-h2">Email Address:</div>
+                    <div class="contact-main-para2">Ezgatherr@gmail.com</div>
+                </div>
+
+                <div>
+                    <div class="contact-main-h2">Follow Us on:</div>
+                    <MudStack Row="true" Spacing="2">
+                        <MudIcon Icon="@CustomIcons.FacebookIcon" />
+                        <MudIcon Icon="@CustomIcons.TwitterIcon" />
+                        <MudIcon Icon="@CustomIcons.InstagramIcon" />
+                    </MudStack>
+                </div>
+            </div>
+
+        </div>
+    </MudItem>
+
+</MudGrid>
+
+
+<style>
+    .contact-main-box {
+        background-color: #3E1268;
+        height: 165px;
+        padding: 20px;
+        margin-bottom: 60px;
+    }
+
+    .contact-header-content {
+        max-width: 500px;
+    }
+
+    .contact-main-h1 {
+        color: #FFF;
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    .contact-main-para {
+        color: #FFF;
+        font-size: 12px;
+        opacity: 0.8;
+    }
+
+    .contact-main-card {
+        margin-top: -80px;
+        background-color: #FFF;
+        border-top-left-radius: 32px;
+        border-top-right-radius: 32px;
+        padding: 20px;
+    }
+
+    .contact-main-title {
+        color: #111;
+        font-size: 26px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 16px;
+    }
+
+        .form-group label {
+            font-size: 13px;
+            color: #333;
+        }
+
+    .custom-input,
+    .custom-textarea {
+        width: 100%;
+        border: 1px solid #DDD;
+        background-color: #F9F9F9;
+        border-radius: 12px;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .custom-textarea {
+        height: 100px;
+        resize: none;
+    }
+
+    .send-btn {
+        margin-top: 12px;
+        height: 48px;
+        border-radius: 24px;
+        color: white !important;
+        font-weight: 600;
+        background-color:red;
+    }
+
+    .divider-line {
+        margin: 24px 0;
+        border-top: 1px solid #D9D9D9;
+    }
+
+    .info-block > div {
+        margin-bottom: 16px;
+    }
+
+    .contact-main-h2 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .contact-main-para2 {
+        font-size: 14px;
+        color: #666;
+    }
+
+</style>

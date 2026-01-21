@@ -1,0 +1,360 @@
+﻿
+@page "/privacypolicy"
+<PageTitle>Policy Page</PageTitle>
+
+<MudGrid Spacing="0">
+    <MudItem xs="12" Style="background-color:#FFF; height:42px;">
+        <MudStack Row="true" Justify="Justify.Center" AlignItems="AlignItems.Center" Spacing="2">
+
+            <div class="mobile-tab @(activeTab == 0 ? "active" : "")" @onclick="() => SetTab(0)">
+                Privacy Policy
+            </div>
+
+            <div style="width:2px; height:13px; background-color:#E5E7EB;"></div>
+
+            <div class="mobile-tab @(activeTab == 1 ? "active" : "")" @onclick="() => SetTab(1)">
+                Terms & Conditions
+            </div>
+
+        </MudStack>
+    </MudItem>
+</MudGrid>
+
+<!-- CONTENT AREA -->
+<div class="mt-4 p-3">
+
+    @if (activeTab == 0)
+    {
+
+        <MudContainer MaxWidth="MaxWidth.Large">
+            <MudGrid Spacing="0">
+                <MudItem xs="12">
+                    <div>
+                        <div>
+                            <h6 class="privacy-policy-h1">EZ Gatherr’s Privacy</h6>
+                        </div>
+                        <div class="mt-4">
+                            <p class="privacy-policy-para">
+                                Your privacy is important to us. This Privacy Policy explains how our Event Management App collects,
+                                uses, and protects your personal information when you use our application and services.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <div>
+                            <h6 class="privacy-policy-h2">1. Information We Collect</h6>
+                        </div>
+                        <div class="mt-4">
+                            <p class="privacy-policy-para">
+                                We collect personal information such as your name, phone number, email address,
+                                and event-related details including event type, date, location, and preferences.
+                                We may also collect usage data such as app activity, device information, and basic analytics to improve our services. Payment information is processed securely
+                                through third-party payment providers, and we do not store your card or banking details.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <div>
+                            <h6 class="privacy-policy-h2">2.How We Use Your Information</h6>
+                        </div>
+                        <div class="mt-4">
+                            <p class="privacy-policy-para">
+                                The information we collect is used to manage and organize events, provide personalized services,
+                                communicate confirmations and updates, respond to customer support requests,
+                                improve app functionality, and ensure platform security.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <div>
+                            <h6 class="privacy-policy-h2">3.Data Sharing</h6>
+                        </div>
+                        <div class="mt-4">
+                            <p class="privacy-policy-para">
+                                We do not sell, rent, or trade your personal information. Your data may be shared only
+                                with trusted service providers who help us operate the app or when required by law.
+                                All third parties are expected to protect your information and use it solely for authorized purposes.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="mt-8">
+                        <div>
+                            <h6 class="privacy-policy-h2">4.Data Security</h6>
+                        </div>
+                        <div class="mt-4">
+                            <p class="privacy-policy-para">
+                                We take reasonable technical and organizational measures to protect your information from unauthorized access, misuse, or loss.
+                                While we strive to keep your data secure, no digital platform can guarantee complete security.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <div>
+                            <h6 class="privacy-policy-h2">5.User Rights</h6>
+                        </div>
+                        <div class="mt-4">
+                            <p class="privacy-policy-para">
+                                You have the right to access, update, or delete your personal information and to withdraw your consent at any time.
+                                You may manage your data through the app or contact us for assistance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <div>
+                            <h6 class="privacy-policy-h2">6.Cookies and Tracking Technologies</h6>
+                        </div>
+                        <div class="mt-4">
+                            <p class="privacy-policy-para">
+                                Our app may use cookies or similar technologies to enhance user experience,
+                                analyze usage patterns, and improve overall performance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <div>
+                            <h6 class="privacy-policy-h2">7.Children’s Privacy</h6>
+                        </div>
+                        <div class="mt-4">
+                            <p class="privacy-policy-para">
+                                Our services are not intended for children under the age of 13,
+                                and we do not knowingly collect personal information from children.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <div>
+                            <h6 class="privacy-policy-h2">8.Changes to This Policy</h6>
+                        </div>
+                        <div class="mt-4">
+                            <p class="privacy-policy-para">
+                                We may update this Privacy Policy from time to time. Any changes will be posted within the app,
+                                and continued use of the app indicates acceptance of the updated policy.
+                            </p>
+                        </div>
+                    </div>
+
+                </MudItem>
+            </MudGrid>
+        </MudContainer> }
+    else if (activeTab == 1)
+    {
+        <MudContainer MaxWidth="MaxWidth.Large">
+            <MudGrid Spacing="0">
+                <MudItem xs="12">
+                    <div>
+                        <div>
+                            <h6 class="privacy-policy-h1">Terms & Conditions</h6>
+                        </div>
+                        <div>
+                            <p class="privacy-policy-para">
+                                These Terms & Conditions explain how our services work and what you can expect from Ezgather.
+                                Using our services means you agree to the terms mentioned below.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <div>
+                            <h6 class="privacy-policy-h2">1. Introduction</h6>
+                        </div>
+                        <div class="mt-4">
+                            <p class="privacy-policy-para">
+                                Welcome to Ezgather. By accessing our website or booking our event management services,
+                                you agree to comply with and be bound by these terms and conditions.
+                                These terms apply to all clients, visitors, and users of Ezgather’s services.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <div>
+                            <h6 class="privacy-policy-h2">2. Booking & Service Confirmation</h6>
+                        </div>
+                        <div class="mt-4">
+                            <p class="privacy-policy-para">
+                                All event bookings with Ezgather are subject to availability and confirmation.
+                                A booking is considered confirmed only after the required advance payment is received. Event details, requirements, and timelines must be shared accurately at the time of confirmation.
+                                Any changes requested after confirmation may result in additional charges and adjustments to the delivery schedule.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <div>
+                            <h6 class="privacy-policy-h2">3. Payment Terms</h6>
+                        </div>
+                        <div class="mt-4">
+                            <p class="privacy-policy-para">
+                                Payments must be made according to the agreed payment terms.
+                                An advance payment is required to secure the booking, and the remaining balance must be
+                                settled before or on the event date unless otherwise agreed in writing. Payments once made are non-refundable,
+                                except in cases where a refund is approved by Ezgather under specific circumstances.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="mt-8">
+                        <div>
+                            <h6 class="privacy-policy-h2">4. Cancellation & Changes</h6>
+                        </div>
+                        <div class="mt-4">
+                            <p class="privacy-policy-para">
+                                In the event of cancellation, the client must notify Ezgather in writing. Refunds, if any,
+                                will depend on the notice period provided and the extent of work already completed.
+                                Last-minute cancellations may not be eligible for a refund. Any changes to the event date, time,
+                                venue, or scope of work must be communicated in advance and may incur additional costs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <div>
+                            <h6 class="privacy-policy-h2">5. Client Responsibilities</h6>
+                        </div>
+                        <div class="mt-4">
+                            <p class="privacy-policy-para">
+                                The client is responsible for providing timely approvals, necessary permissions, and access to the event venue.
+                                Ezgather will not be responsible
+                                for delays or issues arising due to incomplete information, lack of coordination, or restricted access.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <div>
+                            <h6 class="privacy-policy-h2">6. Liability & Force Majeure</h6>
+                        </div>
+                        <div class="mt-4">
+                            <p class="privacy-policy-para">
+                                Ezgather shall not be held liable for any failure or delay in performance caused by circumstances beyond reasonable control,
+                                including natural disasters, government regulations, strikes, or unforeseen emergencies.
+                                Ezgather is not responsible for any indirect or consequential losses related to the event.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <div>
+                            <h6 class="privacy-policy-h2">7. Intellectual Property & Media Usage</h6>
+                        </div>
+                        <div class="mt-4">
+                            <p class="privacy-policy-para">
+                                All creative concepts, designs, images, and materials developed for the event remain the intellectual
+                                property of Ezgather unless otherwise agreed in writing. Ezgather reserves the right to use photographs
+                                or videos from events for promotional,
+                                marketing, and portfolio purposes unless the client explicitly requests otherwise prior to the event.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <div>
+                            <h6 class="privacy-policy-h2">8. Termination & Legal Jurisdiction</h6>
+                        </div>
+                        <div class="mt-4">
+                            <p class="privacy-policy-para">
+                                Ezgather reserves the right to suspend or terminate services if the client fails to comply with these terms,
+                                engages in unlawful activities, or does not fulfill payment obligations.
+                                These terms and conditions shall be governed by and interpreted in accordance with the laws of India.
+                            </p>
+                        </div>
+                    </div>
+
+                </MudItem>
+            </MudGrid>
+        </MudContainer>}
+
+</div>
+
+
+
+@code {
+    int activeTab = 0;
+
+    void SetTab(int index)
+    {
+        activeTab = index;
+    }
+}
+
+
+<style>
+.mobile-tab {
+    min-width: 140px;
+    max-width: 180px;
+    height: 42px;
+    padding: 12px 16px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-tab::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;     /* 3px gap from text */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FF3B30;
+    opacity: 0;
+    transition: 0.2s ease;
+}
+
+/* active tab */
+.mobile-tab.active {
+    color: #FF3B30;
+}
+
+.mobile-tab.active::after {
+    opacity: 1;
+}
+
+@@media (max-width: 480px) {
+    .mobile-tab {
+        min-width: 120px;
+        font-size: 13px;
+    }
+}
+
+
+    .privacy-policy-h1 {
+        color: #333;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .privacy-policy-para {
+        color: #333;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 21px */
+    }
+
+    .privacy-policy-h2 {
+        color: #333;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+</style>
