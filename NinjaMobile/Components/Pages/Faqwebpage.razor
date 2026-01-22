@@ -1,0 +1,215 @@
+﻿@page "/faqweb"
+@layout EmptyLayout
+
+<PageTitle>Faq Page For Web</PageTitle>
+
+<MudGrid Spacing="0" Class="faqweb-main-box mb-20">
+
+    <MudItem xs="12" md="6">
+        <div class="faqweb-box1 mt-12">
+            <h6>Frequently asked questions</h6>
+            <p>We’re here to help with any questions you have about plans, pricing, and supported features</p>
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Medium" Class="btn-primary">Get Personalized Help</MudButton>
+
+        </div>
+    </MudItem>
+
+    <MudItem xs="12" md="6" Class="d-flex justify-center align-center">
+        <div class="faq-image-wrapper">
+
+            <div class="faq-bg-img"></div>
+
+            <img src="/images/web-content/faqweb-img1.png" class="faq-main-img" />
+
+        </div>
+    </MudItem>
+
+    <MudItem xs="12">
+        <div class="faq-white-div">
+            <MudStack Row="true" Spacing="0">
+                <div>
+                    <div>
+                        <h6>8+ Years</h6>
+                        <p>Industry Experience</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <h6>8+ Years</h6>
+                        <p>Industry Experience</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <h6>8+ Years</h6>
+                        <p>Industry Experience</p>
+                    </div>
+                </div>
+
+            </MudStack>
+        </div>
+    </MudItem>
+</MudGrid>
+
+
+
+    <MudGrid Spacing="0" Class="pt-20">
+
+        <MudItem xs="12" md="7">
+
+            <MudItem xs="12" sm="12" Class="mt-0">
+                <Expender Heading="What is finance analytics and how can it help my business?" Content="Plan events in minutes with a simple, guided flow." />
+            </MudItem>
+
+            <MudItem xs="12" sm="12" Class="mt-2">
+                <Expender Heading="What is finance analytics and how can it help my business?" Content="Plan events in minutes with a simple, guided flow." />
+            </MudItem>
+
+            <MudItem xs="12" sm="12" Class="mt-2">
+                <Expender Heading="What is finance analytics and how can it help my business?" Content="Plan events in minutes with a simple, guided flow." />
+            </MudItem>
+
+            <MudItem xs="12" sm="12" Class="mt-2">
+                <Expender Heading="What is finance analytics and how can it help my business?" Content="Plan events in minutes with a simple, guided flow." />
+            </MudItem>
+
+        </MudItem>
+
+        <MudItem Class="faqweb-still-box mt-10" xs="12" sm="4">
+            <div class="text-center">
+                <h6>Still have a questions?</h6>
+                <p>Can’t find that answer to your questions? Send us an email and we’ll get back to you as soon as possible</p>
+            </div>
+            <div class="mt-4">
+                <MudButton Href="/allpage" Variant="Variant.Filled" Color="Color.Primary" Class="faq-btn-faq m-2">Send email</MudButton>
+            </div>
+        </MudItem>
+    </MudGrid>
+
+
+
+
+
+<style>
+    .faqweb-main-box {
+        position: relative;
+        background-color: #3E1268;
+        border-bottom-left-radius: 32px;
+        border-bottom-right-radius: 32px;
+        min-height: 480px;
+        padding-bottom: 120px;
+    }
+
+    /* LEFT CONTENT */
+    .faqweb-box1 {
+        padding-left: clamp(20px, 8vw, 160px);
+    }
+
+        .faqweb-box1 h6 {
+            color: #FFF;
+            font-family: "Playfair Display";
+            font-size: clamp(36px, 5vw, 80px);
+            font-style: italic;
+            font-weight: 400;
+            line-height: 1;
+            max-width: 650px;
+        }
+
+        .faqweb-box1 p {
+            margin-top: 20px;
+            max-width: 520px;
+            color: #FFF;
+            font-size: 16px;
+            line-height: 150%;
+        }
+
+    /* IMAGE SIDE */
+    .faq-image-wrapper {
+        position: relative;
+        width: min(420px, 90%);
+    }
+
+    .faq-main-img {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: auto;
+    }
+
+    .faq-bg-img {
+        position: absolute;
+        top: 10%;
+        right: -70%;
+        width: 200%;
+        height: 100%;
+        background-image: url('/images/web-content/faq-img-bg.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 1;
+        pointer-events: none;
+
+    }
+
+    /* WHITE FLOATING CARD */
+    .faq-white-div {
+        position: absolute;
+        bottom: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: min(1100px, 90%);
+        height: 167px;
+        background-color: #FFF;
+        border-radius: 32px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .faq-white-div h6 {
+            color: #111;
+            font-size: clamp(22px, 3vw, 40px);
+            font-weight: 700;
+        }
+
+        .faq-white-div p {
+            color: #666;
+            font-size: clamp(14px, 1.6vw, 24px);
+        }
+
+    /* STILL QUESTION CARD */
+    .faqweb-still-box {
+        width: 100%;
+        max-width: 320px;
+        padding: 32px;
+        background: #3E1268;
+        border-radius: 32px;
+    }
+
+        .faqweb-still-box h6 {
+            color: #FFF;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .faqweb-still-box p {
+            color: rgba(255, 255, 255, 0.60);
+            font-size: 18px;
+        }
+
+    /* BUTTON */
+    .faq-btn-faq {
+        border-radius: 40px;
+        background-color: #FF3B30 !important;
+        text-transform: capitalize !important;
+        box-shadow: 0px 4px 7.1px 0px #FFFFFF80 inset;
+        width: 120px;
+        height: 38px;
+    }
+
+        .faq-btn-faq:hover {
+            background-color: #FF3B30 !important;
+        }
+</style>
