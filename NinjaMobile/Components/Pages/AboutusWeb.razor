@@ -1,0 +1,198 @@
+﻿@page "/aboutusweb"
+<PageTitle>About Us Page</PageTitle>
+
+
+
+<MudGrid Spacing="0" Class="aboutus-bg">
+    <div class="aboutus-left-img">
+    </div>
+    <div class="aboutus-right-img">
+    </div>
+    <MudItem sm="12" xs="12" Class="text-center">
+        <div class="aboutus-text-box">
+            <div class="aboutus-hosting-text">
+                <b class="aboutus-where-text">
+                    Where
+                </b> <br />
+                <span>Food brings</span> <br />
+                <span class="aboutus-where-text"> people</span>
+                <span>together</span>
+            </div>
+        </div>
+        <div class="aboutus-para mt-8">
+            <p>
+                We believe food should feel effortless,
+                comforting, and memorable. EZ Gatherr serves gatherings with care, consistency, and quality you can trust.
+            </p>
+        </div>
+
+        <MudItem xs="12">
+            <div>
+                <Aboutusweb1 />
+            </div>
+        </MudItem>
+
+    </MudItem>
+ </MudGrid>
+
+<MudContainer MaxWidth="MaxWidth.Large" Class="p-0 m-0">
+    <MudGrid Spacing="0" Class="mt-18">
+        <MudItem xs="12" Class="aboutus-second-box">
+            <div Style="padding-left:198px;">
+                <h6 >From Humble Beginnings to Industry Leaders</h6>
+            </div>
+            <div class="aboutus-left-img2">
+            </div>
+        </MudItem>
+
+        <MudItem xs="12" Class="mt-8" Style="padding-left:198px;">
+            <MudStack Row="true">
+
+                <MudItem xs="6">
+                    <div>
+                        <MudStack Row="true" Spacing="4">
+                            <img style="width: 200px; height: 200px; border-radius:24px;" src="/images/web-content/aboutus-second-img1.png" />
+                            <img style="width: 200px; height: 200px; border-radius: 24px;margin-top:24px;" src="/images/web-content/aboutus-second-img2.png" />
+                        </MudStack>
+                        <MudStack Row="true" Spacing="4">
+                            <img style="width: 200px; height: 200px; border-radius: 24px;" src="/images/web-content/aboutus-second-img3.png" />
+                            <img style="width: 200px; height: 200px; border-radius: 24px;margin-top:24px;" src="/images/web-content/aboutus-second-img4.png" />
+                        </MudStack>
+
+                    </div>
+
+                </MudItem>
+                <MudItem xs="6">
+                    <MudStack Row="false">
+                        <div>
+                            <p style=" width: 404px; text-wrap: wrap;">
+                                Founded in 2018, EZgather started with a simple mission:
+                                to make event planning stress-free and enjoyable. What began as a small team
+                                of passionate individuals has grown into a full-service event management
+                                company trusted by clients across the country.
+                            </p>
+                        </div>
+                        <div>
+                            <p style=" width: 404px; text-wrap: wrap;">
+                                Today, we combine creativity, precision, and personal touch to deliver events that exceed expectations.
+                                Whether it's a corporate conference, a dream wedding, or a milestone celebration, we handle every detail with care.
+                            </p>
+                        </div>
+
+                    </MudStack>
+
+                </MudItem>
+            </MudStack>
+        </MudItem>
+
+    </MudGrid>
+</MudContainer>
+
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="m-0 p-0">
+    <div class="mt-12">
+        <TrustBox />
+    </div>
+</MudContainer>
+
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="m-0 p-0">
+    <div class="mt-12">
+        <AboutusTeam />
+    </div>
+</MudContainer>
+
+<style>
+    .aboutus-bg {
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #3E1268;
+        min-height: 700px;
+        padding-top:48px;
+        overflow:hidden;
+    }
+
+
+    .aboutus-left-img {
+        position: absolute;
+        width: 395.318px;
+        height: 385.624px;
+        top: 0px;
+        left: 0px;
+        background-image: url('images/web-content/aboutus-left-img.svg');
+        background-repeat: no-repeat;
+    }
+    .aboutus-right-img {
+        position: absolute;
+        background-image: url('images/web-content/aboutus-right-img.png');
+        top: 12px;
+        right: 236px;
+        width: 173.238px;
+        height: 172.886px;
+      background-repeat:no-repeat;
+    }
+
+    .aboutus-text-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .aboutus-hosting-text {
+        font-family: 'Playfair Display', serif;
+        font-size: 56px;
+        font-weight: 400;
+        font-style: italic;
+        color: #111111;
+        letter-spacing: -2%;
+        line-height: 100%;
+        text-align: left;
+        color: #FFF;
+    }
+
+    .aboutus-where-text {
+        font-family: 'Playfair Display', serif;
+        font-size: 32px;
+        font-weight: 500;
+        font-style: italic;
+        color: #111111;
+        letter-spacing: -2%;
+        line-height: 100%;
+        vertical-align: top;
+        display: inline-block;
+        color: #FFF;
+    }
+    .aboutus-para {
+        color: #FFF;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 24px */
+        z-index: 1;
+    }
+    .aboutus-second-box {
+        position:relative;
+    }
+        .aboutus-second-box h6 {
+            color: #111;
+            font-family: "Playfair Display";
+            font-size: 80px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: 100%; /* 80px */
+            letter-spacing: -1.6px;
+            width:841px;
+            text-wrap:wrap;
+        }
+    .aboutus-left-img2 {
+        position: absolute;
+        width: 395.318px;
+        height: 385.624px;
+        top: 0px;
+        left: 0px;
+        background-image: url('images/web-content/aboutus-left-img2.png');
+        background-repeat: no-repeat;
+    }
+</style>
