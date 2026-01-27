@@ -1,16 +1,18 @@
 ﻿<MudGrid Spacing="0">
-        <MudItem xs="12" sm="12">
-            <div style="position:relative;">
-                <h6 class="planevent-heading1"> Plan Your Event</h6>
-                <div class="planevent-img">
-                    <MudFab Style="color:white;" @onclick="CloseButton" StartIcon="@Icons.Material.Filled.Close" Size="Size.Small" Color="Color.Default" DropShadow="false" />
-                </div>
+    <MudItem xs="12" sm="12">
+        <div style="position:relative;">
+            <h6 class="planevent-heading1"> Plan Your Event</h6>
+            <div class="planevent-img">
+                <MudFab Style="color: white; background-color: #2E0D4E" @onclick="CloseButton" StartIcon="@Icons.Material.Filled.Close" Size="Size.Small" Color="Color.Default" DropShadow="false" />
             </div>
-         </MudItem>
+        </div>
+    </MudItem>
 
-        <MudGrid Spacing="0" Class="ps-4 pe-4 pb-4">
-            <MudItem xs="12" sm="12" Class="mt-5">
-                <MudGrid Spacing="0">
+    <MudItem xs="12" Class="p-4">
+
+        <MudGrid Spacing="2">
+            <MudItem xs="12" sm="12">
+                <MudGrid Spacing="2">
                     <MudItem xs="6" sm="6">
                         <img class="planevent-img1" src="/images/web-content/plan-your-food-pooja.png" />
                     </MudItem>
@@ -24,8 +26,8 @@
                 </MudGrid>
             </MudItem>
 
-            <MudItem xs="12" sm="12" Class="mt-5">
-                <MudGrid Spacing="0">
+            <MudItem xs="12" sm="12">
+                <MudGrid Spacing="2">
                     <MudItem xs="6" sm="6">
                         <img class="planevent-img1" src="/images/web-content/plan-your-food-decor.png" />
                     </MudItem>
@@ -39,8 +41,8 @@
                 </MudGrid>
             </MudItem>
 
-            <MudItem xs="12" sm="12" Class="mt-5">
-                <MudGrid Spacing="0">
+            <MudItem xs="12" sm="12">
+                <MudGrid Spacing="2">
                     <MudItem xs="6" sm="6">
                         <img class="planevent-img1" src="/images/web-content/plan-your-pooja.png" />
                     </MudItem>
@@ -54,8 +56,8 @@
                 </MudGrid>
             </MudItem>
 
-            <MudItem xs="12" sm="12" Class="mt-5">
-                <MudGrid Spacing="0">
+            <MudItem xs="12" sm="12">
+                <MudGrid Spacing="2">
                     <MudItem xs="6" sm="6">
                         <img class="planevent-img1" src="/images/web-content/plan-your-decor.png" />
                     </MudItem>
@@ -70,8 +72,8 @@
             </MudItem>
 
 
-            <MudItem xs="12" sm="12" Class="mt-5">
-                <MudGrid Spacing="0">
+            <MudItem xs="12" sm="12">
+                <MudGrid Spacing="2">
                     <MudItem xs="6" sm="6">
                         <img class="planevent-img1" src="/images/web-content/plan-your-corporate.png" />
                     </MudItem>
@@ -86,6 +88,7 @@
             </MudItem>
 
         </MudGrid>
+    </MudItem>
 
 </MudGrid>
 
@@ -126,7 +129,7 @@
         right: 8px;
     }
     .planevent-img1 {
-        width: 148px;
+        width:100%;
         height: 151px;
         aspect-ratio: 148/221;
         border-radius:24px;
@@ -139,8 +142,6 @@
         line-height: 130%; /* 20.8px */
         letter-spacing: -0.32px;
         margin:0;
-        padding-top:8px;
-        padding-left:8px;
     }
     .planevent-para {
         color: #666;
@@ -150,7 +151,6 @@
         line-height: 150%; /* 18px */
         letter-spacing: -0.24px;
         margin: 0;
-        padding-left: 8px;
     }
     .planevent-button {
         display: flex;
@@ -167,7 +167,6 @@
         font-style: normal;
         font-weight: 600;
         line-height: normal;
-        padding-left: 8px;
     }
 
 </style>

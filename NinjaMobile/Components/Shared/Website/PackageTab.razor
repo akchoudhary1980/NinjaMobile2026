@@ -241,9 +241,13 @@
 
     <MudItem xs="12" class="footer-div">
         <MudStack Row="true" Justify="Justify.Center" AlignItems="AlignItems.Center">
-            <div class="mt-1">
-                <h6> ₹ 13,513.50 <br /> <span>Inclusive of all taxes</span></h6>
-            </div>
+            <MudStack Spacing="0" Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Style="height:56px;">
+
+                <div>
+                    <h6 class="m-0"> ₹ 13,513.50</h6>
+                    <p class="m-0" style="text-decoration:underline;">Inclusive of all taxes</p>
+                </div>
+            </MudStack>
             <div class="footer-div-btnmodify">
                 <MudButton Variant="Variant.Outlined"
                            Size="Size.Medium"

@@ -1,5 +1,473 @@
-﻿<h3>BlogDetailPages</h3>
+﻿@page "/Blogdetailpage"
+<PageTitle>BlogDetail Page</PageTitle>
 
-@code {
+<MudContainer MaxWidth="MaxWidth.Large">
+    <MudGrid Spacing="0">
+        <MudItem xs="12">
+            <div>
+                <h6 class="blog-detail-heading">EZ Gatherr’s Bento Box Isn’t Just Another Meal</h6>
+                <p class="blog-detail-para">A carefully crafted meal experience that balances flavor, freshness, and presentation in every box.</p>
+            </div>
+        </MudItem>
 
-}
+        <MudItem xs="12"> 
+            <MudGrid Spacing="0">
+
+                <MudItem xs="2" sm="2">
+                    <img src="/images/web-content/blogdetails-logo.svg" />
+                </MudItem>
+
+                <MudItem xs="10" sm="10">
+                    <MudStack Spacing="0" Row="false">
+                        <h6 class="blog-detail-heading1">EZ Gatherr</h6>
+                        <MudStack Row="true">
+                            <div class="blog-detail-para1">
+                                <MudStack Row="true" Spacing="0">
+                                    <MudIcon Icon="@CustomIcons.CalendarIcon" Size="Size.Medium" />
+                                    <p>07 Jan 2026</p>
+                                </MudStack>
+                            </div>
+                            <div class="blog-detail-para1">
+                                <MudStack Row="true" Spacing="0">
+                                    <MudIcon Icon="@CustomIcons.ClockIcon" Size="Size.Medium" />
+                                    <p>12 min read</p>
+                                </MudStack>
+                            </div>
+                        </MudStack>
+
+                    </MudStack>                    
+                </MudItem>
+
+            </MudGrid>
+        </MudItem>
+
+        <MudGrid Spacing="0" Class="mt-4">
+            <MudItem xs="12">
+                <MudStack Row="true" Justify="Justify.SpaceBetween">
+                    <MudStack Spacing="3" Row="true" Class="blog-detail-icons">
+                        <h6>Follow us on:</h6>
+                        <MudIcon Icon="@CustomIcons.FacebookIcon" />
+                        <MudIcon Icon="@CustomIcons.TwitterIcon" />
+                        <MudIcon Icon="@CustomIcons.InstagramIcon" />
+                    </MudStack>
+
+
+                    <MudStack Spacing="3" Row="true" Class="blog-detail-icons">
+                        <h6>Share : </h6>
+                        <MudIcon Style="color: #666666;" Icon="@CustomIcons.ShareIcon" />
+                    </MudStack>
+
+                </MudStack>
+            </MudItem>
+        </MudGrid>
+
+    </MudGrid>     
+</MudContainer>
+
+
+<MudContainer MaxWidth="MaxWidth.Large" Class="mt-6">
+    <MudGrid Spacing="0">
+        <MudItem xs="12">
+            <div>
+                <img class="blog-details-box1" src="/images/web-content/RecentBlogPost-1.png" />
+                <p class="blog-detail-para3 mt-4">
+                    When it comes to catering, food should do more than satisfy hunger—it should create comfort, convenience, and a sense of care. At EZ Gatherr, our <span class="blog-detail-para4">Bento Boxes</span> are thoughtfully designed to deliver a complete dining experience in one simple, elegant package.
+
+                    Unlike standard catering meals that often feel rushed or generic, EZ Gatherr’s Bento Box focuses on balance, quality, and consistency—so every guest enjoys the same great experience.
+                </p>
+
+                <div style="border: 1px solid #AAA;">
+
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <h6 style="color: #333; font-size: 16px; font-style: normal;font-weight: 700; line-height: 150%; ">
+                    Curated, Not Compromised
+                </h6>
+                <p class="blog-detail-para3 mt-4">
+                    Every Bento Box is carefully curated to ensure variety without chaos. Instead of piling items together,
+                    each component is placed with intention—allowing flavors to stand out while working together as a complete meal.<br /><br />
+
+                    From the main course to the accompaniments, everything is portioned to feel satisfying, not overwhelming.
+                </p>
+
+            </div>
+
+            <div class="mt-5">
+                <h6 style="color: #333; font-size: 16px; font-style: normal;font-weight: 700; line-height: 150%; ">
+                    Fresh Ingredients, Prepared with Care
+                </h6>
+                <p class="blog-detail-para3 mt-4">
+                    We believe great food starts with great ingredients. EZ Gatherr uses fresh,
+                    high-quality produce and carefully selected spices to maintain taste and consistency across every order.<br /><br />
+
+                    Our preparation process prioritizes hygiene, freshness, and timing—so meals arrive just as they should: warm, fresh, and ready to enjoy.
+                </p>
+                <div style="border: 1px solid #AAA;">
+
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <h6 style="color: #333; font-size: 16px; font-style: normal;font-weight: 700; line-height: 150%; ">
+                    Perfect for Work, Events, and Celebrations
+                </h6>
+                <p style="color: #333;font-size: 12px;font-style: normal;font-weight: 700;line-height: 150%;">EZ Gatherr’s Bento Boxes are ideal for:</p>
+
+                <div class="mt-2">
+                    <ul style="color: #333; font-size: 12px;font-style: normal; font-weight: 500; line-height: 150%;">
+                        <li>Corporate lunches and meetings</li>
+                        <li>Team offsites and workshops</li>
+                        <li>Small events and private gatherings</li>
+                        <li> Conferences and training sessions</li>
+                    </ul>
+                    <p class="mt-3" style="color: #333; font-size: 12px; font-style: italic; font-weight: 500;line-height: 150%;">They’re easy to distribute, easy to eat, and eliminate the complexity of traditional catering setups.</p>
+                </div>
+
+                <div class="mt-5" style="border: 1px solid #AAA;">
+
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <h6 style="color: #333; font-size: 16px; font-style: normal;font-weight: 700; line-height: 150%; ">
+                    Designed for Convenience
+                </h6>
+                <p class="blog-detail-para3 mt-4">
+                    Our Bento Boxes are created to simplify catering without sacrificing quality.
+                    No extra serving counters, no long queues, and no confusion—just neatly packed meals that keep
+                    everything organized and efficient.<br /><br />
+
+                    This makes them especially suitable for fast-paced environments where time and convenience matter.
+                </p>
+                <div style="border: 1px solid #AAA;">
+
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <h6 style="color: #333; font-size: 16px; font-style: normal;font-weight: 700; line-height: 150%; ">
+                    A Thoughtful Way to Bring People Together
+                </h6>
+                <p class="blog-detail-para3 mt-4">
+                    Food has the power to shape moments. With EZ Gatherr’s Bento Boxes, every meal feels considered, 
+                    consistent, and well-crafted—leaving a lasting impression long after the gathering ends.<br /><br />
+
+                    Because at EZ Gatherr, catering is not just about food—it’s about making every gathering effortless and memorable.
+                </p>
+                <div style="border: 1px solid #AAA;">
+
+                </div>
+            </div>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+
+<MudContainer MaxWidth="MaxWidth.Large" Class="mt-6">
+    <MudGrid Spacing="0">
+        <MudItem xs="12" sm="12">
+            <div class="blog-freq-heading">
+                <h2>
+                    Frequently <br />
+                    asked questions
+                </h2>
+            </div>
+        </MudItem>
+
+        <MudItem xs="12" sm="12" Class="mt-3">
+            <Expender Heading="What is finance analytics and how can it help my business?" Content="Plan events in minutes with a simple, guided flow." />
+        </MudItem>
+
+        <MudItem xs="12" sm="12" Class="mt-3">
+            <Expender Heading="What is finance analytics and how can it help my business?" Content="Plan events in minutes with a simple, guided flow." />
+        </MudItem>
+
+        <MudItem xs="12" sm="12" Class="mt-3">
+            <Expender Heading="What is finance analytics and how can it help my business?" Content="Plan events in minutes with a simple, guided flow." />
+        </MudItem>
+
+        <MudItem xs="12" sm="12" Class="mt-3">
+            <Expender Heading="What is finance analytics and how can it help my business?" Content="Plan events in minutes with a simple, guided flow." />
+        </MudItem>
+
+        <MudItem xs="12" sm="12" Class="mt-5">
+            <div class="blog-freq-still-box">
+                <h6>Still have a questions?</h6>
+                <MudStack Row="true">
+                    <p>Can’t find that answer to your questions? Send us an email and we’ll get back to you as soon as possible</p>
+                    <MudButton Href="/allpage" Variant="Variant.Filled" Color="Color.Primary" Class="blog-btn-freq mt-6">Send email</MudButton>
+                </MudStack>
+
+            </div>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+
+<MudContainer MaxWidth="MaxWidth.Large" Class="mt-16">
+    <MudGrid Spacing="0">
+        <MudItem xs="12" Class="blog-girl-box">
+            <div>
+                <h6>Get Stories and special offers delivered Right to your Inbox</h6>
+                <MudStack Spacing="0">
+
+                    <div class="pl-3">
+                        <p>Enter Email</p>
+                        <img class="blog-girl-img" src="/images/web-content/need-help.png" />
+                    </div>
+                    <div>
+                        <input class="blog-input-box p-3" placeholder="Enter Your E-Mail Address" />
+                    </div>
+                </MudStack>
+
+                <MudButton FullWidth="true" Variant="Variant.Filled" Color="Color.Primary" Class="btn-primary mt-5">Subscribe</MudButton>
+            </div>
+
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+
+<MudContainer>
+    <MudGrid Spacing="0">
+        <MudGrid Spacing="4">
+            <MudItem xs="12">
+                <div class="blog-loyalty-wallet-box2">
+                    <img class="blog-loyalty-wallet-banner-img" src="/images/web-content/Untitled-1.svg" />
+                    <img class="blog-loyalty-wallet-img2" src="/images/web-content/main-wallet1.png" />
+                    <div class="blog-loyalty-wallet-box3 m-0">
+                        <p>Available Points</p>
+                        <h6 class="pl-4">850</h6>
+                        <div class="blog-loyalty-wallet" style="font-size:12px;">Points worth ₹ <span style="font-size:12px;">643.50</span></div>
+                    </div>
+                </div>
+
+            </MudItem>
+        </MudGrid>
+    </MudGrid>
+
+</MudContainer>
+
+
+<style>
+    .blog-detail-heading {
+        color: #111;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .blog-detail-para {
+        color: #666;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 21px */
+    }
+    .blog-detail-heading1 {
+        color: #111;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .blog-detail-para1 {
+        color: #666;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .blog-detail-icons {
+        color: #666;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .blog-details-box1 {
+        width: 100%;
+        height: 185px;
+        border-radius: 12.99px;
+        opacity: 1;
+    }
+    .blog-detail-para3 {
+        color: #333;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 18px */
+    }
+    .blog-detail-para4 {
+        color: #4C5FDD;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+    }
+
+    .blog-freq-heading {
+        color: #111;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .freq-panel {
+        width: auto;
+        padding: 9px;
+        border-radius: 24px;
+        background-color: #fff;
+    }
+
+    .mud-expand-panel-text {
+        color: #111;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.4px;
+    }
+
+    .mud-expand-panel-content {
+        font-weight: 200;
+        font-size: 16px;
+    }
+    /* Very importan idea*/
+    .expander-custom .mud-icon-size-medium {
+        width: 24px;
+        height: 24px;
+        border-radius: 5px;
+        background-color: #EEEEEE;
+    }
+
+    .blog-freq-still-box {
+        width: auto;
+        height: 153px;
+        border-radius: 32px;
+        padding: 35px;
+        background: #3E1268;
+    }
+
+        .blog-freq-still-box h6 {
+            color: #FFF;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: -0.64px;
+        }
+
+        .blog-freq-still-box p {
+            color: rgba(255, 255, 255, 0.60);
+            font-family: "Source Sans Pro";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: -0.28px;
+            width: 189px;
+            text-wrap: wrap;
+            opacity: 1;
+        }
+
+    .blog-btn-freq {
+        border-radius: 40px;
+        background-color: #FF3B30 !important;
+        text-transform: capitalize !important;
+        width: 100px;
+        height: 40px;
+        color: #FFF;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+        .blog-btn-freq:hover {
+            background-color: #FF3B30 !important;
+        }
+
+    .blog-girl-box {
+        position:relative;
+        width: auto;
+        height: 311px;
+        background-color:#FFF;
+        border-radius:24px;
+        padding:32px;
+    }
+        .blog-girl-box h6 {
+            width: 161.564px;
+            text-wrap: wrap;
+            color: #111;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    .blog-girl-img {
+        position:absolute;
+        width: 137px;
+        height: 211px;
+        right:24px;
+        top:-32px;
+    }
+
+    .blog-input-box {
+        width:100%;
+        height: 40px;
+        background-color: #F9F9F9;
+        border: 1px solid #EEE;
+        border-radius:10px;
+    }
+
+    .blog-loyalty-wallet-box2 {
+        position: relative;
+        width: auto;
+        height: 348px;
+        background-color: #3E1268;
+        overflow: hidden;
+        border-radius: 24px;
+    }
+
+    .blog-loyalty-wallet-banner-img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .blog-loyalty-wallet-img2 {
+        position: absolute;
+        width: 52px;
+        height: 52px;
+        top: 55px;
+        left: 50%;
+        transform: translateX(-50%);
+        object-fit: cover;
+        display: block;
+    }
+    .blog-loyalty-wallet-box3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #FFF;
+    }
+        .blog-loyalty-wallet-box3 h6 {
+            color: #FFF;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            letter-spacing: -0.72px;
+        }
+
+
+</style>
