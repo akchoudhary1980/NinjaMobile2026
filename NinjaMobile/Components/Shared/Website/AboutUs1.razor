@@ -1,46 +1,85 @@
-﻿<MudGrid>
-    <MudItem xs="12" Style="background-color: #3E1268;">
-        <div class="aboutus1-box1">
-            <div>
-                <h6>Where food brings people together</h6>
-            </div>
-            <div>
-                <p>
-                    We believe food should feel effortless, comforting, and memorable.
-                    EZ Gatherr serves gatherings with care, consistency, and quality you can trust.
-                </p>
+﻿
+<MudGrid Spacing="0" Class="aboutus-bg">
+    <MudItem sm="12" xs="12" Class="text-center">
+        <div class="aboutus-text-box">
+            <div class="aboutus-hosting-text">
+                <b class="aboutus-where-text mt-6 pl-4">Where</b><br />
+                <span>food brings</span><br />
+                <span class="aboutus-where-text">people</span>
+                <span>together</span>
             </div>
         </div>
 
+        <div class="aboutus-para mt-8">
+            <p>
+                We believe food should feel effortless,
+                comforting, and memorable. EZ Gatherr serves gatherings with care, consistency, and quality you can trust.
+            </p>
+        </div>
+
+        <MudItem xs="12">
+            <div>
+                <Aboutusweb1 />
+            </div>
+        </MudItem>
 
     </MudItem>
-
 </MudGrid>
 
 <style>
-    .aboutus1-box1 {
+    .aboutus-bg {
+        position: relative;
         display: flex;
+        width: 100%;
         flex-direction: column;
         align-items: center;
-        gap: 16px;
-        align-self: stretch;
+        background-color: #3E1268;
+        min-height: 800px;
+        padding-top: 48px;
+        overflow: hidden;
     }
-        .aboutus1-box1 h6 {
-            color: #111;
-            font-family: "Playfair Display";
-            font-size: 48px;
-            font-style: italic;
-            font-weight: 400;
-            line-height: 100%; /* 48px */
-            letter-spacing: -0.96px;
-        }
-        .aboutus1-box1 p {
-            color: #E5E7EB;
-            text-align: center;
-            font-family: "Source Sans Pro";
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 150%; /* 24px */
-        }
+
+    .aboutus-text-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .aboutus-hosting-text {
+        font-family: 'Playfair Display', serif;
+        font-size: 56px;
+        font-weight: 400;
+        font-style: italic;
+        color: #111111;
+        letter-spacing: -2%;
+        line-height: 100%;
+        text-align: left;
+        color: #FFF;
+    }
+
+    .aboutus-where-text {
+        font-family: 'Playfair Display', serif;
+        font-size: 32px;
+        font-weight: 500;
+        font-style: italic;
+        color: #111111;
+        letter-spacing: -2%;
+        line-height: 100%;
+        vertical-align: top;
+        display: inline-block;
+        color: #FFF;
+    }
+
+    .aboutus-para {
+        color: #FFF;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 24px */
+        z-index: 1;
+        padding:16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 </style>
