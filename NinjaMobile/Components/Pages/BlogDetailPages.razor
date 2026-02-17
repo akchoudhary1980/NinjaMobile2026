@@ -10,7 +10,7 @@
             </div>
         </MudItem>
 
-        <MudItem xs="12"> 
+        <MudItem xs="12">
             <MudGrid Spacing="0">
 
                 <MudItem xs="2" sm="2">
@@ -35,7 +35,7 @@
                             </div>
                         </MudStack>
 
-                    </MudStack>                    
+                    </MudStack>
                 </MudItem>
 
             </MudGrid>
@@ -61,7 +61,7 @@
             </MudItem>
         </MudGrid>
 
-    </MudGrid>     
+    </MudGrid>
 </MudContainer>
 
 
@@ -151,7 +151,7 @@
                     A Thoughtful Way to Bring People Together
                 </h6>
                 <p class="blog-detail-para3 mt-4">
-                    Food has the power to shape moments. With EZ Gatherr’s Bento Boxes, every meal feels considered, 
+                    Food has the power to shape moments. With EZ Gatherr’s Bento Boxes, every meal feels considered,
                     consistent, and well-crafted—leaving a lasting impression long after the gathering ends.<br /><br />
 
                     Because at EZ Gatherr, catering is not just about food—it’s about making every gathering effortless and memorable.
@@ -235,16 +235,55 @@
                     <img class="blog-loyalty-wallet-banner-img" src="/images/web-content/Untitled-1.svg" />
                     <img class="blog-loyalty-wallet-img2" src="/images/web-content/main-wallet1.png" />
                     <div class="blog-loyalty-wallet-box3 m-0">
-                        <p>Available Points</p>
-                        <h6 class="pl-4">850</h6>
-                        <div class="blog-loyalty-wallet" style="font-size:12px;">Points worth ₹ <span style="font-size:12px;">643.50</span></div>
+                        <p class="m-0" style="color: #D8D0E1;text-align: center; font-size: 10px;font-style: normal;font-weight: 500;line-height: 130%;">Available Points</p>
+                        <h6 class="pl-8 m-0">850</h6>
+                        <div class="blog-loyalty-wallet" style="font-size: 12px; color: #D8D0E1;">Points worth ₹ <span style="font-size: 12px;color: #D8D0E1;">643.50</span></div>
+                    </div>
+
+                    <div class="blog-loyalty-wallet-box4">
+                        <MudItem xs="12">
+                            <MudStack Row="true">
+                                <MudIcon Icon="@CustomIcons.Profile" />
+                                <h6 style="color: #000; font-size: 20px;font-style: normal; font-weight: 600;line-height: 130%;">Refer and Earn</h6>
+                            </MudStack>
+                            <MudStack Row="false">
+                                <div>
+                                    <p class="pl-10">Share our catering with friends and earn rewards when their event gets booked.</p>
+                                </div>
+                                <div>
+                                    <MudButton Variant="Variant.Filled" FullWidth="true" Color="Color.Primary" Size="Size.Medium" Class="btn-primary">Add</MudButton>
+                                </div>
+                            </MudStack>
+                        </MudItem>
                     </div>
                 </div>
+
 
             </MudItem>
         </MudGrid>
     </MudGrid>
+</MudContainer>
 
+
+<MudContainer MaxWidth="MaxWidth.Large" Class="mt-8">
+    <MudGrid Spacing="0">
+        <MudItem xs="12">
+            <h6 style="color: #0A0A0A;font-size: 24px;font-style: normal;font-weight: 600;line-height: 36px;">
+                Popular search
+            </h6>
+        </MudItem>
+        <MudItem xs="12" Class="mt-6">
+            <button class="blogdetails-white-btn">
+                Event management services
+            </button>
+            <button class="blogdetails-white-btn">
+                Pooja services
+            </button>
+            @*<button class="blog-white-btn">
+                    Professional event planners
+                </button>*@
+        </MudItem>
+    </MudGrid>
 </MudContainer>
 
 
@@ -256,6 +295,7 @@
         font-weight: 600;
         line-height: normal;
     }
+
     .blog-detail-para {
         color: #666;
         font-size: 14px;
@@ -263,6 +303,7 @@
         font-weight: 400;
         line-height: 150%; /* 21px */
     }
+
     .blog-detail-heading1 {
         color: #111;
         font-size: 18px;
@@ -270,6 +311,7 @@
         font-weight: 700;
         line-height: normal;
     }
+
     .blog-detail-para1 {
         color: #666;
         font-size: 14px;
@@ -277,6 +319,7 @@
         font-weight: 500;
         line-height: normal;
     }
+
     .blog-detail-icons {
         color: #666;
         font-size: 14px;
@@ -284,12 +327,14 @@
         font-weight: 500;
         line-height: normal;
     }
+
     .blog-details-box1 {
         width: 100%;
         height: 185px;
         border-radius: 12.99px;
         opacity: 1;
     }
+
     .blog-detail-para3 {
         color: #333;
         font-size: 12px;
@@ -297,6 +342,7 @@
         font-weight: 500;
         line-height: 150%; /* 18px */
     }
+
     .blog-detail-para4 {
         color: #4C5FDD;
         font-size: 12px;
@@ -395,13 +441,14 @@
         }
 
     .blog-girl-box {
-        position:relative;
+        position: relative;
         width: auto;
         height: 311px;
-        background-color:#FFF;
-        border-radius:24px;
-        padding:32px;
+        background-color: #FFF;
+        border-radius: 24px;
+        padding: 32px;
     }
+
         .blog-girl-box h6 {
             width: 161.564px;
             text-wrap: wrap;
@@ -411,28 +458,29 @@
             font-weight: 600;
             line-height: normal;
         }
+
     .blog-girl-img {
-        position:absolute;
+        position: absolute;
         width: 137px;
         height: 211px;
-        right:24px;
-        top:-32px;
+        right: 24px;
+        top: -32px;
     }
 
     .blog-input-box {
-        width:100%;
+        width: 100%;
         height: 40px;
         background-color: #F9F9F9;
         border: 1px solid #EEE;
-        border-radius:10px;
+        border-radius: 10px;
     }
 
     .blog-loyalty-wallet-box2 {
         position: relative;
-        width: auto;
-        height: 348px;
+        width: 100%;
+        min-height: 408px;
         background-color: #3E1268;
-        overflow: hidden;
+        overflow: visible;
         border-radius: 24px;
     }
 
@@ -453,13 +501,15 @@
         object-fit: cover;
         display: block;
     }
+
     .blog-loyalty-wallet-box3 {
         position: absolute;
-        top: 50%;
+        top: 38%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: #FFF;
     }
+
         .blog-loyalty-wallet-box3 h6 {
             color: #FFF;
             font-size: 36px;
@@ -469,5 +519,34 @@
             letter-spacing: -0.72px;
         }
 
-
+    .blog-loyalty-wallet-box4 {
+        position: absolute;
+        background-color: #FFF;
+        width: 90%;
+        max-width: 332px;
+        height: auto; /* ✅ flexible */
+        padding: 16px;
+        border-radius: 24px;
+        top: 68%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+    .blogdetails-white-btn {
+        display: inline-flex;
+        height: 36px;
+        padding: 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 100px;
+        background: #FFF;
+        color: #666;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 19.5px; /* 162.5% */
+        letter-spacing: -0.076px;
+    }
 </style>
