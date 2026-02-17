@@ -8,7 +8,10 @@
                 @foreach (var s in SliderList)
                 {
                     <div class="zig-icon-wrapper">
-                        <img src="https://airbrotest.ezgatherr.com/uploadfiles/@s.WebPicture" alt="img" />
+                        @{
+                            string picture = UrlPrefixService.UrlPrefix + s.WebPicture;
+                        }
+                        <img src="@picture" alt="img" />
                         <div class="bg-zigzig">
 
                         </div>
@@ -23,7 +26,10 @@
                 @foreach (var s in SliderList)
                 {
                     <div class="zig-icon-wrapper">
-                        <img src="https://airbrotest.ezgatherr.com/uploadfiles/@s.WebPicture" alt="img" />
+                        @{
+                            string picture = UrlPrefixService.UrlPrefix + s.WebPicture;
+                        }
+                        <img src="@picture" alt="img" />
                         <div class="bg-zigzig">
 
                         </div>

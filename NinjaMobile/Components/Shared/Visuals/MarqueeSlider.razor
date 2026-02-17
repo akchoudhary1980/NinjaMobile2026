@@ -15,8 +15,12 @@
                         <MudGrid Spacing="2">
                             <MudItem xs="12" sm="12">
                                 <MudStack Row="true" AlignItems="AlignItems.Start">
+                                    @{ 
+                                        string picture = UrlPrefixService.UrlPrefix + t.WebPicture;
+                                    }
+
                                     <div>
-                                        <img src="https://airbrotest.ezgatherr.com/uploadfiles/@t.WebPicture" alt="Client Images" height="60" width="60" class="rounded-circle" />
+                                        <img src="@picture" alt="Client Images" height="60" width="60" class="rounded-circle" />
                                     </div>
                                     <div>
                                         <h6 class="marquee-client-name">@t.CustomerName</h6>
@@ -40,8 +44,11 @@
                         <MudGrid Spacing="2">
                             <MudItem xs="12" sm="12">
                                 <MudStack Row="true" AlignItems="AlignItems.Start">
+                                    @{
+                                        string picture = UrlPrefixService.UrlPrefix + t.WebPicture;
+                                    }
                                     <div>
-                                        <img src="https://airbrotest.ezgatherr.com/uploadfiles/@t.WebPicture" alt="Client Images" height="60" width="60" class="rounded-circle" />
+                                        <img src="@picture" alt="Client Images" height="60" width="60" class="rounded-circle" />
                                     </div>
                                     <div>
                                         <h6 class="marquee-client-name">@t.CustomerName</h6>

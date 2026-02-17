@@ -1,11 +1,16 @@
 ﻿using MudBlazor.Services;
+using Ninja.Services;
 using NinjaMobile.Components;
 using NinjaMobile.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//For linux server
+//builder.WebHost.UseUrls("http://0.0.0.0:5003");
+
 builder.Services.AddRazorComponents().AddInteractiveServerComponents();
 builder.Services.AddMudServices();
+builder.Services.AddScoped<UrlPrefixService>();
 
 //var apiBaseUrl = "https://airbrotest.ezgatherr.com/api/";
 var apiBaseUrl = "https://localhost:7238/api/";

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
+using Ninja.Services;
 using NinjaMobile.Models;
 #nullable disable warnings
 
@@ -12,6 +13,9 @@ namespace NinjaMobile.Components.Shared.Visuals
 
         [Inject]
         private IJSRuntime JS { get; set; }
+
+        [Inject]
+        private UrlPrefixService UrlPrefixService { get; set; }
 
         int activeIndex = 0;
         DotInteropHelper dotHelper;
