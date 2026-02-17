@@ -12,7 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Components\Shared\BentoBox\" />
+    <Folder Include="Components\Shared\GatherrBox\" />
+    <Folder Include="Components\Shared\GatherrFeast\" />
+    <Folder Include="Components\Shared\GatherrBento\" />
   </ItemGroup>
 
   <ItemGroup>

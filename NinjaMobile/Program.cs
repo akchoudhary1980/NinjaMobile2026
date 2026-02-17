@@ -7,8 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents().AddInteractiveServerComponents();
 builder.Services.AddMudServices();
 
-var apiBaseUrl = "https://airbrotest.ezgatherr.com/api/";
-//var apiBaseUrl = "https://localhost:7238/api/";
+//var apiBaseUrl = "https://airbrotest.ezgatherr.com/api/";
+var apiBaseUrl = "https://localhost:7238/api/";
 builder.Services.AddHttpClient("ApiClient", client =>
 {
     client.BaseAddress = new Uri(apiBaseUrl);

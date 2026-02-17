@@ -1,10 +1,10 @@
 ﻿@page "/"
-<PageTitle>Home Page</PageTitle>
+<PageTitle>Mobile Home Page</PageTitle>
 
 <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="m-0 p-0">
     <MenuSection />
     <HeroSection />
-    <MarqueeZigZagSlider />
+    <MarqueeZigZagSlider SliderList="@sliderList" />
     <div class="mt-12">
         <FromFinaleSlider />
     </div>
@@ -36,8 +36,6 @@
     </div>
 </MudContainer>
 
-
-
 <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="m-0 p-0">
     <div class="mt-12">
         <DealOfMonthSlider />
@@ -46,7 +44,7 @@
 
 <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="m-0 p-0">
     <div class="mt-12">
-        <MarqueeSlider />
+        <MarqueeSlider TestimonialsList="testimonialsList" />
     </div>
     <div class="mt-12">
         <ThisSeason />
